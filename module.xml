@@ -1,0 +1,20 @@
+<module>
+	<rawname>daynight</rawname>
+	<name>Day Night Mode</name>
+	<version>1.0.0</version>
+	<type>setup</type>
+	<category>Inbound Call Control</category>
+	<description>
+		Day / Night control - allows for two destinations to be chosen and provides a feature code
+		that toggles between the two destinations.
+	</description>
+	<changelog>
+		*1.0* First release for FreePBX 2.3 
+	</changelog>
+	<menuitems>
+		<daynight>Day/Night Control</daynight>
+	</menuitems>
+	<location>release/2.3/daynight-2.5.14.1.tgz</location>
+	<info>http://aussievoip.com.au/wiki/freePBX-DayNight</info>
+	<md5sum>0562003b980c9d420010e8768490c7f0</md5sum>
+</module>
