@@ -158,13 +158,13 @@ function daynight_toggle() {
 
 		$c='s';
 		$ext->add($id, $c, '', new ext_setvar('DAYNIGHTMODE', '${DB(DAYNIGHT/C${INDEX}}'));	
-		$ext->add($id, $c, '', new ext_gotoif('$["${DAYNIGHTMODE}" = "NIGHT"]', 'night', 'day'));
+		$ext->add($id, $c, '', new ext_gotoif('$["${DAYNIGHTMODE}" = "NIGHT"]', 'day', 'night'));
 
-		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));	
+		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));	
 		$ext->add($id, $c, '', new ext_playback('beep&silence/1&day&reception&digits/${INDEX}&enabled'));
 		$ext->add($id, $c, '', new ext_hangup(''));
 
-		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));	
+		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));	
 		$ext->add($id, $c, '', new ext_playback('beep&silence/1&beep&silence/1&day&reception&digits/${INDEX}&disabled'));
 		$ext->add($id, $c, '', new ext_hangup(''));
 	}
