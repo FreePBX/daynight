@@ -36,7 +36,9 @@ $daynightcodes = daynight_list();
 <?php
 if (isset($daynightcodes)) {
 	foreach ($daynightcodes as $code) {
-		echo "<li><a id=\"".($itemid==$code['ext'] ? 'current':'')."\" href=\"config.php?display=".urlencode($dispnum)."&itemid=".urlencode($code['ext'])."&action=edit\">($fc{$code['ext']}) {$code['dest']}</a></li>";
+		$dnobj = daynight_get_obj($code['ext']);
+		$color = $dnobj['state'] == 'DAY' ? "style='color:green'" : "style='color:red'";
+		echo "<li><a $color id=\"".($itemid==$code['ext'] ? 'current':'')."\" href=\"config.php?display=".urlencode($dispnum)."&itemid=".urlencode($code['ext'])."&action=edit\">($fc{$code['ext']}) {$code['dest']}</a></li>";
 	}
 }
 ?>
