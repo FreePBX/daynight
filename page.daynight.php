@@ -74,7 +74,7 @@ function daynight_show_edit($post, $add="") {
 	unset($fcc);
 
 	$dests = daynight_get_obj($itemid);
-	$password = isset($dests['password'])?$dests['password']:$password;
+	$password = isset($dests['password'])?$dests['password']:'';
 	$fc_description = isset($dests['fc_description'])?$dests['fc_description']:'';
 	$state = isset($dests['state'])?$dests['state']:'DAY';
 ?>
@@ -166,8 +166,8 @@ function daynight_show_edit($post, $add="") {
 	// returns an array, $dest['day'], $dest['night']
 	// and puts null if nothing set
 
-	drawdestinations(0, _("DAY"),   $dests['day']);
-	drawdestinations(1, _("NIGHT"), $dests['night']);
+	drawdestinations(0, _("DAY"),   isset($dests['day'])?$dests['day']:'');
+	drawdestinations(1, _("NIGHT"), isset($dests['night'])?$dests['night']:'');
 
 	//TODO: Check to make sure a destination radio button was checked, and if custom, that it was not blank
 	//
