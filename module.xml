@@ -17,7 +17,7 @@
 	<menuitems>
 		<daynight needsenginedb="yes">Day/Night Control</daynight>
 	</menuitems>
-	<location>release/2.3/daynight-1.0.2.tgz</location>
+	<location>release/2.3/daynight-1.0.2.1.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-DayNight</info>
-	<md5sum>65c284ec3242f2d1876fb6e6b307c7af</md5sum>
+	<md5sum>6affd8db3773f02b39ae4fe727c73fb1</md5sum>
 </module>
