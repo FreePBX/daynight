@@ -24,7 +24,7 @@ class dayNightObject {
 				return $mode;
 			}
 		} else {
-			die("No open connection to asterisk manager, can not access object.");
+			die_freepbx("No open connection to asterisk manager, can not access object.");
 		}
 	}
 
@@ -32,7 +32,7 @@ class dayNightObject {
 		global $astman;
 
 		if ($this->getState() === false) {
-			die("You must create the object before setting the state.");
+			die_freepbx("You must create the object before setting the state.");
 			return false;
 		} else {
 			switch ($state) {
@@ -41,11 +41,11 @@ class dayNightObject {
 					if ($astman != null) {
 						$astman->database_put("DAYNIGHT","C".$this->id,$state);
 					} else {
-						die("No open connection to asterisk manager, can not access object.");
+						die_freepbx("No open connection to asterisk manager, can not access object.");
 					}
 					break;
 				default:
-					die("Invalid state: $state");
+					die_freepbx("Invalid state: $state");
 					break;
 			}
 		}
@@ -56,7 +56,7 @@ class dayNightObject {
 
 		$current_state = $this->getState();
 		if ($current_state !== false) {
-			die("Object already exists and is in state: $current_state, you must delete it first");
+			die_freepbx("Object already exists and is in state: $current_state, you must delete it first");
 			return false;
 		} else {
 			switch ($state) {
@@ -65,11 +65,11 @@ class dayNightObject {
 					if ($astman != null) {
 						$astman->database_put("DAYNIGHT","C".$this->id,$state);
 					} else {
-						die("No open connection to asterisk manager, can not access object.");
+						die_freepbx("No open connection to asterisk manager, can not access object.");
 					}
 					break;
 				default:
-					die("Invalid state: $state");
+					die_freepbx("Invalid state: $state");
 					break;
 			}
 		}
@@ -81,7 +81,7 @@ class dayNightObject {
 		if ($astman != null) {
 			$astman->database_del("DAYNIGHT","C".$this->id);
 		} else {
-			die("No open connection to asterisk manager, can not access object.");
+			die_freepbx("No open connection to asterisk manager, can not access object.");
 		}
 	}
 }

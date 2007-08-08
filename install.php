@@ -10,7 +10,7 @@ $sql = "CREATE TABLE IF NOT EXISTS daynight
 			 ";
 $check = $db->query($sql);
 if(DB::IsError($check)) {
-	die("Can not create daynight table");
+	die_freepbx("Can not create daynight table");
 }
 
 // Day / Night Mode Control
