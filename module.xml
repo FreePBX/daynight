@@ -1,7 +1,7 @@
 <module>
 	<rawname>daynight</rawname>
 	<name>Day Night Mode</name>
-	<version>1.0.2.1</version>
+	<version>1.0.2.2</version>
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
@@ -9,6 +9,7 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
+		*1.0.2.2* bump for rc1
 		*1.0.2.1* added xml attribute needsenginedb, fixed some undefined vars
 		*1.0.2* Added red/green color coding of rnav to see current mode
 		*1.0.1* #2047 got day/night reversed
@@ -18,6 +19,5 @@
 		<daynight needsenginedb="yes">Day/Night Control</daynight>
 	</menuitems>
 	<location>release/2.3/daynight-1.0.2.1.tgz</location>
-	<info>http://aussievoip.com.au/wiki/freePBX-DayNight</info>
 	<md5sum>6affd8db3773f02b39ae4fe727c73fb1</md5sum>
 </module>
