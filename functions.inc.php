@@ -121,7 +121,7 @@ function daynight_get_config($engine) {
 
 			foreach ($list as $item) {
 				$dests = daynight_get_obj($item['ext']);
-				$ext->add($id, $item['ext'], '', new ext_gotoif('$["${DB(DAYNIGHT/C${EXTEN}}" = "NIGHT"]',$dests['night'],$dests['day']));
+				$ext->add($id, $item['ext'], '', new ext_gotoif('$["${DB(DAYNIGHT/C${EXTEN})}" = "NIGHT"]',$dests['night'],$dests['day']));
 			}
 
 			daynight_toggle();
