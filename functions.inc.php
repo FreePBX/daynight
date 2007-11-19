@@ -270,4 +270,48 @@ function daynight_get_obj($id=0) {
 
 		return $dmodes;
 }
+
+
+/*
+SELECT s1.ext ext, dest, dmode, s2.description descirption FROM daynight s1 
+INNER JOIN
+    (
+			      SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2 
+						ON s1.ext = s2.ext WHERE dmode in ('day','night')
+						AND dest = '$dest'
+
+Provides: ext, dest, dmode, description
+*/
+function daynight_check_destinations($dest=true) {
+	global $active_modules;
+
+	$destlist = array();
+	if (is_array($dest) && empty($dest)) {
+		return $destlist;
+	}
+	$sql = "
+		SELECT s1.ext ext, dest, dmode, s2.description descirption FROM daynight s1 
+		INNER JOIN
+    		(
+					SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2 
+					ON s1.ext = s2.ext WHERE dmode in ('day','night') 
+		";
+	if ($dest !== true) {
+		$sql .= "AND dest in ('".implode("','",$dest)."')";
+	}
+	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
+
+	//$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
+
+	foreach ($results as $result) {
+		$thisdest = $result['dest'];
+		$thisid   = $result['ext'];
+		$destlist[] = array(
+			'dest' => $thisdest,
+			'description' => 'Daynight: '.$result['description'].' ('.$result['dmode'].')',
+			'edit_url' => 'config.php?display=daynight&itemid='.urlencode($thisid).'&action=edit',
+		);
+	}
+	return $destlist;
+}
 ?>
