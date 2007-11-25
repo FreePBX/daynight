@@ -85,7 +85,15 @@ function daynight_show_edit($post, $add="") {
 	$delURL = $_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'&action=delete';
 ?>
 <?php		if ($itemid != ""){ ?>
-	<p><a href="<?php echo $delURL ?>"><?php echo _("Delete Day/Night Feature Code:")?> <?php echo $code; ?></a></p>
+	<a href="<?php echo $delURL ?>"><?php echo _("Delete Day/Night Feature Code:")?> <?php echo $code; ?></a><br />
+<?php
+					$usage_list = framework_display_destination_usage(daynight_getdest($itemid));
+					if (!empty($usage_list)) {
+?>
+						<a href="#" class="info"><?php echo $usage_list['text']?>:<span><?php echo $usage_list['tooltip']?></span></a>
+<?php
+					}
+?>
 <?php		} ?>
 
 	<form name="prompt" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return prompt_onsubmit();">

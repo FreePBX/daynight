@@ -108,6 +108,38 @@ function daynight_destinations() {
 		return null;
 }
 
+function daynight_getdest($exten) {
+	return array('app-daynight,'.$exten.',1');
+}
+
+function daynight_getdestinfo($dest) {
+	global $active_modules;
+
+	if (substr(trim($dest),0,13) == 'app-daynight,') {
+		$exten = explode(',',$dest);
+		$exten = $exten[1];
+
+		$thisexten = array();
+		$thislist = daynight_list($exten);
+		foreach ($thislist as $item) {
+			if ($item['ext'] == $exten) {
+				$thisexten = $item;
+				break;
+			}
+		}
+		if (empty($thisexten)) {
+			return array();
+		} else {
+			//$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
+			return array('description' => 'Day/Night ('.$exten.') : '.$thisexten['dest'],
+			             'edit_url' => 'config.php?display=daynight&itemid='.urlencode($exten).'&action=edit',
+								  );
+		}
+	} else {
+		return false;
+	}
+}
+
 function daynight_get_config($engine) {
 	global $ext;
 
@@ -290,7 +322,7 @@ function daynight_check_destinations($dest=true) {
 		return $destlist;
 	}
 	$sql = "
-		SELECT s1.ext ext, dest, dmode, s2.description descirption FROM daynight s1 
+		SELECT s1.ext ext, dest, dmode, s2.description description FROM daynight s1 
 		INNER JOIN
     		(
 					SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2 
