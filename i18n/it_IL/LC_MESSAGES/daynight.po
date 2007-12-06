@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-08-12 15:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Francesco Romano\n"
+"Language-Team:\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: page.daynight.php:35
+msgid "Add Day/Night Code"
+msgstr "Aggiungi Servizio Giorno/Notte"
+
+#: page.daynight.php:82
+msgid "Day / Night Mode Control"
+msgstr "Controllo Servizio Giorno/Notte"
+
+#: page.daynight.php:88
+msgid "Delete Day/Night Feature Code:"
+msgstr "Elimina codice Servizio Giorno/Notte"
+
+#: page.daynight.php:103 page.daynight.php:178
+#, c-format
+msgid "Use feature code: %s to toggle DAY/NIGHT mode"
+msgstr "Utilizzare il codice: %s per cambiare il Servizio Giorno/Notte"
+
+#: page.daynight.php:112
+msgid "Day/Night Feature Code Index:"
+msgstr "Indice Codice Servizio Giorno/Notte"
+
+#: page.daynight.php:113
+msgid ""
+"There are a total of 10 Feature code objects, 0-9, each can control a call "
+"flow and be toggled using the day/night feature code plus the index."
+msgstr "Sono disponibili in totale 10 codici, da 0 9, ognuno dei quali puo' controllare un particolare percorso. Si cambia il servizio giorno/notte con il codice più l'indice."
+
+#: page.daynight.php:138
+msgid "Description"
+msgstr "Descrizione"
+
+#: page.daynight.php:143
+msgid "Current Mode:"
+msgstr "Modo Corrente:"
+
+#: page.daynight.php:144
+msgid ""
+"This will change the current state for this Day/Night Mode Control, or set "
+"the intial state when creating a new one."
+msgstr "Questo cambierà lo stato corrente del Servizio Giorno/Notte, oppure imposta lo stato iniziale quando se ne crea uno nuovo."
+
+#: page.daynight.php:155
+msgid "Optional Password"
+msgstr "Password Opzionale"
+
+#: page.daynight.php:169
+msgid "DAY"
+msgstr "GIORNO"
+
+#: page.daynight.php:170
+msgid "NIGHT"
+msgstr "NOTTE"
+
+#: page.daynight.php:215
+msgid "$mode"
+msgstr ""
+
+#: page.daynight.php:215
+msgid "Destination to use when set to $mode mode"
+msgstr "Destinazione da usare se impostato su $mode"
+
+msgid "Voicemail"
+msgstr "Casella Vocale"
+
+msgid "Extensions"
+msgstr "Interni"
+
+msgid "Day Night Mode"
+msgstr "Controllo Giorno Notte"
+
+msgid "Terminate Call"
+msgstr "Termina Chiamata"
+
+msgid "Core"
+msgstr "Sistema"
+
+msgid "Conferences"
+msgstr "Conferenze"
+
+msgid "Phonebook Directory"
+msgstr "Rubrica"
+
+msgid "Queues"
+msgstr "Code"
+
+msgid "Ring Groups"
+msgstr "Gruppi di chiamata"
+
+msgid "Speed dial functions"
+msgstr "Selezione breve"
+
+msgid "Time Conditions"
+msgstr "Condizioni Temporali"
+
+msgid "Custom Contexts"
+msgstr "Contesti Personalizzati"
+
+msgid "Extended Routing"
+msgstr "Rotte specifiche"
+
+msgid "Custom App<span><br>ADVANCED USERS ONLY<br><br>Uses Goto() to send caller to a custom context.<br><br>The context name should start with \"custom-\", and be in the format custom-context,extension,priority. Example entry:<br><br><b>custom-myapp,s,1</b><br><br>The <b>[custom-myapp]</b> context would need to be created and included in extensions_custom.conf</span>"
+msgstr "Applicazione Personalizzata<span>SOLO UTENTI AVANZATI<br>Utilizzare Goto() per inviare la chiamata verso un contesto personalizzato.<br><br>Il nome del contesto deve iniziare per \"custom-\" e deve essere nel formato custom-contesto,extension,priorità. Esempio: <br><br><b>custom-app,s,1</b><br><br><b>Il contesto [custom-app] </b> deve poi essere creato e incluso nel file extensions_custom.conf</span"
+
+msgid "Save"
+msgstr "Salva"
+
+msgid "You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code will be un-protected"
+msgstr "Come opzione si puo' inserire una password di autenticazione prima di cambiare il servizio giorno/notte. Se il campo rimane vuoto, qualsiasi utente potrà attivare o disattivare il servizio"
+
+msgid "Day"
+msgstr "Giorno"
+
+msgid "Night"
+msgstr "Notte"
