@@ -143,7 +143,7 @@ function daynight_show_edit($post, $add="") {
 		</td>
 	</tr>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Description")?>:<span><?php echo _('Description for this Day/Night Control')?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Description")?>:<span><?php echo _("Description for this Day/Night Control")?></span></a></td>
 		<td><input size="40" type="text" name="fc_description" value="<?php  echo $fc_description ?>">
 		</td>
 	</tr>
