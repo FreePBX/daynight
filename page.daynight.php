@@ -125,7 +125,7 @@ function daynight_show_edit($post, $add="") {
 <?php
 			if ($add == "add" && $itemid =="") {
 ?>
-			<select name="itemid"/>
+			<select name="itemid">
 			<?php
 				$ids = daynight_get_avail();
 				foreach ($ids as $id) {
@@ -153,7 +153,7 @@ function daynight_show_edit($post, $add="") {
 		</span></a>
 		</td>
 		<td>
-			<select name="state"/>
+			<select name="state">
 				<option value="DAY" <?php echo ($state == 'DAY' ? 'SELECTED':'') ?> >Day</option> 
 				<option value="NIGHT" <?php echo ($state == 'NIGHT' ? 'SELECTED':'') ?> >Night</option> 
 			</select>
