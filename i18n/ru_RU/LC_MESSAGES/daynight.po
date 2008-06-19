@@ -1,0 +1,149 @@
+# Russian freePBX ver. translation
+# Copyright (c) 2006-2008 PostMet Corporation
+# This file is distributed under the same license as the freePBX package.
+# Alexander Kozyrev <ceo@postmet.com>, Sergey Nikolayev <sergey@postmet.com>, 2006-2008.
+#
+# Использовать iconv amp.new -f UTF-8 -t ISO-8859-5 -o amp.po
+# fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-19 21:45+0100\n"
+"PO-Revision-Date: 2008-01-16 16:38+0100\n"
+"Last-Translator: Alexander Kozyrev <ceo@postmet.com>\n"
+"Language-Team: Russian <faq@postmet.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-5\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: page.daynight.php:35
+msgid "Add Day/Night Code"
+msgstr "Добавить Дневной/Ночной код"
+
+#: page.daynight.php:82
+msgid "Day / Night Mode Control"
+msgstr "Контроль Дневного/Ночного режима"
+
+#: page.daynight.php:88
+msgid "Delete Day/Night Feature Code:"
+msgstr "Удалить Дневной/Ночной код:"
+
+#: page.daynight.php:103 page.daynight.php:178
+#, c-format
+msgid "Use feature code: %s to toggle DAY/NIGHT mode"
+msgstr "Используйте код: %s для переключения в Дневной/Ночной режим"
+
+#: page.daynight.php:112
+msgid "Day/Night Feature Code Index:"
+msgstr "Список кодов Дневной/Ночной режим:"
+
+#: page.daynight.php:113
+msgid ""
+"There are a total of 10 Feature code objects, 0-9, each can control a call "
+"flow and be toggled using the day/night feature code plus the index."
+msgstr ""
+"Всего 10 дополнений к коду опции переключения в Дневной/Ночной режим, "
+"от 0 до 9, каждый из которых контролирует свой сценарий прохождение звонков "
+"и будет включаться используя код опции (например *28) плюс дополнение (например "
+"*280)" 
+
+#: page.daynight.php:138
+msgid "Description"
+msgstr "Описание"
+
+#: page.daynight.php:146
+msgid "Description for this Day/Night Control"
+msgstr "Описание для этого кода Дневной/Ночной режим"
+
+#: page.daynight.php:143
+msgid "Current Mode:"
+msgstr "Текущий режим:"
+
+#: page.daynight.php:144
+msgid ""
+"This will change the current state for this Day/Night Mode Control, or set "
+"the intial state when creating a new one."
+msgstr ""
+"Здесь можно изменить текущий Дневной/Ночной режим или установить начальное состояние "
+"если создан новый."  
+
+#: page.daynight.php:155
+msgid "Optional Password"
+msgstr "Пароль (опционально)"
+
+#: page.daynight.php:169
+msgid "DAY"
+msgstr "ДЕНЬ"
+
+#: page.daynight.php:170
+msgid "NIGHT"
+msgstr "НОЧЬ"
+
+#: page.daynight.php:215
+msgid "$mode"
+msgstr ""
+
+#: page.daynight.php:215
+msgid "Destination to use when set to $mode mode"
+msgstr "Назначение, если выбран режим $mode"
+
+msgid "Voicemail"
+msgstr "Голосовая почта"
+
+msgid "Extensions"
+msgstr "Внутренний номер"
+
+msgid "Day Night Mode"
+msgstr "Режим дня и ночи"
+
+msgid "Terminate Call"
+msgstr "Терминировать звонок"
+
+msgid "Misc Destinations"
+msgstr "Различные направления"
+
+msgid "IVR"
+msgstr "Интерактивное меню"
+
+msgid "Languages"
+msgstr "Языки"
+
+msgid "Conferences"
+msgstr "Конференция"
+
+msgid "Phonebook Directory"
+msgstr "Телефонная книга"
+
+msgid "Queues"
+msgstr "Очередь"
+
+msgid "Ring Groups"
+msgstr "Группа вызова"
+
+msgid "Speed dial functions"
+msgstr "Функции быстрого набора"
+
+msgid "Time Conditions"
+msgstr "Временные состояния"
+
+msgid "Custom Applications"
+msgstr "Специальное приложение"
+
+msgid "Extended Routing"
+msgstr "Расширенная маршрутизация"
+
+msgid "Custom App<span><br>ADVANCED USERS ONLY<br><br>Uses Goto() to send caller to a custom context.<br><br>The context name should start with \"custom-\", and be in the format custom-context,extension,priority. Example entry:<br><br><b>custom-myapp,s,1</b><br><br>The <b>[custom-myapp]</b> context would need to be created and included in extensions_custom.conf</span>"
+msgstr "Особые приложения<span><br>ТОЛЬКО ОПЫТНЫМ ПОЛЬЗОВАТЕЛЯМ<br>Используйте операнд Goto() для перенаправления в custom контекст.<br><br>Название контекста должно начинаться с \"custom-\" и быть в формате custom-context,extension,приоритет. Например:<br><b>custom-app,s,1</b><br>Контекст <b>[custom-app]</b> должен быть создан в extensions_custom.conf</span"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code will be un-protected"
+msgstr "Опционально можно использовать переключение в Днеаной/Ночной режим через пароль. Если оставить поле пустым, то использование этой опции не защищено"
+
+msgid "Day"
+msgstr "День"
+
+msgid "Night"
+msgstr "Ночь"
