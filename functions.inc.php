@@ -267,10 +267,8 @@ function daynight_edit($post, $id=0) {
 		$password = trim($post['password']);
 		sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'password', '$password')");
 	}
-	if (isset($post['fc_description']) && trim($post['fc_description'] != "")) {
-		$fc_description = trim($post['fc_description']);
-		sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'fc_description', '$fc_description')");
-	}
+	$fc_description = isset($post['fc_description']) ? trim($post['fc_description']) : "";
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'fc_description', '$fc_description')");
 
 	$dn = new dayNightObject($id);
 	$dn->del();
