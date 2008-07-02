@@ -31,8 +31,8 @@ unset($fcc);
 if ($delete_old) {
 	$list = daynight_list();
 	foreach ($list as $item) {
-		$id = $item['ext']
-		$fc_description = $item['dest']
+		$id = $item['ext'];
+		$fc_description = $item['dest'];
 		$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
 		if ($fc_description) {
 			$fcc->setDescription("$id: $fc_description");
@@ -40,7 +40,7 @@ if ($delete_old) {
 			$fcc->setDescription("$id: Day Night Control");
 		}
 		$fcc->setDefault('*28'.$id);
-		if ($code != '*28') {
+		if ($code != '*28' && $code != '') {
 			$fcc->setCode($code.$id);
 		}
 		if (!$enabled) {
