@@ -165,38 +165,50 @@ function daynight_get_config($engine) {
 function daynight_toggle() {
 	global $ext;
 
-	$fcc = new featurecode('daynight', 'toggle-mode');
-	$c = $fcc->getCodeActive();
-	unset($fcc);
-
-	if (!empty($c)) {
-		$id = "app-daynight-toggle"; // The context to be included
-
-		$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
-
-		$list = daynight_list();
-		$passwords = daynight_passwords();
-		foreach ($list as $item) {
-			$index = $item['ext'];
-			$ext->add($id, $c.$index, '', new ext_answer(''));
-			$ext->add($id, $c.$index, '', new ext_wait('1'));
-
-			if (isset($passwords[$index]) && trim($passwords[$index]) != "" && ctype_digit(trim($passwords[$index]))) {
-				$ext->add($id, $c.$index, '', new ext_authenticate($passwords[$index]));
-			}
-			$ext->add($id, $c.$index, '', new ext_setvar('INDEX', $index));	
-			$ext->add($id, $c.$index, '', new ext_goto($id.',s,1'));
+	$list = daynight_list();
+	$passwords = daynight_passwords();
+	$got_code = false;
+	
+	$id = "app-daynight-toggle"; // The context to be included
+	foreach ($list as $item) {
+		$index = $item['ext'];
+		$fcc = new featurecode('daynight', 'toggle-mode-'.$index);
+		$c = $fcc->getCodeActive();
+		unset($fcc);
+		if (!$c) {
+			continue;
 		}
+		$got_code = true;
+		if ($amp_conf['USEDEVSTATE']) {
+			$ext->addHint($id, $c, 'Custom:DAYNIGHT'.$index);
+		}
+		$ext->add($id, $c, '', new ext_answer(''));
+		$ext->add($id, $c, '', new ext_wait('1'));
+		if (isset($passwords[$index]) && trim($passwords[$index]) != "" && ctype_digit(trim($passwords[$index]))) {
+			$ext->add($id, $c, '', new ext_authenticate($passwords[$index]));
+		}
+		$ext->add($id, $c, '', new ext_setvar('INDEX', $index));	
+		$ext->add($id, $c, '', new ext_goto($id.',s,1'));
+	}
+
+	if ($got_code) {
+		$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
 
 		$c='s';
 		$ext->add($id, $c, '', new ext_setvar('DAYNIGHTMODE', '${DB(DAYNIGHT/C${INDEX})}'));	
 		$ext->add($id, $c, '', new ext_gotoif('$["${DAYNIGHTMODE}" = "NIGHT"]', 'day', 'night'));
 
 		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));	
+		if ($amp_conf['USEDEVSTATE']) {
+			$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DAYNIGHT${INDEX})', 'NOT_INUSE'));
+		}
 		$ext->add($id, $c, '', new ext_playback('beep&silence/1&day&reception&digits/${INDEX}&enabled'));
 		$ext->add($id, $c, '', new ext_hangup(''));
 
 		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));	
+		if ($amp_conf['USEDEVSTATE']) {
+			$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DAYNIGHT${INDEX})', 'INUSE'));
+		}
 		$ext->add($id, $c, '', new ext_playback('beep&silence/1&beep&silence/1&day&reception&digits/${INDEX}&disabled'));
 		$ext->add($id, $c, '', new ext_hangup(''));
 	}
@@ -268,11 +280,21 @@ function daynight_edit($post, $id=0) {
 		sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'password', '$password')");
 	}
 	$fc_description = isset($post['fc_description']) ? trim($post['fc_description']) : "";
-	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'fc_description', '$fc_description')");
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'fc_description', '".addslashes($fc_description)."')");
 
 	$dn = new dayNightObject($id);
 	$dn->del();
 	$dn->create($post['state']);
+
+	$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
+	if ($fc_description) {
+		$fcc->setDescription("$id: $fc_description");
+	} else {
+		$fcc->setDescription("$id: Day Night Control");
+	}
+	$fcc->setDefault('*28'.$id);
+	$fcc->update();
+	unset($fcc);	
 
 	needreload();
 }
@@ -282,6 +304,10 @@ function daynight_del($id){
 	// TODO: delete ASTDB entry when deleting the mode
 	//
 	$results = sql("DELETE FROM daynight WHERE ext = \"$id\"","query");
+
+	$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
+	$fcc->delete();
+	unset($fcc);	
 }
 
 function daynight_get_obj($id=0) {

@@ -20,11 +20,6 @@ $fc_description = isset($_REQUEST['fc_description'])?$_REQUEST['fc_description']
 
 isset($_REQUEST['itemid'])?$itemid=mysql_real_escape_string($_REQUEST['itemid']):$itemid='';
 
-
-$fcc = new featurecode('daynight', 'toggle-mode');
-$fc = $fcc->getCodeActive();
-unset($fcc);
-
 $daynightcodes = daynight_list();
 ?>
 
@@ -36,9 +31,13 @@ $daynightcodes = daynight_list();
 <?php
 if (isset($daynightcodes)) {
 	foreach ($daynightcodes as $code) {
+		$fcc = new featurecode('daynight', 'toggle-mode-'.$code['ext']);
+		$fc = $fcc->getCode();
+		unset($fcc);
+
 		$dnobj = daynight_get_obj($code['ext']);
 		$color = $dnobj['state'] == 'DAY' ? "style='color:green'" : "style='color:red'";
-		echo "<li><a $color id=\"".($itemid==$code['ext'] ? 'current':'')."\" href=\"config.php?display=".urlencode($dispnum)."&itemid=".urlencode($code['ext'])."&action=edit\">($fc{$code['ext']}) {$code['dest']}</a></li>";
+		echo "<li><a $color id=\"".($itemid==$code['ext'] ? 'current':'')."\" href=\"config.php?display=".urlencode($dispnum)."&itemid=".urlencode($code['ext'])."&action=edit\">($fc) {$code['dest']}</a></li>";
 	}
 }
 ?>
@@ -69,8 +68,8 @@ function daynight_show_edit($post, $add="") {
 	global $db;
 	global $itemid;
 
-	$fcc = new featurecode('daynight', 'toggle-mode');
-	$code = $fcc->getCodeActive().$itemid;
+	$fcc = new featurecode('daynight', 'toggle-mode-'.$itemid);
+	$code = $fcc->getCodeActive();
 	unset($fcc);
 
 	$dests = daynight_get_obj($itemid);
