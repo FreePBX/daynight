@@ -8,7 +8,7 @@ unset($fcc);
 
 $list = daynight_list();
 foreach ($list as $item) {
-	$id = $item['ext']
+	$id = $item['ext'];
 	$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
 	$fcc->delete();
 	unset($fcc);	
