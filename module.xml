@@ -29,6 +29,6 @@
 	<menuitems>
 		<daynight needsenginedb="yes">Day/Night Control</daynight>
 	</menuitems>
-	<location>release/2.5/daynight-2.5.0.tgz</location>
-	<md5sum>bc26f540b23a0f2ec7d24051d064d7be</md5sum>
+	<location>release/2.5/daynight-2.5.0.1.tgz</location>
+	<md5sum>efe3cbccc40aa102d0f087d6c316a256</md5sum>
 </module>
