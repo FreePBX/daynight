@@ -327,7 +327,6 @@ function daynight_get_obj($id=0) {
 		return $dmodes;
 }
 
-
 /*
 SELECT s1.ext ext, dest, dmode, s2.description descirption FROM daynight s1 
 INNER JOIN
@@ -370,4 +369,188 @@ function daynight_check_destinations($dest=true) {
 	}
 	return $destlist;
 }
+
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+// TIMECONDITIONS HOOK:
+//
+// Helper Functions
+//
+
+// Note only one of these should be set, a feature code can't be associated with both the day and night mode
+function daynight_get_timecondition($id=0) {
+	global $db;
+
+	$sql = "SELECT ext, dmode FROM daynight WHERE dmode IN ('timeday', 'timenight') AND dest = '$id' ORDER BY dmode";
+	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
+	if(DB::IsError($res)) {
+		return null;
+	}
+	// we will start the loop but only return the first occurence since there should only be one
+	if (empty($res)) {
+		return array('ext' => '', 'dmode' => '');
+	} else {
+		foreach($res as $pair) {
+			return $pair;
+		}
+	}
+}
+
+function daynight_list_timecondition($daynight_id='all') {
+	global $db;
+
+	if ($daynight_id == 'all') {
+		$results = sql("SELECT ext, dmode, dest FROM daynight WHERE dmode IN ('timeday', 'timenight') ORDER BY dest","getAll",DB_FETCHMODE_ASSOC);
+	} else {
+		$results = sql("SELECT ext, dmode, dest FROM daynight WHERE dmode IN ('timeday', 'timenight') AND `ext` = '$daynight_id' ORDER BY CAST(dest AS UNSIGNED)","getAll",DB_FETCHMODE_ASSOC);
+	}
+	return $results;
+}
+
+function daynight_edit_timecondition($viewing_itemid, $daynight_ref) {
+	global $db;
+
+	$sql = "DELETE FROM `daynight` WHERE `dmode` IN ('timeday', 'timenight') AND dest = '$viewing_itemid'";
+	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
+
+	if ($daynight_ref != '') {
+		$daynight_vals = explode(',',$daynight_ref,2);
+		$sql = "INSERT INTO `daynight` (`ext`, `dmode`, `dest`) VALUES ('".$daynight_vals[0]."', '".$daynight_vals[1]."', '$viewing_itemid')";
+		sql($sql);
+	}
+}
+
+function daynight_add_timecondition($daynight_ref) { 
+	global $db;
+
+	// We don't know what the new timecondtion id is yet so we will put a place holder and check it when the page reloads
+	//
+	daynight_edit_timecondition('add', $daynight_ref);
+}
+
+function daynight_checkadd_timecondition() { 
+	global $db;
+
+	$sql = "SELECT ext FROM daynight WHERE dmode IN ('timeday', 'timenight') AND dest = 'add'";
+	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
+	if(DB::IsError($res)) {
+		return null;
+	}
+
+	// If we find anything, then we get the highest timecondtions_id which should be the last one inserted
+	//
+	if (! empty($res)) {
+
+		$timeconditions_arr = timeconditions_list();
+
+		foreach ($timeconditions_arr as $item) {
+			$timeconditions_ids[] = $item['timeconditions_id'];
+		}
+		rsort($timeconditions_ids);
+		$viewing_itemid = $timeconditions_ids[0];
+
+		$sql = "UPDATE `daynight` SET `dest` = '$viewing_itemid' WHERE `dest` = 'add'";
+		sql($sql);
+	}
+}
+
+function daynight_del_timecondition($viewing_itemid) {
+	global $db;
+
+	$sql = "DELETE FROM `daynight` WHERE `dmode` IN ('timeday', 'timenight') AND dest = '$viewing_itemid'";
+	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
+}
+
+// -----------------------------------------------------------------
+// Hooks to associate a daynight featurecode with a timecondition
+//
+function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
+	switch ($target_menuid) {
+		// only provide display for timeconditions
+		case 'timeconditions':
+			$html = '';
+			$html = '<tr><td colspan="2"><h5>';
+			$html .= _("Day/Night Mode Association");
+			$html .= '<hr></h5></td></tr>';
+			$html .= '<tr>';
+			$html .= '<td><a href="#" class="info">';
+			$html .= _("Associate with").'<span>'._("If a selection is made, this timecondtion will be associated with that featurecode and will allow this timecondtion to be direct overriden by that daynight mode featurecode").'.</span></a>:</td>';
+			$html .= '<td><select name="daynight_ref">';
+			$daynightcodes = daynight_list();
+			$current = daynight_get_timecondition($viewing_itemid);
+			$html .= "\n";
+			$html .= sprintf('<option value="" %s>%s</option>',$current['ext'] == '' ?'selected':'', _("No Association"));
+			$html .= "\n";
+			foreach ($daynightcodes as $dn_item) {
+				$html .= sprintf('<option value="%d,timeday" %s>%s</option>', $dn_item['ext'], ($current['ext'].','.$current['dmode'] == $dn_item['ext'].',timeday'?'selected':''), $dn_item['dest']._(" - Force Day"));
+				$html .= "\n";
+				$html .= sprintf('<option value="%d,timenight" %s>%s</option>', $dn_item['ext'], ($current['ext'].','.$current['dmode'] == $dn_item['ext'].',timenight'?'selected':''), $dn_item['dest']._(" - Force Night"));
+				$html .= "\n";
+			}
+			$html .= '</select></td></tr>';
+
+			return $html;
+			break;
+		default:
+			return false;
+			break;
+	}
+}
+
+function daynight_hookProcess_timeconditions($viewing_itemid, $request) {
+
+	$daynight_ref = isset($request['daynight_ref']) ? $request['daynight_ref'] : '';
+
+	// Do the un-natural act of checking to see if the last call was an add
+	// in which case we left a place holder for the timecondtions_id and we
+	// need to go up-date it
+	//
+	// This is necessary because this process hook is called prior to the
+	// creation of the timecondition from the timecondtions module
+	//
+	if(!isset($request['action']) ) {
+		daynight_checkadd_timecondition($daynight_ref);
+	}
+	switch ($request['action'])	{
+		case 'add':
+			// we don't have an viewing_itemid at this point
+			daynight_add_timecondition($daynight_ref);
+			break;
+		case 'delete':
+			daynight_del_timecondition($viewing_itemid);
+			break;
+		case 'edit':
+			daynight_edit_timecondition($viewing_itemid, $daynight_ref);
+			break;
+	}
+}
+
+// Splice into the timecondtion dialplan and put an override if associated with a daynight mode code
+//
+function daynight_hookGet_config($engine) {
+	global $ext;  // is this the best way to pass this?
+	switch($engine) {
+		case "asterisk":
+			if (! function_exists('timeconditions_get')) {
+				return true;
+			}
+			$overrides = daynight_list_timecondition();
+			$context = "timeconditions";
+
+			if(is_array($overrides)) {
+				foreach($overrides as $item) {
+					$daynight_id     = $item['ext'];
+					$mode            = ($item['dmode'] == 'timeday') ? 'DAY' : 'NIGHT';
+					$timecondition_id = $item['dest'];
+					$timeconditions_arr = timeconditions_get($timecondition_id);
+					if (is_array($timeconditions_arr)) {
+						$dest = ($mode == 'DAY') ? $timeconditions_arr['truegoto'] : $timeconditions_arr['falsegoto'];
+						$ext->splice($context, $timecondition_id, 0, new ext_gotoif('$["${DB(DAYNIGHT/C'.$daynight_id.')}" = "'.$mode.'"]',$dest));
+					}
+				}
+			}
+		break;
+	}
+}
+
 ?>

@@ -92,8 +92,20 @@ function daynight_show_edit($post, $add="") {
 						<a href="#" class="info"><?php echo $usage_list['text']?>:<span><?php echo $usage_list['tooltip']?></span></a>
 <?php
 					}
+					$timeconditions_refs = daynight_list_timecondition($itemid);
+					if (!empty($timeconditions_refs)) {
+						echo "<br /><br />";
+						foreach($timeconditions_refs as $ref) {
+							$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Nigh Mode") : _("Forces to Day Mode");
+							$timecondition_id = $ref['dest'];
+							$tcURL = $_SERVER['PHP_SELF'].'?'."display=timeconditions&itemid=$timecondition_id";
 ?>
-<?php		} ?>
+							<a href="<?php echo $tcURL ?>"><?php echo sprintf(_("Linked to Time Condtion %s - "),$timecondition_id)?> <?php echo $dmode; ?></a><br />
+<?php
+						}
+					}
+				} 
+?>
 
 	<form name="prompt" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return prompt_onsubmit();">
 	<input type="hidden" name="action" value="edited" />

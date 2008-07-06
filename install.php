@@ -1,11 +1,28 @@
 <?php
 
+require_once dirname(__FILE__)."/functions.inc.php";
+
+global $db;
+global $amp_conf;
+
+if (! function_exists("out")) {
+	function out($text) {
+		echo $text."<br />";
+	}
+}
+
+if (! function_exists("outn")) {
+	function outn($text) {
+		echo $text;
+	}
+}
+
 $sql = "CREATE TABLE IF NOT EXISTS daynight 
         (
 				ext varchar(10) NOT NULL default '',
 				dmode varchar(40) NOT NULL default '',
 			  dest varchar(255) NOT NULL default '',
-				PRIMARY KEY (ext, dmode)
+				PRIMARY KEY (ext, dmode, dest)
 			  );
 			 ";
 $check = $db->query($sql);
@@ -49,6 +66,15 @@ if ($delete_old) {
 		$fcc->update();
 		unset($fcc);	
 	}
+}
+
+outn(_("changing primary keys to all fields.."));
+$sql = 'ALTER TABLE `daynight` DROP PRIMARY KEY , ADD PRIMARY KEY ( `ext` , `dmode` , `dest` )';
+$results = $db->query($sql);
+if(DB::IsError($results)) {
+	out(_("ERROR: failed to alter primary keys ").$results->getMessage());
+} else {
+	out(_("OK"));
 }
 
 ?>
