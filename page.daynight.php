@@ -124,7 +124,7 @@ function daynight_show_edit($post, $add="") {
 <?php
 			if ($add == "add" && $itemid =="") {
 ?>
-			<select name="itemid">
+			<select name="itemid" tabindex="<?php echo ++$tabindex;?>">
 			<?php
 				$ids = daynight_get_avail();
 				foreach ($ids as $id) {
@@ -143,7 +143,7 @@ function daynight_show_edit($post, $add="") {
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Description")?>:<span><?php echo _("Description for this Day/Night Control")?></span></a></td>
-		<td><input size="40" type="text" name="fc_description" value="<?php  echo $fc_description ?>">
+		<td><input size="40" type="text" name="fc_description" value="<?php  echo $fc_description ?>" tabindex="<?php echo ++$tabindex;?>">
 		</td>
 	</tr>
 	<tr>
@@ -152,7 +152,7 @@ function daynight_show_edit($post, $add="") {
 		</span></a>
 		</td>
 		<td>
-			<select name="state">
+			<select name="state" tabindex="<?php echo ++$tabindex;?>">
 				<option value="DAY" <?php echo ($state == 'DAY' ? 'SELECTED':'') ?> >Day</option> 
 				<option value="NIGHT" <?php echo ($state == 'NIGHT' ? 'SELECTED':'') ?> >Night</option> 
 			</select>
@@ -160,7 +160,7 @@ function daynight_show_edit($post, $add="") {
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Optional Password")?>:<span><?php echo _('You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code will be un-protected')?></span></a></td>
-		<td><input size="12" type="text" name="password" value="<?php  echo $password ?>">
+		<td><input size="12" type="text" name="password" value="<?php  echo $password ?>" tabindex="<?php echo ++$tabindex;?>">
 		</td>
 	</tr>
 	<tr>
