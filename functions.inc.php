@@ -308,6 +308,10 @@ function daynight_del($id){
 	$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
 	$fcc->delete();
 	unset($fcc);	
+
+	$dn = new dayNightObject($id);
+	$dn->del();
+	unset($dn);	
 }
 
 function daynight_get_obj($id=0) {
