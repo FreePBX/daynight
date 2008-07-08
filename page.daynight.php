@@ -79,34 +79,35 @@ function daynight_show_edit($post, $add="") {
 ?>
 	<div class="content">
 	<h2><?php echo _("Day / Night Mode Control"); ?></h2>
-
-<?php
-	$delURL = $_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'&action=delete';
+<?php		
+	if ($itemid != ""){ 
+		$delURL = $_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'&action=delete';
+		$tlabel = sprintf(_("Delete Day/Night Feature Code"),$code);
+		$label = '<span><img width="16" height="16" border="0" title="'.$tlabel.'" alt="" src="images/core_delete.png"/>&nbsp;'.$tlabel.'</span>';
 ?>
-<?php		if ($itemid != ""){ ?>
-	<a href="<?php echo $delURL ?>"><?php echo _("Delete Day/Night Feature Code:")?> <?php echo $code; ?></a><br />
+		<a href="<?php echo $delURL ?>"><?php echo $label; ?></a><br />
 <?php
-					$usage_list = framework_display_destination_usage(daynight_getdest($itemid));
-					if (!empty($usage_list)) {
+		$usage_list = framework_display_destination_usage(daynight_getdest($itemid));
+		if (!empty($usage_list)) {
 ?>
-						<a href="#" class="info"><?php echo $usage_list['text']?>:<span><?php echo $usage_list['tooltip']?></span></a>
+			<a href="#" class="info"><?php echo $usage_list['text'].'<br />'?><span><?php echo $usage_list['tooltip']?></span></a>
 <?php
-					}
-					$timeconditions_refs = daynight_list_timecondition($itemid);
-					if (!empty($timeconditions_refs)) {
-						echo "<br /><br />";
-						foreach($timeconditions_refs as $ref) {
-							$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Nigh Mode") : _("Forces to Day Mode");
-							$timecondition_id = $ref['dest'];
-							$tcURL = $_SERVER['PHP_SELF'].'?'."display=timeconditions&itemid=$timecondition_id";
+		}
+		$timeconditions_refs = daynight_list_timecondition($itemid);
+		if (!empty($timeconditions_refs)) {
+			echo "<br />";
+			foreach($timeconditions_refs as $ref) {
+				$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Nigh Mode") : _("Forces to Day Mode");
+				$timecondition_id = $ref['dest'];
+				$tcURL = $_SERVER['PHP_SELF'].'?'."display=timeconditions&itemid=$timecondition_id";
+				$label = '<span><img width="16" height="16" border="0" title="'.sprintf(_("Linked to Time Condtion %s - %s"),$timecondition_id,$dmode).'" alt="" src="images/clock_link.png"/>&nbsp;'.sprintf(_("Linked to Time Condtion %s - %s"),$timecondition_id,$dmode).'</span>';
 ?>
-							<a href="<?php echo $tcURL ?>"><?php echo sprintf(_("Linked to Time Condtion %s - "),$timecondition_id)?> <?php echo $dmode; ?></a><br />
+				<a href="<?php echo $tcURL ?>"><?php echo $label; ?></a><br />
 <?php
-						}
-					}
-				} 
+			}
+		}
+	} 
 ?>
-
 	<form name="prompt" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return prompt_onsubmit();">
 	<input type="hidden" name="action" value="edited" />
 	<input type="hidden" name="display" value="daynight" />
