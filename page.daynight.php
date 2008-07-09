@@ -82,7 +82,7 @@ function daynight_show_edit($post, $add="") {
 <?php		
 	if ($itemid != ""){ 
 		$delURL = $_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'&action=delete';
-		$tlabel = sprintf(_("Delete Day/Night Feature Code"),$code);
+		$tlabel = sprintf(_("Delete Day/Night Feature Code %s"),$code);
 		$label = '<span><img width="16" height="16" border="0" title="'.$tlabel.'" alt="" src="images/core_delete.png"/>&nbsp;'.$tlabel.'</span>';
 ?>
 		<a href="<?php echo $delURL ?>"><?php echo $label; ?></a><br />
