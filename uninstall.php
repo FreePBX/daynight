@@ -14,6 +14,6 @@ foreach ($list as $item) {
 	unset($fcc);	
 }
 
-sql('DROP TABLE daynight');
+sql('DROP TABLE IF EXISTS daynight');
 
 ?>
