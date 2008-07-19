@@ -469,6 +469,7 @@ function daynight_del_timecondition($viewing_itemid) {
 // Hooks to associate a daynight featurecode with a timecondition
 //
 function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
+	global $tabindex;
 	switch ($target_menuid) {
 		// only provide display for timeconditions
 		case 'timeconditions':
@@ -479,7 +480,7 @@ function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
 			$html .= '<tr>';
 			$html .= '<td><a href="#" class="info">';
 			$html .= _("Associate with").'<span>'._("If a selection is made, this timecondtion will be associated with that featurecode and will allow this timecondtion to be direct overriden by that daynight mode featurecode").'.</span></a>:</td>';
-			$html .= '<td><select name="daynight_ref">';
+			$html .= '<td><select tabindex="'.++$tabindex.'" name="daynight_ref">';
 			$daynightcodes = daynight_list();
 			$current = daynight_get_timecondition($viewing_itemid);
 			$html .= "\n";
