@@ -164,6 +164,7 @@ function daynight_get_config($engine) {
 
 function daynight_toggle() {
 	global $ext;
+	global $amp_conf;
 
 	$list = daynight_list();
 	$passwords = daynight_passwords();
