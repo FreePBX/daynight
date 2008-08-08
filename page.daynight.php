@@ -97,7 +97,7 @@ function daynight_show_edit($post, $add="") {
 		if (!empty($timeconditions_refs)) {
 			echo "<br />";
 			foreach($timeconditions_refs as $ref) {
-				$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Nigh Mode") : _("Forces to Day Mode");
+				$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Day  Mode") : _("Forces to Night Mode");
 				$timecondition_id = $ref['dest'];
 				$tcURL = $_SERVER['PHP_SELF'].'?'."display=timeconditions&itemid=$timecondition_id";
 				$label = '<span><img width="16" height="16" border="0" title="'.sprintf(_("Linked to Time Condtion %s - %s"),$timecondition_id,$dmode).'" alt="" src="images/clock_link.png"/>&nbsp;'.sprintf(_("Linked to Time Condtion %s - %s"),$timecondition_id,$dmode).'</span>';
