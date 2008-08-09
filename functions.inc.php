@@ -428,7 +428,7 @@ function daynight_edit_timecondition($viewing_itemid, $daynight_ref) {
 function daynight_add_timecondition($daynight_ref) { 
 	global $db;
 
-	// We don't know what the new timecondtion id is yet so we will put a place holder and check it when the page reloads
+	// We don't know what the new timecondition id is yet so we will put a place holder and check it when the page reloads
 	//
 	daynight_edit_timecondition('add', $daynight_ref);
 }
@@ -442,7 +442,7 @@ function daynight_checkadd_timecondition() {
 		return null;
 	}
 
-	// If we find anything, then we get the highest timecondtions_id which should be the last one inserted
+	// If we find anything, then we get the highest timeconditions_id which should be the last one inserted
 	//
 	if (! empty($res)) {
 
@@ -480,7 +480,7 @@ function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
 			$html .= '<hr></h5></td></tr>';
 			$html .= '<tr>';
 			$html .= '<td><a href="#" class="info">';
-			$html .= _("Associate with").'<span>'._("If a selection is made, this timecondtion will be associated with that featurecode and will allow this timecondtion to be direct overriden by that daynight mode featurecode").'.</span></a>:</td>';
+			$html .= _("Associate with").'<span>'._("If a selection is made, this timecondition will be associated with that featurecode and will allow this timecondition to be direct overriden by that daynight mode featurecode").'.</span></a>:</td>';
 			$html .= '<td><select tabindex="'.++$tabindex.'" name="daynight_ref">';
 			$daynightcodes = daynight_list();
 			$current = daynight_get_timecondition($viewing_itemid);
@@ -508,11 +508,11 @@ function daynight_hookProcess_timeconditions($viewing_itemid, $request) {
 	$daynight_ref = isset($request['daynight_ref']) ? $request['daynight_ref'] : '';
 
 	// Do the un-natural act of checking to see if the last call was an add
-	// in which case we left a place holder for the timecondtions_id and we
+	// in which case we left a place holder for the timeconditions_id and we
 	// need to go up-date it
 	//
 	// This is necessary because this process hook is called prior to the
-	// creation of the timecondition from the timecondtions module
+	// creation of the timecondition from the timeconditions module
 	//
 	if(!isset($request['action']) ) {
 		daynight_checkadd_timecondition($daynight_ref);
@@ -531,7 +531,7 @@ function daynight_hookProcess_timeconditions($viewing_itemid, $request) {
 	}
 }
 
-// Splice into the timecondtion dialplan and put an override if associated with a daynight mode code
+// Splice into the timecondition dialplan and put an override if associated with a daynight mode code
 //
 function daynight_hookGet_config($engine) {
 	global $ext;  // is this the best way to pass this?

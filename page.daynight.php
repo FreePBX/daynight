@@ -100,7 +100,7 @@ function daynight_show_edit($post, $add="") {
 				$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Day  Mode") : _("Forces to Night Mode");
 				$timecondition_id = $ref['dest'];
 				$tcURL = $_SERVER['PHP_SELF'].'?'."display=timeconditions&itemid=$timecondition_id";
-				$label = '<span><img width="16" height="16" border="0" title="'.sprintf(_("Linked to Time Condtion %s - %s"),$timecondition_id,$dmode).'" alt="" src="images/clock_link.png"/>&nbsp;'.sprintf(_("Linked to Time Condtion %s - %s"),$timecondition_id,$dmode).'</span>';
+				$label = '<span><img width="16" height="16" border="0" title="'.sprintf(_("Linked to Time Condition %s - %s"),$timecondition_id,$dmode).'" alt="" src="images/clock_link.png"/>&nbsp;'.sprintf(_("Linked to Time Condition %s - %s"),$timecondition_id,$dmode).'</span>';
 ?>
 				<a href="<?php echo $tcURL ?>"><?php echo $label; ?></a><br />
 <?php
@@ -161,7 +161,7 @@ function daynight_show_edit($post, $add="") {
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Current Mode:")?>
-		<span><?php echo _("This will change the current state for this Day/Night Mode Control, or set the intial state when creating a new one.")?>
+		<span><?php echo _("This will change the current state for this Day/Night Mode Control, or set the initial state when creating a new one.")?>
 		</span></a>
 		</td>
 		<td>
