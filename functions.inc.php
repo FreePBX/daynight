@@ -263,6 +263,7 @@ function daynight_passwords() {
 }
 
 function daynight_edit($post, $id=0) {
+	global $db;
 
 	// TODO: Probably have separate add and edit (and change in page.daynight.php also)
 	//       Need to set the day/night mode in the system if new
@@ -281,7 +282,7 @@ function daynight_edit($post, $id=0) {
 		sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'password', '$password')");
 	}
 	$fc_description = isset($post['fc_description']) ? trim($post['fc_description']) : "";
-	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'fc_description', '".addslashes($fc_description)."')");
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'fc_description', '".$db->escapeSimple($fc_description)."')");
 
 	$dn = new dayNightObject($id);
 	$dn->del();
