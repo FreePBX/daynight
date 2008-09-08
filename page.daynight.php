@@ -172,7 +172,7 @@ function daynight_show_edit($post, $add="") {
 		</td>
 	</tr>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Optional Password")?>:<span><?php echo _('You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code will be un-protected')?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Optional Password")?>:<span><?php echo _('You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code and it will be un-protected')?></span></a></td>
 		<td><input size="12" type="text" name="password" value="<?php  echo $password ?>" tabindex="<?php echo ++$tabindex;?>">
 		</td>
 	</tr>
