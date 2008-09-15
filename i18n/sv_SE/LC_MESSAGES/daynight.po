@@ -134,3 +134,6 @@ msgstr "NATT"
 msgid "Please enter a valid numeric password, only numbers are allowed"
 msgstr "Skriv in ett giltigt lösenord, endast siffror"
 
+#: module.xml
+msgid "Day/Night Control"
+msgstr "Dag/Natt-kontroll"
