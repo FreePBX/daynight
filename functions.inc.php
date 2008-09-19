@@ -517,18 +517,19 @@ function daynight_hookProcess_timeconditions($viewing_itemid, $request) {
 	//
 	if(!isset($request['action']) ) {
 		daynight_checkadd_timecondition($daynight_ref);
-	}
-	switch ($request['action'])	{
-		case 'add':
-			// we don't have an viewing_itemid at this point
-			daynight_add_timecondition($daynight_ref);
-			break;
-		case 'delete':
-			daynight_del_timecondition($viewing_itemid);
-			break;
-		case 'edit':
-			daynight_edit_timecondition($viewing_itemid, $daynight_ref);
-			break;
+	} else {
+		switch ($request['action'])	{
+			case 'add':
+				// we don't have an viewing_itemid at this point
+				daynight_add_timecondition($daynight_ref);
+				break;
+			case 'delete':
+				daynight_del_timecondition($viewing_itemid);
+				break;
+			case 'edit':
+				daynight_edit_timecondition($viewing_itemid, $daynight_ref);
+				break;
+		}
 	}
 }
 
