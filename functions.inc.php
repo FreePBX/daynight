@@ -165,6 +165,10 @@ function daynight_get_config($engine) {
 function daynight_toggle() {
 	global $ext;
 	global $amp_conf;
+	global $version;
+	global $DEVSTATE;
+
+	$DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
 
 	$list = daynight_list();
 	$passwords = daynight_passwords();
@@ -201,14 +205,14 @@ function daynight_toggle() {
 
 		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));	
 		if ($amp_conf['USEDEVSTATE']) {
-			$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DAYNIGHT${INDEX})', 'NOT_INUSE'));
+			$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DAYNIGHT${INDEX})', 'NOT_INUSE'));
 		}
 		$ext->add($id, $c, '', new ext_playback('beep&silence/1&day&reception&digits/${INDEX}&enabled'));
 		$ext->add($id, $c, '', new ext_hangup(''));
 
 		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));	
 		if ($amp_conf['USEDEVSTATE']) {
-			$ext->add($id, $c, '', new ext_setvar('DEVSTATE(Custom:DAYNIGHT${INDEX})', 'INUSE'));
+			$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DAYNIGHT${INDEX})', 'INUSE'));
 		}
 		$ext->add($id, $c, '', new ext_playback('beep&silence/1&beep&silence/1&day&reception&digits/${INDEX}&disabled'));
 		$ext->add($id, $c, '', new ext_hangup(''));
