@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 11:07+0200\n"
+"POT-Creation-Date: 2008-10-05 22:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,42 +16,47 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.inc.php:480
+#: functions.inc.php:376
+#, php-format
+msgid "Daynight: %s (%s)"
+msgstr ""
+
+#: functions.inc.php:484
 msgid "Day/Night Mode Association"
 msgstr ""
 
-#: functions.inc.php:484
+#: functions.inc.php:488
 msgid "Associate with"
 msgstr ""
 
-#: functions.inc.php:484
+#: functions.inc.php:488
 msgid ""
 "If a selection is made, this timecondition will be associated with that "
 "featurecode and will allow this timecondition to be direct overriden by that "
 "daynight mode featurecode"
 msgstr ""
 
-#: functions.inc.php:489
+#: functions.inc.php:493
 msgid "No Association"
 msgstr ""
 
-#: functions.inc.php:492
+#: functions.inc.php:496
 msgid " - Force Day"
 msgstr ""
 
-#: functions.inc.php:494
+#: functions.inc.php:498
 msgid " - Force Night"
 msgstr ""
 
-#: install.php:71
+#: install.php:74
 msgid "changing primary keys to all fields.."
 msgstr ""
 
-#: install.php:75
+#: install.php:78
 msgid "ERROR: failed to alter primary keys "
 msgstr ""
 
-#: install.php:77
+#: install.php:80
 msgid "OK"
 msgstr ""
 
@@ -118,6 +123,14 @@ msgid ""
 "the initial state when creating a new one."
 msgstr ""
 
+#: page.daynight.php:169
+msgid "Day"
+msgstr ""
+
+#: page.daynight.php:170
+msgid "Night"
+msgstr ""
+
 #: page.daynight.php:175
 msgid "Optional Password"
 msgstr ""
@@ -141,6 +154,15 @@ msgstr ""
 msgid "Please enter a valid numeric password, only numbers are allowed"
 msgstr ""
 
+#: page.daynight.php:235
+#, php-format
+msgid "Destination to use when set to %s mode"
+msgstr ""
+
 #: module.xml
-msgid Day/Night Control"
+msgid "Day Night Mode"
+msgstr ""
+
+#: module.xml
+msgid "Day/Night Control"
 msgstr ""

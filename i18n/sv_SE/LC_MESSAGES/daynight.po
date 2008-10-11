@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX daynight\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-08 19:19+0200\n"
-"PO-Revision-Date: 2008-09-08 20:10+0100\n"
+"POT-Creation-Date: 2008-10-05 22:47+0200\n"
+"PO-Revision-Date: 2008-10-11 16:37+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,39 +17,44 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: functions.inc.php:480
+#: functions.inc.php:376
+#, php-format
+msgid "Daynight: %s (%s)"
+msgstr "Dag/Natt: %s (%s)"
+
+#: functions.inc.php:484
 msgid "Day/Night Mode Association"
 msgstr "Tilldela Dag/Natt-läge"
 
-#: functions.inc.php:484
+#: functions.inc.php:488
 msgid "Associate with"
 msgstr "Tilldela till"
 
-#: functions.inc.php:484
+#: functions.inc.php:488
 msgid "If a selection is made, this timecondition will be associated with that featurecode and will allow this timecondition to be direct overriden by that daynight mode featurecode"
 msgstr "Om ett val har gjorts kommer denna tidskondition att tilldelas till en funktionskod som gör det möjligt att "
 
-#: functions.inc.php:489
+#: functions.inc.php:493
 msgid "No Association"
 msgstr "Ingen tilldelning"
 
-#: functions.inc.php:492
+#: functions.inc.php:496
 msgid " - Force Day"
 msgstr "- Tvinga Dagläge"
 
-#: functions.inc.php:494
+#: functions.inc.php:498
 msgid " - Force Night"
 msgstr "- Tvinga Nattläge"
 
-#: install.php:71
+#: install.php:74
 msgid "changing primary keys to all fields.."
 msgstr "ändra primärnyckel för alla fält"
 
-#: install.php:75
+#: install.php:78
 msgid "ERROR: failed to alter primary keys "
 msgstr "FEL: kunde inte ändra primärnyckel"
 
-#: install.php:77
+#: install.php:80
 msgid "OK"
 msgstr "OK"
 
@@ -114,12 +119,20 @@ msgstr "Aktuellt läge:"
 msgid "This will change the current state for this Day/Night Mode Control, or set the initial state when creating a new one."
 msgstr "Detta kommer att ändra aktuellt läge för denna Dag/Natt-kontroll, eller sätta utgångsläge när nya skapas."
 
+#: page.daynight.php:169
+msgid "Day"
+msgstr "Dag"
+
+#: page.daynight.php:170
+msgid "Night"
+msgstr "Natt"
+
 #: page.daynight.php:175
 msgid "Optional Password"
 msgstr "Valfritt lösenord"
 
 #: page.daynight.php:175
-msgid "You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code will be un-protected"
+msgid "You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code and it will be un-protected"
 msgstr "Du kan valfritt inkludera ett lösenord som måste anges innan omkoppling av Dag/Natt-läge kan ske. Om detta fält lämnas tomt kan vem som helst ställa om Dag/Natt-läget."
 
 #: page.daynight.php:189
@@ -134,6 +147,16 @@ msgstr "NATT"
 msgid "Please enter a valid numeric password, only numbers are allowed"
 msgstr "Skriv in ett giltigt lösenord, endast siffror"
 
+#: page.daynight.php:235
+#, php-format
+msgid "Destination to use when set to %s mode"
+msgstr "Destination att gå till när det är %s"
+
+#: module.xml
+msgid "Day Night Mode"
+msgstr "Dag/Natt-läge"
+
 #: module.xml
 msgid "Day/Night Control"
 msgstr "Dag/Natt-kontroll"
+

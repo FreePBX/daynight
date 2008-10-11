@@ -166,8 +166,8 @@ function daynight_show_edit($post, $add="") {
 		</td>
 		<td>
 			<select name="state" tabindex="<?php echo ++$tabindex;?>">
-				<option value="DAY" <?php echo ($state == 'DAY' ? 'SELECTED':'') ?> >Day</option> 
-				<option value="NIGHT" <?php echo ($state == 'NIGHT' ? 'SELECTED':'') ?> >Night</option> 
+				<option value="DAY" <?php echo ($state == 'DAY' ? 'SELECTED':'') ?> ><?php echo _("Day");?></option> 
+				<option value="NIGHT" <?php echo ($state == 'NIGHT' ? 'SELECTED':'') ?> ><?php echo _("Night");?></option> 
 			</select>
 		</td>
 	</tr>
@@ -232,7 +232,7 @@ function daynight_show_edit($post, $add="") {
 function drawdestinations($count, $mode, $dest) { ?>
 	<tr> 
 		<td style="text-align:right;">
-		<a href="#" class="info"><strong><?php echo _("$mode")?></strong><span><?php echo _("Destination to use when set to $mode mode")?></span></a>
+		<a href="#" class="info"><strong><?php echo $mode?></strong><span><?php echo sprintf(_("Destination to use when set to %s mode"),$mode);?></span></a>
 		</td>
 		<td> 
 			<table> <?php echo drawselects($dest,$count); ?> 

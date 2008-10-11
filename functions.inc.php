@@ -373,7 +373,7 @@ function daynight_check_destinations($dest=true) {
 		$thisid   = $result['ext'];
 		$destlist[] = array(
 			'dest' => $thisdest,
-			'description' => 'Daynight: '.$result['description'].' ('.$result['dmode'].')',
+			'description' => sprintf(_("Daynight: %s (%s)"),$result['description'],$result['dmode']),
 			'edit_url' => 'config.php?display=daynight&itemid='.urlencode($thisid).'&action=edit',
 		);
 	}
