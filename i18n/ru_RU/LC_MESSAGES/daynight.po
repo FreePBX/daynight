@@ -63,7 +63,7 @@ msgstr "Текущий режим:"
 #: page.daynight.php:144
 msgid ""
 "This will change the current state for this Day/Night Mode Control, or set "
-"the intial state when creating a new one."
+"the initial state when creating a new one."
 msgstr ""
 "Здесь можно изменить текущий Дневной/Ночной режим или установить начальное состояние "
 "если создан новый."  
@@ -71,6 +71,15 @@ msgstr ""
 #: page.daynight.php:155
 msgid "Optional Password"
 msgstr "Пароль (опционально)"
+
+#: page.daynight.php:175
+msgid ""
+"You can optionally include a password to authenticate before toggling the "
+"day/night mode. If left blank anyone can use the feature code and it will be "
+"un-protected"
+msgstr ""
+"Опционально можно добавить пароль для аутентификации прежде чем переключать режим день/ночь. "
+"Если оставить пустым - любой, кто узнает сервисный код переключения может воспользоваться, и это никак не защищено."
 
 #: page.daynight.php:169
 msgid "DAY"
@@ -138,9 +147,6 @@ msgstr "Особые приложения<span><br>ТОЛЬКО ОПЫТНЫМ ПОЛЬЗОВАТЕЛЯМ<br>Используйте о
 
 msgid "Save"
 msgstr "Сохранить"
-
-msgid "You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code will be un-protected"
-msgstr "Опционально можно использовать переключение в Днеаной/Ночной режим через пароль. Если оставить поле пустым, то использование этой опции не защищено"
 
 msgid "Day"
 msgstr "День"
