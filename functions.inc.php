@@ -6,10 +6,21 @@
 class dayNightObject {
 
 	var $id;
+	var $DEVSTATE;
 
 	// contstructor
 	function dayNightObject($item) {
+		global $amp_conf;
+
 		$this->id = $item;
+
+		if ($amp_conf['USEDEVSTATE']) {
+			$engine_info = engine_getinfo();
+			$version = $engine_info['version'];
+			$this->DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
+		} else {
+			$this->DEVSTATE = false;
+		}
 	}
 		
 	function getState() {
@@ -40,6 +51,10 @@ class dayNightObject {
 				case "NIGHT":
 					if ($astman != null) {
 						$astman->database_put("DAYNIGHT","C".$this->id,$state);
+						if ($this->DEVSTATE) {
+							$value_opt = ($state  == 'DAY') ? 'NOT_INUSE' : 'INUSE';
+							$astman->send_request('Command',array('Command'=>"core set global ".$this->DEVSTATE."(Custom:DAYNIGHT".$this->id.") $value_opt"));
+						}
 					} else {
 						die_freepbx("No open connection to asterisk manager, can not access object.");
 					}
@@ -64,6 +79,10 @@ class dayNightObject {
 				case "NIGHT":
 					if ($astman != null) {
 						$astman->database_put("DAYNIGHT","C".$this->id,$state);
+						if ($this->DEVSTATE) {
+							$value_opt = ($state  == 'DAY') ? 'NOT_INUSE' : 'INUSE';
+							$astman->send_request('Command',array('Command'=>"core set global ".$this->DEVSTATE."(Custom:DAYNIGHT".$this->id.") $value_opt"));
+						}
 					} else {
 						die_freepbx("No open connection to asterisk manager, can not access object.");
 					}
