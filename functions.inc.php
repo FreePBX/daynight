@@ -166,7 +166,6 @@ function daynight_get_config($engine) {
 		case "asterisk":
 
 			$id = "app-daynight"; // The context to be included
-			$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
 
 			$list = daynight_list();
 
