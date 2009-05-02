@@ -225,7 +225,7 @@ function daynight_toggle() {
 		if ($amp_conf['USEDEVSTATE']) {
 			$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DAYNIGHT${INDEX})', 'NOT_INUSE'));
 		}
-		if (!$amp_conf['FCBEEPONLY']) {
+		if ($amp_conf['FCBEEPONLY']) {
 			$ext->add($id, $c, 'hook_day', new ext_playback('beep')); // $cmd,n,Playback(...)
 		} else {
 			$ext->add($id, $c, 'hook_day', new ext_playback('beep&silence/1&day&reception&digits/${INDEX}&enabled'));
@@ -236,7 +236,7 @@ function daynight_toggle() {
 		if ($amp_conf['USEDEVSTATE']) {
 			$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DAYNIGHT${INDEX})', 'INUSE'));
 		}
-		if (!$amp_conf['FCBEEPONLY']) {
+		if ($amp_conf['FCBEEPONLY']) {
 			$ext->add($id, $c, 'hook_night', new ext_playback('beep')); // $cmd,n,Playback(...)
 		} else {
 			$ext->add($id, $c, 'hook_night', new ext_playback('beep&silence/1&beep&silence/1&day&reception&digits/${INDEX}&disabled'));
