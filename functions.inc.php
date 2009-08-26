@@ -191,6 +191,9 @@ function daynight_toggle() {
 	$list = daynight_list();
 	$passwords = daynight_passwords();
 	$got_code = false;
+
+	$day_recording = daynight_recording('day');
+	$night_recording = daynight_recording('night');
 	
 	$id = "app-daynight-toggle"; // The context to be included
 	foreach ($list as $item) {
@@ -211,6 +214,14 @@ function daynight_toggle() {
 			$ext->add($id, $c, '', new ext_authenticate($passwords[$index]));
 		}
 		$ext->add($id, $c, '', new ext_setvar('INDEX', $index));	
+		$day_file = "beep&silence/1&day&reception&digits/${index}&activated";
+		$night_file = "beep&silence/1&day&reception&digits/${index}&de-activated";
+		if (function_exists('recordings_get_file')) {
+		  if ($day_recording[$index] != 0 ) { $day_file = recordings_get_file ($day_recording[$index]); }
+		  if ($night_recording[$index] != 0 ) { $night_file = recordings_get_file ($night_recording[$index]); }
+		  }
+		$ext->add($id, $c, '', new ext_setvar('DAYREC', $day_file));	
+		$ext->add($id, $c, '', new ext_setvar('NIGHTREC', $night_file));	
 		$ext->add($id, $c, '', new ext_goto($id.',s,1'));
 	}
 
@@ -228,7 +239,7 @@ function daynight_toggle() {
 		if ($amp_conf['FCBEEPONLY']) {
 			$ext->add($id, $c, 'hook_day', new ext_playback('beep')); // $cmd,n,Playback(...)
 		} else {
-			$ext->add($id, $c, 'hook_day', new ext_playback('beep&silence/1&day&reception&digits/${INDEX}&enabled'));
+      $ext->add($id, $c, 'hook_day', new ext_playback('${DAYREC}'));
 		}
 		$ext->add($id, $c, '', new ext_hangup(''));
 
@@ -239,7 +250,7 @@ function daynight_toggle() {
 		if ($amp_conf['FCBEEPONLY']) {
 			$ext->add($id, $c, 'hook_night', new ext_playback('beep')); // $cmd,n,Playback(...)
 		} else {
-			$ext->add($id, $c, 'hook_night', new ext_playback('beep&silence/1&beep&silence/1&day&reception&digits/${INDEX}&disabled'));
+   		$ext->add($id, $c, 'hook_night', new ext_playback('${NIGHTREC}'));
 		}
 		$ext->add($id, $c, '', new ext_hangup(''));
 	}
@@ -292,6 +303,22 @@ function daynight_passwords() {
 	}
 }
 
+//get the existing daynight recordings
+//$mode is either 'day' or 'night'
+function daynight_recording($mode) {
+	$results = sql("SELECT ext, dest FROM daynight WHERE dmode = '".$mode."_recording_id'","getAll",DB_FETCHMODE_ASSOC);
+	if(is_array($results)){
+		foreach($results as $result){
+			$list[$result['ext']] = $result['dest'];
+		}
+	}
+	if (isset($list)) {
+		return $list;
+	} else { 
+		return array();
+	}
+}
+
 function daynight_edit($post, $id=0) {
 	global $db;
 
@@ -299,7 +326,7 @@ function daynight_edit($post, $id=0) {
 	//       Need to set the day/night mode in the system if new
 
 	// Delete all the old dests
-	sql("DELETE FROM daynight WHERE dmode IN ('day', 'night', 'password', 'fc_description') AND ext = '$id'");
+	sql("DELETE FROM daynight WHERE dmode IN ('day', 'night', 'password', 'fc_description','day_recording_id','night_recording_id') AND ext = '$id'");
 
 	$day   = isset($post[$post['goto0'].'0'])?$post[$post['goto0'].'0']:'';
 	$night = isset($post[$post['goto1'].'1'])?$post[$post['goto1'].'1']:'';
@@ -313,6 +340,11 @@ function daynight_edit($post, $id=0) {
 	}
 	$fc_description = isset($post['fc_description']) ? trim($post['fc_description']) : "";
 	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'fc_description', '".$db->escapeSimple($fc_description)."')");
+
+	$day_recording_id = isset($post['day_recording_id']) ? trim($post['day_recording_id']) : "";
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'day_recording_id', '$day_recording_id')");
+	$night_recording_id = isset($post['night_recording_id']) ? trim($post['night_recording_id']) : "";
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'night_recording_id', '$night_recording_id')");
 
 	$dn = new dayNightObject($id);
 	$dn->del();
@@ -349,7 +381,7 @@ function daynight_del($id){
 function daynight_get_obj($id=0) {
 	global $db;
 
-	$sql = "SELECT dmode, dest FROM daynight WHERE dmode IN ('day', 'night', 'password', 'fc_description') AND ext = '$id' ORDER BY dmode";
+	$sql = "SELECT dmode, dest FROM daynight WHERE dmode IN ('day', 'night', 'password', 'fc_description','day_recording_id','night_recording_id') AND ext = '$id' ORDER BY dmode";
 	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 	if(DB::IsError($res)) {
 		return null;

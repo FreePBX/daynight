@@ -18,6 +18,8 @@ $tabindex = 0;
 $action = isset($_REQUEST['action'])?$_REQUEST['action']:'';
 $password = isset($_REQUEST['password'])?$_REQUEST['password']:'';
 $fc_description = isset($_REQUEST['fc_description'])?$_REQUEST['fc_description']:'';
+$day_recording_id = isset($_POST['day_recording_id']) ? $_POST['day_recording_id'] :  '';
+$night_recording_id = isset($_POST['night_recording_id']) ? $_POST['night_recording_id'] :  '';
 
 isset($_REQUEST['itemid'])?$itemid=mysql_real_escape_string($_REQUEST['itemid']):$itemid='';
 
@@ -77,6 +79,8 @@ function daynight_show_edit($post, $add="") {
 	$password = isset($dests['password'])?$dests['password']:'';
 	$fc_description = isset($dests['fc_description'])?$dests['fc_description']:'';
 	$state = isset($dests['state'])?$dests['state']:'DAY';
+	$day_recording_id = isset($dests['day_recording_id'])?$dests['day_recording_id']:'';
+	$night_recording_id = isset($dests['night_recording_id'])?$dests['night_recording_id']:'';
 ?>
 	<div class="content">
 	<h2><?php echo _("Day / Night Mode Control"); ?></h2>
@@ -172,6 +176,44 @@ function daynight_show_edit($post, $add="") {
 			</select>
 		</td>
 	</tr>
+
+<?php if(function_exists('recordings_list')) { //only include if recordings are enabled ?>
+	<tr>
+		<td><a href="#" class="info"><?php echo _("Recording for Day Mode")?><span><?php echo _("Message to be played.<br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
+		<td>
+			<select name="day_recording_id"  tabindex="<?php echo ++$tabindex;?>">
+			<?php
+				$tresults = recordings_list();
+				$default = (isset($day_recording_id) ? $day_recording_id : '');
+				echo '<option value="0">' ._("Default") ."</option>\n";
+				if (isset($tresults[0])) {
+					foreach ($tresults as $tresult) {
+						echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
+					}
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td><a href="#" class="info"><?php echo _("Recording for Night Mode")?><span><?php echo _("Message to be played.<br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
+		<td>
+			<select name="night_recording_id"  tabindex="<?php echo ++$tabindex;?>">
+			<?php
+				$default = (isset($night_recording_id) ? $night_recording_id : '');
+				echo '<option value="0">' ._("Default") ."</option>\n";
+				if (isset($tresults[0])) {
+					foreach ($tresults as $tresult) {
+						echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
+					}
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+
+<?php } ?>
+
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Optional Password")?>:<span><?php echo _('You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code and it will be un-protected')?></span></a></td>
 		<td><input size="12" type="text" name="password" value="<?php  echo $password ?>" tabindex="<?php echo ++$tabindex;?>">
