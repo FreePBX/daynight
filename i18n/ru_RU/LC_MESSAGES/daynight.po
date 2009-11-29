@@ -14,17 +14,17 @@
 #    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
 #
 # Russian freePBX ver. translation
-# Copyright (c) 2006-2008 PostMet Corporation
+# Copyright (c) 2006-2009 PostMet Corporation
 # This file is distributed under the same license as the freePBX package.
-# Alexander Kozyrev <ceo@postmet.com>, Sergey Nikolayev <sergey@postmet.com>, 2006-2008.
+# Alexander Kozyrev <ceo@postmet.com>, Sergey Nikolayev <sergey@postmet.com>, 2006-2009.
 #
 # Использовать iconv amp.new -f UTF-8 -t ISO-8859-5 -o amp.po
 # fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.3\n"
+"Project-Id-Version: 1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-26 07:00+0200\n"
+"POT-Creation-Date: 2009-11-28 07:00+0200\n"
 "PO-Revision-Date: 2008-01-16 16:38+0100\n"
 "Last-Translator: Alexander Kozyrev <ceo@postmet.com>\n"
 "Language-Team: Russian <faq@postmet.com>\n"
@@ -163,21 +163,23 @@ msgstr "Ночь"
 
 #: page.daynight.php:182
 msgid "Recording for Day Mode"
-msgstr ""
+msgstr "Запись для режима День"
 
 #: page.daynight.php:182 page.daynight.php:199
 msgid ""
 "Message to be played.<br>To add additional recordings use the \"System "
 "Recordings\" MENU to the left"
 msgstr ""
+"Звуковое сообщение, которое будет воспроизведено.<br>Чтобы добавить собственное "
+"сообщение изпользуйте модуль 'Записи в системе' из меню слева."
 
 #: page.daynight.php:188 page.daynight.php:204
 msgid "Default"
-msgstr ""
+msgstr "По умолчанию"
 
 #: page.daynight.php:199
 msgid "Recording for Night Mode"
-msgstr ""
+msgstr "Запись для режима Ночь"
 
 #: page.daynight.php:218
 msgid "Optional Password"
@@ -217,67 +219,3 @@ msgstr "Режим дня и ночи"
 #: module.xml
 msgid "Day/Night Control"
 msgstr "Дневной/Ночной контроль "
-
-#~ msgid "Delete Day/Night Feature Code:"
-#~ msgstr "Удалить Дневной/Ночной код:"
-
-#~ msgid "$mode"
-#~ msgstr "$mode"
-
-#~ msgid "Destination to use when set to $mode mode"
-#~ msgstr "Назначение, если выбран режим $mode"
-
-#~ msgid "Voicemail"
-#~ msgstr "Голосовая почта"
-
-#~ msgid "Extensions"
-#~ msgstr "Внутренний номер"
-
-#~ msgid "Terminate Call"
-#~ msgstr "Терминировать звонок"
-
-#~ msgid "Misc Destinations"
-#~ msgstr "Различные направления"
-
-#~ msgid "IVR"
-#~ msgstr "Интерактивное меню"
-
-#~ msgid "Languages"
-#~ msgstr "Языки"
-
-#~ msgid "Conferences"
-#~ msgstr "Конференция"
-
-#~ msgid "Phonebook Directory"
-#~ msgstr "Телефонная книга"
-
-#~ msgid "Queues"
-#~ msgstr "Очередь"
-
-#~ msgid "Ring Groups"
-#~ msgstr "Группа вызова"
-
-#~ msgid "Speed dial functions"
-#~ msgstr "Функции быстрого набора"
-
-#~ msgid "Time Conditions"
-#~ msgstr "Временные состояния"
-
-#~ msgid "Custom Applications"
-#~ msgstr "Специальное приложение"
-
-#~ msgid "Extended Routing"
-#~ msgstr "Расширенная маршрутизация"
-
-#~ msgid ""
-#~ "Custom App<span><br>ADVANCED USERS ONLY<br><br>Uses Goto() to send caller "
-#~ "to a custom context.<br><br>The context name should start with \"custom-"
-#~ "\", and be in the format custom-context,extension,priority. Example entry:"
-#~ "<br><br><b>custom-myapp,s,1</b><br><br>The <b>[custom-myapp]</b> context "
-#~ "would need to be created and included in extensions_custom.conf</span>"
-#~ msgstr ""
-#~ "Особые приложения<span><br>ТОЛЬКО ОПЫТНЫМ ПОЛЬЗОВАТЕЛЯМ<br>Используйте "
-#~ "операнд Goto() для перенаправления в custom контекст.<br><br>Название "
-#~ "контекста должно начинаться с \"custom-\" и быть в формате custom-context,"
-#~ "extension,приоритет. Например:<br><b>custom-app,s,1</b><br>Контекст <b>"
-#~ "[custom-app]</b> должен быть создан в extensions_custom.conf</span"
