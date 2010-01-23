@@ -50,7 +50,7 @@ msgstr "Associa con"
 #: functions.inc.php:546
 msgid ""
 "If a selection is made, this timecondition will be associated with that "
-"featurecode and will allow this timecondition to be direct overriden by that "
+"featurecode and will allow this timecondition to be direct overridden by that "
 "daynight mode featurecode"
 msgstr ""
 "Se si effettua una selezione, questa condizione temporale sarà associata con "

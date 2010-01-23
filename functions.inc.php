@@ -543,7 +543,7 @@ function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
 			$html .= '<hr></h5></td></tr>';
 			$html .= '<tr>';
 			$html .= '<td><a href="#" class="info">';
-			$html .= _("Associate with").'<span>'._("If a selection is made, this timecondition will be associated with that featurecode and will allow this timecondition to be direct overriden by that daynight mode featurecode").'.</span></a>:</td>';
+			$html .= _("Associate with").'<span>'._("If a selection is made, this timecondition will be associated with that featurecode and will allow this timecondition to be direct overridden by that daynight mode featurecode").'.</span></a>:</td>';
 			$html .= '<td><select tabindex="'.++$tabindex.'" name="daynight_ref">';
 			$daynightcodes = daynight_list();
 			$current = daynight_get_timecondition($viewing_itemid);

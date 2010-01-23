@@ -51,7 +51,7 @@ msgstr "与之相关的是"
 #: functions.inc.php:546
 msgid ""
 "If a selection is made, this timecondition will be associated with that "
-"featurecode and will allow this timecondition to be direct overriden by that "
+"featurecode and will allow this timecondition to be direct overridden by that "
 "daynight mode featurecode"
 msgstr ""
 "如果进行了某些选择，那么此时间条件控制设置将与该功能代码相联系，并且允许此时"
