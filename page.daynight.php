@@ -264,7 +264,6 @@ function daynight_show_edit($post, $add="") {
 	</script>
 
 	</form>
-	</div>
 <?php
 } //daynight function
 
