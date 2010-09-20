@@ -21,7 +21,7 @@ $fc_description = isset($_REQUEST['fc_description'])?$_REQUEST['fc_description']
 $day_recording_id = isset($_POST['day_recording_id']) ? $_POST['day_recording_id'] :  '';
 $night_recording_id = isset($_POST['night_recording_id']) ? $_POST['night_recording_id'] :  '';
 
-isset($_REQUEST['itemid'])?$itemid=mysql_real_escape_string($_REQUEST['itemid']):$itemid='';
+isset($_REQUEST['itemid'])?$itemid=$db->escapeSimple($_REQUEST['itemid']):$itemid='';
 
 $daynightcodes = daynight_list();
 ?>
