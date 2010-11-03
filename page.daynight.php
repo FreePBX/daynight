@@ -229,8 +229,8 @@ function daynight_show_edit($post, $add="") {
 	// returns an array, $dest['day'], $dest['night']
 	// and puts null if nothing set
 
-	drawdestinations(0, _("DAY"),   isset($dests['day'])?$dests['day']:'');
-	drawdestinations(1, _("NIGHT"), isset($dests['night'])?$dests['night']:'');
+	drawdestinations(0, _("DAY"),   (isset($dests['day'])?$dests['day']:''));
+	drawdestinations(1, _("NIGHT"), (isset($dests['night'])?$dests['night']:''));
 
 	//TODO: Check to make sure a destination radio button was checked, and if custom, that it was not blank
 	//
