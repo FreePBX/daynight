@@ -534,9 +534,16 @@ function daynight_del_timecondition($viewing_itemid) {
 //
 function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
 	global $tabindex;
+	global $amp_conf;
 	switch ($target_menuid) {
 		// only provide display for timeconditions
 		case 'timeconditions':
+			$current = daynight_get_timecondition($viewing_itemid);
+      if (!$amp_conf['DAYNIGHTTCHOOK'] && $current['ext'] == '') {
+        break;
+      }
+			$daynightcodes = daynight_list();
+
 			$html = '';
 			$html = '<tr><td colspan="2"><h5>';
 			$html .= _("Day/Night Mode Association");
@@ -545,8 +552,6 @@ function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
 			$html .= '<td><a href="#" class="info">';
 			$html .= _("Associate with").'<span>'._("If a selection is made, this timecondition will be associated with that featurecode and will allow this timecondition to be direct overridden by that daynight mode featurecode").'.</span></a>:</td>';
 			$html .= '<td><select tabindex="'.++$tabindex.'" name="daynight_ref">';
-			$daynightcodes = daynight_list();
-			$current = daynight_get_timecondition($viewing_itemid);
 			$html .= "\n";
 			$html .= sprintf('<option value="" %s>%s</option>',$current['ext'] == '' ?'selected':'', _("No Association"));
 			$html .= "\n";
@@ -614,7 +619,7 @@ function daynight_hookGet_config($engine) {
 					$timecondition_id = $item['dest'];
 					$timeconditions_arr = timeconditions_get($timecondition_id);
 					if (is_array($timeconditions_arr)) {
-						$dest = ($mode == 'DAY') ? $timeconditions_arr['truegoto'] : $timeconditions_arr['falsegoto'];
+						$dest = ($mode == 'DAY') ? 'truestate' : 'falsestate';
 						$ext->splice($context, $timecondition_id, 0, new ext_gotoif('$["${DB(DAYNIGHT/C'.$daynight_id.')}" = "'.$mode.'"]',$dest));
 					}
 				}
