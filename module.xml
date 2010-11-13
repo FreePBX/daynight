@@ -48,6 +48,6 @@
 	<menuitems>
 		<daynight needsenginedb="yes">Day/Night Control</daynight>
 	</menuitems>
-	<location>release/2.8/daynight-2.8.0.0.tgz</location>
-	<md5sum>a3ae165da6d4175581cd36535719bea8</md5sum>
+	<location>release/2.9/daynight-2.9.0.0.tgz</location>
+	<md5sum>845bbaaad894e16e005c28cbeade8779</md5sum>
 </module>
