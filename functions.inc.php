@@ -357,6 +357,7 @@ function daynight_edit($post, $id=0) {
 		$fcc->setDescription("$id: Day Night Control");
 	}
 	$fcc->setDefault('*28'.$id);
+  $fcc->setProvideDest();
 	$fcc->update();
 	unset($fcc);	
 
