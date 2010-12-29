@@ -439,6 +439,11 @@ function daynight_check_destinations($dest=true) {
 	return $destlist;
 }
 
+function daynight_change_destination($old_dest, $new_dest) {
+	$sql = 'UPDATE daynight SET dest = "' . $new_dest . '" WHERE dest = "' . $old_dest . '"';
+	sql($sql, "query");
+}
+
 //-----------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
 // TIMECONDITIONS HOOK:
@@ -628,5 +633,4 @@ function daynight_hookGet_config($engine) {
 		break;
 	}
 }
-
 ?>
