@@ -81,6 +81,8 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  {
 	}
 }
 
+$freepbx_conf =& freepbx_conf::create();
+
   // DAYNIGHTTCHOOK
   //
   $set['value'] = false;
