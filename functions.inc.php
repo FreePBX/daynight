@@ -6,7 +6,6 @@
 class dayNightObject {
 
 	var $id;
-	var $DEVSTATE;
 
 	// contstructor
 	function dayNightObject($item) {
@@ -184,9 +183,6 @@ function daynight_toggle() {
 	global $ext;
 	global $amp_conf;
 	global $version;
-	global $DEVSTATE;
-
-	$DEVSTATE = version_compare($version, "1.6", "ge") ? "DEVICE_STATE" : "DEVSTATE";
 
 	$list = daynight_list();
 	$passwords = daynight_passwords();
@@ -234,7 +230,7 @@ function daynight_toggle() {
 
 		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));	
 		if ($amp_conf['USEDEVSTATE']) {
-			$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DAYNIGHT${INDEX})', 'NOT_INUSE'));
+			$ext->add($id, $c, '', new ext_setvar($amp_conf['AST_FUNC_DEVICE_STATE'].'(Custom:DAYNIGHT${INDEX})', 'NOT_INUSE'));
 		}
 		if ($amp_conf['FCBEEPONLY']) {
 			$ext->add($id, $c, 'hook_day', new ext_playback('beep')); // $cmd,n,Playback(...)
@@ -245,7 +241,7 @@ function daynight_toggle() {
 
 		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));	
 		if ($amp_conf['USEDEVSTATE']) {
-			$ext->add($id, $c, '', new ext_setvar($DEVSTATE.'(Custom:DAYNIGHT${INDEX})', 'INUSE'));
+			$ext->add($id, $c, '', new ext_setvar($amp_conf['AST_FUNC_DEVICE_STATE'].'(Custom:DAYNIGHT${INDEX})', 'INUSE'));
 		}
 		if ($amp_conf['FCBEEPONLY']) {
 			$ext->add($id, $c, 'hook_night', new ext_playback('beep')); // $cmd,n,Playback(...)
