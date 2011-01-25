@@ -5,18 +5,6 @@ require_once dirname(__FILE__)."/functions.inc.php";
 global $db;
 global $amp_conf;
 
-if (! function_exists("out")) {
-	function out($text) {
-		echo $text."<br />";
-	}
-}
-
-if (! function_exists("outn")) {
-	function outn($text) {
-		echo $text;
-	}
-}
-
 $sql = "CREATE TABLE IF NOT EXISTS daynight 
         (
 				ext varchar(10) NOT NULL default '',
