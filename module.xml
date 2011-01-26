@@ -1,14 +1,14 @@
 <module>
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
-	<name>Day Night Mode</name>
+	<name>Call Flow Control</name>
 	<version>2.9.0.1</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
-		Day / Night control - allows for two destinations to be chosen and provides a feature code
+		Call Flow manual toggle control - allows for two destinations to be chosen and provides a feature code
 		that toggles between the two destinations.
 	</description>
 	<changelog>
@@ -48,7 +48,7 @@
 		<version>2.5.0alpha1</version>
 	</depends>
 	<menuitems>
-		<daynight needsenginedb="yes">Day/Night Control</daynight>
+		<daynight needsenginedb="yes">Call Flow Control</daynight>
 	</menuitems>
 	<location>release/2.9/daynight-2.9.0.1.tgz</location>
 	<md5sum>b45469e565455028d76899a66de13ea9</md5sum>

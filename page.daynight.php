@@ -30,7 +30,7 @@ $daynightcodes = daynight_list();
 
 <!-- right side menu -->
 <div class="rnav"><ul>
-    <li><a id="<?php echo ($itemid=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>&action=add"><?php echo _("Add Day/Night Code")?></a></li>
+    <li><a id="<?php echo ($itemid=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>&action=add"><?php echo _("Add Call Flow Toggle Code")?></a></li>
 <?php
 if (isset($daynightcodes)) {
 	foreach ($daynightcodes as $code) {
@@ -83,11 +83,11 @@ function daynight_show_edit($post, $add="") {
 	$night_recording_id = isset($dests['night_recording_id'])?$dests['night_recording_id']:'';
 ?>
 	<div class="content">
-	<h2><?php echo _("Day / Night Mode Control"); ?></h2>
+	<h2><?php echo _("Call Flow Toggle Control"); ?></h2>
 <?php		
 	if ($itemid != ""){ 
 		$delURL = $_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'&action=delete';
-		$tlabel = sprintf(_("Delete Day/Night Feature Code %s"),$code);
+		$tlabel = sprintf(_("Delete Call Flow Toggle Feature Code %s"),$code);
 		$label = '<span><img width="16" height="16" border="0" title="'.$tlabel.'" alt="" src="images/core_delete.png"/>&nbsp;'.$tlabel.'</span>';
 ?>
 		<a href="<?php echo $delURL ?>"><?php echo $label; ?></a><br />
@@ -102,7 +102,7 @@ function daynight_show_edit($post, $add="") {
 		if (!empty($timeconditions_refs)) {
 			echo "<br />";
 			foreach($timeconditions_refs as $ref) {
-				$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Day  Mode") : _("Forces to Night Mode");
+				$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Normal Mode (Green/BLF off)") : _("Forces to Override Mode (Red/BLF on)");
 				$timecondition_id = $ref['dest'];
 				$tcURL = $_SERVER['PHP_SELF'].'?'."display=timeconditions&itemid=$timecondition_id";
 				$label = '<span><img width="16" height="16" border="0" title="'.sprintf(_("Linked to Time Condition %s - %s"),$timecondition_id,$dmode).'" alt="" src="images/clock_link.png"/>&nbsp;'.sprintf(_("Linked to Time Condition %s - %s"),$timecondition_id,$dmode).'</span>';
@@ -134,8 +134,8 @@ function daynight_show_edit($post, $add="") {
 		</td>
 	</tr>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Day/Night Feature Code Index:")?>
-		<span><?php echo _("There are a total of 10 Feature code objects, 0-9, each can control a call flow and be toggled using the day/night feature code plus the index.")?>
+		<td><a href="#" class="info"><?php echo _("Call Flow Toggle Feature Code Index:")?>
+		<span><?php echo _("There are a total of 10 Feature code objects, 0-9, each can control a call flow and be toggled using the call flow toggle feature code plus the index.")?>
 		</span></a>
 		</td>
 		<td>
@@ -160,26 +160,26 @@ function daynight_show_edit($post, $add="") {
 		</td>
 	</tr>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Description")?>:<span><?php echo _("Description for this Day/Night Control")?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Description")?>:<span><?php echo _("Description for this Call Flow Toggle Control")?></span></a></td>
 		<td><input size="40" type="text" name="fc_description" value="<?php  echo $fc_description ?>" tabindex="<?php echo ++$tabindex;?>">
 		</td>
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Current Mode:")?>
-		<span><?php echo _("This will change the current state for this Day/Night Mode Control, or set the initial state when creating a new one.")?>
+		<span><?php echo _("This will change the current state for this Call Folow Toggle Control, or set the initial state when creating a new one.")?>
 		</span></a>
 		</td>
 		<td>
 			<select name="state" tabindex="<?php echo ++$tabindex;?>">
-				<option value="DAY" <?php echo ($state == 'DAY' ? 'SELECTED':'') ?> ><?php echo _("Day");?></option> 
-				<option value="NIGHT" <?php echo ($state == 'NIGHT' ? 'SELECTED':'') ?> ><?php echo _("Night");?></option> 
+				<option value="DAY" <?php echo ($state == 'DAY' ? 'SELECTED':'') ?> ><?php echo _("Normal (Green/BLF off)");?></option> 
+				<option value="NIGHT" <?php echo ($state == 'NIGHT' ? 'SELECTED':'') ?> ><?php echo _("Override (Red/BLF on)");?></option> 
 			</select>
 		</td>
 	</tr>
 
 <?php if(function_exists('recordings_list')) { //only include if recordings are enabled ?>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Recording for Day Mode")?><span><?php echo _("Message to be played.<br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Recording for Normal Mode")?><span><?php echo _("Message to be played in normal mode (Green/BLF off).<br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td>
 			<select name="day_recording_id"  tabindex="<?php echo ++$tabindex;?>">
 			<?php
@@ -196,7 +196,7 @@ function daynight_show_edit($post, $add="") {
 		</td>
 	</tr>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Recording for Night Mode")?><span><?php echo _("Message to be played.<br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Recording for Override Mode")?><span><?php echo _("Message to be played in override mode (Red/BLF on).<br>To add additional recordings use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td>
 			<select name="night_recording_id"  tabindex="<?php echo ++$tabindex;?>">
 			<?php
@@ -215,7 +215,7 @@ function daynight_show_edit($post, $add="") {
 <?php } ?>
 
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Optional Password")?>:<span><?php echo _('You can optionally include a password to authenticate before toggling the day/night mode. If left blank anyone can use the feature code and it will be un-protected')?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Optional Password")?>:<span><?php echo _('You can optionally include a password to authenticate before toggling the call flow. If left blank anyone can use the feature code and it will be un-protected')?></span></a></td>
 		<td><input size="12" type="text" name="password" value="<?php  echo $password ?>" tabindex="<?php echo ++$tabindex;?>">
 		</td>
 	</tr>
@@ -229,8 +229,8 @@ function daynight_show_edit($post, $add="") {
 	// returns an array, $dest['day'], $dest['night']
 	// and puts null if nothing set
 
-	drawdestinations(0, _("DAY"),   (isset($dests['day'])?$dests['day']:''));
-	drawdestinations(1, _("NIGHT"), (isset($dests['night'])?$dests['night']:''));
+	drawdestinations(0, _("Normal Flow (Green/BLF off)"),   (isset($dests['day'])?$dests['day']:''));
+	drawdestinations(1, _("Override Flow (Red/BLF on)"), (isset($dests['night'])?$dests['night']:''));
 
 	//TODO: Check to make sure a destination radio button was checked, and if custom, that it was not blank
 	//

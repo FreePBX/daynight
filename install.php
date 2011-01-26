@@ -42,7 +42,7 @@ if ($delete_old) {
 		if ($fc_description) {
 			$fcc->setDescription("$id: $fc_description");
 		} else {
-			$fcc->setDescription("$id: Day Night Control");
+			$fcc->setDescription("$id: Call Flow Toggle");
 		}
 		$fcc->setDefault('*28'.$id);
 		if ($code != '*28' && $code != '') {
@@ -79,10 +79,10 @@ $freepbx_conf =& freepbx_conf::create();
   $set['hidden'] = 0;
   $set['level'] = 1;
   $set['module'] = 'daynight';
-  $set['category'] = 'Day Night Module';
+  $set['category'] = 'Call Flow Control Module';
   $set['emptyok'] = 0;
   $set['name'] = 'Hook Time Condtions Module';
-  $set['description'] = 'By default, the Day/Night module will not hook Time Conditions allowing one to associate a daynight manual override with a time condition since time conditions have their own feature code as of version 2.9. If there is already an associaiton configured (on an upgraded system), this will have no affect for the Time Conditions that are effected. Setting this to true reverts the 2.8 and prior behavior by allowing for the use of a daynight toggle to be associated with a time conditon. This can be useful for two scenarios. First, to override a Time Condition without the automatic resetting that occurs with the built in Time Condition overrides. The second use is the ability to associate a single daynight toggle with multiple time conditions thus creating a <b>master switch</b> that can be used to override several possible call flows through different time conditions.';
+  $set['description'] = 'By default, the Call Flow Control module will not hook Time Conditions allowing one to associate a call flow toggle feauture code with a time condition since time conditions have their own feature code as of version 2.9. If there is already an associaiton configured (on an upgraded system), this will have no affect for the Time Conditions that are effected. Setting this to true reverts the 2.8 and prior behavior by allowing for the use of a call flow toggle to be associated with a time conditon. This can be useful for two scenarios. First, to override a Time Condition without the automatic resetting that occurs with the built in Time Condition overrides. The second use is the ability to associate a single call flow toggle with multiple time conditions thus creating a <b>master switch</b> that can be used to override several possible call flows through different time conditions.';
   $set['type'] = CONF_TYPE_BOOL;
   $freepbx_conf->define_conf_setting('DAYNIGHTTCHOOK',$set,true);
 
