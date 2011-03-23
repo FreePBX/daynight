@@ -125,7 +125,7 @@ function daynight_show_edit($post, $add="") {
 	<tr>
 		<td colspan="2">	
 		<input name="Submit" type="submit" value="<?php echo _("Save")?>">
-		<?php if ($itemid != '') echo "&nbsp ".sprintf(_("Use feature code: %s to toggle the call flow mode mode"),"<strong>".$code."</strong>")?>
+		<?php if ($itemid != '') echo "&nbsp ".sprintf(_("Use feature code: %s to toggle the call flow mode"),"<strong>".$code."</strong>")?>
 		</td>
 	</tr>
 	<tr>
