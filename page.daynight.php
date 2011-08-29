@@ -160,7 +160,7 @@ function daynight_show_edit($post, $add="") {
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Current Mode:")?>
-		<span><?php echo _("This will change the current state for this Call Folow Toggle Control, or set the initial state when creating a new one.")?>
+		<span><?php echo _("This will change the current state for this Call Flow Toggle Control, or set the initial state when creating a new one.")?>
 		</span></a>
 		</td>
 		<td>
