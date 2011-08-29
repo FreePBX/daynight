@@ -24,12 +24,7 @@ $night_recording_id = isset($_POST['night_recording_id']) ? $_POST['night_record
 isset($_REQUEST['itemid'])?$itemid=$db->escapeSimple($_REQUEST['itemid']):$itemid='';
 
 $daynightcodes = daynight_list();
-?>
-
-</div> <!-- end content div so we can display rnav properly-->
-
-<!-- right side menu -->
-<div class="rnav"><ul>
+?><div class="rnav"><ul>
     <li><a id="<?php echo ($itemid=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>&action=add"><?php echo _("Add Call Flow Toggle Code")?></a></li>
 <?php
 if (isset($daynightcodes)) {
@@ -82,7 +77,6 @@ function daynight_show_edit($post, $add="") {
 	$day_recording_id = isset($dests['day_recording_id'])?$dests['day_recording_id']:'';
 	$night_recording_id = isset($dests['night_recording_id'])?$dests['night_recording_id']:'';
 ?>
-	<div class="content">
 	<h2><?php echo _("Call Flow Toggle Control"); ?></h2>
 <?php		
 	if ($itemid != ""){ 
