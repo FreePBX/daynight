@@ -52,7 +52,7 @@ class dayNightObject {
 						$astman->database_put("DAYNIGHT","C".$this->id,$state);
 						if ($this->DEVSTATE) {
 							$value_opt = ($state  == 'DAY') ? 'NOT_INUSE' : 'INUSE';
-							$astman->send_request('Command',array('Command'=>"core set global ".$this->DEVSTATE."(Custom:DAYNIGHT".$this->id.") $value_opt"));
+							$astman->set_global($this->DEVSTATE."(Custom:DAYNIGHT".$this->id.")", $value_opt);
 						}
 					} else {
 						die_freepbx("No open connection to asterisk manager, can not access object.");
@@ -80,7 +80,7 @@ class dayNightObject {
 						$astman->database_put("DAYNIGHT","C".$this->id,$state);
 						if ($this->DEVSTATE) {
 							$value_opt = ($state  == 'DAY') ? 'NOT_INUSE' : 'INUSE';
-							$astman->send_request('Command',array('Command'=>"core set global ".$this->DEVSTATE."(Custom:DAYNIGHT".$this->id.") $value_opt"));
+							$astman->set_global($this->DEVSTATE."(Custom:DAYNIGHT".$this->id.")", $value_opt);
 						}
 					} else {
 						die_freepbx("No open connection to asterisk manager, can not access object.");
