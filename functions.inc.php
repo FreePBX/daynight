@@ -1,4 +1,5 @@
 <?php
+if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
  /* $Id: functions.inc.php 4024 2007-06-09 03:09:16Z p_lindheimer $ */
 
 // Class To Create, Access and Change DAYNIGHT objects in the dialplan
