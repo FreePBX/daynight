@@ -53,6 +53,6 @@
 	<menuitems>
 		<daynight needsenginedb="yes">Call Flow Control</daynight>
 	</menuitems>
-	<location>release/2.10/daynight-2.10.0.0.tgz</location>
-	<md5sum>de944ce32b0c8da34a0838f4a4804321</md5sum>
+	<location>release/2.10/daynight-2.10.0.1.tgz</location>
+	<md5sum>a86fb4ca4eed1202f0187a883b7d5b3d</md5sum>
 </module>
