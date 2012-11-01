@@ -11,7 +11,7 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
-		*2.11.0.0* $6051
+		*2.11.0.0* #6051
 		*2.10.0.2* republished to prune problematic changelog during development
 		*2.10.0.1* #5476, #5478 
 		*2.10.0.0* new version changes
