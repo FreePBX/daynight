@@ -55,4 +55,4 @@
 	</menuitems>
 	<location>release/2.10/daynight-2.10.0.1.tgz</location>
 	<md5sum>a86fb4ca4eed1202f0187a883b7d5b3d</md5sum>
-</module>
+<supported><version>2.10</version></supported></module>
