@@ -32,4 +32,4 @@
 	</menuitems>
 	<location>release/2.11/daynight-2.10.0.2.tgz</location>
 	<md5sum>599aa916c5844bab7d155446996897ce</md5sum>
-</module>
+<supported><version>2.10</version></supported></module>
