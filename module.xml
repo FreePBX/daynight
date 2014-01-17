@@ -36,6 +36,9 @@
 			<display>daynight</display>
 		</daynight>
  	</popovers>
+	<supported>
+		<version>2.10</version>
+	</supported>
 	<location>release/2.11/daynight-2.11.0.0.tgz</location>
 	<md5sum>3ff349034d789c2706c8937bb0776546</md5sum>
 </module>
