@@ -19,7 +19,7 @@
 # Alexander Kozyrev <ceo@postmet.com>, Sergey Nikolayev <sergey@postmet.com>, 2006-2011.
 #
 # Использовать iconv daynight.pot -f UTF-8 -t ISO-8859-5 -o daynight.po
-# fuzzy
+
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.1\n"
@@ -36,7 +36,7 @@ msgid "Call Flow Control"
 msgstr "Общее управление прохождения вызовов"
 
 msgid "Applications"
-msgstr ""
+msgstr "Приложения"
 
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
@@ -47,7 +47,7 @@ msgstr ""
 "помощи сервисного кода\t\t."
 
 msgid "Hook Time Conditions Module"
-msgstr ""
+msgstr "Вызвать модуль условий по времени"
 
 msgid "Call Flow Control Module"
 msgstr "Модуль контроля вызовов"
@@ -89,7 +89,7 @@ msgstr "Переключатель состояния прохождения в�
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Переключатель состояния прохождения вызовов (%s) : %s"
 
-#, fuzzy
+
 msgid "Call Flow Toggle Mode Association"
 msgstr "Ассоциация режима День/Ночь"
 
@@ -153,7 +153,7 @@ msgstr "Добавить сервисный код переключения со
 msgid "Call Flow Toggle Control"
 msgstr "Управление переключением прохождения вызовов"
 
-#, fuzzy, php-format
+
 msgid "Delete Call Flow Toggle Feature Code %s"
 msgstr "Удалить сервисный код %s День/Ночь "
 
@@ -172,13 +172,13 @@ msgstr "Сохранить"
 
 #, php-format
 msgid "Use feature code: %s to toggle the call flow mode"
-msgstr ""
+msgstr "Используйте код: %s для переключения режима прохождения вызова"
 
-#, fuzzy
+
 msgid "Call Flow Toggle Feature Code Index:"
 msgstr "Список кодов Дневной/Ночной режим:"
 
-#, fuzzy
+
 msgid ""
 "There are a total of 10 Feature code objects, 0-9, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
@@ -191,7 +191,7 @@ msgstr ""
 msgid "Description"
 msgstr "Описание"
 
-#, fuzzy
+
 msgid "Description for this Call Flow Toggle Control"
 msgstr "Описание для этого режима День/Ночь"
 
@@ -201,7 +201,9 @@ msgstr "Текущий режим:"
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
-msgstr ""
+msgstr "" 
+"Эта опция изменяет текущее состояние для сценария прохождения звонков или"
+"выставляет начальные условия при создании нового сценария"
 
 msgid "Normal (Green/BLF off)"
 msgstr "Нормальный (Green/BLF выключен)"
@@ -209,11 +211,11 @@ msgstr "Нормальный (Green/BLF выключен)"
 msgid "Override (Red/BLF on)"
 msgstr "Подавление правил Override (Red/BLF включен)"
 
-#, fuzzy
+
 msgid "Recording for Normal Mode"
 msgstr "Запись для режима День"
 
-#, fuzzy
+
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the left"
@@ -224,11 +226,11 @@ msgstr ""
 msgid "Default"
 msgstr "По умолчанию"
 
-#, fuzzy
+
 msgid "Recording for Override Mode"
 msgstr "Запись для режима Ночь"
 
-#, fuzzy
+
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the left"
@@ -239,7 +241,7 @@ msgstr ""
 msgid "Optional Password"
 msgstr "Пароль (опционально)"
 
-#, fuzzy
+
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
@@ -268,7 +270,7 @@ msgstr "Назначение если установлен режим %s"
 #~ msgid "Hook Time Condtions Module"
 #~ msgstr "Модуль включения Правил по времени"
 
-#, fuzzy
+
 #~ msgid ""
 #~ "This will change the current state for this Call Folow Toggle Control, or "
 #~ "set the initial state when creating a new one."
