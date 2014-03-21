@@ -210,7 +210,7 @@ function daynight_toggle() {
 		if (isset($passwords[$index]) && trim($passwords[$index]) != "" && ctype_digit(trim($passwords[$index]))) {
 			$ext->add($id, $c, '', new ext_authenticate($passwords[$index]));
 		}
-		$ext->add($id, $c, '', new ext_setvar('INDEX', $index));	
+		$ext->add($id, $c, '', new ext_setvar('INDEXES', $index));
     // Depends on featurecode.sln which is provided in core's sound files
     //
 		$day_file = "beep&silence/1&featurecode&digits/${index}&de-activated";
@@ -227,29 +227,103 @@ function daynight_toggle() {
 	if ($got_code) {
 		$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
 
+		$fcc = new featurecode('daynight', 'toggle-mode-all');
+		$c = $fcc->getCodeActive();
+		unset($fcc);
+		if ($c) {
+			$ext->add($id, $c, '', new ext_macro('user-callerid'));
+			$ext->add($id, $c, '', new ext_goto($id.',${EXTEN}${AMPUSER},1'));
+
+			$userFCs = array();
+			if (function_exists('cos_islicenced') && cos_islicenced()) {
+				$cos = Cos::create();
+
+				$allCos = $cos->getAllCos();
+				foreach ($allCos as $cos_name) {
+					$all = $cos->getAll($cos_name);
+
+					foreach ($all['members'] as $key => $val) {
+						$userFCs[$key] = array_merge(($userFCs[$key] ? $userFCs[$key] : array()), $all['fcallow']);
+					}
+				}
+			}
+
+			$users = core_users_list();
+			foreach ($users as $user) {
+				$exten = $user[0];
+
+				$indexes = '';
+				$hint = '';
+				foreach ($list as $item) {
+					if (count($userFCs) > 1 && (!isset($userFCs[$exten]) || !isset($userFCs[$exten]['toggle-mode-' . $item['ext']]))) {
+						continue;
+					}
+					$indexes.= '&' . $item['ext'];
+					$hint.= '&Custom:DAYNIGHT' . $item['ext'];
+				}
+				$indexes = ltrim($indexes, '&');
+				$hint = ltrim($hint, '&');
+
+				if ($amp_conf['USEDEVSTATE']) {
+					$ext->addHint($id, $c . $exten, $hint);
+				}
+
+				if (strlen($indexes) == 0) {
+					$ext->add($id, $c . $exten, '', new ext_hangup(''));
+					continue;
+				}
+
+				$ext->add($id, $c . $exten, '', new ext_setvar('INDEXES', $indexes));
+
+				$day_file = "beep&silence/1&featurecode&de-activated";
+				$night_file = "beep&silence/1&featurecode&activated";
+				$ext->add($id, $c . $exten, '', new ext_setvar('DAYREC', $day_file));
+				$ext->add($id, $c . $exten, '', new ext_setvar('NIGHTREC', $night_file));
+				$ext->add($id, $c . $exten, '', new ext_goto($id.',s,1'));
+			}
+		}
+
 		$c='s';
-		$ext->add($id, $c, '', new ext_setvar('DAYNIGHTMODE', '${DB(DAYNIGHT/C${INDEX})}'));	
+		/* If any are on, all will be turned off.
+		 * Otherwise, all will be turned on.
+		 */
+		$ext->add($id, $c, '', new ext_setvar('LOOPCNT', '${FIELDQTY(INDEXES,&)}'));
+		$ext->add($id, $c, '', new ext_setvar('ITER', '1'));
+		$ext->add($id, $c, 'begin1', new ext_setvar('INDEX', '${CUT(INDEXES,&,${ITER})}'));
+
+		$ext->add($id, $c, '', new ext_setvar('MODE', '${DB(DAYNIGHT/C${INDEX})}'));
+		$ext->add($id, $c, '', new ext_gotoif('$["${MODE}" != "NIGHT"]', 'end1'));
+
+		$ext->add($id, $c, '', new ext_setvar('DAYNIGHTMODE', 'NIGHT'));
+
+		$ext->add($id, $c, 'end1', new ext_setvar('ITER', '$[${ITER} + 1]'));
+		$ext->add($id, $c, '', new ext_gotoif('$[${ITER} <= ${LOOPCNT}]', 'begin1'));
+
+		$ext->add($id, $c, '', new ext_setvar('LOOPCNT', '${FIELDQTY(INDEXES,&)}'));
+		$ext->add($id, $c, '', new ext_setvar('ITER', '1'));
+		$ext->add($id, $c, 'begin2', new ext_setvar('INDEX', '${CUT(INDEXES,&,${ITER})}'));
+
 		$ext->add($id, $c, '', new ext_gotoif('$["${DAYNIGHTMODE}" = "NIGHT"]', 'day', 'night'));
 
-		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));	
+		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));
 		if ($amp_conf['USEDEVSTATE']) {
 			$ext->add($id, $c, '', new ext_setvar($amp_conf['AST_FUNC_DEVICE_STATE'].'(Custom:DAYNIGHT${INDEX})', 'NOT_INUSE'));
 		}
-		if ($amp_conf['FCBEEPONLY']) {
-			$ext->add($id, $c, 'hook_day', new ext_playback('beep')); // $cmd,n,Playback(...)
-		} else {
-      $ext->add($id, $c, 'hook_day', new ext_playback('${DAYREC}'));
-		}
-		$ext->add($id, $c, '', new ext_hangup(''));
+		$ext->add($id, $c, 'hook_day', new ext_goto('end2'));
 
-		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));	
+		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));
 		if ($amp_conf['USEDEVSTATE']) {
 			$ext->add($id, $c, '', new ext_setvar($amp_conf['AST_FUNC_DEVICE_STATE'].'(Custom:DAYNIGHT${INDEX})', 'INUSE'));
 		}
+		$ext->add($id, $c, 'hook_night', new ext_goto('end2'));
+
+		$ext->add($id, $c, 'end2', new ext_setvar('ITER', '$[${ITER} + 1]'));
+		$ext->add($id, $c, '', new ext_gotoif('$[${ITER} <= ${LOOPCNT}]', 'begin2'));
+
 		if ($amp_conf['FCBEEPONLY']) {
-			$ext->add($id, $c, 'hook_night', new ext_playback('beep')); // $cmd,n,Playback(...)
+			$ext->add($id, $c, '', new ext_playback('beep')); // $cmd,n,Playback(...)
 		} else {
-   		$ext->add($id, $c, 'hook_night', new ext_playback('${NIGHTREC}'));
+			$ext->add($id, $c, '', new ext_execif('$["${DAYNIGHTMODE}" = "NIGHT"]', 'Playback', '${DAYREC}', 'Playback', '${NIGHTREC}'));
 		}
 		$ext->add($id, $c, '', new ext_hangup(''));
 	}

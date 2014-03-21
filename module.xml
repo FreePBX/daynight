@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>2.11.0.0</version>
+	<version>2.11.0.1</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<category>Applications</category>
@@ -11,6 +11,7 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
+		*2.11.0.1* Add feature code to toggle all
 		*2.11.0.0* #6051
 		*2.10.0.2* republished to prune problematic changelog during development
 		*2.10.0.1* #5476, #5478 
