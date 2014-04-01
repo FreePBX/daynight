@@ -231,13 +231,16 @@ function daynight_toggle() {
 		$c = $fcc->getCodeActive();
 		unset($fcc);
 		if ($c) {
-			$ext->add($id, $c, '', new ext_macro('user-callerid'));
-			$ext->add($id, $c, '', new ext_goto($id.',${EXTEN}${AMPUSER},1'));
+			$ext->add($id, $c, '', new ext_goto($id.',${EXTEN}*${AMPUSER},1'));
 
 			$userFCs = array();
-			if (function_exists('cos_islicenced') && cos_islicenced()) {
+			if ($bmo && $bmo->Cos && $bmo->Cos->isLicensed()) {
+				$cos = $bmo->Cos;
+			} else if (function_exists('cos_islicenced') && cos_islicenced()) {
 				$cos = Cos::create();
+			}
 
+			if ($cos) {
 				$allCos = $cos->getAllCos();
 				foreach ($allCos as $cos_name) {
 					$all = $cos->getAll($cos_name);
@@ -265,21 +268,21 @@ function daynight_toggle() {
 				$hint = ltrim($hint, '&');
 
 				if ($amp_conf['USEDEVSTATE']) {
-					$ext->addHint($id, $c . $exten, $hint);
+					$ext->addHint($id, $c . '*' . $exten, $hint);
 				}
 
 				if (strlen($indexes) == 0) {
-					$ext->add($id, $c . $exten, '', new ext_hangup(''));
+					$ext->add($id, $c . '*' . $exten, '', new ext_hangup(''));
 					continue;
 				}
 
-				$ext->add($id, $c . $exten, '', new ext_setvar('INDEXES', $indexes));
+				$ext->add($id, $c . '*' . $exten, '', new ext_setvar('INDEXES', $indexes));
 
 				$day_file = "beep&silence/1&featurecode&de-activated";
 				$night_file = "beep&silence/1&featurecode&activated";
-				$ext->add($id, $c . $exten, '', new ext_setvar('DAYREC', $day_file));
-				$ext->add($id, $c . $exten, '', new ext_setvar('NIGHTREC', $night_file));
-				$ext->add($id, $c . $exten, '', new ext_goto($id.',s,1'));
+				$ext->add($id, $c . '*' . $exten, '', new ext_setvar('DAYREC', $day_file));
+				$ext->add($id, $c . '*' . $exten, '', new ext_setvar('NIGHTREC', $night_file));
+				$ext->add($id, $c . '*' . $exten, '', new ext_goto($id.',s,1'));
 			}
 		}
 
