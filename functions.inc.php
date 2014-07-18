@@ -22,10 +22,9 @@ class dayNightObject {
 			$this->DEVSTATE = false;
 		}
 	}
-		
+
 	function getState() {
 		global $astman;
-
 		if ($astman != null) {
 			$mode = $astman->database_get("DAYNIGHT","C".$this->id);
 			if ($mode != "DAY" && $mode != "NIGHT") {
@@ -121,7 +120,7 @@ function daynight_destinations() {
 	}
 
 	// return an associative array with destination and description
-	if (isset($extens)) 
+	if (isset($extens))
 		return $extens;
 	else
 		return null;
@@ -191,7 +190,7 @@ function daynight_toggle() {
 
 	$day_recording = daynight_recording('day');
 	$night_recording = daynight_recording('night');
-	
+
 	$id = "app-daynight-toggle"; // The context to be included
 	foreach ($list as $item) {
 		$index = $item['ext'];
@@ -211,7 +210,7 @@ function daynight_toggle() {
 		if (isset($passwords[$index]) && trim($passwords[$index]) != "" && ctype_digit(trim($passwords[$index]))) {
 			$ext->add($id, $c, '', new ext_authenticate($passwords[$index]));
 		}
-		$ext->add($id, $c, '', new ext_setvar('INDEX', $index));	
+		$ext->add($id, $c, '', new ext_setvar('INDEX', $index));
     // Depends on featurecode.sln which is provided in core's sound files
     //
 		$day_file = "beep&silence/1&featurecode&digits/${index}&de-activated";
@@ -220,8 +219,8 @@ function daynight_toggle() {
 		  if ($day_recording[$index] != 0 ) { $day_file = recordings_get_file ($day_recording[$index]); }
 		  if ($night_recording[$index] != 0 ) { $night_file = recordings_get_file ($night_recording[$index]); }
 		  }
-		$ext->add($id, $c, '', new ext_setvar('DAYREC', $day_file));	
-		$ext->add($id, $c, '', new ext_setvar('NIGHTREC', $night_file));	
+		$ext->add($id, $c, '', new ext_setvar('DAYREC', $day_file));
+		$ext->add($id, $c, '', new ext_setvar('NIGHTREC', $night_file));
 		$ext->add($id, $c, '', new ext_goto($id.',s,1'));
 	}
 
@@ -229,10 +228,10 @@ function daynight_toggle() {
 		$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
 
 		$c='s';
-		$ext->add($id, $c, '', new ext_setvar('DAYNIGHTMODE', '${DB(DAYNIGHT/C${INDEX})}'));	
+		$ext->add($id, $c, '', new ext_setvar('DAYNIGHTMODE', '${DB(DAYNIGHT/C${INDEX})}'));
 		$ext->add($id, $c, '', new ext_gotoif('$["${DAYNIGHTMODE}" = "NIGHT"]', 'day', 'night'));
 
-		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));	
+		$ext->add($id, $c, 'day', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'DAY'));
 		if ($amp_conf['USEDEVSTATE']) {
 			$ext->add($id, $c, '', new ext_setvar($amp_conf['AST_FUNC_DEVICE_STATE'].'(Custom:DAYNIGHT${INDEX})', 'NOT_INUSE'));
 		}
@@ -243,7 +242,7 @@ function daynight_toggle() {
 		}
 		$ext->add($id, $c, '', new ext_hangup(''));
 
-		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));	
+		$ext->add($id, $c, 'night', new ext_setvar('DB(DAYNIGHT/C${INDEX})', 'NIGHT'));
 		if ($amp_conf['USEDEVSTATE']) {
 			$ext->add($id, $c, '', new ext_setvar($amp_conf['AST_FUNC_DEVICE_STATE'].'(Custom:DAYNIGHT${INDEX})', 'INUSE'));
 		}
@@ -283,7 +282,7 @@ function daynight_list() {
 	}
 	if (isset($list)) {
 		return $list;
-	} else { 
+	} else {
 		return array();
 	}
 }
@@ -298,7 +297,7 @@ function daynight_passwords() {
 	}
 	if (isset($list)) {
 		return $list;
-	} else { 
+	} else {
 		return array();
 	}
 }
@@ -314,7 +313,7 @@ function daynight_recording($mode) {
 	}
 	if (isset($list)) {
 		return $list;
-	} else { 
+	} else {
 		return array();
 	}
 }
@@ -359,7 +358,7 @@ function daynight_edit($post, $id=0) {
 	$fcc->setDefault('*28'.$id);
   $fcc->setProvideDest();
 	$fcc->update();
-	unset($fcc);	
+	unset($fcc);
 
 	needreload();
 }
@@ -372,11 +371,11 @@ function daynight_del($id){
 
 	$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
 	$fcc->delete();
-	unset($fcc);	
+	unset($fcc);
 
 	$dn = new dayNightObject($id);
 	$dn->del();
-	unset($dn);	
+	unset($dn);
 }
 
 function daynight_get_obj($id=0) {
@@ -397,10 +396,10 @@ function daynight_get_obj($id=0) {
 }
 
 /*
-SELECT s1.ext ext, dest, dmode, s2.description descirption FROM daynight s1 
+SELECT s1.ext ext, dest, dmode, s2.description descirption FROM daynight s1
 INNER JOIN
     (
-			      SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2 
+			      SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2
 						ON s1.ext = s2.ext WHERE dmode in ('day','night')
 						AND dest = '$dest'
 
@@ -414,11 +413,11 @@ function daynight_check_destinations($dest=true) {
 		return $destlist;
 	}
 	$sql = "
-		SELECT s1.ext ext, dest, dmode, s2.description description FROM daynight s1 
+		SELECT s1.ext ext, dest, dmode, s2.description description FROM daynight s1
 		INNER JOIN
     		(
-					SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2 
-					ON s1.ext = s2.ext WHERE dmode in ('day','night') 
+					SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2
+					ON s1.ext = s2.ext WHERE dmode in ('day','night')
 		";
 	if ($dest !== true) {
 		$sql .= "AND dest in ('".implode("','",$dest)."')";
@@ -494,7 +493,7 @@ function daynight_edit_timecondition($viewing_itemid, $daynight_ref) {
 	}
 }
 
-function daynight_add_timecondition($daynight_ref) { 
+function daynight_add_timecondition($daynight_ref) {
 	global $db;
 
 	// We don't know what the new timecondition id is yet so we will put a place holder and check it when the page reloads
@@ -502,7 +501,7 @@ function daynight_add_timecondition($daynight_ref) {
 	daynight_edit_timecondition('add', $daynight_ref);
 }
 
-function daynight_checkadd_timecondition() { 
+function daynight_checkadd_timecondition() {
 	global $db;
 
 	$sql = "SELECT ext FROM daynight WHERE dmode IN ('timeday', 'timenight') AND dest = 'add'";
