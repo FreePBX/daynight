@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 /* $Id: page.ivr.php 3790 2007-02-16 18:52:53Z p_lindheimer $ */
 //Copyright (C) 2007 Atengo LLC (info@atengo.net)
@@ -79,9 +79,9 @@ function daynight_show_edit($post, $add="") {
 	$night_recording_id = isset($dests['night_recording_id'])?$dests['night_recording_id']:'';
 ?>
 	<h2><?php echo _("Call Flow Toggle Control"); ?></h2>
-<?php		
-	if ($itemid != ""){ 
-		$delURL = $_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'&action=delete';
+<?php
+	if ($itemid != ""){
+		$delURL = '?'.$_SERVER['QUERY_STRING'].'&action=delete';
 		$tlabel = sprintf(_("Delete Call Flow Toggle Feature Code %s"),$code);
 		$label = '<span><img width="16" height="16" border="0" title="'.$tlabel.'" alt="" src="images/core_delete.png"/>&nbsp;'.$tlabel.'</span>';
 ?>
@@ -99,16 +99,16 @@ function daynight_show_edit($post, $add="") {
 			foreach($timeconditions_refs as $ref) {
 				$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Normal Mode (Green/BLF off)") : _("Forces to Override Mode (Red/BLF on)");
 				$timecondition_id = $ref['dest'];
-				$tcURL = $_SERVER['PHP_SELF'].'?'."display=timeconditions&itemid=$timecondition_id";
+				$tcURL = '?'."display=timeconditions&itemid=$timecondition_id";
 				$label = '<span><img width="16" height="16" border="0" title="'.sprintf(_("Linked to Time Condition %s - %s"),$timecondition_id,$dmode).'" alt="" src="images/clock_link.png"/>&nbsp;'.sprintf(_("Linked to Time Condition %s - %s"),$timecondition_id,$dmode).'</span>';
 ?>
 				<a href="<?php echo $tcURL ?>"><?php echo $label; ?></a><br />
 <?php
 			}
 		}
-	} 
+	}
 ?>
-	<form name="prompt" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return prompt_onsubmit();">
+	<form name="prompt" action="" method="post" onsubmit="return prompt_onsubmit();">
 	<input type="hidden" name="action" value="edited" />
 	<input type="hidden" name="display" value="daynight" />
 	<input name="Submit" type="submit" style="display:none;" value="save" />
@@ -118,7 +118,7 @@ function daynight_show_edit($post, $add="") {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2">	
+		<td colspan="2">
 		<input name="Submit" type="submit" value="<?php echo _("Save")?>">
 		<?php if ($itemid != '') echo "&nbsp ".sprintf(_("Use feature code: %s to toggle the call flow mode"),"<strong>".$code."</strong>")?>
 		</td>
@@ -166,8 +166,8 @@ function daynight_show_edit($post, $add="") {
 		</td>
 		<td>
 			<select name="state" tabindex="<?php echo ++$tabindex;?>">
-				<option value="DAY" <?php echo ($state == 'DAY' ? 'SELECTED':'') ?> ><?php echo _("Normal (Green/BLF off)");?></option> 
-				<option value="NIGHT" <?php echo ($state == 'NIGHT' ? 'SELECTED':'') ?> ><?php echo _("Override (Red/BLF on)");?></option> 
+				<option value="DAY" <?php echo ($state == 'DAY' ? 'SELECTED':'') ?> ><?php echo _("Normal (Green/BLF off)");?></option>
+				<option value="NIGHT" <?php echo ($state == 'NIGHT' ? 'SELECTED':'') ?> ><?php echo _("Override (Red/BLF on)");?></option>
 			</select>
 		</td>
 	</tr>
@@ -231,7 +231,7 @@ function daynight_show_edit($post, $add="") {
 	//
 ?>
 	<tr>
-		<td colspan=2>	
+		<td colspan=2>
 		<input name="Submit" type="submit" value="<?php echo _("Save")?>">
 		<?php if ($itemid != '') echo "&nbsp ".sprintf(_("Use feature code: %s to toggle the call flow mode"),"<strong>".$code."</strong>")?>
 		</td>
@@ -267,13 +267,13 @@ function daynight_show_edit($post, $add="") {
 // dest is the target
 //
 function drawdestinations($count, $mode, $dest) { ?>
-	<tr> 
+	<tr>
 		<td style="text-align:right;">
 		<a href="#" class="info"><strong><?php echo $mode?></strong><span><?php echo sprintf(_("Destination to use when set to %s mode"),$mode);?></span></a>
 		</td>
-		<td> 
-			<table> <?php echo drawselects($dest,$count); ?> 
-			</table> 
+		<td>
+			<table> <?php echo drawselects($dest,$count); ?>
+			</table>
 		</td>
 	</tr>
 	<tr><td colspan=2><hr /></td></tr>
