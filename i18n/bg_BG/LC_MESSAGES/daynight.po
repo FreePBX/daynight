@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-23 09:52+0000\n"
-"PO-Revision-Date: 2014-07-21 16:48+0200\n"
+"PO-Revision-Date: 2014-07-21 16:49+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian "
 "<http://git.freepbx.org/projects/freepbx/daynight/bg/>\n"
@@ -255,7 +255,7 @@ msgid "Override Flow (Red/BLF on)"
 msgstr "Отменен Поток (Червено/BLF вкл)"
 
 msgid "Please enter a valid numeric password, only numbers are allowed"
-msgstr "Моля въведете правилна цифрова парола, само цифри са позволени"
+msgstr "Моля въведете правилна цифрова парола, позволени са само цифри"
 
 #, php-format
 msgid "Destination to use when set to %s mode"
