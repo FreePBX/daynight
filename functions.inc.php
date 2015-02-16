@@ -405,25 +405,26 @@ function daynight_edit($post, $id=0) {
 	//       Need to set the day/night mode in the system if new
 
 	// Delete all the old dests
-	sql("DELETE FROM daynight WHERE dmode IN ('day', 'night', 'password', 'fc_description','day_recording_id','night_recording_id') AND ext = '$id'");
-
+	if($post['action'] != "add"){
+		sql("DELETE FROM daynight WHERE dmode IN ('day', 'night', 'password', 'fc_description','day_recording_id','night_recording_id') AND ext = $id");
+	}
 	$day   = isset($post[$post['goto0'].'0'])?$post[$post['goto0'].'0']:'';
 	$night = isset($post[$post['goto1'].'1'])?$post[$post['goto1'].'1']:'';
 
-	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'day', '$day')");
-	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'night', '$night')");
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ($id, 'day', '$day')");
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ($id, 'night', '$night')");
 
 	if (isset($post['password']) && trim($post['password'] != "")) {
 		$password = trim($post['password']);
-		sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'password', '$password')");
+		sql("INSERT INTO daynight (ext, dmode, dest) VALUES ($id, 'password', '$password')");
 	}
 	$fc_description = isset($post['fc_description']) ? trim($post['fc_description']) : "";
-	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'fc_description', '".$db->escapeSimple($fc_description)."')");
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ($id, 'fc_description', '".$db->escapeSimple($fc_description)."')");
 
 	$day_recording_id = isset($post['day_recording_id']) ? trim($post['day_recording_id']) : "";
-	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'day_recording_id', '$day_recording_id')");
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ($id, 'day_recording_id', '$day_recording_id')");
 	$night_recording_id = isset($post['night_recording_id']) ? trim($post['night_recording_id']) : "";
-	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ('$id', 'night_recording_id', '$night_recording_id')");
+	sql("INSERT INTO daynight (ext, dmode, dest) VALUES ($id, 'night_recording_id', '$night_recording_id')");
 
 	$dn = new dayNightObject($id);
 	$dn->del();
@@ -436,7 +437,7 @@ function daynight_edit($post, $id=0) {
 		$fcc->setDescription("$id: Call Flow Toggle Control");
 	}
 	$fcc->setDefault('*28'.$id);
-  $fcc->setProvideDest();
+	$fcc->setProvideDest();
 	$fcc->update();
 	unset($fcc);	
 
@@ -444,11 +445,10 @@ function daynight_edit($post, $id=0) {
 }
 
 function daynight_del($id){
-
 	// TODO: delete ASTDB entry when deleting the mode
 	//
-	$results = sql("DELETE FROM daynight WHERE ext = \"$id\"","query");
-
+	$results = sql("DELETE FROM daynight WHERE ext = $id","query");
+	debug($results);
 	$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
 	$fcc->delete();
 	unset($fcc);	
@@ -712,4 +712,5 @@ function daynight_hookGet_config($engine) {
 		break;
 	}
 }
+
 ?>
