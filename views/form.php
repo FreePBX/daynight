@@ -8,7 +8,7 @@ $dests = daynight_get_obj($itemid);
 extract($dests);
 $ids = daynight_get_avail();
 foreach ($ids as $id) {
-	$indexopts .= '<option value="'.$id.'">'.$id.'</option>';
+	$indexopts .= '<option value='.$id.'>'.$id.'</option>';
 }
 if($itemid == ''){
 	$indexinput = '<select class="form-control" id="itemid" name="itemid">';

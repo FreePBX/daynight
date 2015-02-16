@@ -23,7 +23,7 @@ class Daynight implements \BMO {
 		$fc_description = isset($request['fc_description'])?$request['fc_description']:'';
 		$day_recording_id = isset($request['day_recording_id']) ? $request['day_recording_id'] :  '';
 		$night_recording_id = isset($request['night_recording_id']) ? $request['night_recording_id'] :  '';
-		isset($request['itemid'])?$itemid=$this->db->escapeSimple($request['itemid']):$itemid='';
+		isset($request['itemid'])?$itemid=$request['itemid']:$itemid='';
 		$extdisplay = isset($request['extdisplay'])? $request['extdisplay']:'';
 		switch ($action) {
 			case "add":
