@@ -448,7 +448,6 @@ function daynight_del($id){
 	// TODO: delete ASTDB entry when deleting the mode
 	//
 	$results = sql("DELETE FROM daynight WHERE ext = $id","query");
-	debug($results);
 	$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
 	$fcc->delete();
 	unset($fcc);	
