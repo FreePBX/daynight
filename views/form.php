@@ -86,7 +86,7 @@ if(function_exists('recordings_list')) {
 }
 //Usage
 $timeconditions_refs = daynight_list_timecondition($itemid);
-if (!empty($timeconditions_refs)) {		
+if (!empty($timeconditions_refs)) {
 	foreach($timeconditions_refs as $ref) {
 		$dmode = ($ref['dmode'] == 'timeday') ? _("Forces to Normal Mode (Green/BLF off)") : _("Forces to Override Mode (Red/BLF on)");
 		$timecondition_id = $ref['dest'];
@@ -135,7 +135,7 @@ if (!empty($usage_list)) {
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<span id="itemid-help" class="help-block fpbx-help-block"><?php echo _("There are a total of 10 Feature code objects, 0-9, each can control a call flow and be toggled using the call flow toggle feature code plus the index.")?></span>
+			<span id="itemid-help" class="help-block fpbx-help-block"><?php echo sprintf(_("There are a total of %s Feature code objects, %s, each can control a call flow and be toggled using the call flow toggle feature code plus the index."),'100','0-99')?></span>
 		</div>
 	</div>
 </div>

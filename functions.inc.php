@@ -24,7 +24,7 @@ class dayNightObject {
 			$this->DEVSTATE = false;
 		}
 	}
-		
+
 	function getState() {
 		global $astman;
 
@@ -123,7 +123,7 @@ function daynight_destinations() {
 	}
 
 	// return an associative array with destination and description
-	if (isset($extens)) 
+	if (isset($extens))
 		return $extens;
 	else
 		return null;
@@ -193,7 +193,7 @@ function daynight_toggle() {
 
 	$day_recording = daynight_recording('day');
 	$night_recording = daynight_recording('night');
-	
+
 	$id = "app-daynight-toggle"; // The context to be included
 	foreach ($list as $item) {
 		$index = $item['ext'];
@@ -222,8 +222,8 @@ function daynight_toggle() {
 		  if ($day_recording[$index] != 0 ) { $day_file = recordings_get_file ($day_recording[$index]); }
 		  if ($night_recording[$index] != 0 ) { $night_file = recordings_get_file ($night_recording[$index]); }
 		  }
-		$ext->add($id, $c, '', new ext_setvar('DAYREC', $day_file));	
-		$ext->add($id, $c, '', new ext_setvar('NIGHTREC', $night_file));	
+		$ext->add($id, $c, '', new ext_setvar('DAYREC', $day_file));
+		$ext->add($id, $c, '', new ext_setvar('NIGHTREC', $night_file));
 		$ext->add($id, $c, '', new ext_goto($id.',s,1'));
 	}
 
@@ -344,7 +344,7 @@ function daynight_get_avail() {
 		$results = array();
 	}
 
-	for ($i=0;$i<=9;$i++) {
+	for ($i=0;$i<=99;$i++) {
 		if (!in_array($i,$results)) {
 			$list[]=$i;
 		}
@@ -362,7 +362,7 @@ function daynight_list() {
 	}
 	if (isset($list)) {
 		return $list;
-	} else { 
+	} else {
 		return array();
 	}
 }
@@ -377,7 +377,7 @@ function daynight_passwords() {
 	}
 	if (isset($list)) {
 		return $list;
-	} else { 
+	} else {
 		return array();
 	}
 }
@@ -393,7 +393,7 @@ function daynight_recording($mode) {
 	}
 	if (isset($list)) {
 		return $list;
-	} else { 
+	} else {
 		return array();
 	}
 }
@@ -439,7 +439,7 @@ function daynight_edit($post, $id=0) {
 	$fcc->setDefault('*28'.$id);
 	$fcc->setProvideDest();
 	$fcc->update();
-	unset($fcc);	
+	unset($fcc);
 
 	needreload();
 }
@@ -450,11 +450,11 @@ function daynight_del($id){
 	$results = sql("DELETE FROM daynight WHERE ext = $id","query");
 	$fcc = new featurecode('daynight', 'toggle-mode-'.$id);
 	$fcc->delete();
-	unset($fcc);	
+	unset($fcc);
 
 	$dn = new dayNightObject($id);
 	$dn->del();
-	unset($dn);	
+	unset($dn);
 }
 
 function daynight_get_obj($id=0) {
@@ -475,10 +475,10 @@ function daynight_get_obj($id=0) {
 }
 
 /*
-SELECT s1.ext ext, dest, dmode, s2.description descirption FROM daynight s1 
+SELECT s1.ext ext, dest, dmode, s2.description descirption FROM daynight s1
 INNER JOIN
     (
-			      SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2 
+			      SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2
 						ON s1.ext = s2.ext WHERE dmode in ('day','night')
 						AND dest = '$dest'
 
@@ -492,11 +492,11 @@ function daynight_check_destinations($dest=true) {
 		return $destlist;
 	}
 	$sql = "
-		SELECT s1.ext ext, dest, dmode, s2.description description FROM daynight s1 
+		SELECT s1.ext ext, dest, dmode, s2.description description FROM daynight s1
 		INNER JOIN
     		(
-					SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2 
-					ON s1.ext = s2.ext WHERE dmode in ('day','night') 
+					SELECT ext, dest description FROM daynight WHERE dmode = 'fc_description') s2
+					ON s1.ext = s2.ext WHERE dmode in ('day','night')
 		";
 	if ($dest !== true) {
 		$sql .= "AND dest in ('".implode("','",$dest)."')";
@@ -572,7 +572,7 @@ function daynight_edit_timecondition($viewing_itemid, $daynight_ref) {
 	}
 }
 
-function daynight_add_timecondition($daynight_ref) { 
+function daynight_add_timecondition($daynight_ref) {
 	global $db;
 
 	// We don't know what the new timecondition id is yet so we will put a place holder and check it when the page reloads
@@ -580,7 +580,7 @@ function daynight_add_timecondition($daynight_ref) {
 	daynight_edit_timecondition('add', $daynight_ref);
 }
 
-function daynight_checkadd_timecondition() { 
+function daynight_checkadd_timecondition() {
 	global $db;
 
 	$sql = "SELECT ext FROM daynight WHERE dmode IN ('timeday', 'timenight') AND dest = 'add'";
