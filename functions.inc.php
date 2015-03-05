@@ -337,14 +337,15 @@ function daynight_toggle() {
 
 function daynight_get_avail() {
 	global $db;
-
 	$sql = "SELECT ext FROM daynight ORDER BY ext";
-	$results = $db->getCol($sql);
+	$sth = $db->prepare($sql);
+	$sth->execute();
+	$results = $sth->fetchAll(PDO::FETCH_COLUMN, 0);
 	if(DB::IsError($results)) {
 		$results = array();
 	}
 
-	for ($i=0;$i<=99;$i++) {
+	for ($i=0;$i<=9;$i++) {
 		if (!in_array($i,$results)) {
 			$list[]=$i;
 		}
@@ -726,4 +727,4 @@ function daynight_hookGet_config($engine) {
 	}
 }
 
-?>
+
