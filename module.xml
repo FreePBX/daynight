@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>13.0.2</version>
+	<version>13.0.1alpha2</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,8 +12,8 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
-		*13.0.2* FREEPBX-8299 Increase number of available call flow control flows
-		*13.0.1* Skinning updates
+		*13.0.1alpha2* FREEPBX-8299 Increase number of available call flow control flows
+		*13.0.1alpha1* Skinning updates
 		*2.11.0.4* Part fix for #6923 language not being set.
 		*2.11.0.3* Add license file
 		*2.11.0.2* Add a * to toggle all extension feature codes

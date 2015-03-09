@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: traduction française du module daynight\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:18-0500\n"
+"POT-Creation-Date: 2015-03-09 12:35-0400\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Thomas Gagniere <tgagniere@reseau-concept.com>\n"
 "Language-Team: \n"
@@ -28,11 +28,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.inc.php:633
+#: functions.inc.php:634
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:631
+#: functions.inc.php:632
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -48,11 +48,11 @@ msgstr ""
 msgid "Add Toggle"
 msgstr ""
 
-#: daynight.i18n.php:4
+#: daynight.i18n.php:6 daynight.i18n.php:12
 msgid "Applications"
 msgstr ""
 
-#: daynight.i18n.php:13
+#: daynight.i18n.php:18
 msgid ""
 "By default, the Call Flow Control module will not hook Time Conditions "
 "allowing one to associate a call flow toggle feauture code with a time "
@@ -68,11 +68,11 @@ msgid ""
 "several possible call flows through different time conditions."
 msgstr ""
 
-#: daynight.i18n.php:3 daynight.i18n.php:7
+#: daynight.i18n.php:4 daynight.i18n.php:10
 msgid "Call Flow Control"
 msgstr ""
 
-#: daynight.i18n.php:11
+#: daynight.i18n.php:16
 msgid "Call Flow Control Module"
 msgstr ""
 
@@ -81,7 +81,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:644
+#: functions.inc.php:645
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -93,16 +93,15 @@ msgstr ""
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:513
+#: functions.inc.php:514
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
 
-#: daynight.i18n.php:5
+#: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\n"
-"\t\tthat toggles between the two destinations."
+"and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
 
 #: views/form.php:174
@@ -153,11 +152,11 @@ msgstr ""
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr ""
 
-#: daynight.i18n.php:9
+#: daynight.i18n.php:14
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:658
+#: functions.inc.php:659
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -260,8 +259,9 @@ msgid "Submit"
 msgstr ""
 
 #: views/form.php:138
+#, php-format
 msgid ""
-"There are a total of 10 Feature code objects, 0-9, each can control a call "
+"There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
 
