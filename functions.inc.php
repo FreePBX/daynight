@@ -234,6 +234,7 @@ function daynight_toggle() {
 		$c = $fcc->getCodeActive();
 		unset($fcc);
 		if ($c) {
+			$ext->add($id, $c, '', new ext_macro('user-callerid'));
 			$ext->add($id, $c, '', new ext_goto($id.',${EXTEN}*${AMPUSER},1'));
 
 			$userFCs = array();
