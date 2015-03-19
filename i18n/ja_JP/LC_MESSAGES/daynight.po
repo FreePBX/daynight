@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:18-0500\n"
+"POT-Creation-Date: 2015-03-20 05:56+1000\n"
 "PO-Revision-Date: 2013-11-07 13:00+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -47,11 +47,11 @@ msgstr ""
 "Language: Japanese\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: functions.inc.php:633
+#: functions.inc.php:634
 msgid " - Force Time Condition False Destination"
 msgstr "強制的に時間条件をFalse宛先にする。"
 
-#: functions.inc.php:631
+#: functions.inc.php:632
 msgid " - Force Time Condition True Destination"
 msgstr "強制的に時間条件をTrue宛先にする。"
 
@@ -67,11 +67,11 @@ msgstr ""
 msgid "Add Toggle"
 msgstr ""
 
-#: daynight.i18n.php:4
+#: daynight.i18n.php:6 daynight.i18n.php:12
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: daynight.i18n.php:13
+#: daynight.i18n.php:18
 msgid ""
 "By default, the Call Flow Control module will not hook Time Conditions "
 "allowing one to associate a call flow toggle feauture code with a time "
@@ -98,11 +98,11 @@ msgstr ""
 "イッチ</b>を作成して、単一のコールフロー切り替えを複数の時間条件と連動させる"
 "機能です。"
 
-#: daynight.i18n.php:3 daynight.i18n.php:7
+#: daynight.i18n.php:4 daynight.i18n.php:10
 msgid "Call Flow Control"
 msgstr "コールフロー制御"
 
-#: daynight.i18n.php:11
+#: daynight.i18n.php:16
 msgid "Call Flow Control Module"
 msgstr "コールフロー制御モジュール"
 
@@ -111,7 +111,7 @@ msgstr "コールフロー制御モジュール"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "コールフロー切り替え (%s) : %s"
 
-#: functions.inc.php:644
+#: functions.inc.php:645
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -123,17 +123,18 @@ msgstr "コールフロー切り替え制御"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:513
+#: functions.inc.php:514
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "コールフロー切り替え (%s) : %s"
 
-#: daynight.i18n.php:5
+#: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\n"
-"\t\tthat toggles between the two destinations."
+"and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
+"コールフローの手動トグル制御 - 2つの宛先を選択できるようにし、その2つの宛先間"
+"が切り替わるキーコードを提供します。"
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -183,11 +184,11 @@ msgstr "強制的にノーマルモードにする (緑/BLF オフ)"
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "強制的に上書きモードにする (赤/BLF オン)"
 
-#: daynight.i18n.php:9
+#: daynight.i18n.php:14
 msgid "Hook Time Conditions Module"
 msgstr "時間条件フックモジュール"
 
-#: functions.inc.php:658
+#: functions.inc.php:659
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -377,11 +378,3 @@ msgstr "全てのフィールドに対するプライマリキーを変更中.."
 
 #~ msgid "Use feature code: %s to toggle the call flow mode"
 #~ msgstr "キーコードを使用する:  %s コールフローモードを切り替えるため"
-
-#~ msgid ""
-#~ "Call Flow manual toggle control - allows for two destinations to be "
-#~ "chosen and provides a feature code\t\tthat toggles between the two "
-#~ "destinations."
-#~ msgstr ""
-#~ "コールフローの手動トグル制御 - 2つの宛先を選択できるようにし、その2つの宛"
-#~ "先間が切り替わるキーコードを提供します。"

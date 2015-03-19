@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:18-0500\n"
+"POT-Creation-Date: 2015-03-20 05:56+1000\n"
 "PO-Revision-Date: 2009-01-31 00:31+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -30,11 +30,11 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:633
+#: functions.inc.php:634
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:631
+#: functions.inc.php:632
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -50,11 +50,11 @@ msgstr ""
 msgid "Add Toggle"
 msgstr ""
 
-#: daynight.i18n.php:4
+#: daynight.i18n.php:6 daynight.i18n.php:12
 msgid "Applications"
 msgstr ""
 
-#: daynight.i18n.php:13
+#: daynight.i18n.php:18
 msgid ""
 "By default, the Call Flow Control module will not hook Time Conditions "
 "allowing one to associate a call flow toggle feauture code with a time "
@@ -70,11 +70,11 @@ msgid ""
 "several possible call flows through different time conditions."
 msgstr ""
 
-#: daynight.i18n.php:3 daynight.i18n.php:7
+#: daynight.i18n.php:4 daynight.i18n.php:10
 msgid "Call Flow Control"
 msgstr ""
 
-#: daynight.i18n.php:11
+#: daynight.i18n.php:16
 msgid "Call Flow Control Module"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:644
+#: functions.inc.php:645
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -95,16 +95,15 @@ msgstr ""
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:513
+#: functions.inc.php:514
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
 
-#: daynight.i18n.php:5
+#: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\n"
-"\t\tthat toggles between the two destinations."
+"and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
 
 #: views/form.php:174
@@ -155,11 +154,11 @@ msgstr ""
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr ""
 
-#: daynight.i18n.php:9
+#: daynight.i18n.php:14
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:658
+#: functions.inc.php:659
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -314,7 +313,9 @@ msgstr "正在更改所有字段的主键。。。"
 #~ "If a selection is made, this timecondition will be associated with that "
 #~ "featurecode and will allow this timecondition to be direct overridden by "
 #~ "that daynight mode featurecode"
-#~ msgstr "如果进行了某些选择，那么此时间条件控制设置将与该功能代码相联系，并且允许此时间条件控制的设置被昼夜模式的功能代码所覆盖"
+#~ msgstr ""
+#~ "如果进行了某些选择，那么此时间条件控制设置将与该功能代码相联系，并且允许此"
+#~ "时间条件控制的设置被昼夜模式的功能代码所覆盖"
 
 #~ msgid " - Force Day"
 #~ msgstr " - 强制白昼模式"
@@ -346,7 +347,9 @@ msgstr "正在更改所有字段的主键。。。"
 #~ msgid ""
 #~ "There are a total of 10 Feature code objects, 0-9, each can control a "
 #~ "call flow and be toggled using the day/night feature code plus the index."
-#~ msgstr "一共有10个功能代码对象，从0到9，每个都可以控制一个呼叫流，并可以由昼/夜模式功能代码加索引来触发。"
+#~ msgstr ""
+#~ "一共有10个功能代码对象，从0到9，每个都可以控制一个呼叫流，并可以由昼/夜模"
+#~ "式功能代码加索引来触发。"
 
 #~ msgid "Description for this Day/Night Control"
 #~ msgstr "对这项昼/夜控制规则的描述"
@@ -366,7 +369,9 @@ msgstr "正在更改所有字段的主键。。。"
 #~ "You can optionally include a password to authenticate before toggling the "
 #~ "day/night mode. If left blank anyone can use the feature code and it will "
 #~ "be un-protected"
-#~ msgstr "你可以包含一个可选的密码，它在切换昼夜模式时起到验证的作用。如果不填，那么所有人都可以使用功能代码，此功能代码不受保护。"
+#~ msgstr ""
+#~ "你可以包含一个可选的密码，它在切换昼夜模式时起到验证的作用。如果不填，那么"
+#~ "所有人都可以使用功能代码，此功能代码不受保护。"
 
 #~ msgid "DAY"
 #~ msgstr "昼"
