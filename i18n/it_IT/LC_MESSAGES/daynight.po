@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-20 18:33-0400\n"
+"POT-Creation-Date: 2015-03-20 18:42-0400\n"
 "PO-Revision-Date: 2008-11-07 18:38+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -29,25 +29,29 @@ msgstr ""
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
-#: functions.inc.php:647
+#: functions.inc.php:635
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:645
+#: functions.inc.php:633
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
-#: page.daynight.php:18
-msgid "Add Call Flow Toggle Code"
+#: page.daynight.php:13
+msgid ": Add"
+msgstr ""
+
+#: page.daynight.php:11
+msgid ": Edit"
+msgstr ""
+
+#: views/bootnav.php:6
+msgid "Add Toggle"
 msgstr ""
 
 #: daynight.i18n.php:6 daynight.i18n.php:12
 msgid "Applications"
 msgstr ""
-
-#: functions.inc.php:639
-msgid "Associate with"
-msgstr "Associa con"
 
 #: daynight.i18n.php:18
 msgid ""
@@ -78,16 +82,16 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: page.daynight.php:70
+#: functions.inc.php:646
+msgid "Call Flow Toggle Associate with"
+msgstr ""
+
+#: page.daynight.php:7
 msgid "Call Flow Toggle Control"
 msgstr ""
 
-#: page.daynight.php:121
-msgid "Call Flow Toggle Feature Code Index:"
-msgstr ""
-
-#: functions.inc.php:635
-msgid "Call Flow Toggle Mode Association"
+#: views/form.php:126
+msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
 #: functions.inc.php:515
@@ -101,41 +105,51 @@ msgid ""
 "and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
 
-#: page.daynight.php:152
-msgid "Current Mode:"
-msgstr "Modo Corrente:"
+#: views/form.php:174
+msgid "Current Mode"
+msgstr ""
 
-#: page.daynight.php:172 page.daynight.php:188
+#: views/form.php:24 views/form.php:25
 msgid "Default"
 msgstr ""
 
-#: page.daynight.php:74
-#, php-format
-msgid "Delete Call Flow Toggle Feature Code %s"
+#: Daynight.class.php:50
+msgid "Delete"
 msgstr ""
 
-#: page.daynight.php:147
+#: views/form.php:150
 msgid "Description"
 msgstr "Descrizione"
 
-#: page.daynight.php:147
+#: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
 msgstr ""
 
-#: page.daynight.php:261
-#, php-format
-msgid "Destination to use when set to %s mode"
-msgstr "Destinazione da usare se impostato su modalità %s"
+#: views/grid.php:31
+msgid "Destination"
+msgstr ""
+
+#: views/form.php:238
+msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
+msgstr ""
+
+#: views/form.php:262
+msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
+msgstr ""
 
 #: install.php:81
 msgid "ERROR: failed to alter primary keys "
 msgstr "ERROE: alterazione chiavi primarie fallito"
 
-#: page.daynight.php:89
+#: views/grid.php:30
+msgid "Feature Code"
+msgstr ""
+
+#: views/form.php:91
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr ""
 
-#: page.daynight.php:89
+#: views/form.php:91
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr ""
 
@@ -143,7 +157,7 @@ msgstr ""
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:639
+#: functions.inc.php:660
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -162,32 +176,32 @@ msgid ""
 "BLF on) state."
 msgstr ""
 
-#: page.daynight.php:92
+#: views/form.php:94
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "Collegato alla Condizione Temporale %s - %s"
 
-#: page.daynight.php:166
+#: views/bootnav.php:5
+msgid "List Toggles"
+msgstr ""
+
+#: views/form.php:54
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
-"recordings use the \"System Recordings\" MENU to the left"
+"recordings use the \"System Recordings\" MENU above"
 msgstr ""
 
-#: page.daynight.php:183
+#: views/form.php:80
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
-"recordings use the \"System Recordings\" MENU to the left"
+"recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:642
-msgid "No Association"
-msgstr "Nessuna Associazione"
-
-#: page.daynight.php:158
+#: views/form.php:179
 msgid "Normal (Green/BLF off)"
 msgstr ""
 
-#: page.daynight.php:216
+#: views/form.php:226
 msgid "Normal Flow (Green/BLF off)"
 msgstr ""
 
@@ -195,53 +209,73 @@ msgstr ""
 msgid "OK"
 msgstr "OK"
 
-#: page.daynight.php:202
+#: views/form.php:202
 msgid "Optional Password"
 msgstr "Password Opzionale"
 
-#: page.daynight.php:159
+#: views/form.php:181
 msgid "Override (Red/BLF on)"
 msgstr ""
 
-#: page.daynight.php:217
+#: views/form.php:250
 msgid "Override Flow (Red/BLF on)"
 msgstr ""
 
-#: page.daynight.php:240
+#: assets/js/daynight.js:4
 msgid "Please enter a valid numeric password, only numbers are allowed"
 msgstr ""
 "Prego immettere una password numerica valida, solo numero sono permessi"
 
-#: page.daynight.php:166
+#: assets/js/daynight.js:7
+msgid "Please set the Current Mode"
+msgstr ""
+
+#: assets/js/daynight.js:5
+msgid "Please set the Normal Flow destination"
+msgstr ""
+
+#: assets/js/daynight.js:6
+msgid "Please set the Override Flow destination"
+msgstr ""
+
+#: views/form.php:40
 msgid "Recording for Normal Mode"
 msgstr ""
 
-#: page.daynight.php:183
+#: views/form.php:66
 msgid "Recording for Override Mode"
 msgstr ""
 
-#: page.daynight.php:111 page.daynight.php:224
-msgid "Save"
-msgstr "Salva"
+#: Daynight.class.php:55
+msgid "Reset"
+msgstr ""
 
-#: page.daynight.php:122
+#: views/grid.php:32
+msgid "State"
+msgstr ""
+
+#: Daynight.class.php:60
+msgid "Submit"
+msgstr ""
+
+#: views/form.php:138
+#, php-format
 msgid ""
-"There are a total of 10 Feature code objects, 0-9, each can control a call "
+"There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
 
-#: page.daynight.php:153
+#: views/form.php:189
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
 msgstr ""
 
-#: page.daynight.php:112 page.daynight.php:225
-#, php-format
-msgid "Use feature code: %s to toggle the call flow mode"
+#: views/form.php:98
+msgid "Time Condition Reference"
 msgstr ""
 
-#: page.daynight.php:202
+#: views/form.php:214
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
@@ -251,6 +285,21 @@ msgstr ""
 #: install.php:77
 msgid "changing primary keys to all fields.."
 msgstr "cambiamento chiavi primarie su tutti i campi.."
+
+#~ msgid "Associate with"
+#~ msgstr "Associa con"
+
+#~ msgid "Current Mode:"
+#~ msgstr "Modo Corrente:"
+
+#~ msgid "Destination to use when set to %s mode"
+#~ msgstr "Destinazione da usare se impostato su modalità %s"
+
+#~ msgid "No Association"
+#~ msgstr "Nessuna Associazione"
+
+#~ msgid "Save"
+#~ msgstr "Salva"
 
 #~ msgid "Day/Night (%s) : %s"
 #~ msgstr "Giorno/Notte (%s) : %s"
