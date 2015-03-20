@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-20 06:02+1000\n"
+"POT-Creation-Date: 2015-03-20 18:33-0400\n"
 "PO-Revision-Date: 2014-07-21 16:49+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/daynight/"
@@ -36,29 +36,25 @@ msgstr ""
 "X-Poedit-Country: BULGARIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:635
+#: functions.inc.php:647
 msgid " - Force Time Condition False Destination"
 msgstr " - Приложи Времево Условие за Направление Не Съвпада"
 
-#: functions.inc.php:633
+#: functions.inc.php:645
 msgid " - Force Time Condition True Destination"
 msgstr " - Приложи Времево Условие за Направление Ако Съвпада"
 
-#: page.daynight.php:13
-msgid ": Add"
-msgstr ""
-
-#: page.daynight.php:11
-msgid ": Edit"
-msgstr ""
-
-#: views/bootnav.php:6
-msgid "Add Toggle"
-msgstr ""
+#: page.daynight.php:18
+msgid "Add Call Flow Toggle Code"
+msgstr "Добави Специален Код за Превключване на Потока от Входящи Обаждания"
 
 #: daynight.i18n.php:6 daynight.i18n.php:12
 msgid "Applications"
 msgstr "Приложения"
+
+#: functions.inc.php:639
+msgid "Associate with"
+msgstr "Асоциирай с"
 
 #: daynight.i18n.php:18
 msgid ""
@@ -101,17 +97,18 @@ msgstr "Модул за Управление на Входящи Обаждан�
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Превключване на Потока от Входящи Обаждания (%s) : %s"
 
-#: functions.inc.php:646
-msgid "Call Flow Toggle Associate with"
-msgstr ""
-
-#: page.daynight.php:7
+#: page.daynight.php:70
 msgid "Call Flow Toggle Control"
 msgstr "Управление на Превключване на Потока от Входящи Обаждания"
 
-#: views/form.php:126
-msgid "Call Flow Toggle Feature Code Index"
+#: page.daynight.php:121
+msgid "Call Flow Toggle Feature Code Index:"
 msgstr ""
+"Индекс на Специален Код за Превключване на Потока от Входящи Обаждания:"
+
+#: functions.inc.php:635
+msgid "Call Flow Toggle Mode Association"
+msgstr "Асоцииране на Режим на Превключване на Потока от Входящи Обаждания"
 
 #: functions.inc.php:515
 #, php-format
@@ -127,52 +124,42 @@ msgstr ""
 "избере и предостави специален код\t\tкойто да превключи между двете "
 "направления."
 
-#: views/form.php:174
-msgid "Current Mode"
-msgstr ""
+#: page.daynight.php:152
+msgid "Current Mode:"
+msgstr "Текущ Режим:"
 
-#: views/form.php:24 views/form.php:25
+#: page.daynight.php:172 page.daynight.php:188
 msgid "Default"
 msgstr "По-Подразбиране"
 
-#: Daynight.class.php:50
-msgid "Delete"
-msgstr ""
+#: page.daynight.php:74
+#, php-format
+msgid "Delete Call Flow Toggle Feature Code %s"
+msgstr "Изтрий Специален Код за Превключване на Потока от Входящи Обаждания %s"
 
-#: views/form.php:150
+#: page.daynight.php:147
 msgid "Description"
 msgstr "Описание"
 
-#: views/form.php:162
+#: page.daynight.php:147
 msgid "Description for this Call Flow Toggle Control"
 msgstr ""
 "Описание за това Управление на Превключване на Потока от Входящи Обаждания"
 
-#: views/grid.php:31
-msgid "Destination"
-msgstr ""
-
-#: views/form.php:238
-msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
-msgstr ""
-
-#: views/form.php:262
-msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
-msgstr ""
+#: page.daynight.php:261
+#, php-format
+msgid "Destination to use when set to %s mode"
+msgstr "Направление, което да се използва при %s режим"
 
 #: install.php:81
 msgid "ERROR: failed to alter primary keys "
 msgstr "Грешка: не мога да променя primary keys "
 
-#: views/grid.php:30
-msgid "Feature Code"
-msgstr ""
-
-#: views/form.php:91
+#: page.daynight.php:89
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr "Принуждава към Нормален Режим (Зелено/BLF изкл)"
 
-#: views/form.php:91
+#: page.daynight.php:89
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Принуждава към Режим на Отмяна (Червено/BLF вкл)"
 
@@ -180,7 +167,7 @@ msgstr "Принуждава към Режим на Отмяна (Червено
 msgid "Hook Time Conditions Module"
 msgstr "Модул за превключване на Времеви Условия"
 
-#: functions.inc.php:660
+#: functions.inc.php:639
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -216,32 +203,36 @@ msgstr ""
 "две направления когато това асоциирано Превключване на Потока Входящи "
 "Обаждания е в състояние отмяна (Червено/BLF вкл)."
 
-#: views/form.php:94
+#: page.daynight.php:92
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "Свързан към Времева Група %s - %s"
 
-#: views/bootnav.php:5
-msgid "List Toggles"
-msgstr ""
-
-#: views/form.php:54
+#: page.daynight.php:166
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
-"recordings use the \"System Recordings\" MENU above"
+"recordings use the \"System Recordings\" MENU to the left"
 msgstr ""
+"Съобщение за възпроизвеждане в нормален режим (Зелено/BLF изкл).<br>За да "
+"добавите допълнителни записи използвайте меню \"Системни Записи\""
 
-#: views/form.php:80
+#: page.daynight.php:183
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
-"recordings use the \"System Recordings\" MENU to the above"
+"recordings use the \"System Recordings\" MENU to the left"
 msgstr ""
+"Съобщение за възпроизвеждане в режим на отмяна (Червено/BLF вкл).<br>За да "
+"добавите допълнителни записи използвайте меню \"Системни Записи\" отляво"
 
-#: views/form.php:179
+#: functions.inc.php:642
+msgid "No Association"
+msgstr "Без Асоциация"
+
+#: page.daynight.php:158
 msgid "Normal (Green/BLF off)"
 msgstr "Нормален (Зелено/BLF изкл)"
 
-#: views/form.php:226
+#: page.daynight.php:216
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Нормален Поток (Зелено/BLF изкл)"
 
@@ -249,62 +240,44 @@ msgstr "Нормален Поток (Зелено/BLF изкл)"
 msgid "OK"
 msgstr "OK"
 
-#: views/form.php:202
+#: page.daynight.php:202
 msgid "Optional Password"
 msgstr "Парола"
 
-#: views/form.php:181
+#: page.daynight.php:159
 msgid "Override (Red/BLF on)"
 msgstr "Отмяна (Червено/BLF вкл)"
 
-#: views/form.php:250
+#: page.daynight.php:217
 msgid "Override Flow (Red/BLF on)"
 msgstr "Отменен Поток (Червено/BLF вкл)"
 
-#: assets/js/daynight.js:4
+#: page.daynight.php:240
 msgid "Please enter a valid numeric password, only numbers are allowed"
 msgstr "Моля въведете правилна цифрова парола, позволени са само цифри"
 
-#: assets/js/daynight.js:7
-msgid "Please set the Current Mode"
-msgstr ""
-
-#: assets/js/daynight.js:5
-msgid "Please set the Normal Flow destination"
-msgstr ""
-
-#: assets/js/daynight.js:6
-msgid "Please set the Override Flow destination"
-msgstr ""
-
-#: views/form.php:40
+#: page.daynight.php:166
 msgid "Recording for Normal Mode"
 msgstr "Запис за Нормален Режим"
 
-#: views/form.php:66
+#: page.daynight.php:183
 msgid "Recording for Override Mode"
 msgstr "Запис за Режим на Отмяна"
 
-#: Daynight.class.php:55
-msgid "Reset"
-msgstr ""
+#: page.daynight.php:111 page.daynight.php:224
+msgid "Save"
+msgstr "Запиши"
 
-#: views/grid.php:32
-msgid "State"
-msgstr ""
-
-#: Daynight.class.php:60
-msgid "Submit"
-msgstr ""
-
-#: views/form.php:138
-#, php-format
+#: page.daynight.php:122
 msgid ""
-"There are a total of %s Feature code objects, %s, each can control a call "
+"There are a total of 10 Feature code objects, 0-9, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
+"Има общо 10 значения на Специален Код, 0-9, всяко от тях може да контролира "
+"потока от входящи обаждания и се превключва използвайки специален код за "
+"превключване на потока от входящи обаждания плюс индекса."
 
-#: views/form.php:189
+#: page.daynight.php:153
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -313,11 +286,13 @@ msgstr ""
 "от Входящи Обаждания, или ще установи първоначално състояние когато "
 "създавате нов."
 
-#: views/form.php:98
-msgid "Time Condition Reference"
+#: page.daynight.php:112 page.daynight.php:225
+#, php-format
+msgid "Use feature code: %s to toggle the call flow mode"
 msgstr ""
+"Използвайте специален код: %s за да превключите потока от входящи обаждания"
 
-#: views/form.php:214
+#: page.daynight.php:202
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
@@ -330,64 +305,6 @@ msgstr ""
 #: install.php:77
 msgid "changing primary keys to all fields.."
 msgstr "промяна на primary keys за всички полета.."
-
-#~ msgid ""
-#~ "There are a total of 10 Feature code objects, 0-9, each can control a "
-#~ "call flow and be toggled using the call flow toggle feature code plus the "
-#~ "index."
-#~ msgstr ""
-#~ "Има общо 10 значения на Специален Код, 0-9, всяко от тях може да "
-#~ "контролира потока от входящи обаждания и се превключва използвайки "
-#~ "специален код за превключване на потока от входящи обаждания плюс индекса."
-
-#~ msgid "Add Call Flow Toggle Code"
-#~ msgstr "Добави Специален Код за Превключване на Потока от Входящи Обаждания"
-
-#~ msgid "Associate with"
-#~ msgstr "Асоциирай с"
-
-#~ msgid "Call Flow Toggle Feature Code Index:"
-#~ msgstr ""
-#~ "Индекс на Специален Код за Превключване на Потока от Входящи Обаждания:"
-
-#~ msgid "Call Flow Toggle Mode Association"
-#~ msgstr "Асоцииране на Режим на Превключване на Потока от Входящи Обаждания"
-
-#~ msgid "Current Mode:"
-#~ msgstr "Текущ Режим:"
-
-#~ msgid "Delete Call Flow Toggle Feature Code %s"
-#~ msgstr ""
-#~ "Изтрий Специален Код за Превключване на Потока от Входящи Обаждания %s"
-
-#~ msgid "Destination to use when set to %s mode"
-#~ msgstr "Направление, което да се използва при %s режим"
-
-#~ msgid ""
-#~ "Message to be played in normal mode (Green/BLF off).<br>To add additional "
-#~ "recordings use the \"System Recordings\" MENU to the left"
-#~ msgstr ""
-#~ "Съобщение за възпроизвеждане в нормален режим (Зелено/BLF изкл).<br>За да "
-#~ "добавите допълнителни записи използвайте меню \"Системни Записи\""
-
-#~ msgid ""
-#~ "Message to be played in override mode (Red/BLF on).<br>To add additional "
-#~ "recordings use the \"System Recordings\" MENU to the left"
-#~ msgstr ""
-#~ "Съобщение за възпроизвеждане в режим на отмяна (Червено/BLF вкл).<br>За "
-#~ "да добавите допълнителни записи използвайте меню \"Системни Записи\" "
-#~ "отляво"
-
-#~ msgid "No Association"
-#~ msgstr "Без Асоциация"
-
-#~ msgid "Save"
-#~ msgstr "Запиши"
-
-#~ msgid "Use feature code: %s to toggle the call flow mode"
-#~ msgstr ""
-#~ "Използвайте специален код: %s за да превключите потока от входящи "
-#~ "обаждания"
 
 #~ msgid "Day/Night (%s) : %s"
 #~ msgstr "Ден/Нощ (%s) : %s"
