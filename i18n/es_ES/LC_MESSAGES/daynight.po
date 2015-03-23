@@ -19,31 +19,35 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-20 18:33-0400\n"
-"PO-Revision-Date: 2009-01-22 13:46+0100\n"
-"Last-Translator: Juan Asensio Sánchez <okelet@gmail.com>\n"
-"Language-Team: Juan Asensio Sánchez <okelet@gmail.com>\n"
+"PO-Revision-Date: 2015-03-23 03:12+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/daynight/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: functions.inc.php:647
 msgid " - Force Time Condition False Destination"
-msgstr ""
+msgstr " - Forzar Condiciones de tiempo Falso Destino"
 
 #: functions.inc.php:645
 msgid " - Force Time Condition True Destination"
-msgstr ""
+msgstr " = Forzar Condiciones de Tiempo Verdadero Destino"
 
 #: page.daynight.php:18
 msgid "Add Call Flow Toggle Code"
-msgstr ""
+msgstr "Añadir Toggle de flujo de llamada"
 
 #: daynight.i18n.php:6 daynight.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "Aplicaciones"
 
 #: functions.inc.php:639
 msgid "Associate with"
@@ -64,42 +68,59 @@ msgid ""
 "conditions thus creating a <b>master switch</b> that can be used to override "
 "several possible call flows through different time conditions."
 msgstr ""
+"Por defecto, el módulo de control de flujo de llamadas no se enganchará "
+"Condiciones de Hora permitiendo asociar un código función  con una condición "
+"de tiempo ya que las condiciones de tiempo tienen su propio código de "
+"función a partir de la versión 2.9. Si ya existe una Asociación configurada ("
+"en un sistema actualizado), esto no tendrá ningún efecto para las "
+"condiciones de tiempo que se efectúa. Poniendo esta propiedad a \"true\" "
+"revierte el comportamiento de 2.8 y anterior, al permitir el uso de un \""
+"toggle\" de flujo de llamada para ser asociado con una condición tiempo. "
+"Esto puede ser útil para dos escenarios. En primer lugar, para anular una "
+"condición de tiempo sin el rearme automático que se produce con el "
+"construido en el \"Condicion de Tiempo Override\". El segundo uso es la "
+"capacidad de asociar un único \"toggle\" de flujo de llamadas con múltiples "
+"condiciones de tiempo creando así un <b>interruptor principal</b> que puede "
+"ser utilizado para anular varios flujos de llamadas a través de diferentes "
+"condiciones de tiempo."
 
 #: daynight.i18n.php:4 daynight.i18n.php:10
 msgid "Call Flow Control"
-msgstr ""
+msgstr "Control de Flujo de llamada"
 
 #: daynight.i18n.php:16
 msgid "Call Flow Control Module"
-msgstr ""
+msgstr "Modulo de Control de Flujo de Llamada"
 
 #: functions.inc.php:155
 #, php-format
 msgid "Call Flow Toggle (%s) : %s"
-msgstr ""
+msgstr "Toggle de Flujo de Llamada (%s): %s"
 
 #: page.daynight.php:70
 msgid "Call Flow Toggle Control"
-msgstr ""
+msgstr "Toggle Control de Flujo de Llamada"
 
 #: page.daynight.php:121
 msgid "Call Flow Toggle Feature Code Index:"
-msgstr ""
+msgstr "Índice de Toggle Feature code de Flujo de Llamada:"
 
 #: functions.inc.php:635
 msgid "Call Flow Toggle Mode Association"
-msgstr ""
+msgstr "Asociación del Modo Toggle en Flujo de Llamada"
 
 #: functions.inc.php:515
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
-msgstr ""
+msgstr "Toggle de Flujo de Llamada: %s  (%s)"
 
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
 "and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
+"Control manual de toggle de Flujo de Llamada - permite escoger dos destinos "
+"y provee un feature code →→ que conmuta entre ambos destinos."
 
 #: page.daynight.php:152
 msgid "Current Mode:"
@@ -107,12 +128,12 @@ msgstr "Modo actual:"
 
 #: page.daynight.php:172 page.daynight.php:188
 msgid "Default"
-msgstr ""
+msgstr "Defecto"
 
 #: page.daynight.php:74
 #, php-format
 msgid "Delete Call Flow Toggle Feature Code %s"
-msgstr ""
+msgstr "Eliminar Codigo de Toggle del Flujo de Llamada %s"
 
 #: page.daynight.php:147
 msgid "Description"
@@ -120,7 +141,7 @@ msgstr "Descripción"
 
 #: page.daynight.php:147
 msgid "Description for this Call Flow Toggle Control"
-msgstr ""
+msgstr "Descripción de Control de este Toggle de Flujo de Llamada"
 
 #: page.daynight.php:261
 #, php-format
@@ -129,19 +150,19 @@ msgstr "Destino a usar cuando se establezca el modo %s"
 
 #: install.php:81
 msgid "ERROR: failed to alter primary keys "
-msgstr "ERROR: No se han podido alterar las claves primarias"
+msgstr "ERROR: No se han podido alterar las claves primarias "
 
 #: page.daynight.php:89
 msgid "Forces to Normal Mode (Green/BLF off)"
-msgstr ""
+msgstr "Fuerza a Modo Normal (Verde/BLF off)"
 
 #: page.daynight.php:89
 msgid "Forces to Override Mode (Red/BLF on)"
-msgstr ""
+msgstr "Fuerza a Modo Override (Rojo/BLF on)"
 
 #: daynight.i18n.php:14
 msgid "Hook Time Conditions Module"
-msgstr ""
+msgstr "Modulo de Condiciones de Tiempo de Enganche"
 
 #: functions.inc.php:639
 msgid ""
@@ -161,23 +182,44 @@ msgid ""
 "destinations when that associated Call Flow Toggle is in its override (Red/"
 "BLF on) state."
 msgstr ""
+"Si se ha realizado una selección, esta timecondition estará asociado con el "
+"flujo de llamada del toggle featurecode especificado. Esto significa que si "
+"el Código de opción de flujo de llamadas está configurado para ignorar (rojo "
+"/ BLF on) entonces este estado el tiempo siempre va a ir a su verdadero "
+"destino si la asociación elegida es 'Condición de fuerce de tiempo  "
+"Verdadero Destino' y siempre irá a su Falso destino si la asociación es con "
+"el 'Condición de fuerce de tiempo Falso Destino'. Cuando el Código de opción "
+"asociada Call Control de flujo está en su modo normal (verde / BLF apagado), "
+"luego entonces esta condición de tiempo funcionará como normal basado en la "
+"hora actual. Los destinos que forman parte de cualquier Asociado Call "
+"Control de flujo Código de función no tendrá ningún efecto en donde una "
+"llamada pasará si pasando por esta condición de tiempo. Lo único que se "
+"realiza a la hora de hacer una asociación está permitiendo que el estado de "
+"anulación de una palanca de flujo de llamada para obligar a esta condición "
+"tiempo de seguir siempre una de sus dos destinos cuando la asociada Call "
+"Flow Toggle está en su anulación (rojo / BLF on)."
 
 #: page.daynight.php:92
 #, php-format
 msgid "Linked to Time Condition %s - %s"
-msgstr "Asociado la condición horaria %s - %s"
+msgstr "Asociado a la condición horaria %s - %s"
 
 #: page.daynight.php:166
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the left"
 msgstr ""
+"Mensaje a ser  usado en modo normal (Verde/BLF off).<br>Para agregar "
+"grabaciones adicionales use el MENU \"Grabaciones del Sistema\" a la "
+"izquierda"
 
 #: page.daynight.php:183
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the left"
 msgstr ""
+"Mensaje a ser ejecutado en modo override (Rojo/BLD on)/<br>Para grabaciones "
+"adicionales use el MENU \"Grabaciones del Sistema\" a la izquierda"
 
 #: functions.inc.php:642
 msgid "No Association"
@@ -185,11 +227,11 @@ msgstr "Sin asociación"
 
 #: page.daynight.php:158
 msgid "Normal (Green/BLF off)"
-msgstr ""
+msgstr "Normal (Verde/BLF off)"
 
 #: page.daynight.php:216
 msgid "Normal Flow (Green/BLF off)"
-msgstr ""
+msgstr "Flujo Normal (Verde/BLF off)"
 
 #: install.php:83
 msgid "OK"
@@ -201,11 +243,11 @@ msgstr "Contraseña opcional"
 
 #: page.daynight.php:159
 msgid "Override (Red/BLF on)"
-msgstr ""
+msgstr "Override (Rojo/BLF on)"
 
 #: page.daynight.php:217
 msgid "Override Flow (Red/BLF on)"
-msgstr ""
+msgstr "Flujo Override (Rojo/BLF on)"
 
 #: page.daynight.php:240
 msgid "Please enter a valid numeric password, only numbers are allowed"
@@ -214,11 +256,11 @@ msgstr ""
 
 #: page.daynight.php:166
 msgid "Recording for Normal Mode"
-msgstr ""
+msgstr "Grabación para modo Normal"
 
 #: page.daynight.php:183
 msgid "Recording for Override Mode"
-msgstr ""
+msgstr "Grabación para modo Override"
 
 #: page.daynight.php:111 page.daynight.php:224
 msgid "Save"
@@ -229,17 +271,22 @@ msgid ""
 "There are a total of 10 Feature code objects, 0-9, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
+"Hay un total de 10 objetos Feature Code, 0-9, cada uno puede controlar un "
+"flujo de llemada y ser conmutado usando el toggle de flujo de llamada mas el "
+"índice."
 
 #: page.daynight.php:153
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
 msgstr ""
+"Esto cambiará en estado actual de Control del toggle de este Flujo de "
+"Llamada, o establecerá el estado inicial cuando se esta creando uno nuevo."
 
 #: page.daynight.php:112 page.daynight.php:225
 #, php-format
 msgid "Use feature code: %s to toggle the call flow mode"
-msgstr ""
+msgstr "Use el código de toggle: %s para cambiar el modo de flujo de llamada"
 
 #: page.daynight.php:202
 msgid ""
@@ -247,6 +294,9 @@ msgid ""
 "call flow. If left blank anyone can use the feature code and it will be un-"
 "protected"
 msgstr ""
+"Usted puede opcionalmente incluir una contraseña para autenticar antes de "
+"cambiar el flujo de la llamada. Si se deja en blanco cualquiera puede usar "
+"el código de feature y estará desprotegido"
 
 #: install.php:77
 msgid "changing primary keys to all fields.."
