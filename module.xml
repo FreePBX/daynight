@@ -40,7 +40,7 @@
 	<popovers>
 		<daynight>
 			<display>daynight</display>
-			<display>form</display>
+			<view>form</view>
 		</daynight>
  	</popovers>
 	<supported>
