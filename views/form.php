@@ -3,20 +3,30 @@
 //	Copyright 2015 Sangoma Technologies.
 
 extract($request);
-
+$itemid = isset($itemid) ? $itemid : "";
 $dests = daynight_get_obj($itemid);
 extract($dests);
+$indexopts = '';
 $ids = daynight_get_avail();
-foreach ($ids as $id) {
-	$indexopts .= '<option value='.$id.'>'.$id.'</option>';
+if(empty($ids) && ($itemid == '')) {
+	?>
+	<div class="alert alert-danger" role="alert"><?php echo _('You have reached the maximum limit for flow controls. Delete one to add a new one')?></div>
+	<?php
+	return;
+}
+if(!empty($ids) && is_array($ids)) {
+	foreach ($ids as $id) {
+		$indexopts .= '<option value='.$id.'>'.$id.'</option>';
+	}
 }
 if($itemid == ''){
 	$indexinput = '<select class="form-control" id="itemid" name="itemid">';
-	$indexinput .= $indexopts;
+	$indexinput .= isset($indexopts) ? $indexopts : "";
 	$indexinput .= '</select>';
 }else{
 	$indexinput = '<input type="text"  class="form-control" name="itemid" id="itemid" value="'.$itemid.'" readonly>';
 }
+$nightopts = $dayopts = array();
 if(function_exists('recordings_list')) {
 	$tresults = recordings_list();
 	$daydefault = (isset($day_recording_id) ? $day_recording_id : '');
@@ -109,10 +119,10 @@ if (!empty($usage_list)) {
 
 ?>
 
-<?php echo $usehtml ?>
-<?php echo $refhtml ?>
+<?php echo !empty($usehtml) ? $usehtml : "" ?>
+<?php echo !empty($refhtml) ? $refhtml : "" ?>
 
-<form name="prompt" id="prompt" class="fpbx-submit" action="" method="post" onsubmit="return prompt_onsubmit();" data-fpbx-delete="?display=daynight&itemid=<?php echo $itemid?>&action=delete">
+<form name="prompt" id="prompt" class="fpbx-submit" action="?display=daynight" method="post" onsubmit="return prompt_onsubmit();" data-fpbx-delete="?display=daynight&itemid=<?php echo $itemid?>&action=delete">
 <input type="hidden" name="action" value="<?php echo isset($itemid)?'edit':'add' ?>" />
 <input type="hidden" name="display" value="daynight" />
 <input type="hidden" name="view" value="form" />
@@ -151,7 +161,7 @@ if (!empty($usage_list)) {
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="fc_description"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="text" class="form-control" id="fc_description" name="fc_description" value="<?php  echo $fc_description ?>">
+						<input type="text" class="form-control" id="fc_description" name="fc_description" value="<?php echo !empty($fc_description) ? $fc_description : "" ?>">
 					</div>
 				</div>
 			</div>
@@ -203,7 +213,7 @@ if (!empty($usage_list)) {
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="password"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="password" class="form-control" id="password" name="password" value="<?php  echo $password ?>">
+						<input type="password" class="form-control" id="password" name="password" value="<?php echo !empty($password) ? $password : "" ?>">
 					</div>
 				</div>
 			</div>

@@ -16,3 +16,13 @@ function prompt_onsubmit() {
 		return warnInvalid(theForm.password, msgInvalidPassword);
 	return true;
 }
+
+$("#daynightgrid").on("post-body.bs.table", function () {
+	$(".deleteitem").off("click");
+	$(".deleteitem").click(function(e) {
+		if(!confirm(_("Are you sure you want to delete this flow?"))) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+	});
+});

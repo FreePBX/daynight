@@ -271,6 +271,11 @@ function daynight_toggle() {
 				$indexes = ltrim($indexes, '&');
 				$hint = ltrim($hint, '&');
 
+				// TODO: we could save the hint in AstDB for this user maybe in their AMPORTAL object and then use
+				//       ${DB()} to get it and create a single hint using a pattern
+				//       exten => _*28*X.,hint,${DB(AMPORTAL/${EXTEN:4}/daynight/hint)}
+				// TODO: or alternatively skip all this if not COS since they'll all be the same
+				//
 				if ($amp_conf['USEDEVSTATE']) {
 					$ext->addHint($id, $c . '*' . $exten, $hint);
 				}
@@ -345,8 +350,8 @@ function daynight_get_avail() {
 	if(DB::IsError($results)) {
 		$results = array();
 	}
-
-	for ($i=0;$i<=9;$i++) {
+  $list = array();
+	for ($i=0;$i<=99;$i++) {
 		if (!in_array($i,$results)) {
 			$list[]=$i;
 		}
@@ -727,5 +732,3 @@ function daynight_hookGet_config($engine) {
 		break;
 	}
 }
-
-

@@ -30,7 +30,7 @@ class Daynight implements \BMO {
 			case "edit":
 			case "edited":
 					daynight_edit($request,$itemid);
-					redirect_standard('itemid', 'view');
+					redirect_standard();
 					break;
 			case "delete":
 					daynight_del($itemid);
@@ -60,11 +60,11 @@ class Daynight implements \BMO {
 						'value' => _('Submit')
 					)
 				);
-				if ($request['itemid'] =='') {
+				if (!isset($request['itemid']) || $request['itemid'] =='') {
 					unset($buttons['delete']);
 				}
-				if($request['view'] != 'form'){
-					unset($buttons);
+				if(empty($request['view']) || $request['view'] != 'form'){
+					$buttons = array();
 				}
 			break;
 		}
