@@ -238,10 +238,12 @@ function daynight_toggle() {
 			$ext->add($id, $c, '', new ext_goto($id.',${EXTEN}*${AMPUSER},1'));
 
 			$userFCs = array();
-			if ($bmo && $bmo->Cos && $bmo->Cos->isLicensed()) {
-				$cos = $bmo->Cos;
+			if (FreePBX::Modules()->checkStatus("cos") && FreePBX::Cos()->isLicensed()) {
+				$cos = FreePBX::Create()->Cos;
 			} else if (function_exists('cos_islicenced') && cos_islicenced()) {
 				$cos = Cos::create();
+			} else {
+				$cos = false;
 			}
 
 			if ($cos) {
