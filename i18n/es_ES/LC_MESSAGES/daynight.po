@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-22 15:36-0400\n"
+"POT-Creation-Date: 2015-09-25 13:36-0700\n"
 "PO-Revision-Date: 2009-01-22 13:46+0100\n"
 "Last-Translator: Juan Asensio Sánchez <okelet@gmail.com>\n"
 "Language-Team: Juan Asensio Sánchez <okelet@gmail.com>\n"
@@ -29,11 +29,11 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:640
+#: functions.inc.php:642
 msgid " - Force Time Condition False Destination"
 msgstr " - Forzar Condiciones de tiempo Falso Destino"
 
-#: functions.inc.php:638
+#: functions.inc.php:640
 msgid " - Force Time Condition True Destination"
 msgstr " = Forzar Condiciones de Tiempo Verdadero Destino"
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Toggle de Flujo de Llamada (%s): %s"
 
-#: functions.inc.php:651
+#: functions.inc.php:653
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -74,7 +74,7 @@ msgstr "Toggle Control de Flujo de Llamada"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:520
+#: functions.inc.php:522
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Toggle de Flujo de Llamada: %s  (%s)"
@@ -123,7 +123,7 @@ msgstr "Fuerza a Modo Normal (Verde/BLF off)"
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Fuerza a Modo Override (Rojo/BLF on)"
 
-#: functions.inc.php:665
+#: functions.inc.php:667
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "

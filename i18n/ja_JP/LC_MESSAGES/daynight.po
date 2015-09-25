@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-22 15:36-0400\n"
+"POT-Creation-Date: 2015-09-25 13:36-0700\n"
 "PO-Revision-Date: 2013-11-07 13:00+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -47,11 +47,11 @@ msgstr ""
 "Language: Japanese\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: functions.inc.php:640
+#: functions.inc.php:642
 msgid " - Force Time Condition False Destination"
 msgstr "強制的に時間条件をFalse宛先にする。"
 
-#: functions.inc.php:638
+#: functions.inc.php:640
 msgid " - Force Time Condition True Destination"
 msgstr "強制的に時間条件をTrue宛先にする。"
 
@@ -80,7 +80,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "コールフロー切り替え (%s) : %s"
 
-#: functions.inc.php:651
+#: functions.inc.php:653
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -92,7 +92,7 @@ msgstr "コールフロー切り替え制御"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:520
+#: functions.inc.php:522
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "コールフロー切り替え (%s) : %s"
@@ -141,7 +141,7 @@ msgstr "強制的にノーマルモードにする (緑/BLF オフ)"
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "強制的に上書きモードにする (赤/BLF オン)"
 
-#: functions.inc.php:665
+#: functions.inc.php:667
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "

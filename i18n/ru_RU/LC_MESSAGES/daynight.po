@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-22 15:36-0400\n"
+"POT-Creation-Date: 2015-09-25 13:36-0700\n"
 "PO-Revision-Date: 2015-04-23 15:19+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -36,11 +36,11 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: functions.inc.php:640
+#: functions.inc.php:642
 msgid " - Force Time Condition False Destination"
 msgstr " - Форсировать назначение которое не попадает под правило по времени"
 
-#: functions.inc.php:638
+#: functions.inc.php:640
 msgid " - Force Time Condition True Destination"
 msgstr " - Форсировать назначение которое попадает под правило по времени"
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Переключатель состояния прохождения вызовов (%s) : %s"
 
-#: functions.inc.php:651
+#: functions.inc.php:653
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -81,7 +81,7 @@ msgstr "Управление переключением прохождения �
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:520
+#: functions.inc.php:522
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Переключатель состояния прохождения вызовов (%s) : %s"
@@ -130,7 +130,7 @@ msgstr "Форсировать переход в нормальный режим
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Форсировать режим подавления (Red/BLF включено)"
 
-#: functions.inc.php:665
+#: functions.inc.php:667
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-22 15:36-0400\n"
+"POT-Creation-Date: 2015-09-25 13:36-0700\n"
 "PO-Revision-Date: 2009-01-31 00:31+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -30,11 +30,11 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:640
+#: functions.inc.php:642
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:638
+#: functions.inc.php:640
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -63,7 +63,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:651
+#: functions.inc.php:653
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:520
+#: functions.inc.php:522
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
@@ -124,7 +124,7 @@ msgstr ""
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr ""
 
-#: functions.inc.php:665
+#: functions.inc.php:667
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
