@@ -70,4 +70,54 @@ class Daynight implements \BMO {
 		}
 		return $buttons;
 	}
+	public function getRightNav($request) {
+		if($request['view']=='form'){
+    	return load_view(__DIR__."/views/bootnav.php",array());
+		}
+	}
+	public function listCallFlows() {
+		$sql = "SELECT ext, dest FROM daynight WHERE dmode = 'fc_description' ORDER BY ext";
+		$stmt = $this->db->prepare($sql);
+		$stmt->execute();
+		$results = $stmt->fetchall(\PDO::FETCH_ASSOC);
+		if(is_array($results)){
+			foreach($results as $result){
+				$list[] = $result;
+			}
+		}
+		if (isset($list)) {
+			return $list;
+		} else {
+			return array();
+		}
+	}
+	public function ajaxRequest($req, &$setting) {
+       switch ($req) {
+           case 'getJSON':
+               return true;
+           break;
+           default:
+               return false;
+           break;
+       }
+   }
+  public function ajaxHandler(){
+    switch ($_REQUEST['command']) {
+      case 'getJSON':
+        switch ($_REQUEST['jdata']) {
+          case 'grid':
+						return array_values($this->listCallFlows());
+          break;
+
+          default:
+            return false;
+          break;
+        }
+      break;
+
+      default:
+        return false;
+      break;
+    }
+  }
 }
