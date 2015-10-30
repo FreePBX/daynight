@@ -37,15 +37,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-25 13:36-0700\n"
+"POT-Creation-Date: 2015-10-29 18:21-0700\n"
 "PO-Revision-Date: 2015-10-27 09:11+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
-"Language-Team: Japanese "
-"<http://weblate.freepbx.org/projects/freepbx/daynight/ja_JP/>\n"
-"Language: ja_JP\n"
+"Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
+"daynight/ja_JP/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
@@ -65,7 +65,7 @@ msgstr ": 追加"
 msgid ": Edit"
 msgstr ": 編集"
 
-#: views/grid.php:19
+#: views/grid.php:16
 msgid "Actions"
 msgstr "アクション"
 
@@ -73,9 +73,17 @@ msgstr "アクション"
 msgid "Add"
 msgstr "追加"
 
+#: views/bootnav.php:6
+msgid "Add Callflow"
+msgstr ""
+
 #: assets/js/daynight.js:23
 msgid "Are you sure you want to delete this flow?"
 msgstr "このコールフローを削除してもよろしいですか？"
+
+#: views/bootnav.php:13
+msgid "Call Flow"
+msgstr ""
 
 #: functions.inc.php:155
 #, php-format
@@ -107,11 +115,11 @@ msgstr "現在のモード"
 msgid "Default"
 msgstr "デフォルト"
 
-#: Daynight.class.php:50 views/grid.php:10
+#: Daynight.class.php:50
 msgid "Delete"
 msgstr "削除"
 
-#: views/form.php:160 views/grid.php:17
+#: views/form.php:160 views/grid.php:14
 msgid "Description"
 msgstr "説明"
 
@@ -131,7 +139,7 @@ msgstr "上書きモード (BLFが赤もしくは点灯) の宛先"
 msgid "ERROR: failed to alter primary keys "
 msgstr "エラー: プライマリキーの変更に失敗"
 
-#: views/grid.php:16
+#: views/grid.php:13
 msgid "Feature Code"
 msgstr "機能コード"
 
@@ -161,34 +169,42 @@ msgid ""
 "destinations when that associated Call Flow Toggle is in its override (Red/"
 "BLF on) state."
 msgstr ""
-"選択された場合、この時間分岐条件は指定されたコールフロー切り替え機能コードと関連づけられます。コールフロー機能コードが上書きモード "
-"(BLFが赤もしくは点灯) に設定された場合、この設定が「強制的に時間分岐条件をTrueの宛先にする」だった場合この時間条件は常にそのTrueの宛先に移動"
-"しますが、関連付けが「強制的に時間条件をFalseの宛先にする」だった場合は常にFalseの宛先に転送します。"
-"関連付けされたコールフロー切り替えが通常モード (BLFが緑もしくは消灯) の時は、この時間条件は現在時刻に基づいて通常どおり動作します。また、関連付けら"
-"れたコールフロー切り替え側の宛先は、この時間条件を通った場合は適用されません。関連付けられた際に行われることは、"
-"その関連付けられたコールフロー切り替えが上書き状態 (BLFが赤もしくは点灯) "
-"の時に、関連付けられた時間条件に対して常にその２つの宛先のうち１つに従うように強制上書きすることだけです。"
+"選択された場合、この時間分岐条件は指定されたコールフロー切り替え機能コードと"
+"関連づけられます。コールフロー機能コードが上書きモード (BLFが赤もしくは点灯) "
+"に設定された場合、この設定が「強制的に時間分岐条件をTrueの宛先にする」だった"
+"場合この時間条件は常にそのTrueの宛先に移動しますが、関連付けが「強制的に時間"
+"条件をFalseの宛先にする」だった場合は常にFalseの宛先に転送します。関連付けさ"
+"れたコールフロー切り替えが通常モード (BLFが緑もしくは消灯) の時は、この時間条"
+"件は現在時刻に基づいて通常どおり動作します。また、関連付けられたコールフロー"
+"切り替え側の宛先は、この時間条件を通った場合は適用されません。関連付けられた"
+"際に行われることは、その関連付けられたコールフロー切り替えが上書き状態 (BLFが"
+"赤もしくは点灯) の時に、関連付けられた時間条件に対して常にその２つの宛先のう"
+"ち１つに従うように強制上書きすることだけです。"
 
 #: views/form.php:104
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "時間条件にリンクしました %s - %s"
 
-#: views/bootnav.php:5
-msgid "List Toggles"
-msgstr "切り替え制御を一覧表示"
+#: views/bootnav.php:7
+msgid "List Callflows"
+msgstr ""
 
 #: views/form.php:64
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
-msgstr "通常モード (BLFが緑もしくは消灯) のときに再生する音声。<br>音声を追加するには、上にある「システム録音」メニューを使います。"
+msgstr ""
+"通常モード (BLFが緑もしくは消灯) のときに再生する音声。<br>音声を追加するに"
+"は、上にある「システム録音」メニューを使います。"
 
 #: views/form.php:90
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
-msgstr "上書きモード (BLFが赤もしくは点灯) のときに再生する音声。<br>音声を追加するには、上にある「システム録音」メニューを使います。"
+msgstr ""
+"上書きモード (BLFが赤もしくは点灯) のときに再生する音声。<br>音声を追加するに"
+"は、上にある「システム録音」メニューを使います。"
 
 #: views/form.php:189
 msgid "Normal (Green/BLF off)"
@@ -216,7 +232,9 @@ msgstr "上書きフロー (BLFが赤もしくは点灯)"
 
 #: assets/js/daynight.js:4
 msgid "Please enter a valid numeric password, only numbers are allowed"
-msgstr "パスワードは数字以外の文字は使えません。数字のみのパスワードを入力してください。"
+msgstr ""
+"パスワードは数字以外の文字は使えません。数字のみのパスワードを入力してくださ"
+"い。"
 
 #: assets/js/daynight.js:7
 msgid "Please set the Current Mode"
@@ -242,7 +260,7 @@ msgstr "上書きモードの音声"
 msgid "Reset"
 msgstr "リセット"
 
-#: views/grid.php:18
+#: views/grid.php:15
 msgid "State"
 msgstr "ステータス"
 
@@ -283,11 +301,16 @@ msgstr ""
 msgid ""
 "You have reached the maximum limit for flow controls. Delete one to add a "
 "new one"
-msgstr "コールフロー切り替え制御の上限に達しました。既存の設定を1つ以上削除してからもう一度試してください。"
+msgstr ""
+"コールフロー切り替え制御の上限に達しました。既存の設定を1つ以上削除してからも"
+"う一度試してください。"
 
 #: install.php:77
 msgid "changing primary keys to all fields.."
 msgstr "全てのフィールドに対するプライマリキーを変更中.."
+
+#~ msgid "List Toggles"
+#~ msgstr "切り替え制御を一覧表示"
 
 #~ msgid "Applications"
 #~ msgstr "アプリケーション"
