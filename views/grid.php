@@ -25,7 +25,7 @@ $daynightcodes = $daynightcodes?$daynightcodes:array();
 		<tr>
 			<td><?php echo $fcc->getCode()?></td>
 			<td><?php echo $row['dest']?></td>
-			<td><span class="text-<?php echo ($dnobj['state'] == 'DAY') ? "success" : "danger"?>"><?php echo $dnobj['state']?></span></td>
+			<td><span class="label label-<?php echo ($dnobj['state'] == 'DAY') ? "success" : "danger"?>"><?php echo $dnobj['state']?></span></td>
 			<td>
 				<a href="?display=daynight&amp;view=form&amp;itemid=<?php echo urlencode($row['ext'])?>&amp;extdisplay=<?php echo urlencode($row['ext'])?>"><i class="fa fa-edit"></i></a>
 				<a class="deleteitem" href="?display=daynight&amp;itemid=<?php echo urlencode($row['ext'])?>&amp;action=delete"><i class="fa fa-trash"></i><a/>
