@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:21-0700\n"
+"POT-Creation-Date: 2015-11-24 13:54-0800\n"
 "PO-Revision-Date: 2015-10-27 09:11+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -77,13 +77,21 @@ msgstr "追加"
 msgid "Add Callflow"
 msgstr ""
 
+#: daynight.i18n.php:6 daynight.i18n.php:12
+msgid "Applications"
+msgstr "アプリケーション"
+
 #: assets/js/daynight.js:23
 msgid "Are you sure you want to delete this flow?"
 msgstr "このコールフローを削除してもよろしいですか？"
 
-#: views/bootnav.php:13
+#: views/bootnav.php:19
 msgid "Call Flow"
 msgstr ""
+
+#: daynight.i18n.php:4 daynight.i18n.php:10
+msgid "Call Flow Control"
+msgstr "コールフロー制御"
 
 #: functions.inc.php:155
 #, php-format
@@ -106,6 +114,14 @@ msgstr "機能コードのインデックス"
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "コールフロー切り替え (%s) : %s"
+
+#: daynight.i18n.php:8
+msgid ""
+"Call Flow manual toggle control - allows for two destinations to be chosen "
+"and provides a feature code\t\tthat toggles between the two destinations."
+msgstr ""
+"コールフローの手動トグル制御 - 2つの宛先を選択できるようにし、その2つの宛先間"
+"が切り替わるキーコードを提供します。"
 
 #: views/form.php:184
 msgid "Current Mode"
@@ -312,9 +328,6 @@ msgstr "全てのフィールドに対するプライマリキーを変更中.."
 #~ msgid "List Toggles"
 #~ msgstr "切り替え制御を一覧表示"
 
-#~ msgid "Applications"
-#~ msgstr "アプリケーション"
-
 #~ msgid ""
 #~ "By default, the Call Flow Control module will not hook Time Conditions "
 #~ "allowing one to associate a call flow toggle feauture code with a time "
@@ -342,19 +355,8 @@ msgstr "全てのフィールドに対するプライマリキーを変更中.."
 #~ "れる<b>マスタースイッチ</b>を作成して、単一のコールフロー切り替えを複数の"
 #~ "時間条件と連動させる機能です。"
 
-#~ msgid "Call Flow Control"
-#~ msgstr "コールフロー制御"
-
 #~ msgid "Call Flow Control Module"
 #~ msgstr "コールフロー制御モジュール"
-
-#~ msgid ""
-#~ "Call Flow manual toggle control - allows for two destinations to be "
-#~ "chosen and provides a feature code\t\tthat toggles between the two "
-#~ "destinations."
-#~ msgstr ""
-#~ "コールフローの手動トグル制御 - 2つの宛先を選択できるようにし、その2つの宛"
-#~ "先間が切り替わるキーコードを提供します。"
 
 #~ msgid "Hook Time Conditions Module"
 #~ msgstr "時間条件フックモジュール"

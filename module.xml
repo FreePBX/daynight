@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>13.0.6</version>
+	<version>13.0.7</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
+		*13.0.7* FREEPBX-10732 Fix destination link
 		*13.0.6* Slideout menu
 		*13.0.5* Better CoS checks
 		*13.0.4* Fix and tweak to work

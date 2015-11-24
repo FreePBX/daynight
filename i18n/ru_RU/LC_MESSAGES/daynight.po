@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:21-0700\n"
+"POT-Creation-Date: 2015-11-24 13:54-0800\n"
 "PO-Revision-Date: 2015-04-23 15:19+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -64,13 +64,21 @@ msgstr ""
 msgid "Add Callflow"
 msgstr ""
 
+#: daynight.i18n.php:6 daynight.i18n.php:12
+msgid "Applications"
+msgstr "Приложения"
+
 #: assets/js/daynight.js:23
 msgid "Are you sure you want to delete this flow?"
 msgstr ""
 
-#: views/bootnav.php:13
+#: views/bootnav.php:19
 msgid "Call Flow"
 msgstr ""
+
+#: daynight.i18n.php:4 daynight.i18n.php:10
+msgid "Call Flow Control"
+msgstr "Общее управление прохождения вызовов"
 
 #: functions.inc.php:155
 #, php-format
@@ -93,6 +101,15 @@ msgstr ""
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Переключатель состояния прохождения вызовов (%s) : %s"
+
+#: daynight.i18n.php:8
+msgid ""
+"Call Flow manual toggle control - allows for two destinations to be chosen "
+"and provides a feature code\t\tthat toggles between the two destinations."
+msgstr ""
+"Ручное включение управления прохождением всех вызовов - разрешает сделать "
+"два назначения для входящих и позволяет переключать вызовы вручную при "
+"помощи сервисного кода\t\t."
 
 #: views/form.php:184
 msgid "Current Mode"
@@ -295,9 +312,6 @@ msgstr "изменить основные значения для всех по�
 #~ msgid "Add Call Flow Toggle Code"
 #~ msgstr "Добавить сервисный код переключения состояния прохождения вызовов"
 
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
 #~ msgid "Associate with"
 #~ msgstr "Ассоциировать с"
 
@@ -331,9 +345,6 @@ msgstr "изменить основные значения для всех по�
 #~ "набрать сервисный код, который будет как-бы <b>главным переключателем</"
 #~ "b>, включающим одно или несколько Правил по времени."
 
-#~ msgid "Call Flow Control"
-#~ msgstr "Общее управление прохождения вызовов"
-
 #~ msgid "Call Flow Control Module"
 #~ msgstr "Модуль контроля вызовов"
 
@@ -342,15 +353,6 @@ msgstr "изменить основные значения для всех по�
 
 #~ msgid "Call Flow Toggle Mode Association"
 #~ msgstr "Ассоциация режима День/Ночь"
-
-#~ msgid ""
-#~ "Call Flow manual toggle control - allows for two destinations to be "
-#~ "chosen and provides a feature code\t\tthat toggles between the two "
-#~ "destinations."
-#~ msgstr ""
-#~ "Ручное включение управления прохождением всех вызовов - разрешает сделать "
-#~ "два назначения для входящих и позволяет переключать вызовы вручную при "
-#~ "помощи сервисного кода\t\t."
 
 #~ msgid "Current Mode:"
 #~ msgstr "Текущий режим:"
