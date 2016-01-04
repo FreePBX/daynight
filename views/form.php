@@ -213,7 +213,10 @@ if (!empty($usage_list)) {
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="password"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="password" class="form-control" id="password" name="password" value="<?php echo !empty($password) ? $password : "" ?>">
+						<div class="input-group">
+							<input type="password" class="form-control" id="password" name="password" value="<?php echo !empty($password) ? $password : "" ?>">
+							<span class="input-group-addon toggle-password" id="pwtoggle" data-id="password"><i class="fa fa-eye"></i></a></span>
+						</div>
 					</div>
 				</div>
 			</div>
