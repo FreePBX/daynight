@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:54-0800\n"
+"POT-Creation-Date: 2016-01-08 19:33-0800\n"
 "PO-Revision-Date: 2015-10-27 09:11+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -143,11 +143,11 @@ msgstr "説明"
 msgid "Description for this Call Flow Toggle Control"
 msgstr "このコールフロー切り替え制御の説明"
 
-#: views/form.php:248
+#: views/form.php:251
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr "通常モード (BLFが緑もしくは消灯) の宛先"
 
-#: views/form.php:272
+#: views/form.php:275
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "上書きモード (BLFが赤もしくは点灯) の宛先"
 
@@ -226,7 +226,7 @@ msgstr ""
 msgid "Normal (Green/BLF off)"
 msgstr "通常 (BLFが緑もしくは消灯)"
 
-#: views/form.php:236
+#: views/form.php:239
 msgid "Normal Flow (Green/BLF off)"
 msgstr "通常フロー (BLFが緑もしくは消灯)"
 
@@ -242,7 +242,7 @@ msgstr "パスワードをかける (オプション)"
 msgid "Override (Red/BLF on)"
 msgstr "上書き (BLFが赤もしくは点灯)"
 
-#: views/form.php:260
+#: views/form.php:263
 msgid "Override Flow (Red/BLF on)"
 msgstr "上書きフロー (BLFが赤もしくは点灯)"
 
@@ -303,7 +303,7 @@ msgstr ""
 msgid "Time Condition Reference"
 msgstr "時間分岐条件への参照"
 
-#: views/form.php:224
+#: views/form.php:227
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"

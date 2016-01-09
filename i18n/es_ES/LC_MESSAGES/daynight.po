@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:54-0800\n"
+"POT-Creation-Date: 2016-01-08 19:33-0800\n"
 "PO-Revision-Date: 2009-01-22 13:46+0100\n"
 "Last-Translator: Juan Asensio Sánchez <okelet@gmail.com>\n"
 "Language-Team: Juan Asensio Sánchez <okelet@gmail.com>\n"
@@ -123,11 +123,11 @@ msgstr "Descripción"
 msgid "Description for this Call Flow Toggle Control"
 msgstr "Descripción de Control de este Toggle de Flujo de Llamada"
 
-#: views/form.php:248
+#: views/form.php:251
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 
-#: views/form.php:272
+#: views/form.php:275
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
@@ -207,7 +207,7 @@ msgstr ""
 msgid "Normal (Green/BLF off)"
 msgstr "Normal (Verde/BLF off)"
 
-#: views/form.php:236
+#: views/form.php:239
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flujo Normal (Verde/BLF off)"
 
@@ -223,7 +223,7 @@ msgstr "Contraseña opcional"
 msgid "Override (Red/BLF on)"
 msgstr "Override (Rojo/BLF on)"
 
-#: views/form.php:260
+#: views/form.php:263
 msgid "Override Flow (Red/BLF on)"
 msgstr "Flujo Override (Rojo/BLF on)"
 
@@ -283,7 +283,7 @@ msgstr ""
 msgid "Time Condition Reference"
 msgstr ""
 
-#: views/form.php:224
+#: views/form.php:227
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"

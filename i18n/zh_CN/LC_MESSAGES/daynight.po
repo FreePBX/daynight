@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:54-0800\n"
+"POT-Creation-Date: 2016-01-08 19:33-0800\n"
 "PO-Revision-Date: 2015-10-16 14:24+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -126,11 +126,11 @@ msgstr "描述"
 msgid "Description for this Call Flow Toggle Control"
 msgstr "呼叫流程切换描述"
 
-#: views/form.php:248
+#: views/form.php:251
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr "当设置为正常流程(Green/BLF off)模式时的目的地"
 
-#: views/form.php:272
+#: views/form.php:275
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "当使用覆盖流程(Red/BLF on) 模式时的目的地"
 
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Normal (Green/BLF off)"
 msgstr "标准模式 (Green/BLF off)"
 
-#: views/form.php:236
+#: views/form.php:239
 msgid "Normal Flow (Green/BLF off)"
 msgstr "标准流程 (Green/BLF off)"
 
@@ -210,7 +210,7 @@ msgstr "可选的密码"
 msgid "Override (Red/BLF on)"
 msgstr "覆盖 (Red/BLF on)"
 
-#: views/form.php:260
+#: views/form.php:263
 msgid "Override Flow (Red/BLF on)"
 msgstr "覆盖流程 (Red/BLF on)"
 
@@ -267,7 +267,7 @@ msgstr ""
 msgid "Time Condition Reference"
 msgstr "时间条件引用"
 
-#: views/form.php:224
+#: views/form.php:227
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"

@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:54-0800\n"
+"POT-Creation-Date: 2016-01-08 19:33-0800\n"
 "PO-Revision-Date: 2015-04-23 15:19+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -131,11 +131,11 @@ msgstr "Описание"
 msgid "Description for this Call Flow Toggle Control"
 msgstr "Описание для этого режима День/Ночь"
 
-#: views/form.php:248
+#: views/form.php:251
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 
-#: views/form.php:272
+#: views/form.php:275
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
@@ -214,7 +214,7 @@ msgstr ""
 msgid "Normal (Green/BLF off)"
 msgstr "Нормальный (Green/BLF выключен)"
 
-#: views/form.php:236
+#: views/form.php:239
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Нормальное прохождение (Green/BLF выключен)"
 
@@ -230,7 +230,7 @@ msgstr "Пароль (опционально)"
 msgid "Override (Red/BLF on)"
 msgstr "Подавление правил Override (Red/BLF включен)"
 
-#: views/form.php:260
+#: views/form.php:263
 msgid "Override Flow (Red/BLF on)"
 msgstr "Подавлять правила (Red/BLF включен)"
 
@@ -289,7 +289,7 @@ msgstr ""
 msgid "Time Condition Reference"
 msgstr ""
 
-#: views/form.php:224
+#: views/form.php:227
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
