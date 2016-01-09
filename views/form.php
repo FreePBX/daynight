@@ -30,7 +30,7 @@ $nightopts = $dayopts = array();
 if(function_exists('recordings_list')) {
 	$tresults = recordings_list();
 	$daydefault = (isset($day_recording_id) ? $day_recording_id : '');
-	$nightdefault = (isset($night_recording_id) ? $day_recording_id : '');
+	$nightdefault = (isset($night_recording_id) ? $night_recording_id : '');
 	$dayopts .= '<option value="0">' ._("Default") ."</option>\n";
 	$nightopts .= '<option value="0">' ._("Default") ."</option>\n";
 	if (isset($tresults[0])) {
