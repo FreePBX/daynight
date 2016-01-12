@@ -153,7 +153,7 @@ function daynight_getdestinfo($dest) {
 		} else {
 			//$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
 			return array('description' => sprintf(_("Call Flow Toggle (%s) : %s"),$exten,$thisexten['dest']),
-			             'edit_url' => 'config.php?display=daynight&itemid='.urlencode($exten).'&action=edit',
+			             'edit_url' => 'config.php?display=daynight&view=form&itemid='.urlencode($exten).'&extdisplay='.urlencode($exten),
 								  );
 		}
 	} else {
