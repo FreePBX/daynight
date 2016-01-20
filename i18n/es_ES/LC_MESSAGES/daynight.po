@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 19:33-0800\n"
-"PO-Revision-Date: 2016-01-20 06:50+0200\n"
+"PO-Revision-Date: 2016-01-20 07:07+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish "
 "<http://weblate.freepbx.org/projects/freepbx/daynight/es_ES/>\n"
@@ -84,7 +84,7 @@ msgstr "Toggle de Flujo de Llamada (%s): %s"
 
 #: functions.inc.php:653
 msgid "Call Flow Toggle Associate with"
-msgstr ""
+msgstr "Toggle de flujo de llamada asociado"
 
 #: page.daynight.php:7
 msgid "Call Flow Toggle Control"
@@ -92,7 +92,7 @@ msgstr "Toggle Control de Flujo de Llamada"
 
 #: views/form.php:136
 msgid "Call Flow Toggle Feature Code Index"
-msgstr ""
+msgstr "Codigo de Caracteristica para Toggle de flujo de llamada"
 
 #: functions.inc.php:522
 #, php-format
@@ -109,7 +109,7 @@ msgstr ""
 
 #: views/form.php:184
 msgid "Current Mode"
-msgstr ""
+msgstr "Modo actual"
 
 #: views/form.php:34 views/form.php:35
 msgid "Default"
@@ -117,7 +117,7 @@ msgstr "Defecto"
 
 #: Daynight.class.php:50
 msgid "Delete"
-msgstr ""
+msgstr "Borrar"
 
 #: views/form.php:160 views/grid.php:14
 msgid "Description"
@@ -130,6 +130,8 @@ msgstr "Descripción de Control de este Toggle de Flujo de Llamada"
 #: views/form.php:251
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
+"Destino a usar cuando se establece en el modo de flujo normal (verde/BLF "
+"apagado)"
 
 #: views/form.php:275
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
