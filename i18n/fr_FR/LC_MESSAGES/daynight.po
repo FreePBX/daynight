@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: traduction française du module daynight\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 19:33-0800\n"
-"PO-Revision-Date: 2016-02-05 09:59+0200\n"
+"PO-Revision-Date: 2016-02-05 10:05+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/daynight/fr_FR/>\n"
@@ -114,7 +114,7 @@ msgstr "Défaut"
 
 #: Daynight.class.php:50
 msgid "Delete"
-msgstr ""
+msgstr "Supprimer"
 
 #: views/form.php:160 views/grid.php:14
 msgid "Description"
