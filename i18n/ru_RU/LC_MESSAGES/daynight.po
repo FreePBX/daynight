@@ -46,23 +46,23 @@ msgstr " - Форсировать назначение которое попад
 
 #: page.daynight.php:14
 msgid ": Add"
-msgstr ""
+msgstr ":Добавить"
 
 #: page.daynight.php:12
 msgid ": Edit"
-msgstr ""
+msgstr ":Редактировать"
 
 #: views/grid.php:16
 msgid "Actions"
-msgstr ""
+msgstr "Действия"
 
 #: views/grid.php:8
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 #: views/bootnav.php:6
 msgid "Add Callflow"
-msgstr ""
+msgstr "Добавить Callflow"
 
 #: daynight.i18n.php:6 daynight.i18n.php:12
 msgid "Applications"
@@ -70,11 +70,11 @@ msgstr "Приложения"
 
 #: assets/js/daynight.js:23
 msgid "Are you sure you want to delete this flow?"
-msgstr ""
+msgstr "Вы уверены,что хотите удалить  данный поток  вызова?"
 
 #: views/bootnav.php:19
 msgid "Call Flow"
-msgstr ""
+msgstr "Поток  вызова"
 
 #: daynight.i18n.php:4 daynight.i18n.php:10
 msgid "Call Flow Control"
@@ -87,7 +87,7 @@ msgstr "Переключатель состояния прохождения в�
 
 #: functions.inc.php:653
 msgid "Call Flow Toggle Associate with"
-msgstr ""
+msgstr "Связать переключение прохождения вызовов  с "
 
 #: page.daynight.php:7
 msgid "Call Flow Toggle Control"
@@ -95,7 +95,7 @@ msgstr "Управление переключением прохождения �
 
 #: views/form.php:136
 msgid "Call Flow Toggle Feature Code Index"
-msgstr ""
+msgstr "Индекс сервисного кода  функции \"Переключение прохождения вызовов\""
 
 #: functions.inc.php:522
 #, php-format
@@ -113,7 +113,7 @@ msgstr ""
 
 #: views/form.php:184
 msgid "Current Mode"
-msgstr ""
+msgstr "Текущий режим"
 
 #: views/form.php:34 views/form.php:35
 msgid "Default"
@@ -121,7 +121,7 @@ msgstr "По умолчанию"
 
 #: Daynight.class.php:50
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: views/form.php:160 views/grid.php:14
 msgid "Description"
@@ -134,10 +134,14 @@ msgstr "Описание для этого режима День/Ночь"
 #: views/form.php:251
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
+"Какой внутренний номер использовать когда установлен Normal Flow (Green/BLF "
+"off) режим"
 
 #: views/form.php:275
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
+"Какой внутренний номер использовать когда установлен Override Flow (Red/BLF "
+"on) режим"
 
 #: install.php:81
 msgid "ERROR: failed to alter primary keys "
@@ -145,7 +149,7 @@ msgstr "ОШИБКА: не удалось изменить основные зн
 
 #: views/grid.php:13
 msgid "Feature Code"
-msgstr ""
+msgstr "Сервисный код"
 
 #: views/form.php:101
 msgid "Forces to Normal Mode (Green/BLF off)"
@@ -196,19 +200,23 @@ msgstr "Присоединено к правилу по времени %s - %s"
 
 #: views/bootnav.php:7
 msgid "List Callflows"
-msgstr ""
+msgstr "Список потоков вызова"
 
 #: views/form.php:64
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
 msgstr ""
+"Сообщение,воспроизводимое в обычном режиме(Green/BLF off).<br>Для добавления "
+"дополнительных записей  используйте \"System Recordings\" Меню "
 
 #: views/form.php:90
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
+"Сообщение,воспроизводимое в обычном режиме (Red/BLF on).<br>Для добавления "
+"дополнительных записей  используйте \"System Recordings\" Меню "
 
 #: views/form.php:189
 msgid "Normal (Green/BLF off)"
@@ -240,15 +248,15 @@ msgstr "Введите разрешённый цифровой пароль, р�
 
 #: assets/js/daynight.js:7
 msgid "Please set the Current Mode"
-msgstr ""
+msgstr "Установите текущий режим"
 
 #: assets/js/daynight.js:5
 msgid "Please set the Normal Flow destination"
-msgstr ""
+msgstr "Пожалуйста установите направление для  Normal Flow"
 
 #: assets/js/daynight.js:6
 msgid "Please set the Override Flow destination"
-msgstr ""
+msgstr "Пожалуйста установите направление для   Override Flow "
 
 #: views/form.php:50
 msgid "Recording for Normal Mode"
@@ -260,15 +268,15 @@ msgstr "Запись для режима Ночь"
 
 #: Daynight.class.php:55
 msgid "Reset"
-msgstr ""
+msgstr "Сброс"
 
 #: views/grid.php:15
 msgid "State"
-msgstr ""
+msgstr "Статус"
 
 #: Daynight.class.php:60
 msgid "Submit"
-msgstr ""
+msgstr "Подтвердить"
 
 #: views/form.php:148
 #, php-format
@@ -276,6 +284,8 @@ msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
+"Всего %s сервисных кодов, %s, каждый из которых может контролировать течение "
+"вызова, и может быть переключён, используя функцию  Сall flow toggle"
 
 #: views/form.php:199
 msgid ""
@@ -287,7 +297,7 @@ msgstr ""
 
 #: views/form.php:108
 msgid "Time Condition Reference"
-msgstr ""
+msgstr "Ссылка на временное условие"
 
 #: views/form.php:227
 msgid ""
@@ -304,6 +314,8 @@ msgid ""
 "You have reached the maximum limit for flow controls. Delete one to add a "
 "new one"
 msgstr ""
+"Вы достигли максимальный предел количества контролей течения вызова. Удалите "
+"один  для создания нового."
 
 #: install.php:77
 msgid "changing primary keys to all fields.."
