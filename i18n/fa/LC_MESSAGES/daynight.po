@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 19:33-0800\n"
-"PO-Revision-Date: 2016-03-20 09:59+0200\n"
+"PO-Revision-Date: 2016-03-20 10:16+0300\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian "
 "<http://weblate.freepbx.org/projects/freepbx/daynight/fa/>\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: functions.inc.php:642
 msgid " - Force Time Condition False Destination"
-msgstr ""
+msgstr "- تحمیل شرط زمانی به مقصد غلط"
 
 #: functions.inc.php:640
 msgid " - Force Time Condition True Destination"
-msgstr ""
+msgstr "- تحمیل شرط زمانی به مقصد درست"
 
 #: page.daynight.php:14
 msgid ": Add"
@@ -47,45 +47,45 @@ msgstr "افزودن"
 
 #: views/bootnav.php:6
 msgid "Add Callflow"
-msgstr ""
+msgstr "افزودن روند تماس"
 
 #: daynight.i18n.php:6 daynight.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "درخواست"
 
 #: assets/js/daynight.js:23
 msgid "Are you sure you want to delete this flow?"
-msgstr ""
+msgstr "آیا از حذف این روند اطمینان دارید؟"
 
 #: views/bootnav.php:19
 msgid "Call Flow"
-msgstr ""
+msgstr "روند تماس"
 
 #: daynight.i18n.php:4 daynight.i18n.php:10
 msgid "Call Flow Control"
-msgstr ""
+msgstr "کنترل روند تماس"
 
 #: functions.inc.php:155
 #, php-format
 msgid "Call Flow Toggle (%s) : %s"
-msgstr ""
+msgstr "تغییر وضعیت روند تماس (%s) : %s"
 
 #: functions.inc.php:653
 msgid "Call Flow Toggle Associate with"
-msgstr ""
+msgstr "تغییر وضعیت روند تماس وابسته با"
 
 #: page.daynight.php:7
 msgid "Call Flow Toggle Control"
-msgstr ""
+msgstr "کنترل تغییر وضعیت روند تماس"
 
 #: views/form.php:136
 msgid "Call Flow Toggle Feature Code Index"
-msgstr ""
+msgstr "فهرست کد ویژه تغییر وضعیت روند تماس"
 
 #: functions.inc.php:522
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
-msgstr ""
+msgstr "تغییر وضعیت روند تماس: %s (%s)"
 
 #: daynight.i18n.php:8
 msgid ""
@@ -95,47 +95,47 @@ msgstr ""
 
 #: views/form.php:184
 msgid "Current Mode"
-msgstr ""
+msgstr "حالت کنونی"
 
 #: views/form.php:34 views/form.php:35
 msgid "Default"
-msgstr ""
+msgstr "پیشفرض"
 
 #: Daynight.class.php:50
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: views/form.php:160 views/grid.php:14
 msgid "Description"
-msgstr ""
+msgstr "شرح"
 
 #: views/form.php:172
 msgid "Description for this Call Flow Toggle Control"
-msgstr ""
+msgstr "شرحی برای کنترل تغییر وضعیت روند تماس"
 
 #: views/form.php:251
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
-msgstr ""
+msgstr "مقصد مورد استفاده وقتی حالت روند نرمال تنظیم شده باشد"
 
 #: views/form.php:275
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
-msgstr ""
+msgstr "مقصد مورد استفاده وقتی حالت روند ابطال تنظیم شده باشد"
 
 #: install.php:81
 msgid "ERROR: failed to alter primary keys "
-msgstr ""
+msgstr "خطا:تغییر کلید اصلی ناموفق بود"
 
 #: views/grid.php:13
 msgid "Feature Code"
-msgstr ""
+msgstr "کد ویژه"
 
 #: views/form.php:101
 msgid "Forces to Normal Mode (Green/BLF off)"
-msgstr ""
+msgstr "تحمیل به حالت نرمال(سبز/BLF off )"
 
 #: views/form.php:101
 msgid "Forces to Override Mode (Red/BLF on)"
-msgstr ""
+msgstr "تحمیل به حالت ابطال (قرمز/BLF on)"
 
 #: functions.inc.php:667
 msgid ""
@@ -159,11 +159,11 @@ msgstr ""
 #: views/form.php:104
 #, php-format
 msgid "Linked to Time Condition %s - %s"
-msgstr ""
+msgstr "متصل شده به شرایط زمانی %s - %s"
 
 #: views/bootnav.php:7
 msgid "List Callflows"
-msgstr ""
+msgstr "فهرست روندهای تماس"
 
 #: views/form.php:64
 msgid ""
@@ -179,63 +179,63 @@ msgstr ""
 
 #: views/form.php:189
 msgid "Normal (Green/BLF off)"
-msgstr ""
+msgstr "نرمال(سبز/BLF off)"
 
 #: views/form.php:239
 msgid "Normal Flow (Green/BLF off)"
-msgstr ""
+msgstr "روند نرمال (سبز/BLF off)"
 
 #: install.php:83
 msgid "OK"
-msgstr ""
+msgstr "تایید"
 
 #: views/form.php:212
 msgid "Optional Password"
-msgstr ""
+msgstr "کلمه عبور اختیاری"
 
 #: views/form.php:191
 msgid "Override (Red/BLF on)"
-msgstr ""
+msgstr "ابطال (قرمز/ BLF on)"
 
 #: views/form.php:263
 msgid "Override Flow (Red/BLF on)"
-msgstr ""
+msgstr "ابطال روند (قرمز/ BLF on)"
 
 #: assets/js/daynight.js:4
 msgid "Please enter a valid numeric password, only numbers are allowed"
-msgstr ""
+msgstr "لطفا یک کلمه عبور عددی وارد کنید،فقط عدد مجاز است"
 
 #: assets/js/daynight.js:7
 msgid "Please set the Current Mode"
-msgstr ""
+msgstr "لطفا حالت فعلی را تنظیم کنید"
 
 #: assets/js/daynight.js:5
 msgid "Please set the Normal Flow destination"
-msgstr ""
+msgstr "لطفا مقصد روند نرمال را تنظیم کنید"
 
 #: assets/js/daynight.js:6
 msgid "Please set the Override Flow destination"
-msgstr ""
+msgstr "لطفا مقصد روند ابطال را تنظیم کنید"
 
 #: views/form.php:50
 msgid "Recording for Normal Mode"
-msgstr ""
+msgstr "ضبط برای حالت نرمال"
 
 #: views/form.php:76
 msgid "Recording for Override Mode"
-msgstr ""
+msgstr "ضبط برای حالت ابطال"
 
 #: Daynight.class.php:55
 msgid "Reset"
-msgstr ""
+msgstr "تنظیم مجدد"
 
 #: views/grid.php:15
 msgid "State"
-msgstr ""
+msgstr "کیفیت"
 
 #: Daynight.class.php:60
 msgid "Submit"
-msgstr ""
+msgstr "ارسال"
 
 #: views/form.php:148
 #, php-format
@@ -252,7 +252,7 @@ msgstr ""
 
 #: views/form.php:108
 msgid "Time Condition Reference"
-msgstr ""
+msgstr "مرجع شرایط زمانی"
 
 #: views/form.php:227
 msgid ""
@@ -269,4 +269,4 @@ msgstr ""
 
 #: install.php:77
 msgid "changing primary keys to all fields.."
-msgstr ""
+msgstr "تغییر دادن کلیدهای اصلی برای همه فیلدها.."
