@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 19:33-0800\n"
-"PO-Revision-Date: 2016-04-02 18:34+0200\n"
+"PO-Revision-Date: 2016-04-02 18:37+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian "
 "<http://weblate.freepbx.org/projects/freepbx/daynight/fa/>\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: functions.inc.php:642
 msgid " - Force Time Condition False Destination"
-msgstr "- تحمیل شرط زمانی به مقصد غلط"
+msgstr " - تحمیل شرط زمانی به مقصد غلط"
 
 #: functions.inc.php:640
 msgid " - Force Time Condition True Destination"
-msgstr "- تحمیل شرط زمانی به مقصد درست"
+msgstr " - تحمیل شرط زمانی به مقصد درست"
 
 #: page.daynight.php:14
 msgid ": Add"
@@ -125,7 +125,7 @@ msgstr "مقصد مورد استفاده وقتی حالت روند ابطال �
 
 #: install.php:81
 msgid "ERROR: failed to alter primary keys "
-msgstr "خطا:تغییر کلید اصلی ناموفق بود"
+msgstr "خطا:تغییر کلید اصلی ناموفق بود "
 
 #: views/grid.php:13
 msgid "Feature Code"
