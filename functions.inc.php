@@ -636,6 +636,7 @@ function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
         break;
       }
 			$daynightcodes = daynight_list();
+        $dnopts = sprintf('<option value="" %s>%s</option>',$current['ext'] == '' ?'selected':'', _("No Association"));
 			foreach ($daynightcodes as $dn_item) {
 				$dnopts .= sprintf('<option value="%d,timeday" %s>%s</option>', $dn_item['ext'], ($current['ext'].','.$current['dmode'] == $dn_item['ext'].',timeday'?'selected':''), $dn_item['dest']._(" - Force Time Condition True Destination"));
 				$dnopts .= "\n";
