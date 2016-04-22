@@ -125,7 +125,6 @@ if (!empty($usage_list)) {
 <form name="prompt" id="prompt" class="fpbx-submit" action="?display=daynight" method="post" onsubmit="return prompt_onsubmit();" data-fpbx-delete="?display=daynight&itemid=<?php echo $itemid?>&action=delete">
 <input type="hidden" name="action" value="<?php echo isset($itemid)?'edit':'add' ?>" />
 <input type="hidden" name="display" value="daynight" />
-<input type="hidden" name="view" value="form" />
 <!--Call Flow Toggle Feature Code Index-->
 <div class="element-container">
 	<div class="row">

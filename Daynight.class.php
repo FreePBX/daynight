@@ -29,12 +29,14 @@ class Daynight implements \BMO {
 			case "add":
 			case "edit":
 			case "edited":
-					daynight_edit($request,$itemid);
-					redirect_standard();
+					\daynight_edit($request,$itemid);
+					\needreload();
+					$_REQUEST['view'] = null;
 					break;
 			case "delete":
-					daynight_del($itemid);
-					redirect_standard();
+					\daynight_del($itemid);
+					\needreload();
+					$_REQUEST['view'] = null;
 					break;
 		}
     }
@@ -120,4 +122,26 @@ class Daynight implements \BMO {
       break;
     }
   }
+	public function tcAdd($data){
+		if(\FreePBX::Config()->get('DAYNIGHTTCHOOK')){
+			$sql = "DELETE FROM `daynight` WHERE `dmode` IN ('timeday', 'timenight') AND dest = :id";
+			$stmt = $this->db->prepare($sql);
+			$stmt->execute(array(':id' => $data['id']));
+			if (isset($data['post']['daynight_ref']) && $data['post']['daynight_ref'] != '') {
+				$daynight_vals = explode(',',$data['post']['daynight_ref'],2);
+				$sql = "INSERT INTO `daynight` (`ext`, `dmode`, `dest`) VALUES (:ext, :dmode, :dest)";
+				$vars = array(':ext' => $daynight_vals[0], ':dmode' => $daynight_vals[1], ':dest' => $data['id'] );
+				$stmt = $this->db->prepare($sql);
+				$stmt->execute($vars);
+			}
+		}
+	}
+
+	public function tcDelete($data){
+		if(\FreePBX::Config()->get('DAYNIGHTTCHOOK')){
+			$sql = "DELETE FROM `daynight` WHERE `dmode` IN ('timeday', 'timenight') AND dest = :id";
+			$stmt = $this->db->prepare($sql);
+			$stmt->execute(array(':id' => $data));
+		}
+	}
 }
