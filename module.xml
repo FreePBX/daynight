@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>13.0.9</version>
+	<version>13.0.10</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
+		*13.0.10* FREEPBX-12114 FREEPBX-12112
 		*13.0.9* FREEPBX-11228 Update destination link
 		*13.0.8* FREEPBX-11169 FREEPBX-11165
 		*13.0.7* FREEPBX-10732 Fix destination link
@@ -23,20 +24,6 @@
 		*13.0.1* FREEPBX-8689
 		*13.0.1alpha2* FREEPBX-8299 Increase number of available call flow control flows
 		*13.0.1alpha1* Skinning updates
-		*2.11.0.4* Part fix for #6923 language not being set.
-		*2.11.0.3* Add license file
-		*2.11.0.2* Add a * to toggle all extension feature codes
-		*2.11.0.1* Add feature code to toggle all
-		*2.10.0.0* new version changes
-		*2.9.0.3* #4993
-		*2.9.0.2* #4740, #4758, #4768
-		*2.9.0.1* #4651, #4653, #4655
-		*2.9.0.0* #4636
-		*2.8.0.0* #4309
-		*2.7.0.0* spelling errors, localizations
-		*2.6.0.2* #3585 custom recordings
-		*2.6.0.1* init tabindex
-		*2.6.0.0* #3650, #3651
 	</changelog>
 	<depends>
 		<version>13.0.5</version>

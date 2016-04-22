@@ -18,26 +18,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-08 19:33-0800\n"
+"POT-Creation-Date: 2016-04-22 11:16-0700\n"
 "PO-Revision-Date: 2016-01-20 07:07+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
-"Language-Team: Spanish "
-"<http://weblate.freepbx.org/projects/freepbx/daynight/es_ES/>\n"
-"Language: es_ES\n"
+"Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/daynight/"
+"es_ES/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:642
+#: functions.inc.php:643
 msgid " - Force Time Condition False Destination"
 msgstr " - Forzar Condiciones de tiempo Falso Destino"
 
-#: functions.inc.php:640
+#: functions.inc.php:641
 msgid " - Force Time Condition True Destination"
 msgstr " = Forzar Condiciones de Tiempo Verdadero Destino"
 
@@ -69,6 +69,37 @@ msgstr "Aplicaciones"
 msgid "Are you sure you want to delete this flow?"
 msgstr "¿Seguro que quieres borrar este flujo?"
 
+#: daynight.i18n.php:18
+msgid ""
+"By default, the Call Flow Control module will not hook Time Conditions "
+"allowing one to associate a call flow toggle feauture code with a time "
+"condition since time conditions have their own feature code as of version "
+"2.9. If there is already an associaiton configured (on an upgraded system), "
+"this will have no affect for the Time Conditions that are effected. Setting "
+"this to true reverts the 2.8 and prior behavior by allowing for the use of a "
+"call flow toggle to be associated with a time conditon. This can be useful "
+"for two scenarios. First, to override a Time Condition without the automatic "
+"resetting that occurs with the built in Time Condition overrides. The second "
+"use is the ability to associate a single call flow toggle with multiple time "
+"conditions thus creating a <b>master switch</b> that can be used to override "
+"several possible call flows through different time conditions."
+msgstr ""
+"Por defecto, el módulo de control de flujo de llamadas no se enganchará "
+"Condiciones de Hora permitiendo asociar un código función  con una condición "
+"de tiempo ya que las condiciones de tiempo tienen su propio código de "
+"función a partir de la versión 2.9. Si ya existe una Asociación configurada "
+"(en un sistema actualizado), esto no tendrá ningún efecto para las "
+"condiciones de tiempo que se efectúa. Poniendo esta propiedad a \"true\" "
+"revierte el comportamiento de 2.8 y anterior, al permitir el uso de un "
+"\"toggle\" de flujo de llamada para ser asociado con una condición tiempo. "
+"Esto puede ser útil para dos escenarios. En primer lugar, para anular una "
+"condición de tiempo sin el rearme automático que se produce con el "
+"construido en el \"Condicion de Tiempo Override\". El segundo uso es la "
+"capacidad de asociar un único \"toggle\" de flujo de llamadas con múltiples "
+"condiciones de tiempo creando así un <b>interruptor principal</b> que puede "
+"ser utilizado para anular varios flujos de llamadas a través de diferentes "
+"condiciones de tiempo."
+
 #: views/bootnav.php:19
 msgid "Call Flow"
 msgstr "Flujo de LLamada"
@@ -77,12 +108,16 @@ msgstr "Flujo de LLamada"
 msgid "Call Flow Control"
 msgstr "Control de Flujo de llamada"
 
+#: daynight.i18n.php:16
+msgid "Call Flow Control Module"
+msgstr "Modulo de Control de Flujo de Llamada"
+
 #: functions.inc.php:155
 #, php-format
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Toggle de Flujo de Llamada (%s): %s"
 
-#: functions.inc.php:653
+#: functions.inc.php:654
 msgid "Call Flow Toggle Associate with"
 msgstr "Toggle de flujo de llamada asociado"
 
@@ -90,7 +125,7 @@ msgstr "Toggle de flujo de llamada asociado"
 msgid "Call Flow Toggle Control"
 msgstr "Toggle Control de Flujo de Llamada"
 
-#: views/form.php:136
+#: views/form.php:135
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Codigo de Caracteristica para Toggle de flujo de llamada"
 
@@ -107,7 +142,7 @@ msgstr ""
 "Control manual de toggle de Flujo de Llamada - permite escoger dos destinos "
 "y provee un feature code →→ que conmuta entre ambos destinos."
 
-#: views/form.php:184
+#: views/form.php:183
 msgid "Current Mode"
 msgstr "Modo actual"
 
@@ -115,25 +150,25 @@ msgstr "Modo actual"
 msgid "Default"
 msgstr "Defecto"
 
-#: Daynight.class.php:50
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr "Borrar"
 
-#: views/form.php:160 views/grid.php:14
+#: views/form.php:159 views/grid.php:14
 msgid "Description"
 msgstr "Descripción"
 
-#: views/form.php:172
+#: views/form.php:171
 msgid "Description for this Call Flow Toggle Control"
 msgstr "Descripción de Control de este Toggle de Flujo de Llamada"
 
-#: views/form.php:251
+#: views/form.php:250
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 "Destino a usar cuando se establece en el modo de flujo normal (verde/BLF "
 "apagado)"
 
-#: views/form.php:275
+#: views/form.php:274
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
@@ -153,7 +188,11 @@ msgstr "Fuerza a Modo Normal (Verde/BLF off)"
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Fuerza a Modo Override (Rojo/BLF on)"
 
-#: functions.inc.php:667
+#: daynight.i18n.php:14
+msgid "Hook Time Conditions Module"
+msgstr "Modulo de Condiciones de Tiempo de Enganche"
+
+#: functions.inc.php:668
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -209,11 +248,15 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: views/form.php:189
+#: functions.inc.php:639
+msgid "No Association"
+msgstr "Sin asociación"
+
+#: views/form.php:188
 msgid "Normal (Green/BLF off)"
 msgstr "Normal (Verde/BLF off)"
 
-#: views/form.php:239
+#: views/form.php:238
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flujo Normal (Verde/BLF off)"
 
@@ -221,15 +264,15 @@ msgstr "Flujo Normal (Verde/BLF off)"
 msgid "OK"
 msgstr "Correcto"
 
-#: views/form.php:212
+#: views/form.php:211
 msgid "Optional Password"
 msgstr "Contraseña opcional"
 
-#: views/form.php:191
+#: views/form.php:190
 msgid "Override (Red/BLF on)"
 msgstr "Override (Rojo/BLF on)"
 
-#: views/form.php:263
+#: views/form.php:262
 msgid "Override Flow (Red/BLF on)"
 msgstr "Flujo Override (Rojo/BLF on)"
 
@@ -258,7 +301,7 @@ msgstr "Grabación para modo Normal"
 msgid "Recording for Override Mode"
 msgstr "Grabación para modo Override"
 
-#: Daynight.class.php:55
+#: Daynight.class.php:57
 msgid "Reset"
 msgstr ""
 
@@ -266,18 +309,18 @@ msgstr ""
 msgid "State"
 msgstr ""
 
-#: Daynight.class.php:60
+#: Daynight.class.php:62
 msgid "Submit"
 msgstr ""
 
-#: views/form.php:148
+#: views/form.php:147
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
 
-#: views/form.php:199
+#: views/form.php:198
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -289,7 +332,7 @@ msgstr ""
 msgid "Time Condition Reference"
 msgstr ""
 
-#: views/form.php:227
+#: views/form.php:226
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
@@ -308,43 +351,6 @@ msgstr ""
 #: install.php:77
 msgid "changing primary keys to all fields.."
 msgstr "Cambiando claves primarias a todos los campos..."
-
-#~ msgid ""
-#~ "By default, the Call Flow Control module will not hook Time Conditions "
-#~ "allowing one to associate a call flow toggle feauture code with a time "
-#~ "condition since time conditions have their own feature code as of version "
-#~ "2.9. If there is already an associaiton configured (on an upgraded "
-#~ "system), this will have no affect for the Time Conditions that are "
-#~ "effected. Setting this to true reverts the 2.8 and prior behavior by "
-#~ "allowing for the use of a call flow toggle to be associated with a time "
-#~ "conditon. This can be useful for two scenarios. First, to override a Time "
-#~ "Condition without the automatic resetting that occurs with the built in "
-#~ "Time Condition overrides. The second use is the ability to associate a "
-#~ "single call flow toggle with multiple time conditions thus creating a "
-#~ "<b>master switch</b> that can be used to override several possible call "
-#~ "flows through different time conditions."
-#~ msgstr ""
-#~ "Por defecto, el módulo de control de flujo de llamadas no se enganchará "
-#~ "Condiciones de Hora permitiendo asociar un código función  con una "
-#~ "condición de tiempo ya que las condiciones de tiempo tienen su propio "
-#~ "código de función a partir de la versión 2.9. Si ya existe una Asociación "
-#~ "configurada (en un sistema actualizado), esto no tendrá ningún efecto "
-#~ "para las condiciones de tiempo que se efectúa. Poniendo esta propiedad a "
-#~ "\"true\" revierte el comportamiento de 2.8 y anterior, al permitir el uso "
-#~ "de un \"toggle\" de flujo de llamada para ser asociado con una condición "
-#~ "tiempo. Esto puede ser útil para dos escenarios. En primer lugar, para "
-#~ "anular una condición de tiempo sin el rearme automático que se produce "
-#~ "con el construido en el \"Condicion de Tiempo Override\". El segundo uso "
-#~ "es la capacidad de asociar un único \"toggle\" de flujo de llamadas con "
-#~ "múltiples condiciones de tiempo creando así un <b>interruptor principal</"
-#~ "b> que puede ser utilizado para anular varios flujos de llamadas a través "
-#~ "de diferentes condiciones de tiempo."
-
-#~ msgid "Call Flow Control Module"
-#~ msgstr "Modulo de Control de Flujo de Llamada"
-
-#~ msgid "Hook Time Conditions Module"
-#~ msgstr "Modulo de Condiciones de Tiempo de Enganche"
 
 #~ msgid "Add Call Flow Toggle Code"
 #~ msgstr "Añadir Toggle de flujo de llamada"
@@ -459,9 +465,6 @@ msgstr "Cambiando claves primarias a todos los campos..."
 
 #~ msgid "Night"
 #~ msgstr "Noche"
-
-#~ msgid "No Association"
-#~ msgstr "Sin asociación"
 
 #~ msgid "Save"
 #~ msgstr "Guardar"
