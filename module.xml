@@ -50,6 +50,13 @@
 			<view>form</view>
 		</daynight>
  	</popovers>
+	<hooks>
+		<timeconditions namespace="FreePBX\modules" class="Timeconditions">
+			<method namespace="FreePBX\Modules" class="Daynight" callingMethod="addTimeCondition">tcAdd</method>
+			<method namespace="FreePBX\Modules" class="Daynight" callingMethod="editTimeCondition">tcAdd</method>
+			<method namespace="FreePBX\Modules" class="Daynight" callingMethod="delTimeCondition">tcDelete</method>
+		</timeconditions>
+	</hooks>
 	<supported>
 		<version>13.0</version>
 	</supported>

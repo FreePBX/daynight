@@ -636,6 +636,7 @@ function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
         break;
       }
 			$daynightcodes = daynight_list();
+        $dnopts = sprintf('<option value="" %s>%s</option>',$current['ext'] == '' ?'selected':'', _("No Association"));
 			foreach ($daynightcodes as $dn_item) {
 				$dnopts .= sprintf('<option value="%d,timeday" %s>%s</option>', $dn_item['ext'], ($current['ext'].','.$current['dmode'] == $dn_item['ext'].',timeday'?'selected':''), $dn_item['dest']._(" - Force Time Condition True Destination"));
 				$dnopts .= "\n";
@@ -679,32 +680,7 @@ function daynight_hook_timeconditions($viewing_itemid, $target_menuid) {
 }
 
 function daynight_hookProcess_timeconditions($viewing_itemid, $request) {
-
-	$daynight_ref = isset($request['daynight_ref']) ? $request['daynight_ref'] : '';
-
-	// Do the un-natural act of checking to see if the last call was an add
-	// in which case we left a place holder for the timeconditions_id and we
-	// need to go up-date it
-	//
-	// This is necessary because this process hook is called prior to the
-	// creation of the timecondition from the timeconditions module
-	//
-	if(!isset($request['action']) ) {
-		daynight_checkadd_timecondition($daynight_ref);
-	} else {
-		switch ($request['action'])	{
-			case 'add':
-				// we don't have an viewing_itemid at this point
-				daynight_add_timecondition($daynight_ref);
-				break;
-			case 'delete':
-				daynight_del_timecondition($viewing_itemid);
-				break;
-			case 'edit':
-				daynight_edit_timecondition($viewing_itemid, $daynight_ref);
-				break;
-		}
-	}
+  //moved to a BMO hook
 }
 
 // Splice into the timecondition dialplan and put an override if associated with a daynight mode code
