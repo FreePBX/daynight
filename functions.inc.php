@@ -236,65 +236,6 @@ function daynight_toggle() {
 		if ($c) {
 			$ext->add($id, $c, '', new ext_macro('user-callerid'));
 			$ext->add($id, $c, '', new ext_goto($id.',${EXTEN}*${AMPUSER},1'));
-
-			$userFCs = array();
-			if (FreePBX::Modules()->checkStatus("cos") && FreePBX::Cos()->isLicensed()) {
-				$cos = FreePBX::Create()->Cos;
-			} else if (function_exists('cos_islicenced') && cos_islicenced()) {
-				$cos = Cos::create();
-			} else {
-				$cos = false;
-			}
-
-			if ($cos) {
-				$allCos = $cos->getAllCos();
-				foreach ($allCos as $cos_name) {
-					$all = $cos->getAll($cos_name);
-
-					foreach ($all['members'] as $key => $val) {
-						$userFCs[$key] = array_merge(($userFCs[$key] ? $userFCs[$key] : array()), $all['fcallow']);
-					}
-				}
-			}
-
-			$users = core_users_list();
-			foreach ($users as $user) {
-				$exten = $user[0];
-
-				$indexes = '';
-				$hint = '';
-				foreach ($list as $item) {
-					if (count($userFCs) > 1 && (!isset($userFCs[$exten]) || !isset($userFCs[$exten]['toggle-mode-' . $item['ext']]))) {
-						continue;
-					}
-					$indexes.= '&' . $item['ext'];
-					$hint.= '&Custom:DAYNIGHT' . $item['ext'];
-				}
-				$indexes = ltrim($indexes, '&');
-				$hint = ltrim($hint, '&');
-
-				// TODO: we could save the hint in AstDB for this user maybe in their AMPORTAL object and then use
-				//       ${DB()} to get it and create a single hint using a pattern
-				//       exten => _*28*X.,hint,${DB(AMPORTAL/${EXTEN:4}/daynight/hint)}
-				// TODO: or alternatively skip all this if not COS since they'll all be the same
-				//
-				if ($amp_conf['USEDEVSTATE']) {
-					$ext->addHint($id, $c . '*' . $exten, $hint);
-				}
-
-				if (strlen($indexes) == 0) {
-					$ext->add($id, $c . '*' . $exten, '', new ext_hangup(''));
-					continue;
-				}
-
-				$ext->add($id, $c . '*' . $exten, '', new ext_setvar('INDEXES', $indexes));
-
-				$day_file = "beep&silence/1&featurecode&de-activated";
-				$night_file = "beep&silence/1&featurecode&activated";
-				$ext->add($id, $c . '*' . $exten, '', new ext_setvar('DAYREC', $day_file));
-				$ext->add($id, $c . '*' . $exten, '', new ext_setvar('NIGHTREC', $night_file));
-				$ext->add($id, $c . '*' . $exten, '', new ext_goto($id.',s,1'));
-			}
 		}
 
 		$c='s';
