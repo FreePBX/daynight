@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-22 11:16-0700\n"
+"POT-Creation-Date: 2016-05-06 09:44-0700\n"
 "PO-Revision-Date: 2015-10-16 14:24+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -34,11 +34,11 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:643
+#: functions.inc.php:584
 msgid " - Force Time Condition False Destination"
 msgstr " - 强制时间条件为假目的地设置"
 
-#: functions.inc.php:641
+#: functions.inc.php:582
 msgid " - Force Time Condition True Destination"
 msgstr " - 强制时间添加为真目的地设置"
 
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "呼叫流程切换 (%s) : %s"
 
-#: functions.inc.php:654
+#: functions.inc.php:595
 msgid "Call Flow Toggle Associate with"
 msgstr "呼叫流程切换关联"
 
@@ -115,7 +115,7 @@ msgstr "呼叫流程切换控制"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "呼叫流程功能热键索引"
 
-#: functions.inc.php:522
+#: functions.inc.php:463
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "呼叫流程切换: %s (%s)"
@@ -174,7 +174,7 @@ msgstr "强制使用覆盖模式 (Red/BLF on)"
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:668
+#: functions.inc.php:609
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -214,7 +214,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:639
+#: functions.inc.php:580
 msgid "No Association"
 msgstr "无联系"
 

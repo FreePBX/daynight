@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX daynight\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-22 11:16-0700\n"
+"POT-Creation-Date: 2016-05-06 09:44-0700\n"
 "PO-Revision-Date: 2008-10-11 23:12+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -29,11 +29,11 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: functions.inc.php:643
+#: functions.inc.php:584
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:641
+#: functions.inc.php:582
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:654
+#: functions.inc.php:595
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -110,7 +110,7 @@ msgstr ""
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:522
+#: functions.inc.php:463
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:668
+#: functions.inc.php:609
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -209,7 +209,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:639
+#: functions.inc.php:580
 msgid "No Association"
 msgstr "Ingen tilldelning"
 

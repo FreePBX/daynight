@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-22 11:16-0700\n"
+"POT-Creation-Date: 2016-05-06 09:44-0700\n"
 "PO-Revision-Date: 2015-10-27 09:11+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -49,11 +49,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: functions.inc.php:643
+#: functions.inc.php:584
 msgid " - Force Time Condition False Destination"
 msgstr "強制的に時間条件をFalse宛先にする。"
 
-#: functions.inc.php:641
+#: functions.inc.php:582
 msgid " - Force Time Condition True Destination"
 msgstr "強制的に時間条件をTrue宛先にする。"
 
@@ -129,7 +129,7 @@ msgstr "コールフロー制御モジュール"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "コールフロー切り替え (%s) : %s"
 
-#: functions.inc.php:654
+#: functions.inc.php:595
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgstr "コールフロー切り替え制御"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "機能コードのインデックス"
 
-#: functions.inc.php:522
+#: functions.inc.php:463
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "コールフロー切り替え (%s) : %s"
@@ -202,7 +202,7 @@ msgstr "強制的に上書きモードにする (BLFが赤もしくは点灯)"
 msgid "Hook Time Conditions Module"
 msgstr "時間条件フックモジュール"
 
-#: functions.inc.php:668
+#: functions.inc.php:609
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -257,7 +257,7 @@ msgstr ""
 "上書きモード (BLFが赤もしくは点灯) のときに再生する音声。<br>音声を追加するに"
 "は、上にある「システム録音」メニューを使います。"
 
-#: functions.inc.php:639
+#: functions.inc.php:580
 msgid "No Association"
 msgstr "連動なし"
 

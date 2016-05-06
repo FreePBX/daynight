@@ -9,23 +9,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-22 11:16-0700\n"
+"POT-Creation-Date: 2016-05-06 09:44-0700\n"
 "PO-Revision-Date: 2016-04-26 03:44+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian (Iran) "
-"<http://weblate.freepbx.org/projects/freepbx/daynight/fa_IR/>\n"
-"Language: fa_IR\n"
+"Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
+"daynight/fa_IR/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa_IR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: functions.inc.php:643
+#: functions.inc.php:584
 msgid " - Force Time Condition False Destination"
 msgstr " - تحمیل شرط زمانی به مقصد غلط"
 
-#: functions.inc.php:641
+#: functions.inc.php:582
 msgid " - Force Time Condition True Destination"
 msgstr " - تحمیل شرط زمانی به مقصد درست"
 
@@ -103,7 +103,7 @@ msgstr "ماژول کنترل روند تماس"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "تغییر وضعیت روند تماس (%s) : %s"
 
-#: functions.inc.php:654
+#: functions.inc.php:595
 msgid "Call Flow Toggle Associate with"
 msgstr "تغییر وضعیت روند تماس وابسته با"
 
@@ -115,7 +115,7 @@ msgstr "کنترل تغییر وضعیت روند تماس"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "فهرست کد ویژه تغییر وضعیت روند تماس"
 
-#: functions.inc.php:522
+#: functions.inc.php:463
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "تغییر وضعیت روند تماس: %s (%s)"
@@ -176,7 +176,7 @@ msgstr "تحمیل به حالت ابطال (قرمز/BLF on)"
 msgid "Hook Time Conditions Module"
 msgstr "ماژول هوک شرایط زمانی"
 
-#: functions.inc.php:668
+#: functions.inc.php:609
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -235,7 +235,7 @@ msgstr ""
 "پیام برای پخش در حالت بازنویسی.(قرمز/BLF on).<br>برای افزودن فایل جدید از "
 "منوی \"ضبط شده های سیستمی\" استفاده کنید"
 
-#: functions.inc.php:639
+#: functions.inc.php:580
 msgid "No Association"
 msgstr "هیچ ارتباطی"
 
