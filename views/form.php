@@ -213,7 +213,7 @@ if (!empty($usage_list)) {
 					</div>
 					<div class="col-md-9">
 						<div class="input-group">
-							<input type="password" class="form-control" id="password" name="password" value="<?php echo !empty($password) ? $password : "" ?>">
+							<input type="password" class="form-control clicktoedit" id="password" name="password" value="<?php echo !empty($password) ? $password : "" ?>">
 							<span class="input-group-addon toggle-password" id="pwtoggle" data-id="password"><i class="fa fa-eye"></i></a></span>
 						</div>
 					</div>
