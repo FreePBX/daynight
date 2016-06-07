@@ -19,16 +19,16 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-06 09:44-0700\n"
-"PO-Revision-Date: 2016-01-20 07:07+0200\n"
+"PO-Revision-Date: 2016-06-07 03:13+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
-"Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/daynight/"
-"es_ES/>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/daynight/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -171,6 +171,8 @@ msgstr ""
 #: views/form.php:274
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
+"Destino para utilizar cuando se establece en modo Invalidar flujo (Override "
+"Flow - rojo/BLF encendido)"
 
 #: install.php:81
 msgid "ERROR: failed to alter primary keys "
@@ -178,7 +180,7 @@ msgstr "ERROR: No se han podido alterar las claves primarias "
 
 #: views/grid.php:13
 msgid "Feature Code"
-msgstr ""
+msgstr "Código de Función"
 
 #: views/form.php:101
 msgid "Forces to Normal Mode (Green/BLF off)"
@@ -234,19 +236,23 @@ msgstr "Asociado a la condición horaria %s - %s"
 
 #: views/bootnav.php:7
 msgid "List Callflows"
-msgstr ""
+msgstr "Lista FlujosLlamadas"
 
 #: views/form.php:64
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
 msgstr ""
+"Mensaje a reproducir en el modo normal (verde/BLF apagado).<br>Para añadir "
+"grabaciones adicionales utilizar el menú \"Sistema de Grabaciones\" arriba"
 
 #: views/form.php:90
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
+"Mensaje reproducirá en modo de anulación (Rojo/BLF encendido).<br>Para "
+"añadir grabaciones adicionales utilizar el menú \"System Recordings\" arriba"
 
 #: functions.inc.php:580
 msgid "No Association"
@@ -283,15 +289,15 @@ msgstr ""
 
 #: assets/js/daynight.js:7
 msgid "Please set the Current Mode"
-msgstr ""
+msgstr "Por favor establezca el Modo Actual"
 
 #: assets/js/daynight.js:5
 msgid "Please set the Normal Flow destination"
-msgstr ""
+msgstr "Por favor establezca el destino del Modo Normal"
 
 #: assets/js/daynight.js:6
 msgid "Please set the Override Flow destination"
-msgstr ""
+msgstr "Por favor, establecer el destino para el Modo de anulación"
 
 #: views/form.php:50
 msgid "Recording for Normal Mode"
@@ -303,15 +309,15 @@ msgstr "Grabación para modo Override"
 
 #: Daynight.class.php:57
 msgid "Reset"
-msgstr ""
+msgstr "Reiniciar"
 
 #: views/grid.php:15
 msgid "State"
-msgstr ""
+msgstr "Estado"
 
 #: Daynight.class.php:62
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: views/form.php:147
 #, php-format
@@ -319,6 +325,9 @@ msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
+"Hay un total de objetos de códigos de función %s, %s, cada uno puede "
+"controlar un flujo de llamadas y se alternan conmutando los códigos de "
+"función de flujo de llamada más el índice."
 
 #: views/form.php:198
 msgid ""
@@ -330,7 +339,7 @@ msgstr ""
 
 #: views/form.php:108
 msgid "Time Condition Reference"
-msgstr ""
+msgstr "Referencia de Condición horaria"
 
 #: views/form.php:226
 msgid ""
@@ -347,6 +356,8 @@ msgid ""
 "You have reached the maximum limit for flow controls. Delete one to add a "
 "new one"
 msgstr ""
+"Usted ha alcanzado el limite máximo de control de flujos. Borre alguno para "
+"agregar otro"
 
 #: install.php:77
 msgid "changing primary keys to all fields.."
