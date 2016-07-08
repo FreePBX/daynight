@@ -6,11 +6,11 @@ require_once dirname(__FILE__)."/functions.inc.php";
 global $db;
 global $amp_conf;
 
-$sql = "CREATE TABLE IF NOT EXISTS daynight 
+$sql = "CREATE TABLE IF NOT EXISTS daynight
         (
 				ext varchar(10) NOT NULL default '',
 				dmode varchar(40) NOT NULL default '',
-			  dest varchar(255) NOT NULL default '',
+			  dest varchar(190) NOT NULL default '',
 				PRIMARY KEY (ext, dmode, dest)
 			  );
 			 ";
@@ -30,7 +30,7 @@ if ($code != '') {
 	$enabled = $fcc->isEnabled();
 	$fcc->delete();
 }
-unset($fcc);	
+unset($fcc);
 
 // If we found the old one then we must create all the new ones
 //
@@ -53,7 +53,7 @@ if ($delete_old) {
 			$fcc->setEnabled(false);
 		}
 		$fcc->update();
-		unset($fcc);	
+		unset($fcc);
 	}
 }
 
@@ -69,7 +69,7 @@ if ($delete_old) {
 	}
 }
 $fcc->update();
-unset($fcc);	
+unset($fcc);
 
 // Sqlite3 does not like this syntax, but no migration needed since it started in 2.5
 //
@@ -100,4 +100,3 @@ $freepbx_conf =& freepbx_conf::create();
   $set['description'] = 'By default, the Call Flow Control module will not hook Time Conditions allowing one to associate a call flow toggle feauture code with a time condition since time conditions have their own feature code as of version 2.9. If there is already an associaiton configured (on an upgraded system), this will have no affect for the Time Conditions that are effected. Setting this to true reverts the 2.8 and prior behavior by allowing for the use of a call flow toggle to be associated with a time conditon. This can be useful for two scenarios. First, to override a Time Condition without the automatic resetting that occurs with the built in Time Condition overrides. The second use is the ability to associate a single call flow toggle with multiple time conditions thus creating a <b>master switch</b> that can be used to override several possible call flows through different time conditions.';
   $set['type'] = CONF_TYPE_BOOL;
   $freepbx_conf->define_conf_setting('DAYNIGHTTCHOOK',$set,true);
-
