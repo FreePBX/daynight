@@ -29,7 +29,7 @@
 		*13.0.1alpha1* Skinning updates
 	</changelog>
 	<depends>
-		<version>13.0.5</version>
+		<version>13.0.121</version>
 	</depends>
 	<menuitems>
 		<daynight needsenginedb="yes">Call Flow Control</daynight>
