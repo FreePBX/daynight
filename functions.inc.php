@@ -353,7 +353,7 @@ function daynight_edit($post, $id=0) {
 }
 
 function daynight_del($id){
-  return eturn \FreePBX::Daynight()->del($id, true);
+  return \FreePBX::Daynight()->del($id, true);
 }
 
 function daynight_get_obj($id=0) {
