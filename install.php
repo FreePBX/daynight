@@ -58,17 +58,7 @@ if ($delete_old) {
 }
 
 $fcc = new featurecode('daynight', 'toggle-mode-all');
-$fcc->setDescription("All: Call Flow Toggle");
-$fcc->setDefault('*28');
-if ($delete_old) {
-	if ($code != '*28' && $code != '') {
-		$fcc->setCode($code);
-	}
-	if (!$enabled) {
-		$fcc->setEnabled(false);
-	}
-}
-$fcc->update();
+$fcc->delete();
 unset($fcc);
 
 // Sqlite3 does not like this syntax, but no migration needed since it started in 2.5

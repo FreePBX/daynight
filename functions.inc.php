@@ -230,14 +230,6 @@ function daynight_toggle() {
 	if ($got_code) {
 		$ext->addInclude('from-internal-additional', $id); // Add the include from from-internal
 
-		$fcc = new featurecode('daynight', 'toggle-mode-all');
-		$c = $fcc->getCodeActive();
-		unset($fcc);
-		if ($c) {
-			$ext->add($id, $c, '', new ext_macro('user-callerid'));
-			$ext->add($id, $c, '', new ext_goto($id.',${EXTEN}*${AMPUSER},1'));
-		}
-
 		$c='s';
 		/* If any are on, all will be turned off.
 		 * Otherwise, all will be turned on.
