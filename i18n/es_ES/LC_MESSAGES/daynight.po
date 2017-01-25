@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 09:44-0700\n"
+"POT-Creation-Date: 2017-01-25 11:02-0800\n"
 "PO-Revision-Date: 2016-06-07 03:13+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -33,11 +33,11 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:584
+#: functions.inc.php:576
 msgid " - Force Time Condition False Destination"
 msgstr " - Forzar Condiciones de tiempo Falso Destino"
 
-#: functions.inc.php:582
+#: functions.inc.php:574
 msgid " - Force Time Condition True Destination"
 msgstr " = Forzar Condiciones de Tiempo Verdadero Destino"
 
@@ -117,7 +117,7 @@ msgstr "Modulo de Control de Flujo de Llamada"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Toggle de Flujo de Llamada (%s): %s"
 
-#: functions.inc.php:595
+#: functions.inc.php:587
 msgid "Call Flow Toggle Associate with"
 msgstr "Toggle de flujo de llamada asociado"
 
@@ -129,7 +129,7 @@ msgstr "Toggle Control de Flujo de Llamada"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Codigo de Caracteristica para Toggle de flujo de llamada"
 
-#: functions.inc.php:463
+#: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Toggle de Flujo de Llamada: %s  (%s)"
@@ -174,7 +174,7 @@ msgstr ""
 "Destino para utilizar cuando se establece en modo Invalidar flujo (Override "
 "Flow - rojo/BLF encendido)"
 
-#: install.php:81
+#: install.php:71
 msgid "ERROR: failed to alter primary keys "
 msgstr "ERROR: No se han podido alterar las claves primarias "
 
@@ -194,7 +194,7 @@ msgstr "Fuerza a Modo Override (Rojo/BLF on)"
 msgid "Hook Time Conditions Module"
 msgstr "Modulo de Condiciones de Tiempo de Enganche"
 
-#: functions.inc.php:609
+#: functions.inc.php:601
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -254,7 +254,7 @@ msgstr ""
 "Mensaje reproducirá en modo de anulación (Rojo/BLF encendido).<br>Para "
 "añadir grabaciones adicionales utilizar el menú \"System Recordings\" arriba"
 
-#: functions.inc.php:580
+#: functions.inc.php:572
 msgid "No Association"
 msgstr "Sin asociación"
 
@@ -266,7 +266,7 @@ msgstr "Normal (Verde/BLF off)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flujo Normal (Verde/BLF off)"
 
-#: install.php:83
+#: install.php:73
 msgid "OK"
 msgstr "Correcto"
 
@@ -359,7 +359,7 @@ msgstr ""
 "Usted ha alcanzado el limite máximo de control de flujos. Borre alguno para "
 "agregar otro"
 
-#: install.php:77
+#: install.php:67
 msgid "changing primary keys to all fields.."
 msgstr "Cambiando claves primarias a todos los campos..."
 

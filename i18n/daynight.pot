@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for daynight
-# Copyright (C) 2008-2016 Sangoma, Inc.
+# Copyright (C) 2008-2017 Sangoma, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 09:44-0700\n"
+"POT-Creation-Date: 2017-01-25 11:02-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.inc.php:584
+#: functions.inc.php:576
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:582
+#: functions.inc.php:574
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:595
+#: functions.inc.php:587
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:463
+#: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
-#: install.php:81
+#: install.php:71
 msgid "ERROR: failed to alter primary keys "
 msgstr ""
 
@@ -161,7 +161,7 @@ msgstr ""
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:609
+#: functions.inc.php:601
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -201,7 +201,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:580
+#: functions.inc.php:572
 msgid "No Association"
 msgstr ""
 
@@ -213,7 +213,7 @@ msgstr ""
 msgid "Normal Flow (Green/BLF off)"
 msgstr ""
 
-#: install.php:83
+#: install.php:73
 msgid "OK"
 msgstr ""
 
@@ -295,6 +295,6 @@ msgid ""
 "new one"
 msgstr ""
 
-#: install.php:77
+#: install.php:67
 msgid "changing primary keys to all fields.."
 msgstr ""
