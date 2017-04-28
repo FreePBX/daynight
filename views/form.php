@@ -109,17 +109,8 @@ if (!empty($timeconditions_refs)) {
 	$refhtml .= '<ul>' . $reflist . '</ul>';
 	$refhtml .= '</div>';
 }
-$usage_list = framework_display_destination_usage(daynight_getdest($itemid));
-if (!empty($usage_list)) {
-	$usehtml = '<div class="well well-info">';
-	$usehtml .= '<h4>'.$usage_list['text'].'</h4>';
-	$usehtml .= '<p>'.$usage_list['tooltip'].'</p>';
-	$usehtml .= '</div>';
-}
-
 ?>
 
-<?php echo !empty($usehtml) ? $usehtml : "" ?>
 <?php echo !empty($refhtml) ? $refhtml : "" ?>
 
 <form name="prompt" id="prompt" class="fpbx-submit" action="?display=daynight" method="post" onsubmit="return prompt_onsubmit();" data-fpbx-delete="?display=daynight&itemid=<?php echo $itemid?>&action=delete">
