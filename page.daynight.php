@@ -6,9 +6,24 @@ $dispnum = "daynight"; //used for switch on config.php
 $tabindex = 0;
 $heading = _("Call Flow Toggle Control");
 $request["view"] = !empty($request["view"]) ? $request["view"] : "";
+$usagehtml = '';
 switch($request["view"]){
 	case "form":
 		if(isset($request['itemid'])){
+			$usage_list = framework_display_destination_usage(daynight_getdest($request['itemid']));
+			if(!empty($usage_list)){
+				$usagehtml = <<< HTML
+<div class="panel panel-default fpbx-usageinfo">
+	<div class="panel-heading">
+		$usage_list[text]
+	</div>
+	<div class="panel-body">
+		$usage_list[tooltip]
+	</div>
+</div>
+
+HTML;
+			}
 			$heading .= _(": Edit");
 		}else{
 			$heading .= _(": Add");
@@ -23,6 +38,7 @@ switch($request["view"]){
 ?>
 <div class="container-fluid">
 	<h1><?php echo $heading ?></h1>
+	<?php echo $usagehtml?>
 	<div class = "display full-border">
 		<div class="row">
 			<div class="col-sm-12">
