@@ -10,20 +10,7 @@ $usagehtml = '';
 switch($request["view"]){
 	case "form":
 		if(isset($request['itemid'])){
-			$usage_list = framework_display_destination_usage(daynight_getdest($request['itemid']));
-			if(!empty($usage_list)){
-				$usagehtml = <<< HTML
-<div class="panel panel-default fpbx-usageinfo">
-	<div class="panel-heading">
-		$usage_list[text]
-	</div>
-	<div class="panel-body">
-		$usage_list[tooltip]
-	</div>
-</div>
-
-HTML;
-			}
+			$usagehtml = FreePBX::View()->destinationUsage(daynight_getdest($request['itemid']));
 			$heading .= _(": Edit");
 		}else{
 			$heading .= _(": Add");
