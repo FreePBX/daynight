@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-02 12:15-0400\n"
-"PO-Revision-Date: 2017-06-22 14:33+0200\n"
+"PO-Revision-Date: 2017-06-22 15:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese "
 "<http://weblate.freepbx.org/projects/freepbx/daynight/vi/>\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: functions.inc.php:576
 msgid " - Force Time Condition False Destination"
-msgstr " - Điều kiện thời gian bắt buộc Điểm đích False"
+msgstr " - Điều kiện thời gian bắt buộc tại Điểm đích False"
 
 #: functions.inc.php:574
 msgid " - Force Time Condition True Destination"
-msgstr " - Điều kiện thời gian bắt buộc Điểm đích True"
+msgstr " - Điều kiện thời gian bắt buộc tại Điểm đích True"
 
 #: page.daynight.php:16
 msgid ": Add"
@@ -47,7 +47,7 @@ msgstr "Thêm"
 
 #: views/bootnav.php:6
 msgid "Add Callflow"
-msgstr "Thêm Callflow"
+msgstr "Thêm Callflow ( Dòng cuộc gọi)"
 
 #: daynight.i18n.php:6
 msgid "Applications"
