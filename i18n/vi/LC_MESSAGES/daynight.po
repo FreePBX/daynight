@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-02 12:15-0400\n"
-"PO-Revision-Date: 2017-06-22 10:49+0200\n"
+"PO-Revision-Date: 2017-06-22 14:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese "
 "<http://weblate.freepbx.org/projects/freepbx/daynight/vi/>\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: functions.inc.php:576
 msgid " - Force Time Condition False Destination"
-msgstr ""
+msgstr " - Điều kiện thời gian bắt buộc Điểm đích False"
 
 #: functions.inc.php:574
 msgid " - Force Time Condition True Destination"
-msgstr ""
+msgstr " - Điều kiện thời gian bắt buộc Điểm đích True"
 
 #: page.daynight.php:16
 msgid ": Add"
@@ -72,6 +72,19 @@ msgid ""
 "conditions thus creating a <b>master switch</b> that can be used to override "
 "several possible call flows through different time conditions."
 msgstr ""
+"Theo mặc định, mô-đun Điều khiển dòng cuộc gọi sẽ không hook các điều kiện "
+"thời gian cho phép kết hợp mã tính năng chuyển dòng cuộc gọi với điều kiện "
+"thời gian vì điều kiện thời gian có mã tính năng riêng tại phiên bản 2.9. "
+"Nếu đã có một associaiton được cấu hình (trên một hệ thống được nâng cấp), "
+"điều này sẽ không ảnh hưởng gì đến các điều kiện thời gian hiệu lực. Thiết "
+"lập điều này để thực sự đảo ngược các hành vi 2,8 và trước khi cho phép sử "
+"dụng một chuyển mạch cuộc gọi chuyển đổi để được liên kết với một conditon "
+"thời gian. Điều này có thể hữu ích cho hai kịch bản. Trước tiên, để ghi đè "
+"lên một Điều kiện Thời gian mà không cần đặt lại tự động xảy ra với các điều "
+"kiện Ghi đè Thời gian được xây dựng. Việc sử dụng thứ hai là khả năng liên "
+"kết một chuyển đổi lưu lượng cuộc gọi duy nhất với nhiều điều kiện thời gian "
+"do đó tạo ra một trình chuyển đổi chính có thể được sử dụng để ghi đè một số "
+"dòng gọi có thể có qua các điều kiện thời gian khác nhau."
 
 #: views/bootnav.php:19
 msgid "Call Flow"
@@ -88,30 +101,32 @@ msgstr "Mô đun kiểm soát dòng cuộc gọi"
 #: functions.inc.php:155
 #, php-format
 msgid "Call Flow Toggle (%s) : %s"
-msgstr ""
+msgstr "Chuyển dòng cuộc gọi (%s): %s"
 
 #: functions.inc.php:587
 msgid "Call Flow Toggle Associate with"
-msgstr ""
+msgstr "Chuyển dòng cuộc gọi kết hợp với"
 
 #: page.daynight.php:7
 msgid "Call Flow Toggle Control"
-msgstr ""
+msgstr "Điều khiển chuyển dòng cuộc gọi"
 
 #: views/form.php:126
 msgid "Call Flow Toggle Feature Code Index"
-msgstr ""
+msgstr "Chỉ mục mã tính năng chuyển dòng cuộc gọi"
 
 #: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
-msgstr ""
+msgstr "Chuyển dòng cuộc gọi: %s (%s)"
 
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
 "and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
+"Điều khiển chuyển dòng cuộc gọi thủ công- cho phép được chọn 2 điểm đích và "
+"cung cấp một mã tính năng có thể chuyển đổi giữa 2 điểm đích."
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -131,19 +146,23 @@ msgstr "Mô tả"
 
 #: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
-msgstr ""
+msgstr "Mô tả cho điều khiển chuyển dòng cuộc gọi này"
 
 #: views/form.php:241
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
+"Điểm đích để sử dụng khi cài đặt về chế độ dòng cuộc gọi thông thường ( xanh/"
+"BLF tắt)"
 
 #: views/form.php:265
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
+"Điểm đích để sử dụng khi cài đặt về chế độ ghi đè dòng cuộc gọi ( Đỏ/ BLF "
+"bật)"
 
 #: install.php:71
 msgid "ERROR: failed to alter primary keys "
-msgstr "LỖI: Lựa chọn các khóa chính thất bại "
+msgstr "LỖI: Thay đổi các khóa chính không thành công "
 
 #: views/grid.php:13
 msgid "Feature Code"
@@ -159,7 +178,7 @@ msgstr "Bắt buộc đến chế độ ghi đè (Red/BLF on)"
 
 #: daynight.i18n.php:12
 msgid "Hook Time Conditions Module"
-msgstr "Mô đun các điều kiện Hook Time"
+msgstr "Hook mô đun điều kiện thời gian"
 
 #: functions.inc.php:601
 msgid ""
@@ -179,6 +198,19 @@ msgid ""
 "destinations when that associated Call Flow Toggle is in its override (Red/"
 "BLF on) state."
 msgstr ""
+"Nếu một lựa chọn được tạo ra, điều kiện thời gian này sẽ được kết hợp với mã "
+"tính năng chuyển dòng cuộc gọi xác định. Có nghĩa là nếu mã tính năng chuyển "
+"dòng cuộc gọi được cài đặt về override (ghi đè) ( Đỏ/BLF bật) thì sau đó "
+"điều kiện thời gian sẽ luôn luôn đi tới điểm đích True nếu kết hợp với "
+"'Force Time Condition False Destination'. Khi mã tính năng điều khiển dòng "
+"cuộc gọi đã kết hợp trong chế độ thông thường ( Xanh/BLF tắt) thì sau đó "
+"điều kiện thời gian này sẽ hoạt động thong thường dựa trên thời gian hiện "
+"tại. Các điểm đích là một phần của mã tính năng điều khiển dòng cuộc gọi sẽ "
+"không gây ảnh hưởng đến vị trí một cuộc gọi sẽ tới nếu đi qua điều kiện thời "
+"gian này. Chỉ duy nhất một điều được thực hiện khi tạo một sự kết hợp đang "
+"cho phép trạng thái ghi đè của một chuyển dòng cuộc gọi để buộc điều kiện "
+"thời gian luôn luôn theo dõi một trong hai điểm đích khi mà chuyển dòng cuộc "
+"gọi đang trong trạng thái ghi đè ( Đỏ/BLF bật)."
 
 #: views/form.php:104
 #, php-format
@@ -194,7 +226,7 @@ msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
 msgstr ""
-"Tin nhắn được phát trong chế độ thông thường  (Green/BLF off). <br> Để thêm "
+"Tin nhắn được phát trong chế độ thông thường  (Xanh/BLF tắt). <br> Để thêm "
 "các ghi ẩm bổ sung thì sử dụng MENU trên \"System  Recorrdings\" ( Các ghi "
 "âm hệ thống)"
 
@@ -203,13 +235,13 @@ msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
-"Tin nhắn sẽ được phát trong chế độ ghi đè  (Red/BLF on). <br> Để thêm các "
+"Tin nhắn sẽ được phát trong chế độ ghi đè  (Đỏ/BLF bật). <br> Để thêm các "
 "ghi ẩm bổ sung thì sử dụng MENU trên \"System  Recorrdings\" ( Các ghi âm hệ "
 "thống)"
 
 #: functions.inc.php:572
 msgid "No Association"
-msgstr "Không có sự liên kết"
+msgstr "Không có sự kết hợp"
 
 #: views/form.php:179
 msgid "Normal (Green/BLF off)"
@@ -277,12 +309,17 @@ msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
+"Có tổng %s đối tượng mã tính năng, %s, mỗi mã tính năng điều khiển một dòng "
+"cuộc gọi và được chuyển đổi bằng cách sử dụng mã tính năng chuyển dòng cuộc "
+"gọi cùng với chỉ mục."
 
 #: views/form.php:189
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
 msgstr ""
+"Điều này sẽ thay đổi trạng thái hiện tại của điều khiển chuyển dòng cuộc "
+"gọi, hoặc cài đặt trạng thái ban đầu khi tạo mới."
 
 #: views/form.php:108
 msgid "Time Condition Reference"
@@ -294,6 +331,9 @@ msgid ""
 "call flow. If left blank anyone can use the feature code and it will be un-"
 "protected"
 msgstr ""
+"Bạn có thể tùy chọn bao gồm mật khẩu để xác thực trước khi chuyển đổi dòng "
+"cuộc gọi. Nếu để trống, bất cứ ai cũng có thể sử dụng mã tính năng và nó sẽ "
+"không được bảo vệ"
 
 #: views/form.php:13
 msgid ""
