@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 09:44-0700\n"
+"POT-Creation-Date: 2017-05-02 12:15-0400\n"
 "PO-Revision-Date: 2016-05-26 19:05+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,19 +21,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: functions.inc.php:584
+#: functions.inc.php:576
 msgid " - Force Time Condition False Destination"
 msgstr " - تحمیل شرط زمانی به مقصد غلط"
 
-#: functions.inc.php:582
+#: functions.inc.php:574
 msgid " - Force Time Condition True Destination"
 msgstr " - تحمیل شرط زمانی به مقصد درست"
 
-#: page.daynight.php:14
+#: page.daynight.php:16
 msgid ": Add"
 msgstr ":افزودن"
 
-#: page.daynight.php:12
+#: page.daynight.php:14
 msgid ": Edit"
 msgstr ":ویرایش"
 
@@ -49,7 +49,7 @@ msgstr "افزودن"
 msgid "Add Callflow"
 msgstr "افزودن روند تماس"
 
-#: daynight.i18n.php:6 daynight.i18n.php:12
+#: daynight.i18n.php:6
 msgid "Applications"
 msgstr "درخواست"
 
@@ -57,7 +57,7 @@ msgstr "درخواست"
 msgid "Are you sure you want to delete this flow?"
 msgstr "آیا از حذف این روند اطمینان دارید؟"
 
-#: daynight.i18n.php:18
+#: daynight.i18n.php:16
 msgid ""
 "By default, the Call Flow Control module will not hook Time Conditions "
 "allowing one to associate a call flow toggle feauture code with a time "
@@ -93,7 +93,7 @@ msgstr "روند تماس"
 msgid "Call Flow Control"
 msgstr "کنترل روند تماس"
 
-#: daynight.i18n.php:16
+#: daynight.i18n.php:14
 msgid "Call Flow Control Module"
 msgstr "ماژول کنترل روند تماس"
 
@@ -102,7 +102,7 @@ msgstr "ماژول کنترل روند تماس"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "تغییر وضعیت روند تماس (%s) : %s"
 
-#: functions.inc.php:595
+#: functions.inc.php:587
 msgid "Call Flow Toggle Associate with"
 msgstr "تغییر وضعیت روند تماس وابسته با"
 
@@ -110,11 +110,11 @@ msgstr "تغییر وضعیت روند تماس وابسته با"
 msgid "Call Flow Toggle Control"
 msgstr "کنترل تغییر وضعیت روند تماس"
 
-#: views/form.php:135
+#: views/form.php:126
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "فهرست کد ویژه تغییر وضعیت روند تماس"
 
-#: functions.inc.php:463
+#: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "تغییر وضعیت روند تماس: %s (%s)"
@@ -127,7 +127,7 @@ msgstr ""
 "Call Flow manual toggle control - allows for two  destinations to be chosen "
 "and provides a feature code\t\tthat toggles between the two destinations."
 
-#: views/form.php:183
+#: views/form.php:174
 msgid "Current Mode"
 msgstr "حالت کنونی"
 
@@ -139,23 +139,23 @@ msgstr "پیشفرض"
 msgid "Delete"
 msgstr "حذف"
 
-#: views/form.php:159 views/grid.php:14
+#: views/form.php:150 views/grid.php:14
 msgid "Description"
 msgstr "شرح"
 
-#: views/form.php:171
+#: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
 msgstr "شرحی برای کنترل تغییر وضعیت روند تماس"
 
-#: views/form.php:250
+#: views/form.php:241
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr "مقصد مورد استفاده وقتی حالت روند نرمال تنظیم شده باشد"
 
-#: views/form.php:274
+#: views/form.php:265
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "مقصد مورد استفاده وقتی حالت روند ابطال تنظیم شده باشد"
 
-#: install.php:81
+#: install.php:71
 msgid "ERROR: failed to alter primary keys "
 msgstr "خطا:تغییر کلید اصلی ناموفق بود "
 
@@ -171,11 +171,11 @@ msgstr "تحمیل به حالت نرمال(سبز/BLF off )"
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "تحمیل به حالت ابطال (قرمز/BLF on)"
 
-#: daynight.i18n.php:14
+#: daynight.i18n.php:12
 msgid "Hook Time Conditions Module"
 msgstr "ماژول هوک شرایط زمانی"
 
-#: functions.inc.php:609
+#: functions.inc.php:601
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -234,31 +234,31 @@ msgstr ""
 "پیام برای پخش در حالت بازنویسی.(قرمز/BLF on).<br>برای افزودن فایل جدید از "
 "منوی \"ضبط شده های سیستمی\" استفاده کنید"
 
-#: functions.inc.php:580
+#: functions.inc.php:572
 msgid "No Association"
 msgstr "هیچ ارتباطی"
 
-#: views/form.php:188
+#: views/form.php:179
 msgid "Normal (Green/BLF off)"
 msgstr "نرمال(سبز/BLF off)"
 
-#: views/form.php:238
+#: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "روند نرمال (سبز/BLF off)"
 
-#: install.php:83
+#: install.php:73
 msgid "OK"
 msgstr "تایید"
 
-#: views/form.php:211
+#: views/form.php:202
 msgid "Optional Password"
 msgstr "کلمه عبور اختیاری"
 
-#: views/form.php:190
+#: views/form.php:181
 msgid "Override (Red/BLF on)"
 msgstr "ابطال (قرمز/ BLF on)"
 
-#: views/form.php:262
+#: views/form.php:253
 msgid "Override Flow (Red/BLF on)"
 msgstr "ابطال روند (قرمز/ BLF on)"
 
@@ -298,7 +298,7 @@ msgstr "کیفیت"
 msgid "Submit"
 msgstr "ارسال"
 
-#: views/form.php:147
+#: views/form.php:138
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
@@ -307,7 +307,7 @@ msgstr ""
 "There are a total of %s Feature code  objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 
-#: views/form.php:198
+#: views/form.php:189
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -319,7 +319,7 @@ msgstr ""
 msgid "Time Condition Reference"
 msgstr "مرجع شرایط زمانی"
 
-#: views/form.php:226
+#: views/form.php:217
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
@@ -337,6 +337,6 @@ msgstr ""
 "شما از حداکثر روند تماس استفاده کرده اید. برای افزودن مورد جدید یک مورد را "
 "حذف کنید"
 
-#: install.php:77
+#: install.php:67
 msgid "changing primary keys to all fields.."
 msgstr "تغییر دادن کلیدهای اصلی برای همه فیلدها.."

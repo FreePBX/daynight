@@ -6,9 +6,11 @@ $dispnum = "daynight"; //used for switch on config.php
 $tabindex = 0;
 $heading = _("Call Flow Toggle Control");
 $request["view"] = !empty($request["view"]) ? $request["view"] : "";
+$usagehtml = '';
 switch($request["view"]){
 	case "form":
 		if(isset($request['itemid'])){
+			$usagehtml = FreePBX::View()->destinationUsage(daynight_getdest($request['itemid']));
 			$heading .= _(": Edit");
 		}else{
 			$heading .= _(": Add");
@@ -23,6 +25,7 @@ switch($request["view"]){
 ?>
 <div class="container-fluid">
 	<h1><?php echo $heading ?></h1>
+	<?php echo $usagehtml?>
 	<div class = "display full-border">
 		<div class="row">
 			<div class="col-sm-12">

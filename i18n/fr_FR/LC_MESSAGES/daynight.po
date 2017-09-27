@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: traduction française du module daynight\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 09:44-0700\n"
+"POT-Creation-Date: 2017-05-02 12:15-0400\n"
 "PO-Revision-Date: 2016-02-05 10:05+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -32,19 +32,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: functions.inc.php:584
+#: functions.inc.php:576
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:582
+#: functions.inc.php:574
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
-#: page.daynight.php:14
+#: page.daynight.php:16
 msgid ": Add"
 msgstr ": Ajouter"
 
-#: page.daynight.php:12
+#: page.daynight.php:14
 msgid ": Edit"
 msgstr ": Éditer"
 
@@ -60,7 +60,7 @@ msgstr "Ajouter"
 msgid "Add Callflow"
 msgstr ""
 
-#: daynight.i18n.php:6 daynight.i18n.php:12
+#: daynight.i18n.php:6
 msgid "Applications"
 msgstr "Applications"
 
@@ -68,7 +68,7 @@ msgstr "Applications"
 msgid "Are you sure you want to delete this flow?"
 msgstr ""
 
-#: daynight.i18n.php:18
+#: daynight.i18n.php:16
 msgid ""
 "By default, the Call Flow Control module will not hook Time Conditions "
 "allowing one to associate a call flow toggle feauture code with a time "
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Call Flow Control"
 msgstr ""
 
-#: daynight.i18n.php:16
+#: daynight.i18n.php:14
 msgid "Call Flow Control Module"
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:595
+#: functions.inc.php:587
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -109,11 +109,11 @@ msgstr ""
 msgid "Call Flow Toggle Control"
 msgstr ""
 
-#: views/form.php:135
+#: views/form.php:126
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:463
+#: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
@@ -124,7 +124,7 @@ msgid ""
 "and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:183
+#: views/form.php:174
 msgid "Current Mode"
 msgstr "Mode courant"
 
@@ -136,23 +136,23 @@ msgstr "Défaut"
 msgid "Delete"
 msgstr "Supprimer"
 
-#: views/form.php:159 views/grid.php:14
+#: views/form.php:150 views/grid.php:14
 msgid "Description"
 msgstr "Description"
 
-#: views/form.php:171
+#: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
 msgstr ""
 
-#: views/form.php:250
+#: views/form.php:241
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 
-#: views/form.php:274
+#: views/form.php:265
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
-#: install.php:81
+#: install.php:71
 msgid "ERROR: failed to alter primary keys "
 msgstr "ERREUR: echec de modification de la clé primaire "
 
@@ -168,11 +168,11 @@ msgstr ""
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr ""
 
-#: daynight.i18n.php:14
+#: daynight.i18n.php:12
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:609
+#: functions.inc.php:601
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -212,31 +212,31 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:580
+#: functions.inc.php:572
 msgid "No Association"
 msgstr "Pas d'association"
 
-#: views/form.php:188
+#: views/form.php:179
 msgid "Normal (Green/BLF off)"
 msgstr ""
 
-#: views/form.php:238
+#: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr ""
 
-#: install.php:83
+#: install.php:73
 msgid "OK"
 msgstr "OK"
 
-#: views/form.php:211
+#: views/form.php:202
 msgid "Optional Password"
 msgstr "Mot de passe optionnel"
 
-#: views/form.php:190
+#: views/form.php:181
 msgid "Override (Red/BLF on)"
 msgstr ""
 
-#: views/form.php:262
+#: views/form.php:253
 msgid "Override Flow (Red/BLF on)"
 msgstr ""
 
@@ -278,14 +278,14 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: views/form.php:147
+#: views/form.php:138
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
 
-#: views/form.php:198
+#: views/form.php:189
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -295,7 +295,7 @@ msgstr ""
 msgid "Time Condition Reference"
 msgstr ""
 
-#: views/form.php:226
+#: views/form.php:217
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
@@ -308,7 +308,7 @@ msgid ""
 "new one"
 msgstr ""
 
-#: install.php:77
+#: install.php:67
 msgid "changing primary keys to all fields.."
 msgstr "changement de la clé primaire pour tous les champs.."
 
