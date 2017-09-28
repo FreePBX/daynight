@@ -6,31 +6,35 @@ require_once dirname(__FILE__)."/functions.inc.php";
 global $amp_conf;
 $table = \FreePBX::Database()->migrate("daynight");
 $cols = array (
-  'ext' => array (
+  'ext' =>
+  array (
     'type' => 'string',
-    'length' => '10',
+    'length' => 10,
+    'default' => '',
+    'primaryKey' => true,
   ),
-  'dmode' => array (
+  'dmode' =>
+  array (
     'type' => 'string',
-    'length' => '40',
+    'length' => 40,
+    'default' => '',
+    'primaryKey' => true,
   ),
-  'dest' => array (
+  'dest' =>
+  array (
     'type' => 'string',
-    'length' => '255',
+    'length' => 190,
+    'default' => '',
+    'primaryKey' => true,
   ),
 );
+
+
 $indexes = array (
-  'PRIMARY' => array (
-    'type' => 'unique',
-    'cols' => array (
-      'ext',
-      'dmode',
-      'dest',
-    ),
-  ),
 );
-$table->modify($cols,$indexes);
+$table->modify($cols, $indexes);
 unset($table);
+
 // Get the old feature code if it existed to determine
 // if it had been changed and if it was enabled
 //
