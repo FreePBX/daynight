@@ -4,36 +4,7 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 require_once dirname(__FILE__)."/functions.inc.php";
 
 global $amp_conf;
-$table = \FreePBX::Database()->migrate("daynight");
-$cols = array (
-  'ext' =>
-  array (
-    'type' => 'string',
-    'length' => 10,
-    'default' => '',
-    'primaryKey' => true,
-  ),
-  'dmode' =>
-  array (
-    'type' => 'string',
-    'length' => 40,
-    'default' => '',
-    'primaryKey' => true,
-  ),
-  'dest' =>
-  array (
-    'type' => 'string',
-    'length' => 190,
-    'default' => '',
-    'primaryKey' => true,
-  ),
-);
 
-
-$indexes = array (
-);
-$table->modify($cols, $indexes);
-unset($table);
 
 // Get the old feature code if it existed to determine
 // if it had been changed and if it was enabled
