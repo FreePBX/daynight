@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-02 12:15-0400\n"
+"POT-Creation-Date: 2017-10-25 16:22-0400\n"
 "PO-Revision-Date: 2017-03-03 15:42+0200\n"
 "Last-Translator: hammer125 <auswertung@aon.at>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: functions.inc.php:576
+#: functions.inc.php:577
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:574
+#: functions.inc.php:575
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:587
+#: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -161,7 +161,7 @@ msgstr ""
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:601
+#: functions.inc.php:602
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -201,7 +201,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:572
+#: functions.inc.php:573
 msgid "No Association"
 msgstr ""
 

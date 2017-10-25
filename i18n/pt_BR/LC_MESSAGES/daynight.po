@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-02 12:15-0400\n"
+"POT-Creation-Date: 2017-10-25 16:22-0400\n"
 "PO-Revision-Date: 2017-03-08 21:25+0200\n"
 "Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: functions.inc.php:576
+#: functions.inc.php:577
 msgid " - Force Time Condition False Destination"
 msgstr " - Força Condição Horária Falso Destino"
 
-#: functions.inc.php:574
+#: functions.inc.php:575
 msgid " - Force Time Condition True Destination"
 msgstr " - Força Condição Horária Verdadeiro Destino"
 
@@ -104,7 +104,7 @@ msgstr "Módulo de Controle de Fluxo de Chamadas"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Alternância de Fluxo de Chamadas (%s) : %s"
 
-#: functions.inc.php:587
+#: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
 msgstr "Alternância de fluxo de chamada associado"
 
@@ -182,7 +182,7 @@ msgstr "Força para Modo Substituir (Vermelho/BLF ativado)"
 msgid "Hook Time Conditions Module"
 msgstr "Módulo de Condições de Tempo de Gancho"
 
-#: functions.inc.php:601
+#: functions.inc.php:602
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -241,7 +241,7 @@ msgstr ""
 "Para adicionar gravações adicionais, use o menu \"Gravações do Sistema\" "
 "para o item acima"
 
-#: functions.inc.php:572
+#: functions.inc.php:573
 msgid "No Association"
 msgstr "Sem Associação"
 

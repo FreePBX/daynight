@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>13.0.14</version>
+	<version>13.0.15</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
+		*13.0.14.1* FREEPBX-15738 Fix destination url
 		*13.0.14* FREEPBX-12690 add view for destinations usage
 		*13.0.13.1* FREEPBX-14022 Remove toggle all feature code as it was broken
 		*13.0.13* Table sizing

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-02 12:15-0400\n"
+"POT-Creation-Date: 2017-10-25 16:22-0400\n"
 "PO-Revision-Date: 2016-05-26 19:05+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: functions.inc.php:576
+#: functions.inc.php:577
 msgid " - Force Time Condition False Destination"
 msgstr " - تحمیل شرط زمانی به مقصد غلط"
 
-#: functions.inc.php:574
+#: functions.inc.php:575
 msgid " - Force Time Condition True Destination"
 msgstr " - تحمیل شرط زمانی به مقصد درست"
 
@@ -102,7 +102,7 @@ msgstr "ماژول کنترل روند تماس"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "تغییر وضعیت روند تماس (%s) : %s"
 
-#: functions.inc.php:587
+#: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
 msgstr "تغییر وضعیت روند تماس وابسته با"
 
@@ -175,7 +175,7 @@ msgstr "تحمیل به حالت ابطال (قرمز/BLF on)"
 msgid "Hook Time Conditions Module"
 msgstr "ماژول هوک شرایط زمانی"
 
-#: functions.inc.php:601
+#: functions.inc.php:602
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -234,7 +234,7 @@ msgstr ""
 "پیام برای پخش در حالت بازنویسی.(قرمز/BLF on).<br>برای افزودن فایل جدید از "
 "منوی \"ضبط شده های سیستمی\" استفاده کنید"
 
-#: functions.inc.php:572
+#: functions.inc.php:573
 msgid "No Association"
 msgstr "هیچ ارتباطی"
 
