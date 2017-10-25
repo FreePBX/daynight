@@ -153,7 +153,7 @@ function daynight_getdestinfo($dest) {
 		} else {
 			//$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
 			return array('description' => sprintf(_("Call Flow Toggle (%s) : %s"),$exten,$thisexten['dest']),
-			             'edit_url' => 'config.php?display=daynight&view=form&itemid='.urlencode($exten).'&extdisplay='.urlencode($exten),
+			             'edit_url' => 'config.php?display=daynight&view=form&itemid='.urlencode($exten),
 								  );
 		}
 	} else {
@@ -453,15 +453,16 @@ function daynight_check_destinations($dest=true) {
 		$destlist[] = array(
 			'dest' => $thisdest,
 			'description' => sprintf(_("Call Flow Toggle: %s (%s)"),$result['description'],$result['dmode']),
-			'edit_url' => 'config.php?display=daynight&itemid='.urlencode($thisid).'&action=edit',
+			'edit_url' => 'config.php?display=daynight&view=form&itemid='.urlencode($thisid),
 		);
 	}
 	return $destlist;
 }
 
 function daynight_change_destination($old_dest, $new_dest) {
-	$sql = 'UPDATE daynight SET dest = "' . $new_dest . '" WHERE dest = "' . $old_dest . '"';
-	sql($sql, "query");
+	$sql = 'UPDATE daynight SET dest = :dest WHERE dest = :olddest';
+	$stmt = FreePBX::Database()->prepare($sql);
+	return $stmt->execute(array(':dest' => $new_dest, ':olddest' => $old_dest));
 }
 
 //-----------------------------------------------------------------------------------------------------
