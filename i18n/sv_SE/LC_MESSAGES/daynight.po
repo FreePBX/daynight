@@ -19,21 +19,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX daynight\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 16:22-0400\n"
+"POT-Creation-Date: 2017-10-25 13:30-0700\n"
 "PO-Revision-Date: 2008-10-11 23:12+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -98,7 +99,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -110,7 +111,7 @@ msgstr ""
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
@@ -129,7 +130,7 @@ msgstr ""
 msgid "Default"
 msgstr "Standard"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:53
 msgid "Delete"
 msgstr ""
 
@@ -149,10 +150,6 @@ msgstr ""
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr "FEL: kunde inte ändra primärnyckel"
-
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr ""
@@ -169,7 +166,7 @@ msgstr ""
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -209,7 +206,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr "Ingen tilldelning"
 
@@ -220,10 +217,6 @@ msgstr ""
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr ""
-
-#: install.php:73
-msgid "OK"
-msgstr "OK"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -261,7 +254,7 @@ msgstr ""
 msgid "Recording for Override Mode"
 msgstr ""
 
-#: Daynight.class.php:57
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr ""
 
@@ -269,7 +262,7 @@ msgstr ""
 msgid "State"
 msgstr ""
 
-#: Daynight.class.php:62
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr ""
 
@@ -303,9 +296,14 @@ msgid ""
 "new one"
 msgstr ""
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
-msgstr "ändra primärnyckel för alla fält"
+#~ msgid "ERROR: failed to alter primary keys "
+#~ msgstr "FEL: kunde inte ändra primärnyckel"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "changing primary keys to all fields.."
+#~ msgstr "ändra primärnyckel för alla fält"
 
 #~ msgid "Associate with"
 #~ msgstr "Tilldela till"

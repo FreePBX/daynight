@@ -21,26 +21,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 16:22-0400\n"
+"POT-Creation-Date: 2017-10-25 13:30-0700\n"
 "PO-Revision-Date: 2014-07-21 16:49+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/daynight/"
 "bg/>\n"
+"Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bg_BG\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.10-dev\n"
 "X-Poedit-Language: Bulgarian\n"
 "X-Poedit-Country: BULGARIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr " - Приложи Времево Условие за Направление Не Съвпада"
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr " - Приложи Времево Условие за Направление Ако Съвпада"
 
@@ -117,7 +117,7 @@ msgstr "Модул за Управление на Входящи Обаждан�
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Превключване на Потока от Входящи Обаждания (%s) : %s"
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr "Управление на Превключване на Потока о�
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Превключване на Потока от Входящи Обаждания: %s (%s)"
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Default"
 msgstr "По-Подразбиране"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:53
 msgid "Delete"
 msgstr ""
 
@@ -172,10 +172,6 @@ msgstr ""
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr "Грешка: не мога да променя primary keys "
-
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr ""
@@ -192,7 +188,7 @@ msgstr "Принуждава към Режим на Отмяна (Червено
 msgid "Hook Time Conditions Module"
 msgstr "Модул за превключване на Времеви Условия"
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -249,7 +245,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr "Без Асоциация"
 
@@ -260,10 +256,6 @@ msgstr "Нормален (Зелено/BLF изкл)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Нормален Поток (Зелено/BLF изкл)"
-
-#: install.php:73
-msgid "OK"
-msgstr "OK"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -301,7 +293,7 @@ msgstr "Запис за Нормален Режим"
 msgid "Recording for Override Mode"
 msgstr "Запис за Режим на Отмяна"
 
-#: Daynight.class.php:57
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr ""
 
@@ -309,7 +301,7 @@ msgstr ""
 msgid "State"
 msgstr ""
 
-#: Daynight.class.php:62
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr ""
 
@@ -349,9 +341,14 @@ msgid ""
 "new one"
 msgstr ""
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
-msgstr "промяна на primary keys за всички полета.."
+#~ msgid "ERROR: failed to alter primary keys "
+#~ msgstr "Грешка: не мога да променя primary keys "
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "changing primary keys to all fields.."
+#~ msgstr "промяна на primary keys за всички полета.."
 
 #~ msgid "Add Call Flow Toggle Code"
 #~ msgstr "Добави Специален Код за Превключване на Потока от Входящи Обаждания"

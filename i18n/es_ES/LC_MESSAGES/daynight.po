@@ -18,26 +18,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 16:22-0400\n"
+"POT-Creation-Date: 2017-10-25 13:30-0700\n"
 "PO-Revision-Date: 2016-06-07 03:13+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/daynight/"
 "es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr " - Forzar Condiciones de tiempo Falso Destino"
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr " = Forzar Condiciones de Tiempo Verdadero Destino"
 
@@ -117,7 +117,7 @@ msgstr "Modulo de Control de Flujo de Llamada"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Toggle de Flujo de Llamada (%s): %s"
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr "Toggle de flujo de llamada asociado"
 
@@ -129,7 +129,7 @@ msgstr "Toggle Control de Flujo de Llamada"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Codigo de Caracteristica para Toggle de flujo de llamada"
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Toggle de Flujo de Llamada: %s  (%s)"
@@ -150,7 +150,7 @@ msgstr "Modo actual"
 msgid "Default"
 msgstr "Defecto"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:53
 msgid "Delete"
 msgstr "Borrar"
 
@@ -174,10 +174,6 @@ msgstr ""
 "Destino para utilizar cuando se establece en modo Invalidar flujo (Override "
 "Flow - rojo/BLF encendido)"
 
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr "ERROR: No se han podido alterar las claves primarias "
-
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "Código de Función"
@@ -194,7 +190,7 @@ msgstr "Fuerza a Modo Override (Rojo/BLF on)"
 msgid "Hook Time Conditions Module"
 msgstr "Modulo de Condiciones de Tiempo de Enganche"
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -254,7 +250,7 @@ msgstr ""
 "Mensaje reproducirá en modo de anulación (Rojo/BLF encendido).<br>Para "
 "añadir grabaciones adicionales utilizar el menú \"System Recordings\" arriba"
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr "Sin asociación"
 
@@ -265,10 +261,6 @@ msgstr "Normal (Verde/BLF off)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flujo Normal (Verde/BLF off)"
-
-#: install.php:73
-msgid "OK"
-msgstr "Correcto"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -307,7 +299,7 @@ msgstr "Grabación para modo Normal"
 msgid "Recording for Override Mode"
 msgstr "Grabación para modo Override"
 
-#: Daynight.class.php:57
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -315,7 +307,7 @@ msgstr "Reiniciar"
 msgid "State"
 msgstr "Estado"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr "Enviar"
 
@@ -359,9 +351,14 @@ msgstr ""
 "Usted ha alcanzado el limite máximo de control de flujos. Borre alguno para "
 "agregar otro"
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
-msgstr "Cambiando claves primarias a todos los campos..."
+#~ msgid "ERROR: failed to alter primary keys "
+#~ msgstr "ERROR: No se han podido alterar las claves primarias "
+
+#~ msgid "OK"
+#~ msgstr "Correcto"
+
+#~ msgid "changing primary keys to all fields.."
+#~ msgstr "Cambiando claves primarias a todos los campos..."
 
 #~ msgid "Add Call Flow Toggle Code"
 #~ msgstr "Añadir Toggle de flujo de llamada"
