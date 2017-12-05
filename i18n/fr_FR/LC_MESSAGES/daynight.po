@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: traduction française du module daynight\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-25 16:22-0400\n"
-"PO-Revision-Date: 2017-12-04 21:41+0200\n"
+"PO-Revision-Date: 2017-12-04 23:18+0200\n"
 "Last-Translator: JCattan <jeremie@famillecattan.com>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/daynight/fr_FR/>\n"
@@ -285,7 +285,7 @@ msgstr ""
 
 #: assets/js/daynight.js:7
 msgid "Please set the Current Mode"
-msgstr ""
+msgstr "Choisissez le mode courant SVP"
 
 #: assets/js/daynight.js:5
 msgid "Please set the Normal Flow destination"
