@@ -21,24 +21,24 @@ msgstr ""
 "Project-Id-Version: traduction française du module daynight\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-25 16:22-0400\n"
-"PO-Revision-Date: 2016-02-05 10:05+0200\n"
-"Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
-"Language-Team: French <http://weblate.freepbx.org/projects/freepbx/daynight/"
-"fr_FR/>\n"
+"PO-Revision-Date: 2017-12-04 21:41+0200\n"
+"Last-Translator: JCattan <jeremie@famillecattan.com>\n"
+"Language-Team: French "
+"<http://weblate.freepbx.org/projects/freepbx/daynight/fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 
 #: functions.inc.php:577
 msgid " - Force Time Condition False Destination"
-msgstr ""
+msgstr " - Forcer Condition de temps Fausse"
 
 #: functions.inc.php:575
 msgid " - Force Time Condition True Destination"
-msgstr ""
+msgstr " - Forcer Condition de temps Vraie"
 
 #: page.daynight.php:16
 msgid ": Add"
@@ -58,7 +58,7 @@ msgstr "Ajouter"
 
 #: views/bootnav.php:6
 msgid "Add Callflow"
-msgstr ""
+msgstr "Ajouter Jour/nuit"
 
 #: daynight.i18n.php:6
 msgid "Applications"
@@ -66,7 +66,7 @@ msgstr "Applications"
 
 #: assets/js/daynight.js:23
 msgid "Are you sure you want to delete this flow?"
-msgstr ""
+msgstr "Etes vous sure de vouloir supprimer ?"
 
 #: daynight.i18n.php:16
 msgid ""
@@ -83,46 +83,63 @@ msgid ""
 "conditions thus creating a <b>master switch</b> that can be used to override "
 "several possible call flows through different time conditions."
 msgstr ""
+"Par défaut, le module de contrôle de flux d'appels n'accrochera pas les "
+"conditions temporelles permettant d'associer un code de basculement de flux "
+"d'appel à une condition temporelle puisque les conditions temporelles ont "
+"leur propre code de fonctionnalité à partir de la version 2.9. Si une "
+"association est déjà configurée (sur un système mis à niveau), cela n'aura "
+"aucun effet sur les conditions de temps effectuées. Si vous définissez cette "
+"valeur sur true, le comportement 2.8 et antérieur est rétabli en permettant "
+"l'utilisation d'une bascule de flux d'appels associée à une condition de "
+"temps. Cela peut être utile pour deux scénarios. Tout d'abord, pour "
+"remplacer une condition de temps sans la réinitialisation automatique qui se "
+"produit avec les remplacements prédéfinis de condition de temps. La deuxième "
+"utilisation est la possibilité d'associer un basculement de flux d'appels "
+"unique à plusieurs conditions de temps, créant ainsi un <b> commutateur "
+"principal </b> qui peut être utilisé pour remplacer plusieurs flux d'appels "
+"possibles dans différentes conditions temporelles."
 
 #: views/bootnav.php:19
 msgid "Call Flow"
-msgstr ""
+msgstr "Jour / nuit"
 
 #: daynight.i18n.php:4 daynight.i18n.php:10
 msgid "Call Flow Control"
-msgstr ""
+msgstr "Jour / nuit Contrôle"
 
 #: daynight.i18n.php:14
 msgid "Call Flow Control Module"
-msgstr ""
+msgstr "module contrôle Jour / Nuit"
 
 #: functions.inc.php:155
 #, php-format
 msgid "Call Flow Toggle (%s) : %s"
-msgstr ""
+msgstr "Basculer Jour / Nuit (%s): %s"
 
 #: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
-msgstr ""
+msgstr "Bascule Jour / Nuit associé avec"
 
 #: page.daynight.php:7
 msgid "Call Flow Toggle Control"
-msgstr ""
+msgstr "Bascule Jour/Nuit"
 
 #: views/form.php:126
 msgid "Call Flow Toggle Feature Code Index"
-msgstr ""
+msgstr "Index Code de fonction Bascule Jour/Nuit"
 
 #: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
-msgstr ""
+msgstr "Basculer Jour / Nuit : %s (%s)"
 
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
 "and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
+"Bascule manuelle du Jour /nuit - permet de choisir deux destinations et "
+"fournit un code de fonction qui bascule entre les deux destinations."
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -142,15 +159,15 @@ msgstr "Description"
 
 #: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
-msgstr ""
+msgstr "Description pour ce Jour/Nuit"
 
 #: views/form.php:241
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
-msgstr ""
+msgstr "Destination à utiliser en mode Jour (BLF Verte)"
 
 #: views/form.php:265
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
-msgstr ""
+msgstr "Destination à utiliser en mode Nuit (BLF Rouge)"
 
 #: install.php:71
 msgid "ERROR: failed to alter primary keys "
@@ -158,21 +175,22 @@ msgstr "ERREUR: echec de modification de la clé primaire "
 
 #: views/grid.php:13
 msgid "Feature Code"
-msgstr ""
+msgstr "Code de fonction"
 
 #: views/form.php:101
 msgid "Forces to Normal Mode (Green/BLF off)"
-msgstr ""
+msgstr "Forcer en mode Jour (BLF Vert)"
 
 #: views/form.php:101
 msgid "Forces to Override Mode (Red/BLF on)"
-msgstr ""
+msgstr "Forcer en mode Nuit (BLF Rouge)"
 
 #: daynight.i18n.php:12
 msgid "Hook Time Conditions Module"
-msgstr ""
+msgstr "Module de conditions de temps"
 
 #: functions.inc.php:602
+#, fuzzy
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -190,6 +208,21 @@ msgid ""
 "destinations when that associated Call Flow Toggle is in its override (Red/"
 "BLF on) state."
 msgstr ""
+"Si une sélection est effectuée, cette condition est associée au paramètre de "
+"basculement du jour/nuit spécifié. Cela signifie que si le code de fonction "
+"du jour/nuit est défini pour remplacer (BLF Rouge), cette condition de temps "
+"ira toujours à sa destination Jour si l'association choisie est \"Forcer la "
+"condition de temps\" et qu'elle ira toujours à sa destination. Destination "
+"Nuit si l'association est avec la 'Fausse destination de la condition de "
+"temps de force'. Lorsque le code de caractéristique de contrôle de flux "
+"d'appels associé est dans son mode normal (BLF Vert), alors cette condition "
+"de temps fonctionnera normalement en fonction de l'heure actuelle. Les "
+"destinations qui font partie d'un code de fonctionnalité de contrôle jour/"
+"nuit associé n'auront aucun effet sur l'endroit où un appel ira si vous "
+"traversez cette condition de temps. La seule chose qui est faite lors de la "
+"création d'une association est de permettre à l'état override d'un jour/nuit "
+"de forcer cette condition à toujours suivre l'une de ses deux destinations "
+"lorsque ce Jour/Nuit associé est dans son état override (BLF Rouge) ."
 
 #: views/form.php:104
 #, php-format
@@ -198,19 +231,23 @@ msgstr "Lier à la condition de temps %s - %s"
 
 #: views/bootnav.php:7
 msgid "List Callflows"
-msgstr ""
+msgstr "list des Jour/Nuit"
 
 #: views/form.php:64
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
 msgstr ""
+"Message à lire en mode Jour (BLF Vert).<br>Pour ajouter des enregistrements "
+"supplémentaires, utilisez le MENU \"Enregistrements système\" ci-dessus"
 
 #: views/form.php:90
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
+"Message à lire en mode Nuit (BLF Rouge).<br>Pour ajouter des enregistrements "
+"supplémentaires, utilisez le MENU \"Enregistrements système\" ci-dessus"
 
 #: functions.inc.php:573
 msgid "No Association"
@@ -218,11 +255,11 @@ msgstr "Pas d'association"
 
 #: views/form.php:179
 msgid "Normal (Green/BLF off)"
-msgstr ""
+msgstr "Jour (BLF Vert)"
 
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
-msgstr ""
+msgstr "Jour (BLF Vert)"
 
 #: install.php:73
 msgid "OK"
@@ -234,11 +271,11 @@ msgstr "Mot de passe optionnel"
 
 #: views/form.php:181
 msgid "Override (Red/BLF on)"
-msgstr ""
+msgstr "Nuit (BLF Rouge)"
 
 #: views/form.php:253
 msgid "Override Flow (Red/BLF on)"
-msgstr ""
+msgstr "Nuit (BLF Rouge)"
 
 #: assets/js/daynight.js:4
 msgid "Please enter a valid numeric password, only numbers are allowed"
