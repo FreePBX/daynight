@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: traduction française du module daynight\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-25 16:22-0400\n"
-"PO-Revision-Date: 2017-12-04 23:18+0200\n"
+"PO-Revision-Date: 2017-12-11 23:06+0200\n"
 "Last-Translator: JCattan <jeremie@famillecattan.com>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/daynight/fr_FR/>\n"
@@ -190,7 +190,6 @@ msgid "Hook Time Conditions Module"
 msgstr "Module de conditions de temps"
 
 #: functions.inc.php:602
-#, fuzzy
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -289,31 +288,31 @@ msgstr "Choisissez le mode courant SVP"
 
 #: assets/js/daynight.js:5
 msgid "Please set the Normal Flow destination"
-msgstr ""
+msgstr "Merci de choisir la destination en Mode Jour"
 
 #: assets/js/daynight.js:6
 msgid "Please set the Override Flow destination"
-msgstr ""
+msgstr "Merci de choisir la destination en Mode Nuit"
 
 #: views/form.php:50
 msgid "Recording for Normal Mode"
-msgstr ""
+msgstr "Enregistrement mode Jour"
 
 #: views/form.php:76
 msgid "Recording for Override Mode"
-msgstr ""
+msgstr "Enregistrement mode Nuit"
 
 #: Daynight.class.php:57
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #: views/grid.php:15
 msgid "State"
-msgstr ""
+msgstr "État"
 
 #: Daynight.class.php:62
 msgid "Submit"
-msgstr ""
+msgstr "Envoyer"
 
 #: views/form.php:138
 #, php-format
@@ -321,16 +320,21 @@ msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
+"Il y a un total de %s objets de code de fonctionnalité, %s, chacun peut "
+"contrôler un Jour/Nuit et être basculé en utilisant le code de fonction par "
+"défaut plus l'index."
 
 #: views/form.php:189
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
 msgstr ""
+"Cela modifiera l'état actuel de ce Jour/Nuit, ou définira l'état initial "
+"lors d'une création."
 
 #: views/form.php:108
 msgid "Time Condition Reference"
-msgstr ""
+msgstr "Condition Horaire de référence"
 
 #: views/form.php:217
 msgid ""
@@ -338,12 +342,15 @@ msgid ""
 "call flow. If left blank anyone can use the feature code and it will be un-"
 "protected"
 msgstr ""
+"Vous pouvez éventuellement inclure un mot de passe pour s'authentifier avant "
+"de basculer le Jour/Nuit. Si laissé vide tout le monde peut utiliser le code "
+"de fonction et il sera non protégé"
 
 #: views/form.php:13
 msgid ""
 "You have reached the maximum limit for flow controls. Delete one to add a "
 "new one"
-msgstr ""
+msgstr "Vous avez atteint le maximum de JOUR/NUIT. Merci d'en effacer un avant"
 
 #: install.php:67
 msgid "changing primary keys to all fields.."
