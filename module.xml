@@ -2,20 +2,20 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>14.0.1</version>
+	<version>15.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
-	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
+	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Applications</category>
 	<description>
 		Call Flow manual toggle control - allows for two destinations to be chosen and provides a feature code
 		that toggles between the two destinations.
 	</description>
 	<changelog>
-		*14.0.1* Migrate database calls into xml
+		*15.0.1* Impliment backup
 	</changelog>
 	<depends>
-		<version>14.0</version>
+		<version>15.0</version>
 	</depends>
 	<menuitems>
 		<daynight needsenginedb="yes">Call Flow Control</daynight>
@@ -41,6 +41,6 @@
 		</timeconditions>
 	</hooks>
 	<supported>
-		<version>14.0</version>
+		<version>15.0</version>
 	</supported>
 </module>
