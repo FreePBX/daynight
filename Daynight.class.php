@@ -76,7 +76,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
     public function dumpConfigs(){
         $final = [];
         $states = [];
-        $stmt = $pdo->query('SELECT ext, dest, dmode FROM daynight');
+        $stmt = $this->FreePBX->Database->query('SELECT ext, dest, dmode FROM daynight');
         while ($row = $stmt->fetch()) {
             $final[] = $row;
             if(!isset($states[$row['ext']])){
