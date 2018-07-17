@@ -92,8 +92,8 @@ class Daynight extends FreePBX_Helpers implements BMO {
     public function loadConfigs($configs){
         $sql = "INSERT INTO daynight (ext, dmode, dest) VALUES (:id, :item, :value)";
         $sqldel = "DELETE FROM daynight WHERE ext = :ext AND dmode = :dmode LIMIT 1";
-        $stmt = $this->FreePBX->prepare($sql);
-        $stmtDelete = $this->FreePBX->prepare($sql);
+        $stmt = $this->FreePBX->Database->prepare($sql);
+        $stmtDelete = $this->FreePBX->Database->prepare($sql);
         foreach ($configs['configs'] as $config){
             $stmtDelete->execute([
                 ':ext' => $config['ext'],

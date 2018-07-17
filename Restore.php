@@ -5,6 +5,6 @@ class Restore Extends Base\RestoreBase{
   public function runRestore($jobid){
     $daynight = $this->FreePBX->Daynight;
     $configs = $this->getConfigs();
-    $daynight->configLoad($configs);
+    $daynight->loadConfigs(reset($configs));
   }
 }
