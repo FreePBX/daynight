@@ -9,11 +9,19 @@ use RuntimeException;
 use UnexpectedValueException;
 use BadMethodCallException;
 class Daynight extends FreePBX_Helpers implements BMO {
-
     public function install() {}
     public function uninstall() {}
-    public function doConfigPageInit($page) {
+    public function setDatabase($pdo){
+        $this->Database = $pdo;
+        return $this;
+    }
+    
+    public function resetDatabase(){
+        $this->Database = $this->FreePBX->Database;
+        return $this;
+    }
 
+    public function doConfigPageInit($page) {
         $action = $this->getReq['action'];
         $request = [
             'action' => $action,
@@ -76,7 +84,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
     public function dumpConfigs(){
         $final = [];
         $states = [];
-        $stmt = $this->FreePBX->Database->query('SELECT ext, dest, dmode FROM daynight');
+        $stmt = $this->Database->query('SELECT ext, dest, dmode FROM daynight');
         while ($row = $stmt->fetch()) {
             $final[] = $row;
             if(!isset($states[$row['ext']])){
@@ -92,8 +100,8 @@ class Daynight extends FreePBX_Helpers implements BMO {
     public function loadConfigs($configs){
         $sql = "INSERT INTO daynight (ext, dmode, dest) VALUES (:id, :item, :value)";
         $sqldel = "DELETE FROM daynight WHERE ext = :ext AND dmode = :dmode LIMIT 1";
-        $stmt = $this->FreePBX->Database->prepare($sql);
-        $stmtDelete = $this->FreePBX->Database->prepare($sql);
+        $stmt = $this->Database->prepare($sql);
+        $stmtDelete = $this->Database->prepare($sql);
         foreach ($configs['configs'] as $config){
             $stmtDelete->execute([
                 ':ext' => $config['ext'],
@@ -116,7 +124,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
 
 	public function listCallFlows() {
 		$sql = "SELECT ext, dest FROM daynight WHERE dmode = 'fc_description' ORDER BY ext";
-		$stmt = $this->FreePBX->Database->prepare($sql);
+		$stmt = $this->Database->prepare($sql);
 		$stmt->execute();
         $results = $stmt->fetchall(PDO::FETCH_ASSOC);
         /** Why? */
@@ -143,13 +151,13 @@ class Daynight extends FreePBX_Helpers implements BMO {
 	public function tcAdd($data){
 		if($this->FreePBX->Config->get('DAYNIGHTTCHOOK')){
 			$sql = "DELETE FROM `daynight` WHERE `dmode` IN ('timeday', 'timenight') AND dest = :id";
-			$stmt = $this->FreePBX->Database->prepare($sql);
+			$stmt = $this->Database->prepare($sql);
 			$stmt->execute(array(':id' => $data['id']));
 			if (isset($data['post']['daynight_ref']) && $data['post']['daynight_ref'] != '') {
 				$daynight_vals = explode(',',$data['post']['daynight_ref'],2);
 				$sql = "INSERT INTO `daynight` (`ext`, `dmode`, `dest`) VALUES (:ext, :dmode, :dest)";
 				$vars = array(':ext' => $daynight_vals[0], ':dmode' => $daynight_vals[1], ':dest' => $data['id'] );
-				$stmt = $this->FreePBX->Database->prepare($sql);
+				$stmt = $this->Database->prepare($sql);
 				$stmt->execute($vars);
 			}
         }
@@ -159,7 +167,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
 	public function tcDelete($data){
 		if($this->FreePBX->Config->get('DAYNIGHTTCHOOK')){
 			$sql = "DELETE FROM `daynight` WHERE `dmode` IN ('timeday', 'timenight') AND dest = :id";
-			$stmt = $this->FreePBX->Database->prepare($sql);
+			$stmt = $this->Database->prepare($sql);
 			$stmt->execute(array(':id' => $data));
         }
         return $this;
@@ -172,7 +180,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
 		$day   = isset($post[$post['goto0'].'0'])?$post[$post['goto0'].'0']:'';
 		$night = isset($post[$post['goto1'].'1'])?$post[$post['goto1'].'1']:'';
 		$sql = "INSERT INTO daynight (ext, dmode, dest) VALUES (:id, :item, :value)";
-		$stmt = $this->FreePBX->Database->prepare($sql);
+		$stmt = $this->Database->prepare($sql);
 		$returns = array();
 		$returns['day'] = $stmt->execute(array(':id' => $id, ':item' => 'day', ':value' => $day));
 		$returns['night'] = $stmt->execute(array(':id' => $id, ':item' => 'night', ':value' => $night));
@@ -205,7 +213,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
 		if($all){
 			$sql = "DELETE FROM daynight WHERE ext = :id";
 		}
-		$stmt = $this->FreePBX->Database->prepare($sql);
+		$stmt = $this->Database->prepare($sql);
 		$stmt->execute(array(':id' => $id));
 		if($all){
 			$fcc = new \featurecode('daynight', 'toggle-mode-'.$id);
