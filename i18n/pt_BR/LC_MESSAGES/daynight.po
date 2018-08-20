@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 13:30-0700\n"
+"POT-Creation-Date: 2018-05-07 19:00-0400\n"
 "PO-Revision-Date: 2017-03-08 21:25+0200\n"
 "Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: functions.inc.php:526
+#: functions.inc.php:577
 msgid " - Force Time Condition False Destination"
 msgstr " - Força Condição Horária Falso Destino"
 
-#: functions.inc.php:524
+#: functions.inc.php:575
 msgid " - Force Time Condition True Destination"
 msgstr " - Força Condição Horária Verdadeiro Destino"
 
@@ -104,7 +104,7 @@ msgstr "Módulo de Controle de Fluxo de Chamadas"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Alternância de Fluxo de Chamadas (%s) : %s"
 
-#: functions.inc.php:537
+#: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
 msgstr "Alternância de fluxo de chamada associado"
 
@@ -116,7 +116,7 @@ msgstr "Alternância de Controle de Fluxo de Chamadas"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Índice de Alternância de Controle de Fluxo de Chamadas"
 
-#: functions.inc.php:404
+#: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Alternância de Fluxo de Chamada: %s (%s)"
@@ -138,7 +138,7 @@ msgstr "Modo Atual"
 msgid "Default"
 msgstr "Padrão"
 
-#: Daynight.class.php:53
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr "Apagar"
 
@@ -162,6 +162,10 @@ msgstr ""
 "Destino a ser usado quando definido como Modo Substituir Fluxo (Vermelho/BLF "
 "ativado)"
 
+#: install.php:71
+msgid "ERROR: failed to alter primary keys "
+msgstr "ERRO: falha ao alterar chaves primárias "
+
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "Código de Recurso"
@@ -178,7 +182,7 @@ msgstr "Força para Modo Substituir (Vermelho/BLF ativado)"
 msgid "Hook Time Conditions Module"
 msgstr "Módulo de Condições de Tempo de Gancho"
 
-#: functions.inc.php:551
+#: functions.inc.php:602
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -237,7 +241,7 @@ msgstr ""
 "Para adicionar gravações adicionais, use o menu \"Gravações do Sistema\" "
 "para o item acima"
 
-#: functions.inc.php:522
+#: functions.inc.php:573
 msgid "No Association"
 msgstr "Sem Associação"
 
@@ -248,6 +252,10 @@ msgstr "Normal (Verde/BLF desligado)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Fluxo Normal (Verde/BLF desligado)"
+
+#: install.php:73
+msgid "OK"
+msgstr "OK"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -285,7 +293,7 @@ msgstr "Gravação para o Modo Normal"
 msgid "Recording for Override Mode"
 msgstr "Gravação para o Modo Substituição"
 
-#: Daynight.class.php:58
+#: Daynight.class.php:57
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -293,7 +301,7 @@ msgstr "Reiniciar"
 msgid "State"
 msgstr "Estado"
 
-#: Daynight.class.php:63
+#: Daynight.class.php:62
 msgid "Submit"
 msgstr "Enviar"
 
@@ -337,11 +345,6 @@ msgstr ""
 "Você atingiu o limite máximo para controles de fluxo. Exclua algum para "
 "adicionar um novo"
 
-#~ msgid "ERROR: failed to alter primary keys "
-#~ msgstr "ERRO: falha ao alterar chaves primárias "
-
-#~ msgid "OK"
-#~ msgstr "OK"
-
-#~ msgid "changing primary keys to all fields.."
-#~ msgstr "alterando chaves primárias para todos os campos..."
+#: install.php:67
+msgid "changing primary keys to all fields.."
+msgstr "alterando chaves primárias para todos os campos..."

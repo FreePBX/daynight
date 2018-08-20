@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 13:30-0700\n"
+"POT-Creation-Date: 2018-05-07 19:00-0400\n"
 "PO-Revision-Date: 2015-10-27 09:11+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -49,11 +49,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: functions.inc.php:526
+#: functions.inc.php:577
 msgid " - Force Time Condition False Destination"
 msgstr "強制的に時間条件をFalse宛先にする。"
 
-#: functions.inc.php:524
+#: functions.inc.php:575
 msgid " - Force Time Condition True Destination"
 msgstr "強制的に時間条件をTrue宛先にする。"
 
@@ -129,7 +129,7 @@ msgstr "コールフロー制御モジュール"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "コールフロー切り替え (%s) : %s"
 
-#: functions.inc.php:537
+#: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgstr "コールフロー切り替え制御"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "機能コードのインデックス"
 
-#: functions.inc.php:404
+#: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "コールフロー切り替え (%s) : %s"
@@ -162,7 +162,7 @@ msgstr "現在のモード"
 msgid "Default"
 msgstr "デフォルト"
 
-#: Daynight.class.php:53
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr "削除"
 
@@ -182,6 +182,10 @@ msgstr "通常モード (BLFが緑もしくは消灯) の宛先"
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "上書きモード (BLFが赤もしくは点灯) の宛先"
 
+#: install.php:71
+msgid "ERROR: failed to alter primary keys "
+msgstr "エラー: プライマリキーの変更に失敗"
+
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "機能コード"
@@ -198,7 +202,7 @@ msgstr "強制的に上書きモードにする (BLFが赤もしくは点灯)"
 msgid "Hook Time Conditions Module"
 msgstr "時間条件フックモジュール"
 
-#: functions.inc.php:551
+#: functions.inc.php:602
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -253,7 +257,7 @@ msgstr ""
 "上書きモード (BLFが赤もしくは点灯) のときに再生する音声。<br>音声を追加するに"
 "は、上にある「システム録音」メニューを使います。"
 
-#: functions.inc.php:522
+#: functions.inc.php:573
 msgid "No Association"
 msgstr "連動なし"
 
@@ -264,6 +268,10 @@ msgstr "通常 (BLFが緑もしくは消灯)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "通常フロー (BLFが緑もしくは消灯)"
+
+#: install.php:73
+msgid "OK"
+msgstr "OK"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -303,7 +311,7 @@ msgstr "通常モードの音声"
 msgid "Recording for Override Mode"
 msgstr "上書きモードの音声"
 
-#: Daynight.class.php:58
+#: Daynight.class.php:57
 msgid "Reset"
 msgstr "リセット"
 
@@ -311,7 +319,7 @@ msgstr "リセット"
 msgid "State"
 msgstr "ステータス"
 
-#: Daynight.class.php:63
+#: Daynight.class.php:62
 msgid "Submit"
 msgstr "送信"
 
@@ -352,14 +360,9 @@ msgstr ""
 "コールフロー切り替え制御の上限に達しました。既存の設定を1つ以上削除してからも"
 "う一度試してください。"
 
-#~ msgid "ERROR: failed to alter primary keys "
-#~ msgstr "エラー: プライマリキーの変更に失敗"
-
-#~ msgid "OK"
-#~ msgstr "OK"
-
-#~ msgid "changing primary keys to all fields.."
-#~ msgstr "全てのフィールドに対するプライマリキーを変更中.."
+#: install.php:67
+msgid "changing primary keys to all fields.."
+msgstr "全てのフィールドに対するプライマリキーを変更中.."
 
 #~ msgid "List Toggles"
 #~ msgstr "切り替え制御を一覧表示"

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 13:30-0700\n"
+"POT-Creation-Date: 2018-05-07 19:00-0400\n"
 "PO-Revision-Date: 2015-10-16 14:24+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -34,11 +34,11 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:526
+#: functions.inc.php:577
 msgid " - Force Time Condition False Destination"
 msgstr " - 强制时间条件为假目的地设置"
 
-#: functions.inc.php:524
+#: functions.inc.php:575
 msgid " - Force Time Condition True Destination"
 msgstr " - 强制时间添加为真目的地设置"
 
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "呼叫流程切换 (%s) : %s"
 
-#: functions.inc.php:537
+#: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
 msgstr "呼叫流程切换关联"
 
@@ -115,7 +115,7 @@ msgstr "呼叫流程切换控制"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "呼叫流程功能热键索引"
 
-#: functions.inc.php:404
+#: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "呼叫流程切换: %s (%s)"
@@ -134,7 +134,7 @@ msgstr "当前模式"
 msgid "Default"
 msgstr "默认"
 
-#: Daynight.class.php:53
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr "删除"
 
@@ -154,6 +154,10 @@ msgstr "当设置为正常流程(Green/BLF off)模式时的目的地"
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "当使用覆盖流程(Red/BLF on) 模式时的目的地"
 
+#: install.php:71
+msgid "ERROR: failed to alter primary keys "
+msgstr "错误：在更改主键时发生错误"
+
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "功能热键"
@@ -170,7 +174,7 @@ msgstr "强制使用覆盖模式 (Red/BLF on)"
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:551
+#: functions.inc.php:602
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -210,7 +214,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:522
+#: functions.inc.php:573
 msgid "No Association"
 msgstr "无联系"
 
@@ -221,6 +225,10 @@ msgstr "标准模式 (Green/BLF off)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "标准流程 (Green/BLF off)"
+
+#: install.php:73
+msgid "OK"
+msgstr "完成"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -258,7 +266,7 @@ msgstr "标准模式录音"
 msgid "Recording for Override Mode"
 msgstr "覆盖模式录音"
 
-#: Daynight.class.php:58
+#: Daynight.class.php:57
 msgid "Reset"
 msgstr "重新设置"
 
@@ -266,7 +274,7 @@ msgstr "重新设置"
 msgid "State"
 msgstr ""
 
-#: Daynight.class.php:63
+#: Daynight.class.php:62
 msgid "Submit"
 msgstr "提交"
 
@@ -300,14 +308,9 @@ msgid ""
 "new one"
 msgstr "已经达到最大流程控制数量。删除或者添加新的"
 
-#~ msgid "ERROR: failed to alter primary keys "
-#~ msgstr "错误：在更改主键时发生错误"
-
-#~ msgid "OK"
-#~ msgstr "完成"
-
-#~ msgid "changing primary keys to all fields.."
-#~ msgstr "正在更改所有字段的主键。。。"
+#: install.php:67
+msgid "changing primary keys to all fields.."
+msgstr "正在更改所有字段的主键。。。"
 
 #~ msgid "List Toggles"
 #~ msgstr "切换列表"

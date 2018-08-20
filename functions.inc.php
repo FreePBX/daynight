@@ -11,7 +11,7 @@ class dayNightObject {
 	var $id;
 
 	// contstructor
-	function dayNightObject($item) {
+	function __construct($item) {
 		global $amp_conf;
 
 		$this->id = $item;

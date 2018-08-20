@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 13:30-0700\n"
+"POT-Creation-Date: 2018-05-07 19:00-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,11 +29,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.inc.php:526
+#: functions.inc.php:577
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:524
+#: functions.inc.php:575
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:537
+#: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -110,7 +110,7 @@ msgstr ""
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:404
+#: functions.inc.php:455
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Daynight.class.php:53
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr ""
 
@@ -149,6 +149,10 @@ msgstr ""
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
+#: install.php:71
+msgid "ERROR: failed to alter primary keys "
+msgstr ""
+
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr ""
@@ -165,7 +169,7 @@ msgstr ""
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:551
+#: functions.inc.php:602
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -205,7 +209,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:522
+#: functions.inc.php:573
 msgid "No Association"
 msgstr ""
 
@@ -215,6 +219,10 @@ msgstr ""
 
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
+msgstr ""
+
+#: install.php:73
+msgid "OK"
 msgstr ""
 
 #: views/form.php:202
@@ -253,7 +261,7 @@ msgstr ""
 msgid "Recording for Override Mode"
 msgstr ""
 
-#: Daynight.class.php:58
+#: Daynight.class.php:57
 msgid "Reset"
 msgstr ""
 
@@ -261,7 +269,7 @@ msgstr ""
 msgid "State"
 msgstr ""
 
-#: Daynight.class.php:63
+#: Daynight.class.php:62
 msgid "Submit"
 msgstr ""
 
@@ -293,4 +301,8 @@ msgstr ""
 msgid ""
 "You have reached the maximum limit for flow controls. Delete one to add a "
 "new one"
+msgstr ""
+
+#: install.php:67
+msgid "changing primary keys to all fields.."
 msgstr ""
