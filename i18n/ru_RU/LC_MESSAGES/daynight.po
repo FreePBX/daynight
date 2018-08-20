@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 19:00-0400\n"
+"POT-Creation-Date: 2018-08-20 12:46-0400\n"
 "PO-Revision-Date: 2016-02-05 18:20+0200\n"
 "Last-Translator: ded <ceo@postmet.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -36,11 +36,11 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr " - Форсировать назначение которое не попадает под правило по времени"
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr " - Форсировать назначение которое попадает под правило по времени"
 
@@ -71,6 +71,11 @@ msgstr "Приложения"
 #: assets/js/daynight.js:23
 msgid "Are you sure you want to delete this flow?"
 msgstr "Вы уверены,что хотите удалить  данный поток  вызова?"
+
+#: Daynight.class.php:236 Daynight.class.php:241 Daynight.class.php:264
+#: Daynight.class.php:275
+msgid "Astersik manager is not running or we cannot access it."
+msgstr ""
 
 #: daynight.i18n.php:16
 msgid ""
@@ -119,7 +124,7 @@ msgstr "Модуль контроля вызовов"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Переключатель состояния прохождения вызовов (%s) : %s"
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr "Связать переключение прохождения вызовов  с"
 
@@ -131,7 +136,7 @@ msgstr "Управление переключением прохождения �
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Индекс сервисного кода  функции \"Переключение прохождения вызовов\""
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Переключатель состояния прохождения вызовов (%s) : %s"
@@ -153,7 +158,7 @@ msgstr "Текущий режим"
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:62
 msgid "Delete"
 msgstr "Удалить"
 
@@ -177,10 +182,6 @@ msgstr ""
 "Какой внутренний номер использовать когда установлен Override Flow (Red/BLF "
 "on) режим"
 
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr "ОШИБКА: не удалось изменить основные значения "
-
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "Сервисный код"
@@ -197,7 +198,7 @@ msgstr "Форсировать режим подавления (Red/BLF вклю
 msgid "Hook Time Conditions Module"
 msgstr "Вызвать модуль условий по времени"
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -231,6 +232,11 @@ msgstr ""
 "времени, руководствуясь состоянием этого переключения, когда оно "
 "отображается в положении (Red/BLF включено)."
 
+#: Daynight.class.php:247 Daynight.class.php:261
+#, php-format
+msgid "Invalid State %s"
+msgstr ""
+
 #: views/form.php:104
 #, php-format
 msgid "Linked to Time Condition %s - %s"
@@ -256,7 +262,7 @@ msgstr ""
 "Сообщение, воспроизводимое в обычном режиме (Red/BLF on).<br>Для добавления "
 "дополнительных записей  используйте \"System Recordings\" Меню"
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr "Нет связывания"
 
@@ -268,9 +274,10 @@ msgstr "Нормальный (Green/BLF выключен)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Нормальное прохождение (Green/BLF выключен)"
 
-#: install.php:73
-msgid "OK"
-msgstr "ОК"
+#: Daynight.class.php:258
+#, php-format
+msgid "Object already exists and is in state: %s, you must delete it first"
+msgstr ""
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -308,7 +315,7 @@ msgstr "Запись для режима День"
 msgid "Recording for Override Mode"
 msgstr "Запись для режима Ночь"
 
-#: Daynight.class.php:57
+#: Daynight.class.php:68
 msgid "Reset"
 msgstr "Сброс"
 
@@ -316,7 +323,7 @@ msgstr "Сброс"
 msgid "State"
 msgstr "Статус"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:73
 msgid "Submit"
 msgstr "Подтвердить"
 
@@ -360,9 +367,18 @@ msgstr ""
 "Вы достигли максимального предела количества контрольных точек прохождения "
 "вызова. Удалите одну  для создания новой."
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
-msgstr "изменить основные значения для всех полей.."
+#: Daynight.class.php:244
+msgid "You must create the object before setting the state."
+msgstr ""
+
+#~ msgid "ERROR: failed to alter primary keys "
+#~ msgstr "ОШИБКА: не удалось изменить основные значения "
+
+#~ msgid "OK"
+#~ msgstr "ОК"
+
+#~ msgid "changing primary keys to all fields.."
+#~ msgstr "изменить основные значения для всех полей.."
 
 #~ msgid "Add Call Flow Toggle Code"
 #~ msgstr "Добавить сервисный код переключения состояния прохождения вызовов"

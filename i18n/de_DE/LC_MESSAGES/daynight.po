@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 16:22-0400\n"
+"POT-Creation-Date: 2018-08-20 12:46-0400\n"
 "PO-Revision-Date: 2018-07-04 10:08+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/daynight/de/>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.19.1\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr ""
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr ""
 
@@ -54,6 +54,11 @@ msgstr "Anwendungen"
 
 #: assets/js/daynight.js:23
 msgid "Are you sure you want to delete this flow?"
+msgstr ""
+
+#: Daynight.class.php:236 Daynight.class.php:241 Daynight.class.php:264
+#: Daynight.class.php:275
+msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
 #: daynight.i18n.php:16
@@ -89,7 +94,7 @@ msgstr ""
 msgid "Call Flow Toggle (%s) : %s"
 msgstr ""
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr ""
 
@@ -101,7 +106,7 @@ msgstr ""
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr ""
@@ -120,7 +125,7 @@ msgstr "Aktueller Modus"
 msgid "Default"
 msgstr "Standard"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:62
 msgid "Delete"
 msgstr "Löschen"
 
@@ -140,10 +145,6 @@ msgstr ""
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr ""
-
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "Funktionscode"
@@ -160,7 +161,7 @@ msgstr ""
 msgid "Hook Time Conditions Module"
 msgstr ""
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -177,6 +178,11 @@ msgid ""
 "Flow Toggle to force this time condition to always follow one of its two "
 "destinations when that associated Call Flow Toggle is in its override (Red/"
 "BLF on) state."
+msgstr ""
+
+#: Daynight.class.php:247 Daynight.class.php:261
+#, php-format
+msgid "Invalid State %s"
 msgstr ""
 
 #: views/form.php:104
@@ -200,7 +206,7 @@ msgid ""
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr ""
 
@@ -212,9 +218,10 @@ msgstr "Normal (Grün/BLF aus)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr ""
 
-#: install.php:73
-msgid "OK"
-msgstr "OK"
+#: Daynight.class.php:258
+#, php-format
+msgid "Object already exists and is in state: %s, you must delete it first"
+msgstr ""
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -254,7 +261,7 @@ msgstr "Aufnahme für den Normalmodus"
 msgid "Recording for Override Mode"
 msgstr "Aufnahme für den Überbrückungsmodus"
 
-#: Daynight.class.php:57
+#: Daynight.class.php:68
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -262,7 +269,7 @@ msgstr "Zurücksetzen"
 msgid "State"
 msgstr "Status"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:73
 msgid "Submit"
 msgstr ""
 
@@ -296,6 +303,9 @@ msgid ""
 "new one"
 msgstr ""
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
+#: Daynight.class.php:244
+msgid "You must create the object before setting the state."
 msgstr ""
+
+#~ msgid "OK"
+#~ msgstr "OK"
