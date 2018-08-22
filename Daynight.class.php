@@ -22,7 +22,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
     }
 
     public function doConfigPageInit($page) {
-        $action = $this->getReq['action'];
+        $action = $this->getReq('action');
         $request = [
             'action' => $action,
             'password' => $this->getReq('password'),
