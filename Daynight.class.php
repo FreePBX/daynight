@@ -22,18 +22,8 @@ class Daynight extends FreePBX_Helpers implements BMO {
     }
 
     public function doConfigPageInit($page) {
-        $action = $this->getReq('action');
-        $request = [
-            'action' => $action,
-            'password' => $this->getReq('password'),
-            'fc_description' => $this->getReq('fc_description'),
-            'day_recording_id' => $this->getReq('day_recoerding_id'),
-            'night_recording_id' => $this->getReq('night_recoerding_id'),
-            'itemid' => $this->getReq('itemid'),
-            'extdisplay' => $this->getReq('extdisplay'),
-        ];
-
-		switch ($action) {
+        $request = $_REQUEST;
+		switch ($request['action']) {
 			case "add":
 			case "edit":
 			case "edited":
