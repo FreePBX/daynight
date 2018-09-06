@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 12:46-0400\n"
+"POT-Creation-Date: 2018-09-06 18:53-0400\n"
 "PO-Revision-Date: 2016-05-26 19:05+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -57,8 +57,8 @@ msgstr "درخواست"
 msgid "Are you sure you want to delete this flow?"
 msgstr "آیا از حذف این روند اطمینان دارید؟"
 
-#: Daynight.class.php:236 Daynight.class.php:241 Daynight.class.php:264
-#: Daynight.class.php:275
+#: Daynight.class.php:226 Daynight.class.php:231 Daynight.class.php:254
+#: Daynight.class.php:265
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -140,7 +140,7 @@ msgstr "حالت کنونی"
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr "حذف"
 
@@ -210,7 +210,7 @@ msgstr ""
 "destinations when that associated Call Flow Toggle is in its override (Red/"
 "BLF on) state."
 
-#: Daynight.class.php:247 Daynight.class.php:261
+#: Daynight.class.php:237 Daynight.class.php:251
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
@@ -252,7 +252,7 @@ msgstr "نرمال(سبز/BLF off)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr "روند نرمال (سبز/BLF off)"
 
-#: Daynight.class.php:258
+#: Daynight.class.php:248
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
@@ -293,7 +293,7 @@ msgstr "ضبط برای حالت نرمال"
 msgid "Recording for Override Mode"
 msgstr "ضبط برای حالت ابطال"
 
-#: Daynight.class.php:68
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "تنظیم مجدد"
 
@@ -301,7 +301,7 @@ msgstr "تنظیم مجدد"
 msgid "State"
 msgstr "کیفیت"
 
-#: Daynight.class.php:73
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr "ارسال"
 
@@ -344,7 +344,7 @@ msgstr ""
 "شما از حداکثر روند تماس استفاده کرده اید. برای افزودن مورد جدید یک مورد را "
 "حذف کنید"
 
-#: Daynight.class.php:244
+#: Daynight.class.php:234
 msgid "You must create the object before setting the state."
 msgstr ""
 

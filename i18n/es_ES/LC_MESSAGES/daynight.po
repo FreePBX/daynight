@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 12:46-0400\n"
+"POT-Creation-Date: 2018-09-06 18:53-0400\n"
 "PO-Revision-Date: 2016-06-07 03:13+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -69,8 +69,8 @@ msgstr "Aplicaciones"
 msgid "Are you sure you want to delete this flow?"
 msgstr "¿Seguro que quieres borrar este flujo?"
 
-#: Daynight.class.php:236 Daynight.class.php:241 Daynight.class.php:264
-#: Daynight.class.php:275
+#: Daynight.class.php:226 Daynight.class.php:231 Daynight.class.php:254
+#: Daynight.class.php:265
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -155,7 +155,7 @@ msgstr "Modo actual"
 msgid "Default"
 msgstr "Defecto"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr "Borrar"
 
@@ -230,7 +230,7 @@ msgstr ""
 "condición tiempo de seguir siempre una de sus dos destinos cuando la "
 "asociada Call Flow Toggle está en su anulación (rojo / BLF on)."
 
-#: Daynight.class.php:247 Daynight.class.php:261
+#: Daynight.class.php:237 Daynight.class.php:251
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
@@ -272,7 +272,7 @@ msgstr "Normal (Verde/BLF off)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flujo Normal (Verde/BLF off)"
 
-#: Daynight.class.php:258
+#: Daynight.class.php:248
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
@@ -314,7 +314,7 @@ msgstr "Grabación para modo Normal"
 msgid "Recording for Override Mode"
 msgstr "Grabación para modo Override"
 
-#: Daynight.class.php:68
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -322,7 +322,7 @@ msgstr "Reiniciar"
 msgid "State"
 msgstr "Estado"
 
-#: Daynight.class.php:73
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr "Enviar"
 
@@ -366,7 +366,7 @@ msgstr ""
 "Usted ha alcanzado el limite máximo de control de flujos. Borre alguno para "
 "agregar otro"
 
-#: Daynight.class.php:244
+#: Daynight.class.php:234
 msgid "You must create the object before setting the state."
 msgstr ""
 

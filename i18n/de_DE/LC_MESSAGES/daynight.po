@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 12:46-0400\n"
+"POT-Creation-Date: 2018-09-06 18:53-0400\n"
 "PO-Revision-Date: 2018-07-04 10:08+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/daynight/de/>\n"
@@ -56,8 +56,8 @@ msgstr "Anwendungen"
 msgid "Are you sure you want to delete this flow?"
 msgstr ""
 
-#: Daynight.class.php:236 Daynight.class.php:241 Daynight.class.php:264
-#: Daynight.class.php:275
+#: Daynight.class.php:226 Daynight.class.php:231 Daynight.class.php:254
+#: Daynight.class.php:265
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr "Aktueller Modus"
 msgid "Default"
 msgstr "Standard"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr "Löschen"
 
@@ -180,7 +180,7 @@ msgid ""
 "BLF on) state."
 msgstr ""
 
-#: Daynight.class.php:247 Daynight.class.php:261
+#: Daynight.class.php:237 Daynight.class.php:251
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
@@ -218,7 +218,7 @@ msgstr "Normal (Grün/BLF aus)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr ""
 
-#: Daynight.class.php:258
+#: Daynight.class.php:248
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
@@ -261,7 +261,7 @@ msgstr "Aufnahme für den Normalmodus"
 msgid "Recording for Override Mode"
 msgstr "Aufnahme für den Überbrückungsmodus"
 
-#: Daynight.class.php:68
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -269,7 +269,7 @@ msgstr "Zurücksetzen"
 msgid "State"
 msgstr "Status"
 
-#: Daynight.class.php:73
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr ""
 
@@ -303,7 +303,7 @@ msgid ""
 "new one"
 msgstr ""
 
-#: Daynight.class.php:244
+#: Daynight.class.php:234
 msgid "You must create the object before setting the state."
 msgstr ""
 

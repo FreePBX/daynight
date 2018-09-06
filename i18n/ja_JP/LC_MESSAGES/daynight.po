@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 12:46-0400\n"
+"POT-Creation-Date: 2018-09-06 18:53-0400\n"
 "PO-Revision-Date: 2015-10-27 09:11+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -85,8 +85,8 @@ msgstr "アプリケーション"
 msgid "Are you sure you want to delete this flow?"
 msgstr "このコールフローを削除してもよろしいですか？"
 
-#: Daynight.class.php:236 Daynight.class.php:241 Daynight.class.php:264
-#: Daynight.class.php:275
+#: Daynight.class.php:226 Daynight.class.php:231 Daynight.class.php:254
+#: Daynight.class.php:265
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -167,7 +167,7 @@ msgstr "現在のモード"
 msgid "Default"
 msgstr "デフォルト"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:52
 msgid "Delete"
 msgstr "削除"
 
@@ -233,7 +233,7 @@ msgstr ""
 "赤もしくは点灯) の時に、関連付けられた時間条件に対して常にその２つの宛先のう"
 "ち１つに従うように強制上書きすることだけです。"
 
-#: Daynight.class.php:247 Daynight.class.php:261
+#: Daynight.class.php:237 Daynight.class.php:251
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
@@ -275,7 +275,7 @@ msgstr "通常 (BLFが緑もしくは消灯)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr "通常フロー (BLFが緑もしくは消灯)"
 
-#: Daynight.class.php:258
+#: Daynight.class.php:248
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
@@ -318,7 +318,7 @@ msgstr "通常モードの音声"
 msgid "Recording for Override Mode"
 msgstr "上書きモードの音声"
 
-#: Daynight.class.php:68
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "リセット"
 
@@ -326,7 +326,7 @@ msgstr "リセット"
 msgid "State"
 msgstr "ステータス"
 
-#: Daynight.class.php:73
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr "送信"
 
@@ -367,7 +367,7 @@ msgstr ""
 "コールフロー切り替え制御の上限に達しました。既存の設定を1つ以上削除してからも"
 "う一度試してください。"
 
-#: Daynight.class.php:244
+#: Daynight.class.php:234
 msgid "You must create the object before setting the state."
 msgstr ""
 
