@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-25 16:22-0400\n"
-"PO-Revision-Date: 2018-08-25 14:00+0000\n"
+"PO-Revision-Date: 2018-09-15 02:47+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/daynight/de/>\n"
 "Language: de_DE\n"
@@ -91,15 +91,15 @@ msgstr "Anruffluss-Schalter (%s): %s"
 
 #: functions.inc.php:588
 msgid "Call Flow Toggle Associate with"
-msgstr ""
+msgstr "Anruffluss-Schalter verknüpfen mit"
 
 #: page.daynight.php:7
 msgid "Call Flow Toggle Control"
-msgstr ""
+msgstr "Anruffluss-Schalter-Steuerung"
 
 #: views/form.php:126
 msgid "Call Flow Toggle Feature Code Index"
-msgstr ""
+msgstr "Funktionscode-Index des Anruffluss-Schalters"
 
 #: functions.inc.php:455
 #, php-format
@@ -111,6 +111,8 @@ msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
 "and provides a feature code\t\tthat toggles between the two destinations."
 msgstr ""
+"Manuelle Steuerung des Anruffluss-Schalters - bietet die Möglichkeit, per "
+"Funktioniscode zwischen zwei Zielen umzuschalten."
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -130,7 +132,7 @@ msgstr "Beschreibung"
 
 #: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
-msgstr ""
+msgstr "Bechreibung für diese Anruffluss-Schalter-Steuerung"
 
 #: views/form.php:241
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
@@ -158,7 +160,7 @@ msgstr "Erzwingt den Überbrückungsmodus (Rot/BLF an)"
 
 #: daynight.i18n.php:12
 msgid "Hook Time Conditions Module"
-msgstr ""
+msgstr "Modul für Zeitbedingungen anbinden"
 
 #: functions.inc.php:602
 msgid ""
@@ -298,12 +300,17 @@ msgid ""
 "call flow. If left blank anyone can use the feature code and it will be un-"
 "protected"
 msgstr ""
+"Sie können optional ein Passwort vergeben, das vor dem Schalten des "
+"Anrufflusses eingegeben werden muss. Vergeben Sie hier kein Passwort, kann "
+"jeder den Funktionscode benutzen"
 
 #: views/form.php:13
 msgid ""
 "You have reached the maximum limit for flow controls. Delete one to add a "
 "new one"
 msgstr ""
+"Sie haben die maximale Anzahl von Fluss-Steuerungen ausgeschöpft. Sie müssen "
+"eine löschen, um eine neue hinzuzufügen"
 
 #: install.php:67
 msgid "changing primary keys to all fields.."
