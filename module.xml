@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>15.0.4</version>
+	<version>15.0.5</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
+		*15.0.5* backup and restore 
 		*15.0.4* FREEPBX-18133 Revert post handling from request helper 
 		*15.0.3* Rest Api 
 		*15.0.2* Packaging of ver 15.0.2
