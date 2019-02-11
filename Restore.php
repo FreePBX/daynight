@@ -5,7 +5,7 @@ class Restore Extends Base\RestoreBase{
   public function runRestore($jobid){
     $daynight = $this->FreePBX->Daynight;
     $configs = $this->getConfigs();
-    $daynight->loadConfigs(reset($configs));
+    $daynight->loadConfigs($configs);
   }
 
   public function processLegacy($pdo, $data, $tables, $unknownTables, $tmpfiledir){
