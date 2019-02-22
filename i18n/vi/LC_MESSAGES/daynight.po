@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 18:53-0400\n"
+"POT-Creation-Date: 2019-02-21 23:27-0500\n"
 "PO-Revision-Date: 2017-07-19 16:36+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -57,8 +57,8 @@ msgstr "Các ứng dụng"
 msgid "Are you sure you want to delete this flow?"
 msgstr "Bạn có chắc muốn xóa dòng cuộc gọi này?"
 
-#: Daynight.class.php:226 Daynight.class.php:231 Daynight.class.php:254
-#: Daynight.class.php:265
+#: Daynight.class.php:187 Daynight.class.php:192 Daynight.class.php:215
+#: Daynight.class.php:226
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -213,7 +213,7 @@ msgstr ""
 "kiện thời gian luôn luôn theo dõi một trong hai điểm đích khi mà chuyển đổi "
 "dòng cuộc gọi đang trong trạng thái ghi đè ( Đỏ/BLF bật)."
 
-#: Daynight.class.php:237 Daynight.class.php:251
+#: Daynight.class.php:198 Daynight.class.php:212
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
@@ -257,7 +257,7 @@ msgstr "Thông thường (Xanh/BLF tắt)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Dòng bình thường ( Xanh/ BLF tắt)"
 
-#: Daynight.class.php:248
+#: Daynight.class.php:209
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
@@ -350,7 +350,7 @@ msgstr ""
 "Bạn vừa đạt tới giới hạn tối đa của các điều khiển dòng cuộc gọi. Xóa một "
 "cái cũ để thêm một cái mới"
 
-#: Daynight.class.php:234
+#: Daynight.class.php:195
 msgid "You must create the object before setting the state."
 msgstr ""
 

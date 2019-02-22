@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 18:53-0400\n"
+"POT-Creation-Date: 2019-02-21 23:27-0500\n"
 "PO-Revision-Date: 2016-06-07 03:13+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -69,8 +69,8 @@ msgstr "Aplicaciones"
 msgid "Are you sure you want to delete this flow?"
 msgstr "¿Seguro que quieres borrar este flujo?"
 
-#: Daynight.class.php:226 Daynight.class.php:231 Daynight.class.php:254
-#: Daynight.class.php:265
+#: Daynight.class.php:187 Daynight.class.php:192 Daynight.class.php:215
+#: Daynight.class.php:226
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -230,7 +230,7 @@ msgstr ""
 "condición tiempo de seguir siempre una de sus dos destinos cuando la "
 "asociada Call Flow Toggle está en su anulación (rojo / BLF on)."
 
-#: Daynight.class.php:237 Daynight.class.php:251
+#: Daynight.class.php:198 Daynight.class.php:212
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
@@ -272,7 +272,7 @@ msgstr "Normal (Verde/BLF off)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flujo Normal (Verde/BLF off)"
 
-#: Daynight.class.php:248
+#: Daynight.class.php:209
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
@@ -366,7 +366,7 @@ msgstr ""
 "Usted ha alcanzado el limite máximo de control de flujos. Borre alguno para "
 "agregar otro"
 
-#: Daynight.class.php:234
+#: Daynight.class.php:195
 msgid "You must create the object before setting the state."
 msgstr ""
 

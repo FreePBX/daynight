@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: traduction française du module daynight\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 18:53-0400\n"
+"POT-Creation-Date: 2019-02-21 23:27-0500\n"
 "PO-Revision-Date: 2017-12-11 23:06+0200\n"
 "Last-Translator: JCattan <jeremie@famillecattan.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -68,8 +68,8 @@ msgstr "Applications"
 msgid "Are you sure you want to delete this flow?"
 msgstr "Etes vous sure de vouloir supprimer ?"
 
-#: Daynight.class.php:226 Daynight.class.php:231 Daynight.class.php:254
-#: Daynight.class.php:265
+#: Daynight.class.php:187 Daynight.class.php:192 Daynight.class.php:215
+#: Daynight.class.php:226
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -224,7 +224,7 @@ msgstr ""
 "de forcer cette condition à toujours suivre l'une de ses deux destinations "
 "lorsque ce Jour/Nuit associé est dans son état override (BLF Rouge) ."
 
-#: Daynight.class.php:237 Daynight.class.php:251
+#: Daynight.class.php:198 Daynight.class.php:212
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
@@ -266,7 +266,7 @@ msgstr "Jour (BLF Vert)"
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Jour (BLF Vert)"
 
-#: Daynight.class.php:248
+#: Daynight.class.php:209
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
@@ -359,7 +359,7 @@ msgid ""
 "new one"
 msgstr "Vous avez atteint le maximum de JOUR/NUIT. Merci d'en effacer un avant"
 
-#: Daynight.class.php:234
+#: Daynight.class.php:195
 msgid "You must create the object before setting the state."
 msgstr ""
 

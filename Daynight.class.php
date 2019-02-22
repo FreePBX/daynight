@@ -9,20 +9,20 @@ use RuntimeException;
 use UnexpectedValueException;
 use BadMethodCallException;
 class Daynight extends FreePBX_Helpers implements BMO {
-    public function install() {}
-    public function uninstall() {}
-    public function setDatabase($pdo){
-        $this->Database = $pdo;
-        return $this;
-    }
-    
-    public function resetDatabase(){
-        $this->Database = $this->FreePBX->Database;
-        return $this;
-    }
+	public function install() {}
+	public function uninstall() {}
+	public function setDatabase($pdo){
+		$this->Database = $pdo;
+		return $this;
+	}
 
-    public function doConfigPageInit($page) {
-        $request = $_REQUEST;
+	public function resetDatabase(){
+		$this->Database = $this->FreePBX->Database;
+		return $this;
+	}
+
+	public function doConfigPageInit($page) {
+		$request = $_REQUEST;
 		switch ($request['action']) {
 			case "add":
 			case "edit":
@@ -33,110 +33,71 @@ class Daynight extends FreePBX_Helpers implements BMO {
 			case "delete":
 				$this->del($request['itemid'],true);
 				needreload();
-            break;
-            default:
-            break;
+			break;
+			default:
+			break;
 		}
-    }
+	}
 
 	public function getActionBar($request) {
-        $buttons = [];
-        if (empty($request['view']) || $request['view'] !== 'form') {
-            return $buttons;
-        }
-        if($request['display'] === 'daynight'){
-            if (isset($request['itemid']) || '' != $request['itemid']) {
-                $buttons['delete'] = [
-                    'name' => 'delete',
-                    'id' => 'delete',
-                    'value' => _('Delete'),
-                ];
-            }
-            $buttons['reset'] = [
+		$buttons = [];
+		if (empty($request['view']) || $request['view'] !== 'form') {
+			return $buttons;
+		}
+		if($request['display'] === 'daynight'){
+			if (isset($request['itemid']) || '' != $request['itemid']) {
+				$buttons['delete'] = [
+					'name' => 'delete',
+					'id' => 'delete',
+					'value' => _('Delete'),
+				];
+			}
+			$buttons['reset'] = [
 				'name' => 'reset',
-                'id' => 'reset',
-                'value' => _('Reset'),
-            ];
-            $buttons['submit'] = [
+				'id' => 'reset',
+				'value' => _('Reset'),
+			];
+			$buttons['submit'] = [
 				'name' => 'submit',
-                'id' => 'submit',
-                'value' => _('Submit'),
-            ];
-        }
-        return $buttons;
+				'id' => 'submit',
+				'value' => _('Submit'),
+			];
+		}
+		return $buttons;
 	}
 
 	public function getRightNav($request) {
 		if($request['view'] === 'form'){
-        	return load_view(__DIR__."/views/bootnav.php",array());
+			return load_view(__DIR__."/views/bootnav.php",array());
 		}
 	}
-    public function dumpConfigs(){
-        $final = [];
-        $states = [];
-        $stmt = $this->Database->query('SELECT ext, dest, dmode FROM daynight');
-        while ($row = $stmt->fetch()) {
-            $final[] = $row;
-            if(!isset($states[$row['ext']])){
-                $states[$row['ext']] = $this->getState($row['ext']);
-            }
-        }
-        return [
-            'configs' => $final,
-            'states' => $states,
-        ];
-    }
 
-    public function loadConfigs($configs){
-        $sql = "INSERT INTO daynight (ext, dmode, dest) VALUES (:id, :item, :value)";
-        $sqldel = "DELETE FROM daynight WHERE ext = :ext AND dmode = :dmode LIMIT 1";
-        $stmt = $this->Database->prepare($sql);
-        $stmtDelete = $this->Database->prepare($sql);
-        foreach ($configs['configs'] as $config){
-            $stmtDelete->execute([
-                ':ext' => $config['ext'],
-                ':dmode' => $config['dmode']
-            ]);
-            $stmt->execute([
-                ':id' => $config['ext'],
-                ':item' => $config['dmode'],
-                ':value' => $config['dest']
-            ]);
-        }
-        foreach ($configs['states'] as $key => $state) {
-            if($state === false){
-                continue;
-            }
-            $this->delState($key);
-            $this->addState($key,$state);
-        }
-    }
 
 	public function listCallFlows() {
 		$sql = "SELECT ext, dest FROM daynight WHERE dmode = 'fc_description' ORDER BY ext";
 		$stmt = $this->Database->prepare($sql);
 		$stmt->execute();
-        $results = $stmt->fetchall(PDO::FETCH_ASSOC);
-        /** Why? */
-        $list = [];
+		$results = $stmt->fetchall(PDO::FETCH_ASSOC);
+		/** Why? */
+		$list = [];
 		if(is_array($results)){
 			foreach($results as $result){
 				$list[] = $result;
 			}
-        }
-        return $list;
+		}
+		return $list;
 	}
 
 	public function ajaxRequest($command, &$setting) {
-        return ($command === 'getJSON');
-    }
+		return ($command === 'getJSON');
+	}
 
-    public function ajaxHandler(){
-        if($_REQUEST['command'] === 'getJSON' && $_REQUEST['jdata'] === 'grid'){
-            return array_values($this->listCallFlows());
-        }
-        return false;
-    }
+	public function ajaxHandler(){
+		if($_REQUEST['command'] === 'getJSON' && $_REQUEST['jdata'] === 'grid'){
+			return array_values($this->listCallFlows());
+		}
+		return false;
+	}
 
 	public function tcAdd($data){
 		if($this->FreePBX->Config->get('DAYNIGHTTCHOOK')){
@@ -150,8 +111,8 @@ class Daynight extends FreePBX_Helpers implements BMO {
 				$stmt = $this->Database->prepare($sql);
 				$stmt->execute($vars);
 			}
-        }
-        return $this;
+		}
+		return $this;
 	}
 
 	public function tcDelete($data){
@@ -159,8 +120,8 @@ class Daynight extends FreePBX_Helpers implements BMO {
 			$sql = "DELETE FROM `daynight` WHERE `dmode` IN ('timeday', 'timenight') AND dest = :id";
 			$stmt = $this->Database->prepare($sql);
 			$stmt->execute(array(':id' => $data));
-        }
-        return $this;
+		}
+		return $this;
 	}
 
 	public function edit($post, $id=0){
@@ -196,8 +157,8 @@ class Daynight extends FreePBX_Helpers implements BMO {
 		$fcc->update();
 		unset($fcc);
 		return $returns;
-    }
-    
+	}
+
 	public function del($id, $all=false){
 		$sql = "DELETE FROM daynight WHERE dmode IN ('day', 'night', 'password', 'fc_description','day_recording_id','night_recording_id') AND ext = :id";
 		if($all){
@@ -222,49 +183,49 @@ class Daynight extends FreePBX_Helpers implements BMO {
 			} else {
 				return $mode;
 			}
-        }
-        throw new RuntimeException(_("Astersik manager is not running or we cannot access it."));
+		}
+		throw new RuntimeException(_("Astersik manager is not running or we cannot access it."));
 	}
 
 	public function setState($id, $state){
-        if (!$this->FreePBX->astman->connected()) {
-            throw new RuntimeException(_("Astersik manager is not running or we cannot access it."));
-        }
+		if (!$this->FreePBX->astman->connected()) {
+			throw new RuntimeException(_("Astersik manager is not running or we cannot access it."));
+		}
 		if ($this->getState($id) === false) {
 			 throw new RuntimeException(_("You must create the object before setting the state."));
-        }
-        if($state !== 'DAY' && $state !== 'NIGHT'){
-            throw new \UnexpectedValueException(sprintf(_("Invalid State %s"),$state));
-        }
-        $this->FreePBX->astman->database_put("DAYNIGHT", "C" . $id, $state);
-        $value_opt = ($state == 'DAY') ? 'NOT_INUSE' : 'INUSE';
-        $this->FreePBX->astman->set_global("DEVICE_STATE(Custom:DAYNIGHT" . $id . ")", $value_opt);	
-        return $this;
+		}
+		if($state !== 'DAY' && $state !== 'NIGHT'){
+			throw new \UnexpectedValueException(sprintf(_("Invalid State %s"),$state));
+		}
+		$this->FreePBX->astman->database_put("DAYNIGHT", "C" . $id, $state);
+		$value_opt = ($state == 'DAY') ? 'NOT_INUSE' : 'INUSE';
+		$this->FreePBX->astman->set_global("DEVICE_STATE(Custom:DAYNIGHT" . $id . ")", $value_opt);
+		return $this;
 	}
 
 	public function addState($id, $state="DAY"){
 		$current_state = $this->getState($id);
 		if ($current_state !== false) {
-            throw new BadMethodCallException(sprintf(_('Object already exists and is in state: %s, you must delete it first'),$current_state));
-        }
-        if ($state !== 'DAY' && $state !== 'NIGHT') {
-            throw new \UnexpectedValueException(sprintf(_("Invalid State %s"), $state));
-        }
-        if (!$this->FreePBX->astman->connected()) {
-            throw new RuntimeException(_('Astersik manager is not running or we cannot access it.'));
-        }
+			throw new BadMethodCallException(sprintf(_('Object already exists and is in state: %s, you must delete it first'),$current_state));
+		}
+		if ($state !== 'DAY' && $state !== 'NIGHT') {
+			throw new \UnexpectedValueException(sprintf(_("Invalid State %s"), $state));
+		}
+		if (!$this->FreePBX->astman->connected()) {
+			throw new RuntimeException(_('Astersik manager is not running or we cannot access it.'));
+		}
 
-        $this->FreePBX->astman->database_put("DAYNIGHT","C".$id,$state);
-        $value_opt = ($state  == 'DAY') ? 'NOT_INUSE' : 'INUSE';
-        $this->FreePBX->astman->set_global("DEVICE_STATE(Custom:DAYNIGHT".$id.")", $value_opt);
-        return $this;
-    }
-    
+		$this->FreePBX->astman->database_put("DAYNIGHT","C".$id,$state);
+		$value_opt = ($state  == 'DAY') ? 'NOT_INUSE' : 'INUSE';
+		$this->FreePBX->astman->set_global("DEVICE_STATE(Custom:DAYNIGHT".$id.")", $value_opt);
+		return $this;
+	}
+
 	public function delState($id){
-        if (!$this->FreePBX->astman->connected()) {
-            throw new RuntimeException(_('Astersik manager is not running or we cannot access it.'));
-        }
-        $this->FreePBX->astman->database_del("DAYNIGHT","C".$id);
-        return $this;
+		if (!$this->FreePBX->astman->connected()) {
+			throw new RuntimeException(_('Astersik manager is not running or we cannot access it.'));
+		}
+		$this->FreePBX->astman->database_del("DAYNIGHT","C".$id);
+		return $this;
 	}
 }
