@@ -6,7 +6,8 @@ class Backup Extends Base\BackupBase{
 		$daynight = $this->FreePBX->Daynight;
 		$configs = [
 			'tables' => $this->dumpTables(),
-			'astdb' => $this->FreePBX->astman->database_show('DAYNIGHT')
+			'astdb' => $this->FreePBX->astman->database_show('DAYNIGHT'),
+			'features' => $this->dumpFeatureCodes()
 		];
 		$this->addDependency('timeconditions');
 		$this->addDependency('recordings');

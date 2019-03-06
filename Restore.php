@@ -8,6 +8,9 @@ class Restore Extends Base\RestoreBase{
 		if(!empty($configs['astdb'])) {
 			$this->importAstDB($configs['astdb']);
 		}
+		if(!empty($configs['features'])) {
+			$this->importFeatureCodes($configs['features']);
+		}
 	}
 
 	public function processLegacy($pdo, $data, $tables, $unknownTables){
@@ -17,7 +20,6 @@ class Restore Extends Base\RestoreBase{
 				'DAYNIGHT' => $data['astdb']['DAYNIGHT']
 			]);
 		}
+		$this->restoreLegacyFeatureCodes($pdo);
 	}
-
-
 }
