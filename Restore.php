@@ -11,6 +11,9 @@ class Restore Extends Base\RestoreBase{
 		if(!empty($configs['features'])) {
 			$this->importFeatureCodes($configs['features']);
 		}
+		if(!empty($configs['settings'])) {
+			$this->importAdvancedSettings($configs['settings']);
+		}
 	}
 
 	public function processLegacy($pdo, $data, $tables, $unknownTables){
@@ -21,5 +24,6 @@ class Restore Extends Base\RestoreBase{
 			]);
 		}
 		$this->restoreLegacyFeatureCodes($pdo);
+		$this->restoreLegacyAdvancedSettings($pdo);
 	}
 }
