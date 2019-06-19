@@ -11,13 +11,13 @@ class Backup Extends Base\BackupBase{
 			$family = $res[1];
 			$k 		= $res[2];
 			$value	= $dn;
-			$result[] = array($family,$k, $value ) ;
+			$result[] = array($family => array($k => $value));
+
 		}
 		return $result;
 	}
   
 	public function runBackup($id,$transaction){
-		$daynight = $this->FreePBX->Daynight;
 		$configs = [
 			'tables' => $this->dumpTables(),
 			'astdb' => $this->parse_daynight(),
