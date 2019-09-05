@@ -42,7 +42,7 @@ class Daynight extends Base {
 		$app->put('/{id}', function ($request, $response, $args) {
 			\FreePBX::Modules()->loadFunctionsInc('daynight');
 			$params = $request->getParsedBody();
-			$dn = new dayNightObject($args['id']);
+			$dn = new \dayNightObject($args['id']);
 
 			if ($dn) {
 				$dn->setState($params['state']);
