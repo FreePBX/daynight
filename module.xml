@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>15.0.10</version>
+	<version>15.0.11</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 		that toggles between the two destinations.
 	</description>
 	<changelog>
+		*15.0.11* Related to FREEPBX-20414: removed $jobid from runRestore() 
 		*15.0.10* Fixes class not found error in REST API (FREEPBX-20521) 
 		*15.0.9* FREEPBX-20067 Improve code astdb 
 		*15.0.8* FREEPBX-20067 Fixe backup issue. 
