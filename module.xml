@@ -8,9 +8,9 @@
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Applications</category>
 	<description>
-		Call Flow manual toggle control - allows for two destinations to be chosen and provides a feature code
-		that toggles between the two destinations.
+		Call Flow manual toggle control - allows for two destinations to be chosen and provides a feature code that toggles between the two destinations.
 	</description>
+	<more-info>https://wiki.freepbx.org/display/FPG/Call+Flow+Control+Module</more-info>
 	<changelog>
 		*13.0.15.1* FREEPBX-17342
 		*13.0.14.1* FREEPBX-15738 Fix destination url
