@@ -20,11 +20,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: traduction française du module daynight\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 16:22-0400\n"
+"POT-Creation-Date: 2020-08-17 02:28+0000\n"
 "PO-Revision-Date: 2017-12-11 23:06+0200\n"
 "Last-Translator: JCattan <jeremie@famillecattan.com>\n"
-"Language-Team: French "
-"<http://weblate.freepbx.org/projects/freepbx/daynight/fr_FR/>\n"
+"Language-Team: French <http://weblate.freepbx.org/projects/freepbx/daynight/"
+"fr_FR/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,11 +32,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr " - Forcer Condition de temps Fausse"
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr " - Forcer Condition de temps Vraie"
 
@@ -116,7 +116,7 @@ msgstr "module contrôle Jour / Nuit"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Basculer Jour / Nuit (%s): %s"
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr "Bascule Jour / Nuit associé avec"
 
@@ -128,7 +128,7 @@ msgstr "Bascule Jour/Nuit"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Index Code de fonction Bascule Jour/Nuit"
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Basculer Jour / Nuit : %s (%s)"
@@ -136,10 +136,8 @@ msgstr "Basculer Jour / Nuit : %s (%s)"
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\t\tthat toggles between the two destinations."
+"and provides a feature code that toggles between the two destinations."
 msgstr ""
-"Bascule manuelle du Jour /nuit - permet de choisir deux destinations et "
-"fournit un code de fonction qui bascule entre les deux destinations."
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -149,7 +147,7 @@ msgstr "Mode courant"
 msgid "Default"
 msgstr "Défaut"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:53
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -169,10 +167,6 @@ msgstr "Destination à utiliser en mode Jour (BLF Verte)"
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "Destination à utiliser en mode Nuit (BLF Rouge)"
 
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr "ERREUR: echec de modification de la clé primaire "
-
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "Code de fonction"
@@ -189,7 +183,7 @@ msgstr "Forcer en mode Nuit (BLF Rouge)"
 msgid "Hook Time Conditions Module"
 msgstr "Module de conditions de temps"
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -248,7 +242,7 @@ msgstr ""
 "Message à lire en mode Nuit (BLF Rouge).<br>Pour ajouter des enregistrements "
 "supplémentaires, utilisez le MENU \"Enregistrements système\" ci-dessus"
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr "Pas d'association"
 
@@ -259,10 +253,6 @@ msgstr "Jour (BLF Vert)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Jour (BLF Vert)"
-
-#: install.php:73
-msgid "OK"
-msgstr "OK"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -302,7 +292,7 @@ msgstr "Enregistrement mode Jour"
 msgid "Recording for Override Mode"
 msgstr "Enregistrement mode Nuit"
 
-#: Daynight.class.php:57
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "Reset"
 
@@ -310,7 +300,7 @@ msgstr "Reset"
 msgid "State"
 msgstr "État"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr "Envoyer"
 
@@ -352,9 +342,22 @@ msgid ""
 "new one"
 msgstr "Vous avez atteint le maximum de JOUR/NUIT. Merci d'en effacer un avant"
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
-msgstr "changement de la clé primaire pour tous les champs.."
+#~ msgid ""
+#~ "Call Flow manual toggle control - allows for two destinations to be "
+#~ "chosen and provides a feature code\t\tthat toggles between the two "
+#~ "destinations."
+#~ msgstr ""
+#~ "Bascule manuelle du Jour /nuit - permet de choisir deux destinations et "
+#~ "fournit un code de fonction qui bascule entre les deux destinations."
+
+#~ msgid "ERROR: failed to alter primary keys "
+#~ msgstr "ERREUR: echec de modification de la clé primaire "
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "changing primary keys to all fields.."
+#~ msgstr "changement de la clé primaire pour tous les champs.."
 
 #~ msgid "Associate with"
 #~ msgstr "Associer avec"

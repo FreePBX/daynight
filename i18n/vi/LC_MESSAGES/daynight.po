@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 19:00-0400\n"
+"POT-Creation-Date: 2020-08-17 02:28+0000\n"
 "PO-Revision-Date: 2017-07-19 16:36+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr " - Điều kiện thời gian bắt buộc tại Điểm đích False"
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr " - Điều kiện thời gian bắt buộc tại Điểm đích True"
 
@@ -103,7 +103,7 @@ msgstr "Mô đun điều khiển dòng cuộc gọi"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Chuyển đổi dòng cuộc gọi (%s): %s"
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr "Chuyển đổi dòng cuộc gọi kết hợp với"
 
@@ -115,7 +115,7 @@ msgstr "Điều khiển chuyển đổi dòng cuộc gọi"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Chỉ mục mã tính năng chuyển đổi dòng cuộc gọi"
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Chuyển đổi dòng cuộc gọi: %s (%s)"
@@ -123,10 +123,8 @@ msgstr "Chuyển đổi dòng cuộc gọi: %s (%s)"
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\t\tthat toggles between the two destinations."
+"and provides a feature code that toggles between the two destinations."
 msgstr ""
-"Điều khiển chuyển đổi dòng cuộc gọi thủ công- cho phép được chọn 2 điểm đích "
-"và cung cấp một mã tính năng có thể chuyển đổi giữa 2 điểm đích."
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -136,7 +134,7 @@ msgstr "Chế độ hiện tại"
 msgid "Default"
 msgstr "Mặc định"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:53
 msgid "Delete"
 msgstr "Xóa"
 
@@ -160,10 +158,6 @@ msgstr ""
 "Điểm đích để sử dụng khi cài đặt về chế độ ghi đè dòng cuộc gọi ( Đỏ/ BLF "
 "bật)"
 
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr "LỖI: Thay đổi các khóa chính không thành công "
-
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "Mã tính năng"
@@ -180,7 +174,7 @@ msgstr "Bắt buộc đến chế độ ghi đè (Red/BLF on)"
 msgid "Hook Time Conditions Module"
 msgstr "Hook mô đun điều kiện thời gian"
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -239,7 +233,7 @@ msgstr ""
 "ghi ẩm bổ sung thì sử dụng MENU trên \"System  Recorrdings\" ( Các ghi âm hệ "
 "thống)"
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr "Không có sự kết hợp"
 
@@ -250,10 +244,6 @@ msgstr "Thông thường (Xanh/BLF tắt)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Dòng bình thường ( Xanh/ BLF tắt)"
-
-#: install.php:73
-msgid "OK"
-msgstr "OK"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -291,7 +281,7 @@ msgstr "Ghi âm cho Chế độ thông thường"
 msgid "Recording for Override Mode"
 msgstr "Ghi âm cho Chế độ ghi đè"
 
-#: Daynight.class.php:57
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "Cài đặt lại"
 
@@ -299,7 +289,7 @@ msgstr "Cài đặt lại"
 msgid "State"
 msgstr "Tình trạng"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr "Gửi đi"
 
@@ -343,6 +333,19 @@ msgstr ""
 "Bạn vừa đạt tới giới hạn tối đa của các điều khiển dòng cuộc gọi. Xóa một "
 "cái cũ để thêm một cái mới"
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
-msgstr "Đang thay đổi khóa chính cho tất cả các trường.."
+#~ msgid ""
+#~ "Call Flow manual toggle control - allows for two destinations to be "
+#~ "chosen and provides a feature code\t\tthat toggles between the two "
+#~ "destinations."
+#~ msgstr ""
+#~ "Điều khiển chuyển đổi dòng cuộc gọi thủ công- cho phép được chọn 2 điểm "
+#~ "đích và cung cấp một mã tính năng có thể chuyển đổi giữa 2 điểm đích."
+
+#~ msgid "ERROR: failed to alter primary keys "
+#~ msgstr "LỖI: Thay đổi các khóa chính không thành công "
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "changing primary keys to all fields.."
+#~ msgstr "Đang thay đổi khóa chính cho tất cả các trường.."

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 16:22-0400\n"
+"POT-Creation-Date: 2020-08-17 02:28+0000\n"
 "PO-Revision-Date: 2018-05-29 09:33+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/daynight/it/>\n"
@@ -32,11 +32,11 @@ msgstr ""
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr " - forza tempo condizione falsa destinazione"
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr " - forza tempo condizione vera destinazione"
 
@@ -116,7 +116,7 @@ msgstr "Controllo moduli flusso di chiamata"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Attiva / disattiva flusso chiamate (%s1):%s2"
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr "Flusso di chiamata Attiva / disattiva associato con"
 
@@ -128,7 +128,7 @@ msgstr "Controllo del flusso di chiamata"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "flusso di chiamata attiva l'indice del codice caratteristica"
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Interruttore di chiamata:%s1 (%s2)"
@@ -136,11 +136,8 @@ msgstr "Interruttore di chiamata:%s1 (%s2)"
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\t\tthat toggles between the two destinations."
+"and provides a feature code that toggles between the two destinations."
 msgstr ""
-"Controllo di commutazione manuale di Call Flow: consente di scegliere due "
-"destinazioni e fornisce un codice di funzionalità che alterna tra le due "
-"destinazioni."
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -150,7 +147,7 @@ msgstr "Modalità corrente"
 msgid "Default"
 msgstr "Predefinito"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:53
 msgid "Delete"
 msgstr "Elimina"
 
@@ -160,23 +157,20 @@ msgstr "Descrizione"
 
 #: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
-msgstr "Descrizione per questo controllo di commutazione del flusso di chiamata"
+msgstr ""
+"Descrizione per questo controllo di commutazione del flusso di chiamata"
 
 #: views/form.php:241
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
-"Destinazione da utilizzare quando è impostata la modalità Flusso normale ("
-"verde / BLF spento)"
+"Destinazione da utilizzare quando è impostata la modalità Flusso normale "
+"(verde / BLF spento)"
 
 #: views/form.php:265
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 "Destinazione da utilizzare quando impostato su Sovrascrivi flusso (Rosso / "
 "BLF attivo)"
-
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr "ERROE: alterazione chiavi primarie fallito"
 
 #: views/grid.php:13
 msgid "Feature Code"
@@ -194,7 +188,7 @@ msgstr "Forza la modalità Override (rosso / BLF attivo)"
 msgid "Hook Time Conditions Module"
 msgstr "Modulo di condizioni del tempo di aggancio"
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -219,15 +213,16 @@ msgstr ""
 "su 'Force Time Condition True Destination' e andrà sempre al suo "
 "Destinazione errata se l'associazione è con la 'Destinazione falso "
 "Condizione False Destinazione'. Quando il codice della funzione di controllo "
-"del flusso chiamate associato è in modalità Normale (verde / BLF disattivato)"
-", allora questa condizione temporale funzionerà normalmente in base all'ora "
-"corrente. Le destinazioni che fanno parte di qualsiasi codice funzione di "
-"controllo del flusso chiamate associato non avranno alcun effetto sul luogo "
-"in cui una chiamata andrà se passa attraverso questa condizione temporale. "
-"L'unica cosa che viene fatta quando si crea un'associazione è quella di "
-"consentire lo stato di override di un flusso di chiamate Toggle per forzare "
-"questa condizione temporale a seguire sempre una delle sue due destinazioni "
-"quando quello associato è attivo (rosso / BLF attivo) ."
+"del flusso chiamate associato è in modalità Normale (verde / BLF "
+"disattivato), allora questa condizione temporale funzionerà normalmente in "
+"base all'ora corrente. Le destinazioni che fanno parte di qualsiasi codice "
+"funzione di controllo del flusso chiamate associato non avranno alcun "
+"effetto sul luogo in cui una chiamata andrà se passa attraverso questa "
+"condizione temporale. L'unica cosa che viene fatta quando si crea "
+"un'associazione è quella di consentire lo stato di override di un flusso di "
+"chiamate Toggle per forzare questa condizione temporale a seguire sempre una "
+"delle sue due destinazioni quando quello associato è attivo (rosso / BLF "
+"attivo) ."
 
 #: views/form.php:104
 #, php-format
@@ -256,7 +251,7 @@ msgstr ""
 "aggiungere ulteriori registrazioni utilizzare il MENU \"System Recordings\" "
 "su"
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr "Nessuna Associazione"
 
@@ -267,10 +262,6 @@ msgstr "Normale (Verde/BLF spento)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flusso normale (verde / BLF spento)"
-
-#: install.php:73
-msgid "OK"
-msgstr "OK"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -309,7 +300,7 @@ msgstr "Registrazione per la modalità normale"
 msgid "Recording for Override Mode"
 msgstr "Registrazione per la modalità Override"
 
-#: Daynight.class.php:57
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "Elimina"
 
@@ -317,7 +308,7 @@ msgstr "Elimina"
 msgid "State"
 msgstr "Stato"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr "Sottoscrivo"
 
@@ -363,9 +354,23 @@ msgstr ""
 "Hai raggiunto il limite massimo per i controlli di flusso. Cancellane uno "
 "per aggiungerne uno nuovo"
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
-msgstr "cambiamento chiavi primarie su tutti i campi.."
+#~ msgid ""
+#~ "Call Flow manual toggle control - allows for two destinations to be "
+#~ "chosen and provides a feature code\t\tthat toggles between the two "
+#~ "destinations."
+#~ msgstr ""
+#~ "Controllo di commutazione manuale di Call Flow: consente di scegliere due "
+#~ "destinazioni e fornisce un codice di funzionalità che alterna tra le due "
+#~ "destinazioni."
+
+#~ msgid "ERROR: failed to alter primary keys "
+#~ msgstr "ERROE: alterazione chiavi primarie fallito"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "changing primary keys to all fields.."
+#~ msgstr "cambiamento chiavi primarie su tutti i campi.."
 
 #~ msgid "Associate with"
 #~ msgstr "Associa con"
@@ -509,12 +514,12 @@ msgstr "cambiamento chiavi primarie su tutti i campi.."
 #~ "<br><br><b>custom-myapp,s,1</b><br><br>The <b>[custom-myapp]</b> context "
 #~ "would need to be created and included in extensions_custom.conf</span>"
 #~ msgstr ""
-#~ "Applicazione Personalizzata<span>SOLO UTENTI AVANZATI<br>Utilizzare Goto"
-#~ "() per inviare la chiamata verso un contesto personalizzato.<br><br>Il "
-#~ "nome del contesto deve iniziare per \"custom-\" e deve essere nel formato "
-#~ "custom-contesto,extension,priorità. Esempio: <br><br><b>custom-app,s,1</"
-#~ "b><br><br><b>Il contesto [custom-app] </b> deve poi essere creato e "
-#~ "incluso nel file extensions_custom.conf</span"
+#~ "Applicazione Personalizzata<span>SOLO UTENTI AVANZATI<br>Utilizzare "
+#~ "Goto() per inviare la chiamata verso un contesto personalizzato."
+#~ "<br><br>Il nome del contesto deve iniziare per \"custom-\" e deve essere "
+#~ "nel formato custom-contesto,extension,priorità. Esempio: "
+#~ "<br><br><b>custom-app,s,1</b><br><br><b>Il contesto [custom-app] </b> "
+#~ "deve poi essere creato e incluso nel file extensions_custom.conf</span"
 
 #~ msgid "Misc Destinations"
 #~ msgstr "Destinazioni Varie"

@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>13.0.15.1</version>
+	<version>13.0.15.2</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 	</description>
 	<more-info>https://wiki.freepbx.org/display/FPG/Call+Flow+Control+Module</more-info>
 	<changelog>
+		*13.0.15.2* Packaging of ver 13.0.15.2
 		*13.0.15.1* FREEPBX-17342
 		*13.0.14.1* FREEPBX-15738 Fix destination url
 		*13.0.14* FREEPBX-12690 add view for destinations usage

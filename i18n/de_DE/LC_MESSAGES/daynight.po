@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 16:22-0400\n"
+"POT-Creation-Date: 2020-08-17 02:28+0000\n"
 "PO-Revision-Date: 2020-01-28 10:21+0000\n"
 "Last-Translator: florian alberts <alberts@ar-systems.de>\n"
 "Language-Team: German <http://*/projects/freepbx/daynight/de/>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: functions.inc.php:577
+#: functions.inc.php:526
 msgid " - Force Time Condition False Destination"
 msgstr " - Ziel bei Nichtzutreffen der Zeitbedingung erzwingen"
 
-#: functions.inc.php:575
+#: functions.inc.php:524
 msgid " - Force Time Condition True Destination"
 msgstr " - Ziel bei Zutreffen der Zeitbedingung erzwingen"
 
@@ -104,7 +104,7 @@ msgstr "Modul zur Anrufflusssteuerung"
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Anruffluss-Schalter (%s): %s"
 
-#: functions.inc.php:588
+#: functions.inc.php:537
 msgid "Call Flow Toggle Associate with"
 msgstr "Anruffluss-Schalter verknüpfen mit"
 
@@ -116,7 +116,7 @@ msgstr "Anruffluss-Schalter-Steuerung"
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Funktionscode-Index des Anruffluss-Schalters"
 
-#: functions.inc.php:455
+#: functions.inc.php:404
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Anruffluss-Schalter: %s (%s)"
@@ -124,10 +124,8 @@ msgstr "Anruffluss-Schalter: %s (%s)"
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\t\tthat toggles between the two destinations."
+"and provides a feature code that toggles between the two destinations."
 msgstr ""
-"Manuelle Steuerung des Anruffluss-Schalters - bietet die Möglichkeit, per "
-"Funktioniscode zwischen zwei Zielen umzuschalten."
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -137,7 +135,7 @@ msgstr "Aktueller Modus"
 msgid "Default"
 msgstr "Standard"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:53
 msgid "Delete"
 msgstr "Löschen"
 
@@ -157,10 +155,6 @@ msgstr "Ziel, das bei normalem Fluss (Grün/BLF aus) verwendet werden soll"
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "Ziel, das im Überbrückungs-Fluss (Rot/BLF an) verwendet werden soll"
 
-#: install.php:71
-msgid "ERROR: failed to alter primary keys "
-msgstr "FEHLER: Konnte Primärschlüssel nicht ändern "
-
 #: views/grid.php:13
 msgid "Feature Code"
 msgstr "Funktionscode"
@@ -177,7 +171,7 @@ msgstr "Erzwingt den Überbrückungsmodus (Rot/BLF an)"
 msgid "Hook Time Conditions Module"
 msgstr "Modul für Zeitbedingungen anbinden"
 
-#: functions.inc.php:602
+#: functions.inc.php:551
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -236,11 +230,11 @@ msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
 msgstr ""
-"Nachricht, die im Überbrückungsmodus (Rot/BLF an) abgespielt werden soll.<br "
-"/> Verwenden Sie das „Systemaufnahmen“-Menu oben, um weitere Aufnahmen "
+"Nachricht, die im Überbrückungsmodus (Rot/BLF an) abgespielt werden soll."
+"<br /> Verwenden Sie das „Systemaufnahmen“-Menu oben, um weitere Aufnahmen "
 "hinzuzufügen"
 
-#: functions.inc.php:573
+#: functions.inc.php:522
 msgid "No Association"
 msgstr "Keine Zuordnung"
 
@@ -251,10 +245,6 @@ msgstr "Normal (Grün/BLF aus)"
 #: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Normaler Fluss (Grün/BLF aus)"
-
-#: install.php:73
-msgid "OK"
-msgstr "OK"
 
 #: views/form.php:202
 msgid "Optional Password"
@@ -294,7 +284,7 @@ msgstr "Aufnahme für den Normalmodus"
 msgid "Recording for Override Mode"
 msgstr "Aufnahme für den Überbrückungsmodus"
 
-#: Daynight.class.php:57
+#: Daynight.class.php:58
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -302,7 +292,7 @@ msgstr "Zurücksetzen"
 msgid "State"
 msgstr "Status"
 
-#: Daynight.class.php:62
+#: Daynight.class.php:63
 msgid "Submit"
 msgstr "Absenden"
 
@@ -346,6 +336,19 @@ msgstr ""
 "Sie haben die maximale Anzahl von Fluss-Steuerungen ausgeschöpft. Sie müssen "
 "eine löschen, um eine neue hinzuzufügen"
 
-#: install.php:67
-msgid "changing primary keys to all fields.."
-msgstr "ändere die Primärschlüssel für alle Felder.."
+#~ msgid ""
+#~ "Call Flow manual toggle control - allows for two destinations to be "
+#~ "chosen and provides a feature code\t\tthat toggles between the two "
+#~ "destinations."
+#~ msgstr ""
+#~ "Manuelle Steuerung des Anruffluss-Schalters - bietet die Möglichkeit, per "
+#~ "Funktioniscode zwischen zwei Zielen umzuschalten."
+
+#~ msgid "ERROR: failed to alter primary keys "
+#~ msgstr "FEHLER: Konnte Primärschlüssel nicht ändern "
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "changing primary keys to all fields.."
+#~ msgstr "ändere die Primärschlüssel für alle Felder.."
