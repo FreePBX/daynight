@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 23:27-0500\n"
+"POT-Creation-Date: 2020-08-17 02:30+0000\n"
 "PO-Revision-Date: 2015-10-16 14:24+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -128,7 +128,7 @@ msgstr "呼叫流程切换: %s (%s)"
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\t\tthat toggles between the two destinations."
+"and provides a feature code that toggles between the two destinations."
 msgstr ""
 
 #: views/form.php:174

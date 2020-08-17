@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 23:27-0500\n"
+"POT-Creation-Date: 2020-08-17 02:30+0000\n"
 "PO-Revision-Date: 2018-07-04 10:08+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/daynight/bg/>\n"
@@ -141,11 +141,8 @@ msgstr "Превключване на Потока от Входящи Обаж�
 #: daynight.i18n.php:8
 msgid ""
 "Call Flow manual toggle control - allows for two destinations to be chosen "
-"and provides a feature code\t\tthat toggles between the two destinations."
+"and provides a feature code that toggles between the two destinations."
 msgstr ""
-"Ръчно управление на Входящи Обаждания - позволява за две направления да се "
-"избере и предостави специален код\t\tкойто да превключи между двете "
-"направления."
 
 #: views/form.php:174
 msgid "Current Mode"
@@ -369,6 +366,15 @@ msgstr ""
 #: Daynight.class.php:195
 msgid "You must create the object before setting the state."
 msgstr ""
+
+#~ msgid ""
+#~ "Call Flow manual toggle control - allows for two destinations to be "
+#~ "chosen and provides a feature code\t\tthat toggles between the two "
+#~ "destinations."
+#~ msgstr ""
+#~ "Ръчно управление на Входящи Обаждания - позволява за две направления да "
+#~ "се избере и предостави специален код\t\tкойто да превключи между двете "
+#~ "направления."
 
 #~ msgid "ERROR: failed to alter primary keys "
 #~ msgstr "Грешка: не мога да променя primary keys "

@@ -2,16 +2,17 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>15.0.11</version>
+	<version>15.0.12</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Applications</category>
 	<description>
-		Call Flow manual toggle control - allows for two destinations to be chosen and provides a feature code
-		that toggles between the two destinations.
+		Call Flow manual toggle control - allows for two destinations to be chosen and provides a feature code that toggles between the two destinations.
 	</description>
+	<more-info>https://wiki.freepbx.org/display/FPG/Call+Flow+Control+Module</more-info>
 	<changelog>
+		*15.0.12* Packaging of ver 15.0.12
 		*15.0.11* Related to FREEPBX-20414: removed $jobid from runRestore() 
 		*15.0.10* Fixes class not found error in REST API (FREEPBX-20521) 
 		*15.0.9* FREEPBX-20067 Improve code astdb 
