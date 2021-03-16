@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>15.0.12</version>
+	<version>16.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,20 +12,10 @@
 	</description>
 	<more-info>https://wiki.freepbx.org/display/FPG/Call+Flow+Control+Module</more-info>
 	<changelog>
-		*15.0.12* Packaging of ver 15.0.12
-		*15.0.11* Related to FREEPBX-20414: removed $jobid from runRestore() 
-		*15.0.10* Fixes class not found error in REST API (FREEPBX-20521) 
-		*15.0.9* FREEPBX-20067 Improve code astdb 
-		*15.0.8* FREEPBX-20067 Fixe backup issue. 
-		*15.0.6* fixing legacy restore
-		*15.0.5* backup and restore
-		*15.0.4* FREEPBX-18133 Revert post handling from request helper
-		*15.0.3* Rest Api
-		*15.0.2* Packaging of ver 15.0.2
-		*15.0.1* Impliment backup
+		*16.0.1* 16.0 
 	</changelog>
 	<depends>
-		<version>15.0</version>
+		<version>16.0</version>
 	</depends>
 	<menuitems>
 		<daynight needsenginedb="yes">Call Flow Control</daynight>
