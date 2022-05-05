@@ -44,17 +44,15 @@ if(function_exists('recordings_list')) {
 		<div class="element-container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="row">
-						<div class="form-group">
-							<div class="col-md-3">
-								<label class="control-label" for="day_recording_id">'. _("Recording for Normal Mode").'</label>
-								<i class="fa fa-question-circle fpbx-help-icon" data-for="day_recording_id"></i>
-							</div>
-							<div class="col-md-9">
-								<select class="form-control" id="day_recording_id" name="day_recording_id">
+					<div class="form-group row">
+						<div class="col-md-3">
+							<label class="control-label" for="day_recording_id">'. _("Recording for Normal Mode").'</label>
+							<i class="fa fa-question-circle fpbx-help-icon" data-for="day_recording_id"></i>
+						</div>
+						<div class="col-md-9">
+							<select class="form-control" id="day_recording_id" name="day_recording_id">
 									'.$dayopts.'
-								</select>
-							</div>
+							</select>
 						</div>
 					</div>
 				</div>
@@ -70,17 +68,15 @@ if(function_exists('recordings_list')) {
 		<div class="element-container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="row">
-						<div class="form-group">
-							<div class="col-md-3">
-								<label class="control-label" for="night_recording_id">'. _("Recording for Override Mode").'</label>
-								<i class="fa fa-question-circle fpbx-help-icon" data-for="night_recording_id"></i>
-							</div>
-							<div class="col-md-9">
-								<select class="form-control" id="night_recording_id" name="night_recording_id">
+					<div class="form-group row">
+						<div class="col-md-3">
+							<label class="control-label" for="night_recording_id">'. _("Recording for Override Mode").'</label>
+							<i class="fa fa-question-circle fpbx-help-icon" data-for="night_recording_id"></i>
+						</div>
+						<div class="col-md-9">
+							<select class="form-control" id="night_recording_id" name="night_recording_id">
 									'.$nightopts.'
-								</select>
-							</div>
+							</select>
 						</div>
 					</div>
 				</div>
@@ -120,15 +116,13 @@ if (!empty($timeconditions_refs)) {
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
-					<div class="col-md-3">
-						<label class="control-label" for="itemid"><?php echo _("Call Flow Toggle Feature Code Index") ?></label>
-						<i class="fa fa-question-circle fpbx-help-icon" data-for="itemid"></i>
-					</div>
-					<div class="col-md-9">
-						<?php echo $indexinput ?>
-					</div>
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label class="control-label" for="itemid"><?php echo _("Call Flow Toggle Feature Code Index") ?></label>
+					<i class="fa fa-question-circle fpbx-help-icon" data-for="itemid"></i>
+				</div>
+				<div class="col-md-9">
+					<?php echo $indexinput ?>
 				</div>
 			</div>
 		</div>
@@ -144,15 +138,13 @@ if (!empty($timeconditions_refs)) {
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
-					<div class="col-md-3">
-						<label class="control-label" for="fc_description"><?php echo _("Description") ?></label>
-						<i class="fa fa-question-circle fpbx-help-icon" data-for="fc_description"></i>
-					</div>
-					<div class="col-md-9">
-						<input type="text" class="form-control" id="fc_description" name="fc_description" value="<?php echo !empty($fc_description) ? $fc_description : "" ?>">
-					</div>
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label class="control-label" for="fc_description"><?php echo _("Description") ?></label>
+					<i class="fa fa-question-circle fpbx-help-icon" data-for="fc_description"></i>
+				</div>
+				<div class="col-md-9">
+					<input type="text" class="form-control" id="fc_description" name="fc_description" value="<?php echo !empty($fc_description) ? $fc_description : "" ?>">
 				</div>
 			</div>
 		</div>
@@ -168,18 +160,16 @@ if (!empty($timeconditions_refs)) {
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
-					<div class="col-md-3">
-						<label class="control-label" for="state"><?php echo _("Current Mode") ?></label>
-						<i class="fa fa-question-circle fpbx-help-icon" data-for="state"></i>
-					</div>
-					<div class="col-md-9 radioset">
-						<input type="radio" class="form-control" id="stateday" name="state" value="DAY" <?php echo ($state == 'DAY' ? 'CHECKED':'') ?>>
-						<label for="stateday"><?php echo _("Normal (Green/BLF off)")?></label>
-						<input type="radio" class="form-control" id="statenight" name="state" value="NIGHT" <?php echo ($state == 'NIGHT' ? 'CHECKED':'') ?>>
-						<label for="statenight"><?php echo _("Override (Red/BLF on)")?></label>
-					</div>
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label class="control-label" for="state"><?php echo _("Current Mode") ?></label>
+					<i class="fa fa-question-circle fpbx-help-icon" data-for="state"></i>
+				</div>
+				<div class="col-md-9 radioset">
+					<input type="radio" class="form-control" id="stateday" name="state" value="DAY" <?php echo ($state == 'DAY' ? 'CHECKED':'') ?>>
+					<label for="stateday"><?php echo _("Normal (Green/BLF off)")?></label>
+					<input type="radio" class="form-control" id="statenight" name="state" value="NIGHT" <?php echo ($state == 'NIGHT' ? 'CHECKED':'') ?>>
+					<label for="statenight"><?php echo _("Override (Red/BLF on)")?></label>
 				</div>
 			</div>
 		</div>
@@ -196,17 +186,15 @@ if (!empty($timeconditions_refs)) {
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
-					<div class="col-md-3">
-						<label class="control-label" for="password"><?php echo _("Optional Password") ?></label>
-						<i class="fa fa-question-circle fpbx-help-icon" data-for="password"></i>
-					</div>
-					<div class="col-md-9">
-						<div class="input-group">
-							<input type="password" class="form-control clicktoedit" id="password" name="password" value="<?php echo !empty($password) ? $password : "" ?>">
-							<span class="input-group-addon toggle-password" id="pwtoggle" data-id="password"><i class="fa fa-eye"></i></a></span>
-						</div>
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label class="control-label" for="password"><?php echo _("Optional Password") ?></label>
+					<i class="fa fa-question-circle fpbx-help-icon" data-for="password"></i>
+				</div>
+				<div class="col-md-9">
+					<div class="input-group">
+						<input type="password" class="form-control clicktoedit" id="password" name="password" value="<?php echo !empty($password) ? $password : "" ?>">
+						<span class="input-group-addon toggle-password" id="pwtoggle" data-id="password"><i class="fa fa-eye"></i></a></span>
 					</div>
 				</div>
 			</div>
@@ -223,15 +211,13 @@ if (!empty($timeconditions_refs)) {
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
-					<div class="col-md-3">
-						<label class="control-label" for="goto0"><?php echo _("Normal Flow (Green/BLF off)") ?></label>
-						<i class="fa fa-question-circle fpbx-help-icon" data-for="goto0"></i>
-					</div>
-					<div class="col-md-9">
-						<?php echo drawselects((isset($dests['day'])?$dests['day']:''),0); ?>
-					</div>
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label class="control-label" for="goto0"><?php echo _("Normal Flow (Green/BLF off)") ?></label>
+					<i class="fa fa-question-circle fpbx-help-icon" data-for="goto0"></i>
+				</div>
+				<div class="col-md-9">
+					<?php echo drawselects((isset($dests['day'])?$dests['day']:''),0); ?>
 				</div>
 			</div>
 		</div>
@@ -247,15 +233,13 @@ if (!empty($timeconditions_refs)) {
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
-					<div class="col-md-3">
-						<label class="control-label" for="goto1"><?php echo _("Override Flow (Red/BLF on)") ?></label>
-						<i class="fa fa-question-circle fpbx-help-icon" data-for="goto1"></i>
-					</div>
-					<div class="col-md-9">
-						<?php echo drawselects((isset($dests['night'])?$dests['night']:''),1); ?>
-					</div>
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label class="control-label" for="goto1"><?php echo _("Override Flow (Red/BLF on)") ?></label>
+					<i class="fa fa-question-circle fpbx-help-icon" data-for="goto1"></i>
+				</div>
+				<div class="col-md-9">
+					<?php echo drawselects((isset($dests['night'])?$dests['night']:''),1); ?>
 				</div>
 			</div>
 		</div>
