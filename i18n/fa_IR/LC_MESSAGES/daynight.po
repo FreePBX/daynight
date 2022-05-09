@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 02:30+0000\n"
+"POT-Creation-Date: 2022-05-09 01:53+0000\n"
 "PO-Revision-Date: 2016-05-26 19:05+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -115,7 +115,7 @@ msgstr "تغییر وضعیت روند تماس وابسته با"
 msgid "Call Flow Toggle Control"
 msgstr "کنترل تغییر وضعیت روند تماس"
 
-#: views/form.php:126
+#: views/form.php:121
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "فهرست کد ویژه تغییر وضعیت روند تماس"
 
@@ -130,7 +130,7 @@ msgid ""
 "and provides a feature code that toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:174
+#: views/form.php:165
 msgid "Current Mode"
 msgstr "حالت کنونی"
 
@@ -142,19 +142,19 @@ msgstr "پیشفرض"
 msgid "Delete"
 msgstr "حذف"
 
-#: views/form.php:150 views/grid.php:14
+#: views/form.php:143 views/grid.php:14
 msgid "Description"
 msgstr "شرح"
 
-#: views/form.php:162
+#: views/form.php:154
 msgid "Description for this Call Flow Toggle Control"
 msgstr "شرحی برای کنترل تغییر وضعیت روند تماس"
 
-#: views/form.php:241
+#: views/form.php:227
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr "مقصد مورد استفاده وقتی حالت روند نرمال تنظیم شده باشد"
 
-#: views/form.php:265
+#: views/form.php:249
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "مقصد مورد استفاده وقتی حالت روند ابطال تنظیم شده باشد"
 
@@ -162,11 +162,11 @@ msgstr "مقصد مورد استفاده وقتی حالت روند ابطال �
 msgid "Feature Code"
 msgstr "کد ویژه"
 
-#: views/form.php:101
+#: views/form.php:97
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr "تحمیل به حالت نرمال(سبز/BLF off )"
 
-#: views/form.php:101
+#: views/form.php:97
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "تحمیل به حالت ابطال (قرمز/BLF on)"
 
@@ -213,7 +213,7 @@ msgstr ""
 msgid "Invalid State %s"
 msgstr ""
 
-#: views/form.php:104
+#: views/form.php:100
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "متصل شده به شرایط زمانی %s - %s"
@@ -222,7 +222,7 @@ msgstr "متصل شده به شرایط زمانی %s - %s"
 msgid "List Callflows"
 msgstr "فهرست روندهای تماس"
 
-#: views/form.php:64
+#: views/form.php:62
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
@@ -230,7 +230,7 @@ msgstr ""
 "پیام برای پخش در حالت معمولی (سبز/BLF off).<br>برای افزودن فایل جدید از منوی "
 "\"ضبط شده های سیستمی\" استفاده کنید"
 
-#: views/form.php:90
+#: views/form.php:86
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
@@ -242,11 +242,11 @@ msgstr ""
 msgid "No Association"
 msgstr "هیچ ارتباطی"
 
-#: views/form.php:179
+#: views/form.php:170
 msgid "Normal (Green/BLF off)"
 msgstr "نرمال(سبز/BLF off)"
 
-#: views/form.php:229
+#: views/form.php:216
 msgid "Normal Flow (Green/BLF off)"
 msgstr "روند نرمال (سبز/BLF off)"
 
@@ -255,15 +255,15 @@ msgstr "روند نرمال (سبز/BLF off)"
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
 
-#: views/form.php:202
+#: views/form.php:191
 msgid "Optional Password"
 msgstr "کلمه عبور اختیاری"
 
-#: views/form.php:181
+#: views/form.php:172
 msgid "Override (Red/BLF on)"
 msgstr "ابطال (قرمز/ BLF on)"
 
-#: views/form.php:253
+#: views/form.php:238
 msgid "Override Flow (Red/BLF on)"
 msgstr "ابطال روند (قرمز/ BLF on)"
 
@@ -283,11 +283,11 @@ msgstr "لطفا مقصد روند نرمال را تنظیم کنید"
 msgid "Please set the Override Flow destination"
 msgstr "لطفا مقصد روند ابطال را تنظیم کنید"
 
-#: views/form.php:50
+#: views/form.php:49
 msgid "Recording for Normal Mode"
 msgstr "ضبط برای حالت نرمال"
 
-#: views/form.php:76
+#: views/form.php:73
 msgid "Recording for Override Mode"
 msgstr "ضبط برای حالت ابطال"
 
@@ -303,7 +303,7 @@ msgstr "کیفیت"
 msgid "Submit"
 msgstr "ارسال"
 
-#: views/form.php:138
+#: views/form.php:132
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
@@ -312,7 +312,7 @@ msgstr ""
 "There are a total of %s Feature code  objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 
-#: views/form.php:189
+#: views/form.php:179
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -320,11 +320,11 @@ msgstr ""
 "این وضعیت فعلی روند کنترل تماس را تغییر میدهد، یا وضعیت فعلی را برای مورد "
 "جدید تنظیم میکند."
 
-#: views/form.php:108
+#: views/form.php:104
 msgid "Time Condition Reference"
 msgstr "مرجع شرایط زمانی"
 
-#: views/form.php:217
+#: views/form.php:205
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"

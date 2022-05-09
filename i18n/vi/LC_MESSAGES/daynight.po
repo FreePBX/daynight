@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 02:30+0000\n"
+"POT-Creation-Date: 2022-05-09 01:53+0000\n"
 "PO-Revision-Date: 2017-07-19 16:36+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -116,7 +116,7 @@ msgstr "Chuyển đổi dòng cuộc gọi kết hợp với"
 msgid "Call Flow Toggle Control"
 msgstr "Điều khiển chuyển đổi dòng cuộc gọi"
 
-#: views/form.php:126
+#: views/form.php:121
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Chỉ mục mã tính năng chuyển đổi dòng cuộc gọi"
 
@@ -131,7 +131,7 @@ msgid ""
 "and provides a feature code that toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:174
+#: views/form.php:165
 msgid "Current Mode"
 msgstr "Chế độ hiện tại"
 
@@ -143,21 +143,21 @@ msgstr "Mặc định"
 msgid "Delete"
 msgstr "Xóa"
 
-#: views/form.php:150 views/grid.php:14
+#: views/form.php:143 views/grid.php:14
 msgid "Description"
 msgstr "Mô tả"
 
-#: views/form.php:162
+#: views/form.php:154
 msgid "Description for this Call Flow Toggle Control"
 msgstr "Mô tả cho điều khiển chuyển dòng đổi cuộc gọi này"
 
-#: views/form.php:241
+#: views/form.php:227
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 "Điểm đích để sử dụng khi cài đặt về chế độ dòng cuộc gọi thông thường ( xanh/"
 "BLF tắt)"
 
-#: views/form.php:265
+#: views/form.php:249
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 "Điểm đích để sử dụng khi cài đặt về chế độ ghi đè dòng cuộc gọi ( Đỏ/ BLF "
@@ -167,11 +167,11 @@ msgstr ""
 msgid "Feature Code"
 msgstr "Mã tính năng"
 
-#: views/form.php:101
+#: views/form.php:97
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr "Bắt buộc đến chế độ thông thường (Green/BLF off)"
 
-#: views/form.php:101
+#: views/form.php:97
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Bắt buộc đến chế độ ghi đè (Red/BLF on)"
 
@@ -216,7 +216,7 @@ msgstr ""
 msgid "Invalid State %s"
 msgstr ""
 
-#: views/form.php:104
+#: views/form.php:100
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "Được liên kết tới điều kiện thời gian %s-%s"
@@ -225,7 +225,7 @@ msgstr "Được liên kết tới điều kiện thời gian %s-%s"
 msgid "List Callflows"
 msgstr "Danh sách các dòng cuộc gọi"
 
-#: views/form.php:64
+#: views/form.php:62
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
@@ -234,7 +234,7 @@ msgstr ""
 "các ghi ẩm bổ sung thì sử dụng MENU trên \"System  Recorrdings\" ( Các ghi "
 "âm hệ thống)"
 
-#: views/form.php:90
+#: views/form.php:86
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
@@ -247,11 +247,11 @@ msgstr ""
 msgid "No Association"
 msgstr "Không có sự kết hợp"
 
-#: views/form.php:179
+#: views/form.php:170
 msgid "Normal (Green/BLF off)"
 msgstr "Thông thường (Xanh/BLF tắt)"
 
-#: views/form.php:229
+#: views/form.php:216
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Dòng bình thường ( Xanh/ BLF tắt)"
 
@@ -260,15 +260,15 @@ msgstr "Dòng bình thường ( Xanh/ BLF tắt)"
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
 
-#: views/form.php:202
+#: views/form.php:191
 msgid "Optional Password"
 msgstr "Mật khẩu lựa chọn"
 
-#: views/form.php:181
+#: views/form.php:172
 msgid "Override (Red/BLF on)"
 msgstr "Ghi đè (Đỏ/BLF bật)"
 
-#: views/form.php:253
+#: views/form.php:238
 msgid "Override Flow (Red/BLF on)"
 msgstr "Ghi đè dòng ( Đỏ/ BLF bật)"
 
@@ -288,11 +288,11 @@ msgstr "Vui lòng cài đặt điểm đích Dòng thông thường"
 msgid "Please set the Override Flow destination"
 msgstr "Vui lòng cài đặt điểm đích Dòng ghi đè"
 
-#: views/form.php:50
+#: views/form.php:49
 msgid "Recording for Normal Mode"
 msgstr "Ghi âm cho Chế độ thông thường"
 
-#: views/form.php:76
+#: views/form.php:73
 msgid "Recording for Override Mode"
 msgstr "Ghi âm cho Chế độ ghi đè"
 
@@ -308,7 +308,7 @@ msgstr "Tình trạng"
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: views/form.php:138
+#: views/form.php:132
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
@@ -318,7 +318,7 @@ msgstr ""
 "cuộc gọi và được chuyển đổi bằng cách sử dụng mã tính năng chuyển đổi dòng "
 "cuộc gọi cùng với chỉ mục."
 
-#: views/form.php:189
+#: views/form.php:179
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -326,11 +326,11 @@ msgstr ""
 "Điều này sẽ thay đổi trạng thái hiện tại của điều khiển chuyển đổi dòng cuộc "
 "gọi, hoặc cài đặt trạng thái ban đầu khi tạo mới."
 
-#: views/form.php:108
+#: views/form.php:104
 msgid "Time Condition Reference"
 msgstr "Tham chiếu điều kiện thời gian"
 
-#: views/form.php:217
+#: views/form.php:205
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
