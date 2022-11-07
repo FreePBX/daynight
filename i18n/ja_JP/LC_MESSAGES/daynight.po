@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-09 01:53+0000\n"
+"POT-Creation-Date: 2022-05-23 07:41+0000\n"
 "PO-Revision-Date: 2015-10-27 09:11+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Call Flow Toggle Control"
 msgstr "コールフロー切り替え制御"
 
-#: views/form.php:121
+#: views/form.php:126
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "機能コードのインデックス"
 
@@ -157,7 +157,7 @@ msgid ""
 "and provides a feature code that toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:165
+#: views/form.php:174
 msgid "Current Mode"
 msgstr "現在のモード"
 
@@ -169,19 +169,19 @@ msgstr "デフォルト"
 msgid "Delete"
 msgstr "削除"
 
-#: views/form.php:143 views/grid.php:14
+#: views/form.php:150 views/grid.php:14
 msgid "Description"
 msgstr "説明"
 
-#: views/form.php:154
+#: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
 msgstr "このコールフロー切り替え制御の説明"
 
-#: views/form.php:227
+#: views/form.php:241
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr "通常モード (BLFが緑もしくは消灯) の宛先"
 
-#: views/form.php:249
+#: views/form.php:265
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr "上書きモード (BLFが赤もしくは点灯) の宛先"
 
@@ -189,11 +189,11 @@ msgstr "上書きモード (BLFが赤もしくは点灯) の宛先"
 msgid "Feature Code"
 msgstr "機能コード"
 
-#: views/form.php:97
+#: views/form.php:101
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr "強制的に通常モードにする (BLFが緑もしくは消灯)"
 
-#: views/form.php:97
+#: views/form.php:101
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "強制的に上書きモードにする (BLFが赤もしくは点灯)"
 
@@ -236,7 +236,7 @@ msgstr ""
 msgid "Invalid State %s"
 msgstr ""
 
-#: views/form.php:100
+#: views/form.php:104
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "時間条件にリンクしました %s - %s"
@@ -245,7 +245,7 @@ msgstr "時間条件にリンクしました %s - %s"
 msgid "List Callflows"
 msgstr ""
 
-#: views/form.php:62
+#: views/form.php:64
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
@@ -253,7 +253,7 @@ msgstr ""
 "通常モード (BLFが緑もしくは消灯) のときに再生する音声。<br>音声を追加するに"
 "は、上にある「システム録音」メニューを使います。"
 
-#: views/form.php:86
+#: views/form.php:90
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
@@ -265,11 +265,11 @@ msgstr ""
 msgid "No Association"
 msgstr "連動なし"
 
-#: views/form.php:170
+#: views/form.php:179
 msgid "Normal (Green/BLF off)"
 msgstr "通常 (BLFが緑もしくは消灯)"
 
-#: views/form.php:216
+#: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "通常フロー (BLFが緑もしくは消灯)"
 
@@ -278,15 +278,15 @@ msgstr "通常フロー (BLFが緑もしくは消灯)"
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
 
-#: views/form.php:191
+#: views/form.php:202
 msgid "Optional Password"
 msgstr "パスワードをかける (オプション)"
 
-#: views/form.php:172
+#: views/form.php:181
 msgid "Override (Red/BLF on)"
 msgstr "上書き (BLFが赤もしくは点灯)"
 
-#: views/form.php:238
+#: views/form.php:253
 msgid "Override Flow (Red/BLF on)"
 msgstr "上書きフロー (BLFが赤もしくは点灯)"
 
@@ -308,11 +308,11 @@ msgstr "通常モードの宛先を設定してください。"
 msgid "Please set the Override Flow destination"
 msgstr "上書きモードの宛先を設定してください。"
 
-#: views/form.php:49
+#: views/form.php:50
 msgid "Recording for Normal Mode"
 msgstr "通常モードの音声"
 
-#: views/form.php:73
+#: views/form.php:76
 msgid "Recording for Override Mode"
 msgstr "上書きモードの音声"
 
@@ -328,14 +328,14 @@ msgstr "ステータス"
 msgid "Submit"
 msgstr "送信"
 
-#: views/form.php:132
+#: views/form.php:138
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr "合計で %s の機能コードがあります。 %s"
 
-#: views/form.php:179
+#: views/form.php:189
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -343,11 +343,11 @@ msgstr ""
 "このコールフロー切り替え制御の現ステータスを変更したり、新規作成時には初期ス"
 "テータスを設定します。"
 
-#: views/form.php:104
+#: views/form.php:108
 msgid "Time Condition Reference"
 msgstr "時間分岐条件への参照"
 
-#: views/form.php:205
+#: views/form.php:217
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"

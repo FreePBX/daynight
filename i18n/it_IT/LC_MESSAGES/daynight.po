@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-09 01:53+0000\n"
+"POT-Creation-Date: 2022-05-23 07:41+0000\n"
 "PO-Revision-Date: 2018-05-29 09:33+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/daynight/it/>\n"
@@ -129,7 +129,7 @@ msgstr "Flusso di chiamata Attiva / disattiva associato con"
 msgid "Call Flow Toggle Control"
 msgstr "Controllo del flusso di chiamata"
 
-#: views/form.php:121
+#: views/form.php:126
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "flusso di chiamata attiva l'indice del codice caratteristica"
 
@@ -144,7 +144,7 @@ msgid ""
 "and provides a feature code that toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:165
+#: views/form.php:174
 msgid "Current Mode"
 msgstr "Modalità corrente"
 
@@ -156,22 +156,22 @@ msgstr "Predefinito"
 msgid "Delete"
 msgstr "Elimina"
 
-#: views/form.php:143 views/grid.php:14
+#: views/form.php:150 views/grid.php:14
 msgid "Description"
 msgstr "Descrizione"
 
-#: views/form.php:154
+#: views/form.php:162
 msgid "Description for this Call Flow Toggle Control"
 msgstr ""
 "Descrizione per questo controllo di commutazione del flusso di chiamata"
 
-#: views/form.php:227
+#: views/form.php:241
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 "Destinazione da utilizzare quando è impostata la modalità Flusso normale "
 "(verde / BLF spento)"
 
-#: views/form.php:249
+#: views/form.php:265
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 "Destinazione da utilizzare quando impostato su Sovrascrivi flusso (Rosso / "
@@ -181,11 +181,11 @@ msgstr ""
 msgid "Feature Code"
 msgstr "Codice funzione"
 
-#: views/form.php:97
+#: views/form.php:101
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr "Forza in modalità normale (verde / BLF spento)"
 
-#: views/form.php:97
+#: views/form.php:101
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Forza la modalità Override (rosso / BLF attivo)"
 
@@ -234,7 +234,7 @@ msgstr ""
 msgid "Invalid State %s"
 msgstr ""
 
-#: views/form.php:100
+#: views/form.php:104
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "Collegato alla Condizione Temporale %s - %s"
@@ -243,7 +243,7 @@ msgstr "Collegato alla Condizione Temporale %s - %s"
 msgid "List Callflows"
 msgstr "Elenco flussi di chiamata"
 
-#: views/form.php:62
+#: views/form.php:64
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
@@ -252,7 +252,7 @@ msgstr ""
 "Per aggiungere ulteriori registrazioni utilizzare il menu \"Registrazioni di "
 "sistema\" sopra"
 
-#: views/form.php:86
+#: views/form.php:90
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
@@ -265,11 +265,11 @@ msgstr ""
 msgid "No Association"
 msgstr "Nessuna Associazione"
 
-#: views/form.php:170
+#: views/form.php:179
 msgid "Normal (Green/BLF off)"
 msgstr "Normale (Verde/BLF spento)"
 
-#: views/form.php:216
+#: views/form.php:229
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flusso normale (verde / BLF spento)"
 
@@ -278,15 +278,15 @@ msgstr "Flusso normale (verde / BLF spento)"
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
 
-#: views/form.php:191
+#: views/form.php:202
 msgid "Optional Password"
 msgstr "Password Opzionale"
 
-#: views/form.php:172
+#: views/form.php:181
 msgid "Override (Red/BLF on)"
 msgstr "Override (rosso / BLF attivo)"
 
-#: views/form.php:238
+#: views/form.php:253
 msgid "Override Flow (Red/BLF on)"
 msgstr "Sovrascrivi flusso (rosso / BLF attivo)"
 
@@ -307,11 +307,11 @@ msgstr "Si prega di impostare la destinazione del flusso normale"
 msgid "Please set the Override Flow destination"
 msgstr "Si prega di impostare la destinazione di sostituzione del flusso"
 
-#: views/form.php:49
+#: views/form.php:50
 msgid "Recording for Normal Mode"
 msgstr "Registrazione per la modalità normale"
 
-#: views/form.php:73
+#: views/form.php:76
 msgid "Recording for Override Mode"
 msgstr "Registrazione per la modalità Override"
 
@@ -327,7 +327,7 @@ msgstr "Stato"
 msgid "Submit"
 msgstr "Sottoscrivo"
 
-#: views/form.php:132
+#: views/form.php:138
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
@@ -338,7 +338,7 @@ msgstr ""
 "il codice di attivazione / disattivazione del flusso di chiamate più "
 "l'indice."
 
-#: views/form.php:179
+#: views/form.php:189
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -347,11 +347,11 @@ msgstr ""
 "flusso di chiamata, o imposterà lo stato iniziale quando ne creerai uno "
 "nuovo."
 
-#: views/form.php:104
+#: views/form.php:108
 msgid "Time Condition Reference"
 msgstr "Riferimento delle condizioni temporali"
 
-#: views/form.php:205
+#: views/form.php:217
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
