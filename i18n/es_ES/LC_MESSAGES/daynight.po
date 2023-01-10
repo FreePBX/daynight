@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 02:28+0000\n"
-"PO-Revision-Date: 2023-01-10 11:55+0000\n"
+"PO-Revision-Date: 2023-01-11 12:01+0000\n"
 "Last-Translator: Santiago Pioli <spioli@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/daynight/"
 "es/>\n"
@@ -277,8 +277,7 @@ msgstr "Flujo Override (Rojo/BLF on)"
 
 #: assets/js/daynight.js:4
 msgid "Please enter a valid numeric password, only numbers are allowed"
-msgstr ""
-"Por favor, introduzca una contraseña númerica; sólo se permiten números."
+msgstr "Por favor, introduzca una contraseña númerica; sólo se permiten números"
 
 #: assets/js/daynight.js:7
 msgid "Please set the Current Mode"
