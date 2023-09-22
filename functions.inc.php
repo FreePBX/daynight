@@ -8,6 +8,7 @@ if (!defined('FREEPBX_IS_AUTH')) {
 //
 // Class To Create, Access and Change DAYNIGHT objects in the dialplan
 //
+#[\AllowDynamicProperties]
 class dayNightObject {
 
 	// contstructor
