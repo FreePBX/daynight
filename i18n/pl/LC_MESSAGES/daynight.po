@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 02:28+0000\n"
-"PO-Revision-Date: 2023-11-11 14:00+0000\n"
+"PO-Revision-Date: 2023-11-18 16:02+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/daynight/"
 "pl/>\n"
@@ -40,11 +40,11 @@ msgstr ""
 
 #: views/grid.php:16
 msgid "Actions"
-msgstr ""
+msgstr "Działania"
 
 #: views/grid.php:8
 msgid "Add"
-msgstr ""
+msgstr "Dodaj"
 
 #: views/bootnav.php:6
 msgid "Add Callflow"
