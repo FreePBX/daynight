@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 07:41+0000\n"
+"POT-Creation-Date: 2023-12-05 07:49-0500\n"
 "PO-Revision-Date: 2016-02-05 18:20+0200\n"
 "Last-Translator: ded <ceo@postmet.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -32,31 +32,31 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: functions.inc.php:526
+#: functions.inc.php:541
 msgid " - Force Time Condition False Destination"
 msgstr " - Форсировать назначение которое не попадает под правило по времени"
 
-#: functions.inc.php:524
+#: functions.inc.php:539
 msgid " - Force Time Condition True Destination"
 msgstr " - Форсировать назначение которое попадает под правило по времени"
 
-#: page.daynight.php:16
+#: page.daynight.php:19
 msgid ": Add"
 msgstr ":Добавить"
 
-#: page.daynight.php:14
+#: page.daynight.php:16
 msgid ": Edit"
 msgstr ":Редактировать"
 
-#: views/grid.php:16
+#: views/grid.php:26
 msgid "Actions"
 msgstr "Действия"
 
-#: views/grid.php:8
+#: views/grid.php:9
 msgid "Add"
 msgstr "Добавить"
 
@@ -72,8 +72,8 @@ msgstr "Приложения"
 msgid "Are you sure you want to delete this flow?"
 msgstr "Вы уверены,что хотите удалить  данный поток  вызова?"
 
-#: Daynight.class.php:187 Daynight.class.php:192 Daynight.class.php:215
-#: Daynight.class.php:226
+#: Daynight.class.php:194 Daynight.class.php:199 Daynight.class.php:222
+#: Daynight.class.php:233
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -119,24 +119,24 @@ msgstr "Общее управление прохождения вызовов"
 msgid "Call Flow Control Module"
 msgstr "Модуль контроля вызовов"
 
-#: functions.inc.php:155
+#: functions.inc.php:163
 #, php-format
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Переключатель состояния прохождения вызовов (%s) : %s"
 
-#: functions.inc.php:537
+#: functions.inc.php:552
 msgid "Call Flow Toggle Associate with"
 msgstr "Связать переключение прохождения вызовов  с"
 
-#: page.daynight.php:7
+#: page.daynight.php:9
 msgid "Call Flow Toggle Control"
 msgstr "Управление переключением прохождения вызовов"
 
-#: views/form.php:126
+#: views/form.php:131
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Индекс сервисного кода  функции \"Переключение прохождения вызовов\""
 
-#: functions.inc.php:404
+#: functions.inc.php:418
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Переключатель состояния прохождения вызовов (%s) : %s"
@@ -147,47 +147,47 @@ msgid ""
 "and provides a feature code that toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:174
+#: views/form.php:188
 msgid "Current Mode"
 msgstr "Текущий режим"
 
-#: views/form.php:34 views/form.php:35
+#: views/form.php:37 views/form.php:38
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:57
 msgid "Delete"
 msgstr "Удалить"
 
-#: views/form.php:150 views/grid.php:14
+#: views/form.php:159 views/grid.php:20
 msgid "Description"
 msgstr "Описание"
 
-#: views/form.php:162
+#: views/form.php:174
 msgid "Description for this Call Flow Toggle Control"
 msgstr "Описание для этого режима День/Ночь"
 
-#: views/form.php:241
+#: views/form.php:271
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 "Какой внутренний номер использовать когда установлен Normal Flow (Green/BLF "
 "off) режим"
 
-#: views/form.php:265
+#: views/form.php:299
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 "Какой внутренний номер использовать когда установлен Override Flow (Red/BLF "
 "on) режим"
 
-#: views/grid.php:13
+#: views/grid.php:17
 msgid "Feature Code"
 msgstr "Сервисный код"
 
-#: views/form.php:101
+#: views/form.php:104
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr "Форсировать переход в нормальный режим (Green/BLF выключено)"
 
-#: views/form.php:101
+#: views/form.php:104
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Форсировать режим подавления (Red/BLF включено)"
 
@@ -195,7 +195,7 @@ msgstr "Форсировать режим подавления (Red/BLF вклю
 msgid "Hook Time Conditions Module"
 msgstr "Вызвать модуль условий по времени"
 
-#: functions.inc.php:551
+#: functions.inc.php:566
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -229,12 +229,12 @@ msgstr ""
 "времени, руководствуясь состоянием этого переключения, когда оно "
 "отображается в положении (Red/BLF включено)."
 
-#: Daynight.class.php:198 Daynight.class.php:212
+#: Daynight.class.php:205 Daynight.class.php:219
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
 
-#: views/form.php:104
+#: views/form.php:107
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "Присоединено к правилу по времени %s - %s"
@@ -243,7 +243,7 @@ msgstr "Присоединено к правилу по времени %s - %s"
 msgid "List Callflows"
 msgstr "Список потоков вызова"
 
-#: views/form.php:64
+#: views/form.php:67
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
@@ -251,7 +251,7 @@ msgstr ""
 "Сообщение,воспроизводимое в обычном режиме(Green/BLF off).<br>Для добавления "
 "дополнительных записей  используйте \"System Recordings\" Меню"
 
-#: views/form.php:90
+#: views/form.php:93
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
@@ -259,32 +259,32 @@ msgstr ""
 "Сообщение, воспроизводимое в обычном режиме (Red/BLF on).<br>Для добавления "
 "дополнительных записей  используйте \"System Recordings\" Меню"
 
-#: functions.inc.php:522
+#: functions.inc.php:537
 msgid "No Association"
 msgstr "Нет связывания"
 
-#: views/form.php:179
+#: views/form.php:195
 msgid "Normal (Green/BLF off)"
 msgstr "Нормальный (Green/BLF выключен)"
 
-#: views/form.php:229
+#: views/form.php:257
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Нормальное прохождение (Green/BLF выключен)"
 
-#: Daynight.class.php:209
+#: Daynight.class.php:216
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
 
-#: views/form.php:202
+#: views/form.php:224
 msgid "Optional Password"
 msgstr "Пароль (опционально)"
 
-#: views/form.php:181
+#: views/form.php:199
 msgid "Override (Red/BLF on)"
 msgstr "Подавление правил Override (Red/BLF включен)"
 
-#: views/form.php:253
+#: views/form.php:285
 msgid "Override Flow (Red/BLF on)"
 msgstr "Подавлять правила (Red/BLF включен)"
 
@@ -304,27 +304,27 @@ msgstr "Пожалуйста установите направление для 
 msgid "Please set the Override Flow destination"
 msgstr "Пожалуйста установите направление для обходного сценария"
 
-#: views/form.php:50
+#: views/form.php:53
 msgid "Recording for Normal Mode"
 msgstr "Запись для режима День"
 
-#: views/form.php:76
+#: views/form.php:79
 msgid "Recording for Override Mode"
 msgstr "Запись для режима Ночь"
 
-#: Daynight.class.php:58
+#: Daynight.class.php:63
 msgid "Reset"
 msgstr "Сброс"
 
-#: views/grid.php:15
+#: views/grid.php:23
 msgid "State"
 msgstr "Статус"
 
-#: Daynight.class.php:63
+#: Daynight.class.php:68
 msgid "Submit"
 msgstr "Подтвердить"
 
-#: views/form.php:138
+#: views/form.php:145
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
@@ -334,7 +334,7 @@ msgstr ""
 "контролировать прохождение вызова, и может быть переключён, используя "
 "функцию Переключение прохождения вызова."
 
-#: views/form.php:189
+#: views/form.php:209
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -342,11 +342,11 @@ msgstr ""
 "Эта опция изменяет текущее состояние для сценария прохождения звонков или "
 "выставляет начальные условия при создании нового сценария."
 
-#: views/form.php:108
+#: views/form.php:111
 msgid "Time Condition Reference"
 msgstr "Ссылка на временное условие"
 
-#: views/form.php:217
+#: views/form.php:243
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
@@ -356,7 +356,7 @@ msgstr ""
 "режим день/ночь. Если оставить пустым - любой, кто узнает сервисный код "
 "переключения может воспользоваться, и это никак не защищено"
 
-#: views/form.php:13
+#: views/form.php:14
 msgid ""
 "You have reached the maximum limit for flow controls. Delete one to add a "
 "new one"
@@ -364,7 +364,7 @@ msgstr ""
 "Вы достигли максимального предела количества контрольных точек прохождения "
 "вызова. Удалите одну  для создания новой."
 
-#: Daynight.class.php:195
+#: Daynight.class.php:202
 msgid "You must create the object before setting the state."
 msgstr ""
 

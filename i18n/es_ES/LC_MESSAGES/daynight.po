@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX - módulo daynight module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 07:41+0000\n"
+"POT-Creation-Date: 2023-12-05 07:49-0500\n"
 "PO-Revision-Date: 2016-06-07 03:13+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/daynight/"
@@ -33,27 +33,27 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: functions.inc.php:526
+#: functions.inc.php:541
 msgid " - Force Time Condition False Destination"
 msgstr " - Forzar Condiciones de tiempo Falso Destino"
 
-#: functions.inc.php:524
+#: functions.inc.php:539
 msgid " - Force Time Condition True Destination"
 msgstr " = Forzar Condiciones de Tiempo Verdadero Destino"
 
-#: page.daynight.php:16
+#: page.daynight.php:19
 msgid ": Add"
 msgstr ": Agregar"
 
-#: page.daynight.php:14
+#: page.daynight.php:16
 msgid ": Edit"
 msgstr ": Editar"
 
-#: views/grid.php:16
+#: views/grid.php:26
 msgid "Actions"
 msgstr "Acciones"
 
-#: views/grid.php:8
+#: views/grid.php:9
 msgid "Add"
 msgstr "Agregar"
 
@@ -69,8 +69,8 @@ msgstr "Aplicaciones"
 msgid "Are you sure you want to delete this flow?"
 msgstr "¿Seguro que quieres borrar este flujo?"
 
-#: Daynight.class.php:187 Daynight.class.php:192 Daynight.class.php:215
-#: Daynight.class.php:226
+#: Daynight.class.php:194 Daynight.class.php:199 Daynight.class.php:222
+#: Daynight.class.php:233
 msgid "Astersik manager is not running or we cannot access it."
 msgstr ""
 
@@ -117,24 +117,24 @@ msgstr "Control de Flujo de llamada"
 msgid "Call Flow Control Module"
 msgstr "Modulo de Control de Flujo de Llamada"
 
-#: functions.inc.php:155
+#: functions.inc.php:163
 #, php-format
 msgid "Call Flow Toggle (%s) : %s"
 msgstr "Toggle de Flujo de Llamada (%s): %s"
 
-#: functions.inc.php:537
+#: functions.inc.php:552
 msgid "Call Flow Toggle Associate with"
 msgstr "Toggle de flujo de llamada asociado"
 
-#: page.daynight.php:7
+#: page.daynight.php:9
 msgid "Call Flow Toggle Control"
 msgstr "Toggle Control de Flujo de Llamada"
 
-#: views/form.php:126
+#: views/form.php:131
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Codigo de Caracteristica para Toggle de flujo de llamada"
 
-#: functions.inc.php:404
+#: functions.inc.php:418
 #, php-format
 msgid "Call Flow Toggle: %s (%s)"
 msgstr "Toggle de Flujo de Llamada: %s  (%s)"
@@ -145,47 +145,47 @@ msgid ""
 "and provides a feature code that toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:174
+#: views/form.php:188
 msgid "Current Mode"
 msgstr "Modo actual"
 
-#: views/form.php:34 views/form.php:35
+#: views/form.php:37 views/form.php:38
 msgid "Default"
 msgstr "Defecto"
 
-#: Daynight.class.php:52
+#: Daynight.class.php:57
 msgid "Delete"
 msgstr "Borrar"
 
-#: views/form.php:150 views/grid.php:14
+#: views/form.php:159 views/grid.php:20
 msgid "Description"
 msgstr "Descripción"
 
-#: views/form.php:162
+#: views/form.php:174
 msgid "Description for this Call Flow Toggle Control"
 msgstr "Descripción de Control de este Toggle de Flujo de Llamada"
 
-#: views/form.php:241
+#: views/form.php:271
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 "Destino a usar cuando se establece en el modo de flujo normal (verde/BLF "
 "apagado)"
 
-#: views/form.php:265
+#: views/form.php:299
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 "Destino para utilizar cuando se establece en modo Invalidar flujo (Override "
 "Flow - rojo/BLF encendido)"
 
-#: views/grid.php:13
+#: views/grid.php:17
 msgid "Feature Code"
 msgstr "Código de Función"
 
-#: views/form.php:101
+#: views/form.php:104
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr "Fuerza a Modo Normal (Verde/BLF off)"
 
-#: views/form.php:101
+#: views/form.php:104
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Fuerza a Modo Override (Rojo/BLF on)"
 
@@ -193,7 +193,7 @@ msgstr "Fuerza a Modo Override (Rojo/BLF on)"
 msgid "Hook Time Conditions Module"
 msgstr "Modulo de Condiciones de Tiempo de Enganche"
 
-#: functions.inc.php:551
+#: functions.inc.php:566
 msgid ""
 "If a selection is made, this timecondition will be associated with the "
 "specified call flow toggle  featurecode. This means that if the Call Flow "
@@ -228,12 +228,12 @@ msgstr ""
 "condición tiempo de seguir siempre una de sus dos destinos cuando la "
 "asociada Call Flow Toggle está en su anulación (rojo / BLF on)."
 
-#: Daynight.class.php:198 Daynight.class.php:212
+#: Daynight.class.php:205 Daynight.class.php:219
 #, php-format
 msgid "Invalid State %s"
 msgstr ""
 
-#: views/form.php:104
+#: views/form.php:107
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "Asociado a la condición horaria %s - %s"
@@ -242,7 +242,7 @@ msgstr "Asociado a la condición horaria %s - %s"
 msgid "List Callflows"
 msgstr "Lista FlujosLlamadas"
 
-#: views/form.php:64
+#: views/form.php:67
 msgid ""
 "Message to be played in normal mode (Green/BLF off).<br>To add additional "
 "recordings use the \"System Recordings\" MENU above"
@@ -250,7 +250,7 @@ msgstr ""
 "Mensaje a reproducir en el modo normal (verde/BLF apagado).<br>Para añadir "
 "grabaciones adicionales utilizar el menú \"Sistema de Grabaciones\" arriba"
 
-#: views/form.php:90
+#: views/form.php:93
 msgid ""
 "Message to be played in override mode (Red/BLF on).<br>To add additional "
 "recordings use the \"System Recordings\" MENU to the above"
@@ -258,32 +258,32 @@ msgstr ""
 "Mensaje reproducirá en modo de anulación (Rojo/BLF encendido).<br>Para "
 "añadir grabaciones adicionales utilizar el menú \"System Recordings\" arriba"
 
-#: functions.inc.php:522
+#: functions.inc.php:537
 msgid "No Association"
 msgstr "Sin asociación"
 
-#: views/form.php:179
+#: views/form.php:195
 msgid "Normal (Green/BLF off)"
 msgstr "Normal (Verde/BLF off)"
 
-#: views/form.php:229
+#: views/form.php:257
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Flujo Normal (Verde/BLF off)"
 
-#: Daynight.class.php:209
+#: Daynight.class.php:216
 #, php-format
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
 
-#: views/form.php:202
+#: views/form.php:224
 msgid "Optional Password"
 msgstr "Contraseña opcional"
 
-#: views/form.php:181
+#: views/form.php:199
 msgid "Override (Red/BLF on)"
 msgstr "Override (Rojo/BLF on)"
 
-#: views/form.php:253
+#: views/form.php:285
 msgid "Override Flow (Red/BLF on)"
 msgstr "Flujo Override (Rojo/BLF on)"
 
@@ -304,27 +304,27 @@ msgstr "Por favor establezca el destino del Modo Normal"
 msgid "Please set the Override Flow destination"
 msgstr "Por favor, establecer el destino para el Modo de anulación"
 
-#: views/form.php:50
+#: views/form.php:53
 msgid "Recording for Normal Mode"
 msgstr "Grabación para modo Normal"
 
-#: views/form.php:76
+#: views/form.php:79
 msgid "Recording for Override Mode"
 msgstr "Grabación para modo Override"
 
-#: Daynight.class.php:58
+#: Daynight.class.php:63
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: views/grid.php:15
+#: views/grid.php:23
 msgid "State"
 msgstr "Estado"
 
-#: Daynight.class.php:63
+#: Daynight.class.php:68
 msgid "Submit"
 msgstr "Enviar"
 
-#: views/form.php:138
+#: views/form.php:145
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
@@ -334,7 +334,7 @@ msgstr ""
 "controlar un flujo de llamadas y se alternan conmutando los códigos de "
 "función de flujo de llamada más el índice."
 
-#: views/form.php:189
+#: views/form.php:209
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -342,11 +342,11 @@ msgstr ""
 "Esto cambiará en estado actual de Control del toggle de este Flujo de "
 "Llamada, o establecerá el estado inicial cuando se esta creando uno nuevo."
 
-#: views/form.php:108
+#: views/form.php:111
 msgid "Time Condition Reference"
 msgstr "Referencia de Condición horaria"
 
-#: views/form.php:217
+#: views/form.php:243
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
@@ -356,7 +356,7 @@ msgstr ""
 "cambiar el flujo de la llamada. Si se deja en blanco cualquiera puede usar "
 "el código de feature y estará desprotegido"
 
-#: views/form.php:13
+#: views/form.php:14
 msgid ""
 "You have reached the maximum limit for flow controls. Delete one to add a "
 "new one"
@@ -364,7 +364,7 @@ msgstr ""
 "Usted ha alcanzado el limite máximo de control de flujos. Borre alguno para "
 "agregar otro"
 
-#: Daynight.class.php:195
+#: Daynight.class.php:202
 msgid "You must create the object before setting the state."
 msgstr ""
 
