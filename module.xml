@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>17.0.1</version>
+	<version>17.0.1.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,7 +12,7 @@
 	</description>
 	<more-info>https://wiki.freepbx.org/display/FPG/Call+Flow+Control+Module</more-info>
 	<changelog>
-		*17.0.1* 17.0
+		*17.0.1.1* 17.0
 	</changelog>
 	<depends>
 		<version>17.0</version>
