@@ -14,7 +14,7 @@ class dayNightObject {
 	// contstructor
 	function __construct($id) {
 		global $amp_conf;
-
+		$this->id = $id;
 		if ($amp_conf['USEDEVSTATE']) {
 			$engine_info    = engine_getinfo();
 			$version        = $engine_info['version'];
