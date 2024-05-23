@@ -17,7 +17,8 @@ class Daynight extends Base
 		 */
 		$app->get('/', function ($request, $response, $args) {
 			\FreePBX::Modules()->loadFunctionsInc('daynight');
-			return $response->withJson(daynight_list());
+			$response->getBody()->write(json_encode(daynight_list()));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllReadScopeMiddleware());
 
 		/**
@@ -35,9 +36,9 @@ class Daynight extends Base
 				$daynight['state'] = $dn->getState();
 			}
 
-			$daynight = $daynight ?: false;
-
-			return $response->withJson($daynight);
+			$daynight = $daynight ?? false;
+			$response->getBody()->write(json_encode($daynight));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllReadScopeMiddleware());
 
 		/**
@@ -51,11 +52,12 @@ class Daynight extends Base
 
 			if ($dn) {
 				$dn->setState($params['state']);
-
-				return $response->withJson(true);
+				$response->getBody()->write(json_encode(true));
+				return $response->withHeader('Content-Type', 'application/json');
 			}
 
-			return $response->withJson(false);
+			$response->getBody()->write(json_encode(false));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllWriteScopeMiddleware());
 	}
 }
