@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for daynight
-# Copyright (C) 2008-2023 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2025 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-26 05:05-0500\n"
+"POT-Creation-Date: 2025-02-06 23:40-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Call Flow Toggle Control"
 msgstr ""
 
-#: views/form.php:131
+#: views/form.php:132
 msgid "Call Flow Toggle Feature Code Index"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgid ""
 "and provides a feature code that toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:188
+#: views/form.php:189
 msgid "Current Mode"
 msgstr ""
 
@@ -131,20 +131,20 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: views/form.php:159
+#: views/form.php:160
 #: views/grid.php:20
 msgid "Description"
 msgstr ""
 
-#: views/form.php:174
+#: views/form.php:175
 msgid "Description for this Call Flow Toggle Control"
 msgstr ""
 
-#: views/form.php:271
+#: views/form.php:272
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 
-#: views/form.php:299
+#: views/form.php:300
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 
@@ -152,11 +152,11 @@ msgstr ""
 msgid "Feature Code"
 msgstr ""
 
-#: views/form.php:104
+#: views/form.php:105
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr ""
 
-#: views/form.php:104
+#: views/form.php:105
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Invalid State %s"
 msgstr ""
 
-#: views/form.php:107
+#: views/form.php:108
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr ""
@@ -214,11 +214,11 @@ msgstr ""
 msgid "No Association"
 msgstr ""
 
-#: views/form.php:195
+#: views/form.php:196
 msgid "Normal (Green/BLF off)"
 msgstr ""
 
-#: views/form.php:257
+#: views/form.php:258
 msgid "Normal Flow (Green/BLF off)"
 msgstr ""
 
@@ -227,15 +227,15 @@ msgstr ""
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
 
-#: views/form.php:224
+#: views/form.php:225
 msgid "Optional Password"
 msgstr ""
 
-#: views/form.php:199
+#: views/form.php:200
 msgid "Override (Red/BLF on)"
 msgstr ""
 
-#: views/form.php:285
+#: views/form.php:286
 msgid "Override Flow (Red/BLF on)"
 msgstr ""
 
@@ -275,24 +275,24 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: views/form.php:145
+#: views/form.php:146
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
 "flow and be toggled using the call flow toggle feature code plus the index."
 msgstr ""
 
-#: views/form.php:209
+#: views/form.php:210
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
 msgstr ""
 
-#: views/form.php:111
+#: views/form.php:112
 msgid "Time Condition Reference"
 msgstr ""
 
-#: views/form.php:243
+#: views/form.php:244
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"

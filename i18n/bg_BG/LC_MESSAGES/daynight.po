@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 07:49-0500\n"
+"POT-Creation-Date: 2025-02-06 23:40-0500\n"
 "PO-Revision-Date: 2018-07-04 10:08+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/daynight/bg/>\n"
@@ -129,7 +129,7 @@ msgstr "Превключване на Потока от Входящи Обаж�
 msgid "Call Flow Toggle Control"
 msgstr "Управление на Превключване на Потока от Входящи Обаждания"
 
-#: views/form.php:131
+#: views/form.php:132
 msgid "Call Flow Toggle Feature Code Index"
 msgstr "Превключване на Потока от Входящи Обаждания Индекс Специални Кодове"
 
@@ -144,7 +144,7 @@ msgid ""
 "and provides a feature code that toggles between the two destinations."
 msgstr ""
 
-#: views/form.php:188
+#: views/form.php:189
 msgid "Current Mode"
 msgstr "Текущ Режим"
 
@@ -156,21 +156,21 @@ msgstr "По-Подразбиране"
 msgid "Delete"
 msgstr "Изтрий"
 
-#: views/form.php:159 views/grid.php:20
+#: views/form.php:160 views/grid.php:20
 msgid "Description"
 msgstr "Описание"
 
-#: views/form.php:174
+#: views/form.php:175
 msgid "Description for this Call Flow Toggle Control"
 msgstr ""
 "Описание за това Управление на Превключване на Потока от Входящи Обаждания"
 
-#: views/form.php:271
+#: views/form.php:272
 msgid "Destination to use when set to Normal Flow (Green/BLF off) mode"
 msgstr ""
 "Използвано направление при зададен режим Нормален Поток (Зелено/BLF изкл)"
 
-#: views/form.php:299
+#: views/form.php:300
 msgid "Destination to use when set to Override Flow (Red/BLF on) mode"
 msgstr ""
 "Използвано направление при зададен режим Отменен Поток (Червено/BLF вкл)"
@@ -179,11 +179,11 @@ msgstr ""
 msgid "Feature Code"
 msgstr "Специален Код"
 
-#: views/form.php:104
+#: views/form.php:105
 msgid "Forces to Normal Mode (Green/BLF off)"
 msgstr "Принуждава към Нормален Режим (Зелено/BLF изкл)"
 
-#: views/form.php:104
+#: views/form.php:105
 msgid "Forces to Override Mode (Red/BLF on)"
 msgstr "Принуждава към Режим на Отмяна (Червено/BLF вкл)"
 
@@ -232,7 +232,7 @@ msgstr ""
 msgid "Invalid State %s"
 msgstr ""
 
-#: views/form.php:107
+#: views/form.php:108
 #, php-format
 msgid "Linked to Time Condition %s - %s"
 msgstr "Свързан към Времева Група %s - %s"
@@ -261,11 +261,11 @@ msgstr ""
 msgid "No Association"
 msgstr "Без Асоциация"
 
-#: views/form.php:195
+#: views/form.php:196
 msgid "Normal (Green/BLF off)"
 msgstr "Нормален (Зелено/BLF изкл)"
 
-#: views/form.php:257
+#: views/form.php:258
 msgid "Normal Flow (Green/BLF off)"
 msgstr "Нормален Поток (Зелено/BLF изкл)"
 
@@ -274,15 +274,15 @@ msgstr "Нормален Поток (Зелено/BLF изкл)"
 msgid "Object already exists and is in state: %s, you must delete it first"
 msgstr ""
 
-#: views/form.php:224
+#: views/form.php:225
 msgid "Optional Password"
 msgstr "Парола"
 
-#: views/form.php:199
+#: views/form.php:200
 msgid "Override (Red/BLF on)"
 msgstr "Отмяна (Червено/BLF вкл)"
 
-#: views/form.php:285
+#: views/form.php:286
 msgid "Override Flow (Red/BLF on)"
 msgstr "Отменен Поток (Червено/BLF вкл)"
 
@@ -322,7 +322,7 @@ msgstr "Състояние"
 msgid "Submit"
 msgstr "Приеми"
 
-#: views/form.php:145
+#: views/form.php:146
 #, php-format
 msgid ""
 "There are a total of %s Feature code objects, %s, each can control a call "
@@ -332,7 +332,7 @@ msgstr ""
 "потока на обаждания и да се превключва, като използва специалния код за "
 "превключване на потока на обаждания плюс индекса."
 
-#: views/form.php:209
+#: views/form.php:210
 msgid ""
 "This will change the current state for this Call Flow Toggle Control, or set "
 "the initial state when creating a new one."
@@ -341,11 +341,11 @@ msgstr ""
 "от Входящи Обаждания, или ще установи първоначално състояние когато "
 "създавате нов."
 
-#: views/form.php:111
+#: views/form.php:112
 msgid "Time Condition Reference"
 msgstr "Препратка към Времево Условие"
 
-#: views/form.php:243
+#: views/form.php:244
 msgid ""
 "You can optionally include a password to authenticate before toggling the "
 "call flow. If left blank anyone can use the feature code and it will be un-"
