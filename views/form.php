@@ -98,6 +98,7 @@ if (function_exists('recordings_list')) {
 	';
 }
 //Usage
+$reflist = '';
 $timeconditions_refs = daynight_list_timecondition($itemid);
 if (!empty($timeconditions_refs)) {
 	foreach ($timeconditions_refs as $ref) {
