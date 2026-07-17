@@ -2,7 +2,7 @@
 	<rawname>daynight</rawname>
 	<repo>standard</repo>
 	<name>Call Flow Control</name>
-	<version>17.0.1.2</version>
+	<version>18.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,10 +12,10 @@
 	</description>
 	<more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/22315326/Call+Flow+Control+Module</more-info>
 	<changelog>
-		*17.0.1.2* Fixing Github #646 undefined variable error 
+		*18.0.1* initial release
 	</changelog>
 	<depends>
-		<version>17.0</version>
+		<version>18.0</version>
 	</depends>
 	<menuitems>
 		<daynight needsenginedb="yes">Call Flow Control</daynight>
@@ -41,6 +41,6 @@
 		</timeconditions>
 	</hooks>
 	<supported>
-		<version>17.0</version>
+		<version>18.0</version>
 	</supported>
 </module>
