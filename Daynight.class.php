@@ -49,8 +49,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
 			return $buttons;
 		}
 		if ($request['display'] === 'daynight') {
-			$request['itemid']??='';
-			if (isset($request['itemid']) || '' != $request['itemid']) {
+			if (isset($request['itemid']) && $request['itemid'] !== '') {
 				$buttons['delete'] = [
 					'name'  => 'delete',
 					'id'    => 'delete',
@@ -72,7 +71,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
 	}
 
 	public function getRightNav($request) {
-		if ($request['view'] === 'form') {
+		if (($request['view'] ?? '') === 'form') {
 			return load_view(__DIR__ . "/views/bootnav.php", []);
 		}
 	}
@@ -98,7 +97,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
 	}
 
 	public function ajaxHandler() {
-		if ($_REQUEST['command'] === 'getJSON' && $_REQUEST['jdata'] === 'grid') {
+		if (($_REQUEST['command'] ?? '') === 'getJSON' && ($_REQUEST['jdata'] ?? '') === 'grid') {
 			return array_values($this->listCallFlows());
 		}
 		return false;
@@ -140,7 +139,7 @@ class Daynight extends FreePBX_Helpers implements BMO {
 		$returns          = [];
 		$returns['day']   = $stmt->execute([ ':id' => $id, ':item' => 'day', ':value' => $day ]);
 		$returns['night'] = $stmt->execute([ ':id' => $id, ':item' => 'night', ':value' => $night ]);
-		if (isset($post['password']) && trim($post['password'] != "")) {
+		if (isset($post['password']) && trim((string) $post['password']) !== '') {
 			$returns['password'] = $stmt->execute([ ':id' => $id, ':item' => 'password', ':value' => $post['password'] ]);
 		}
 		$fc_description                = isset($post['fc_description']) ? trim((string) $post['fc_description']) : "";

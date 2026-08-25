@@ -31,7 +31,8 @@ $daynightcodes = $daynightcodes ?: [];
 		<?php foreach ($daynightcodes as $row) {
 			$fcc   = new featurecode('daynight', 'toggle-mode-' . $row['ext']);
 			$fc    = $fcc->getCode();
-			$dnobj = daynight_get_obj($row['ext']);
+			$dnobj = daynight_get_obj($row['ext']) ?? [];
+			$state = $dnobj['state'] ?? 'UNKNOWN';
 			?>
 			<tr>
 				<td>
@@ -40,14 +41,14 @@ $daynightcodes = $daynightcodes ?: [];
 				<td>
 					<?php echo $row['dest'] ?>
 				</td>
-				<td><span class="label label-<?php echo ($dnobj['state'] == 'DAY') ? "success" : "danger" ?>"><?php echo $dnobj['state'] ?></span></td>
+				<td><span class="label label-<?php echo ($state == 'DAY') ? "success" : "danger" ?>"><?php echo $state ?></span></td>
 				<td>
 					<a
 						href="?display=daynight&amp;view=form&amp;itemid=<?php echo urlencode((string) $row['ext']) ?>&amp;extdisplay=<?php echo urlencode((string) $row['ext']) ?>"><i
 							class="fa fa-edit"></i></a>
 					<a class="deleteitem"
 						href="?display=daynight&amp;itemid=<?php echo urlencode((string) $row['ext']) ?>&amp;action=delete"><i
-							class="fa fa-trash"></i><a />
+							class="fa fa-trash"></i></a>
 				</td>
 			</tr>
 		<?php } ?>

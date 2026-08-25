@@ -49,9 +49,15 @@ class Daynight extends Base
 			\FreePBX::Modules()->loadFunctionsInc('daynight');
 			$params = $request->getParsedBody();
 			$dn     = new \dayNightObject($args['id']);
+			$state  = $params['state'] ?? '';
+
+			if ($state !== 'DAY' && $state !== 'NIGHT') {
+				$response->getBody()->write(json_encode(false));
+				return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
+			}
 
 			if ($dn) {
-				$dn->setState($params['state']);
+				$dn->setState($state);
 				$response->getBody()->write(json_encode(true));
 				return $response->withHeader('Content-Type', 'application/json');
 			}
