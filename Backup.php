@@ -10,6 +10,9 @@ class Backup extends Base\BackupBase {
 		$result  = [];
 		foreach ($dn_data as $key => $dn) {
 			$res      = explode('/', (string) $key);
+			if (!isset($res[1], $res[2])) {
+				continue;
+			}
 			$family   = $res[1];
 			$k        = $res[2];
 			$value    = $dn;

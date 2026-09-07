@@ -4,9 +4,11 @@
 
 extract($request);
 $itemid ??= "";
-$dests  = daynight_get_obj($itemid);
+$dests  = daynight_get_obj($itemid) ?? [];
 extract($dests);
 $indexopts = '';
+$recordinghtml = '';
+$state = $state ?? false;
 $ids       = daynight_get_avail();
 if (empty($ids) && ($itemid == '')) {
 	?>
@@ -119,7 +121,7 @@ if (!empty($timeconditions_refs)) {
 
 <form name="prompt" id="prompt" class="fpbx-submit" action="?display=daynight" method="post"
 	onsubmit="return prompt_onsubmit();" data-fpbx-delete="?display=daynight&itemid=<?php echo $itemid ?>&action=delete">
-	<input type="hidden" name="action" value="<?php echo isset($itemid) ? 'edit' : 'add' ?>" />
+	<input type="hidden" name="action" value="<?php echo $itemid !== '' ? 'edit' : 'add' ?>" />
 	<input type="hidden" name="display" value="daynight" />
 	<!--Call Flow Toggle Feature Code Index-->
 	<div class="element-container">

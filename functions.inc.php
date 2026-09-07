@@ -8,8 +8,9 @@ if (!defined('FREEPBX_IS_AUTH')) {
 //
 // Class To Create, Access and Change DAYNIGHT objects in the dialplan
 //
-#[\AllowDynamicProperties]
 class dayNightObject {
+	public int|string $id;
+	public string|false $DEVSTATE;
 
 	// contstructor
 	function __construct($id) {
@@ -180,6 +181,9 @@ function daynight_get_config($engine) {
 
 			foreach ($list as $item) {
 				$dests = daynight_get_obj($item['ext']);
+				if (!isset($dests['day'], $dests['night'])) {
+					continue;
+				}
 				$ext->add($id, $item['ext'], '', new ext_gotoif('$["${DB(DAYNIGHT/C${EXTEN})}" = "NIGHT"]', $dests['night'], $dests['day']));
 			}
 
@@ -226,10 +230,10 @@ function daynight_toggle() {
 		$day_file   = "beep&silence/1&featurecode&digits/{$index}&de-activated";
 		$night_file = "beep&silence/1&featurecode&digits/{$index}&activated";
 		if (function_exists('recordings_get_file')) {
-			if ($day_recording[$index] != 0) {
+			if (($day_recording[$index] ?? 0) != 0) {
 				$day_file = recordings_get_file($day_recording[$index]);
 			}
-			if ($night_recording[$index] != 0) {
+			if (($night_recording[$index] ?? 0) != 0) {
 				$night_file = recordings_get_file($night_recording[$index]);
 			}
 		}
